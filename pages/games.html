@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Games</title>
+
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Import css files -->
+	<link rel="stylesheet" type="text/css" href="../colors.css">
+	<link rel="stylesheet" type="text/css" href="../fonts.css">
+	<link rel="stylesheet" type="text/css" href="../widgets.css">
+
+	<!-- Import javascript file -->
+	<script type="text/javascript" src="../main.js" defer></script>
+</head>
+
+<body>
+	<div class="Menu">
+		<a href="../" id="available">Home</a>
+		<a href="config" id="available">Config</a>
+		<a href="explain" id="available">Explaination</a>
+		<a href="games" id="current">Games</a>
+	</div>
+	
+	<div class="Article">
+		<h2>osu!下载</h2>
+		<div id="section">
+			<p>1.启用 multilib<br>
+			vim /etc/pacman.conf<br>
+			Uncomment [multilib] and mirror</p>
+
+			<p>2.软件<br>
+			sudo pacman -Syu<br>
+			sudo pacman -S wine wine-mono winetricks lib32-{gst-plugins-base-libs,gnutls,<i>vulkan-intel</i>} --needed</p>
+			
+			<p>3.配置<br>
+			winecfg WINEARCH=win32<br>
+			Select "Windows 2000"<br><br>
+
+			winetricks --gui<br>
+			Select "Select the default wineprefix"<br>
+			Select "Install a Windows DLL or component"<br>
+			Select "dotnet40"</p>
+
+			<p><span id="best">第二第三步骤适用于大多数Windows游戏</span></p>
+
+			<p>4.<a href="../pkgs/osu!install.exe">Install osu</a><br>
+			mkdir osu &amp;&amp; wine osu\!install.exe</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Explaination</title>
+	
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Import css files -->
+	<link rel="stylesheet" type="text/css" href="../colors.css">
+	<link rel="stylesheet" type="text/css" href="../fonts.css">
+	<link rel="stylesheet" type="text/css" href="../widgets.css">
+
+	<!-- Import javascript file -->
+	<script type="text/javascript" src="../main.js" defer></script>
+</head>
+	
+<body>
+	<div class="Menu">
+		<a href="../" id="available">Home</a>
+		<a href="config" id="available">Config</a>
+		<a href="explain" id="current">Explaination</a>
+		<a href="games" id="available">Games</a>
+	</div>
+		
+	<div class="Article">
+		<h2>颜色</h2>
+		<div id="section">
+			<strong><span id="important">红色</span>高亮</strong>字--重要<br>
+			<strong><span id="require">黄色</span>高亮</strong>字--需要<br>
+			<strong><span id="best">绿色</span>高亮</strong>字--建议<br>
+			<strong><span id="casual">灰色</span>高亮</strong>字--随便<br>
+			<i>斜体字--根据情况</i><br>
+		</div>
+
+		<h2 id="reference">引用</h2>
+		<div id="section">
+			<a href="https://wiki.archlinux.org/title/Microcode#Loading_microcode">CPU微码固件(AMD/Intel)</a><br>
+			<a href="https://wiki.archlinux.org/title/Category:Graphics">显卡驱动</a><br>
+			<a href="https://wiki.archlinux.org/title/Unofficial_mirrors">非官方镜像</a><br>
+			<a href="https://wiki.archlinux.org/title/Display_manager#List_of_display_managers">登录管理</a><br>
+			<a href="https://wiki.archlinux.org/title/Desktop_environment#List_of_desktop_environments">桌面环境</a><br>
+			<a href="https://wiki.archlinux.org/title/HiDPI#GUI_toolkits">高分辨率</a>
+		</div>
+
+		<h2 id="explaination">解释</h2>
+		<div id="section">			
+			<h3>内核参数</h3>
+			"fbcon=nodefer video=efifb:nobgrt"<br>
+			关闭厂商二次闪logo
+
+			<p>"resume=/dev/..."<br>
+			从/dev/...读取数据,睡眠唤醒</p>
+			
+			<p>"modprobe.blacklist=iTCO_wdt"<br>
+			关闭watchdog</p>
+
+			<h3>磁盘</h3>
+			磁盘编号---有多少磁盘数量<br>
+			磁盘区块---在<strong>一块磁盘</strong>上的区块数(分区)<br><br>
+
+			<h3>睡眠</h3>
+			HandleLidSwitch=...<br>
+			合上笔记本时执行...
+
+			<p>HandleLidSwitchExternalPower=...<br>
+			合上笔记本(有外接电源)时执行...</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Config</title>
+	
+	<!-- Basic -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Import css files -->
+	<link rel="stylesheet" type="text/css" href="../colors.css">
+	<link rel="stylesheet" type="text/css" href="../fonts.css">
+	<link rel="stylesheet" type="text/css" href="../widgets.css">
+
+	<!-- Import javascript file -->
+	<script type="text/javascript" src="../main.js" defer></script>
+</head>
+
+<body>
+	<div class="Menu">
+		<a href="../" id="available">Home</a>
+		<a href="config" id="current">Config</a>
+		<a href="explain" id="available">Explaination</a>
+		<a href="games" id="available">Games</a>
+	</div>
+	
+	<div class="Article">
+		<h2>桌面配置</h2>
+		<div id="section">
+			以<i>{account}</i>身份登录<br><br>
+			
+			<h3>启动服务</h3>
+			sudo systemctl enable acpid bluetooth tlp <span id="require">NetworkManager<br>systemctl start NetworkManager<br></span>
+			联网用nmtui<br><br>
+			
+			<h3>软件下载</h3>
+			sudo pacman -S <i>i3{-wm,lock,status}(<a href="../e#reference">其他桌面环境</a>)</i><br>
+			network-manager-applet pcmanfm-gtk3 xarchiver dmenu<br>
+			dunst feh ibus ibus-libpinyin picom flameshot mpv<br>
+			zsh zsh-{completions,autosuggestions,syntax-highlighting}<br>
+			chromium alacritty xss-lock<br>
+			下载yay:<br>
+			wget https://cutt37.github.io/pkgs/yay-12.1.0-1-x86_64.pkg.tar.zst<br><br>
+
+			<h3>vim配置(可选)</h3>
+			sudo pacman -S npm nodejs<br>
+			vim<br>
+			:PlugInstall<br>
+			:CocInstall coc-json coc-html coc-css<br>
+			:q<br>
+			sudo ln -sf /home/cutt37/.vim /root/.vim<br><br>
+			
+			<h3>我的配置(可选)</h3>
+			<span id="casual">
+				wget https://cutt37.github.io/pkgs/main.zip<br>
+
+				<p>unzip main.zip<br>
+				Execute bash script as root.<br>
+				sudo ./configuration.sh</p>
+			</span>
+
+			<h3>电池状态(可选)</h3>
+			sudo vim /etc/profile<br>
+			添加/path/to/.config/battery-status.sh &amp;<br><br>
+			
+			<h3>软件</h3>
+			yay -S slim archlinux-themes-slim(<a href="../e">其他登录管理界面</a>) ttf-symbola<br>
+			<i>{aic94xx,ast,wd719x}-firmware upd72020x-fw</i><br>
+			缺失的固件(firmware)会在执行mkinitcpio -P时产生警告.<br>
+			可用的固件:<br>
+			<a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
+				mkinitcpio - ArchWiki
+			</a><br>
+			通过yay -S {固件}下载,然后再次执行sudo mkinitcpio -P<br><br>
+			
+			<h3>slim配置</h3>
+			<span id="require">sudo systemctl enable slim</span><br>
+			
+			<p>sudo vim /etc/slim.conf<br>
+			/current_theme to search.<br>
+			current_theme <i>archlinux-simplyblack</i></p>
+
+			echo i3 &gt; .xinitrc<br><br>
+
+			<h3>输入法</h3>
+			<span id="best">若使用fcitx输入法请把所有ibus替换成fcitx</span><br>
+			sudo echo INPUT_METHOD=ibus &gt;&gt; /etc/environment<br>
+			sudo echo XMODIFIERS=@im=ibus &gt;&gt; /etc/environment<br><br>
+			
+			<h3>GTK主题</h3>
+			Nordic-darker: <a href="../pkgs/Nordic-darker.tar.xz">下载</a><br>
+
+			<p>Uncompress it.<br>
+			sudo mv Nordic-darker /usr/share/themes</p>
+
+			sudo echo GTK-THEME=Nordic-darker &gt;&gt; /etc/environment
+		</div>
+	</div>
+</body>
+</html>
