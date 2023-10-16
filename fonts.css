@@ -2,7 +2,7 @@
 	overflow-wrap: break-word;
 
 	font-family: Cantarell,
-	"Ink Free", "Consolas"
-	"Helvetica Neue", -apple-system,
+	"Ink Free", "Consolas",
+	"Helvetica Neue", Helvetica, -apple-system,
 	system-ui;
 }
