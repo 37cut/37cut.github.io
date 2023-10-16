@@ -1,8 +1,13 @@
+@font-face {
+	font-family: SquareAntiqua;
+	src: url("./fonts/SquareAntiqua-Book.ttf") format(truetype);
+}
+
 * {
 	overflow-wrap: break-word;
 
 	font-family: Cantarell,
 	"Ink Free", "Consolas",
-	"Helvetica Neue", Helvetica, -apple-system,
-	system-ui;
+	"Helvetica Neue", -apple-system,
+	SquareAntiqua, system-ui;
 }
