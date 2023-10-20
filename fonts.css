@@ -1,13 +1,27 @@
 @font-face {
-	font-family: SquareAntiqua;
-	src: url("./fonts/SquareAntiqua-Book.ttf") format(truetype);
+	src: url("./fonts/Cantarell-VF.otf") format(opentype);
+	font-family: en-font_cantarell;
+}
+
+@font-face {
+	src: url("./fonts/Ink\ Free.ttf") format(truetype);
+	font-family: en-font_Ink-Free;
+}
+
+@font-face {
+	src: url("./fonts/wqy-microhei-lite.ttc") format(truetype);
+	font-family: cn-font_wqy-microhei-lite;
 }
 
 * {
 	overflow-wrap: break-word;
+	font-family: cn-font_wqy-microhei-lite, system-ui;
+}
 
-	font-family: Cantarell,
-	"Ink Free", "Consolas",
-	"Helvetica Neue", -apple-system,
-	SquareAntiqua, system-ui;
+h1, h2, .Menu, .Download, .Bottom-to-top {
+	font-family: en-font_Ink-Free, system-ui;
+}
+
+#section {
+	font-family: en-font_cantarell, system-ui;
 }
