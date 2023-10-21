@@ -2,11 +2,13 @@
 @font-face {
 	src: url("./fonts/Cantarell-VF.otf") format(opentype);
 	font-family: en-font_cantarell;
-}
+	font-display: swap;
+}	
 
 @font-face {
 	src: url("./fonts/Ink\ Free.ttf") format(truetype);
 	font-family: en-font_Ink-Free;
+	font-display: swap;
 }
 
 
