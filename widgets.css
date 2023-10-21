@@ -18,10 +18,6 @@ h1, h2 {
 	background-color: #9fcebe;
 }
 
-h2 {
-	border-left: var(--5p-b) #509c85;
-}
-
 body {background-color: #ededed;}
 
 
@@ -48,7 +44,8 @@ body {background-color: #ededed;}
 }
 
 .Download, .Menu, .Bottom-to-top {background-color: #ddd2b2;}
-.Download, .Menu, .Bottom-to-top, #section, img {
+.Download, .Menu, .Bottom-to-top,
+#section, img {
 	font-size: 18px;
 	border: var(--1p-b) white;
 	box-shadow: var(--bs-dg);
@@ -78,23 +75,27 @@ a {
 }
 
 a:hover {
-	color: steelblue;
-	background-color: lightsteelblue;
+	color: #6666cc;
 	transition: all .25s ease-in;
-	box-shadow: var(--bs-dg);
 }
 
 #current {color: teal;}
 #current:before {content: "At ";}
 #available {color: navy;}
 
-.Menu #available:hover {color: steelblue;}
+.Menu #available:hover {color: #6666cc;}
+
+a:hover, .Menu #available:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+}
 
 
 
 /* On different resolutions */
 @media screen and (max-width: 960px) {
 	h1, h2, h3 {padding: 1%;}
+	h1, h2 {text-align: center;}
 
 	.Download, .Menu {font-size: 20px;}
 	.Download, .Bottom-to-top {padding: 1%;}

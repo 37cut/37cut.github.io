@@ -18,10 +18,12 @@
 	font-family: cn-font_wqy-microhei-lite, system-ui;
 }
 
-h1, h2, .Menu, .Download, .Bottom-to-top {
-	font-family: en-font_Ink-Free;
+h1, h2,
+.Menu a, .Download,
+.Bottom-to-top a {
+	font-family: en-font_Ink-Free, system-ui;
 }
 
 #section {
-	font-family: en-font_cantarell;
+	font-family: en-font_cantarell, system-ui;
 }
