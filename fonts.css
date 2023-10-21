@@ -1,3 +1,4 @@
+/* Import fonts */
 @font-face {
 	src: url("./fonts/Cantarell-VF.otf") format(opentype);
 	font-family: en-font_cantarell;
@@ -13,6 +14,9 @@
 	font-family: cn-font_wqy-microhei-lite;
 }
 
+
+
+/* Where to display fonts */
 * {
 	overflow-wrap: break-word;
 	font-family: cn-font_wqy-microhei-lite, system-ui;
