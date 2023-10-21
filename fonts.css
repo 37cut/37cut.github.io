@@ -17,10 +17,7 @@
 
 
 /* Where to display fonts */
-* {
-	font-family: cn-font_wqy-microhei-lite;
-	overflow-wrap: break-word;
-}
+* {overflow-wrap: break-word;}
 
 h1, h2,
 .Menu a, .Download,
