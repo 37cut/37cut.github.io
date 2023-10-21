@@ -10,10 +10,9 @@
 }
 
 
-
 * {overflow-wrap: break-word;}
 
-/* Where to display fonts */
+/* Where to display custom fonts */
 h1, h2,
 .Menu a, .Download,
 .Bottom-to-top a {
