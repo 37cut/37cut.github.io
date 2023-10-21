@@ -11,4 +11,4 @@ git add .
 git commit -m "Project submit on $(date +'%Y-%m-%d %H:%M:%S')"
 
 git fetch
-git branch --set-upstream-to=origin/main main
+git branch --set-upstream-to=origin/main $(git branch --show-current)
