@@ -9,11 +9,6 @@
 	font-family: en-font_Ink-Free;
 }
 
-@font-face {
-	src: url("./fonts/wqy-microhei-lite.ttc") format(truetype);
-	font-family: cn-font_wqy-microhei-lite;
-}
-
 
 
 /* Where to display fonts */
