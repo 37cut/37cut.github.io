@@ -24,9 +24,9 @@
 h1, h2,
 .Menu a, .Download,
 .Bottom-to-top a {
-	font-family: en-font_Ink-Free, system-ui;
+	font-family: en-font_Ink-Free, cn-font_wqy-microhei-lite, system-ui;
 }
 
 #section {
-	font-family: en-font_cantarell, system-ui;
+	font-family: en-font_cantarell, cn-font_wqy-microhei-lite, system-ui;
 }
