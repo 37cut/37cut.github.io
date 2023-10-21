@@ -19,7 +19,6 @@
 /* Where to display fonts */
 * {
 	overflow-wrap: break-word;
-	font-family: cn-font_wqy-microhei-lite, system-ui;
 }
 
 h1, h2,
