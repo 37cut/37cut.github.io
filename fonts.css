@@ -18,15 +18,16 @@
 
 /* Where to display fonts */
 * {
+	font-family: cn-font_wqy-microhei-lite;
 	overflow-wrap: break-word;
 }
 
 h1, h2,
 .Menu a, .Download,
 .Bottom-to-top a {
-	font-family: en-font_Ink-Free, cn-font_wqy-microhei-lite, system-ui;
+	font-family: en-font_Ink-Free;
 }
 
 #section {
-	font-family: en-font_cantarell, cn-font_wqy-microhei-lite, system-ui;
+	font-family: en-font_cantarell;
 }
