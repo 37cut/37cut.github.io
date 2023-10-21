@@ -11,15 +11,15 @@
 
 
 
-/* Where to display fonts */
 * {overflow-wrap: break-word;}
 
+/* Where to display fonts */
 h1, h2,
 .Menu a, .Download,
 .Bottom-to-top a {
-	font-family: en-font_Ink-Free;
+	font-family: "Ink Free", en-font_Ink-Free, system-ui;
 }
 
 #section {
-	font-family: en-font_cantarell;
+	font-family: Cantarell, en-font_cantarell, system-ui;
 }
