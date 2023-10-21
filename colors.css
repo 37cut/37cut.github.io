@@ -1,14 +1,17 @@
-/* Red */
-#important {
-	color: firebrick;
-	font-weight: bolder;
-}
-
-/* Orange */
-#require {color: darkgoldenrod;}
-
-/* Green */
+/* Green text */
 #best {color: green;}
 
-/* Light grey */
-#casual {color: grey;}
+/* Orange text */
+#require {color: darkgoldenrod;}
+
+/* Grey text */
+#casual {
+	color: grey;
+	font-weight: 300;
+}
+
+/* Red text */
+#important {
+	color: firebrick;
+	font-weight: 700;
+}
