@@ -79,10 +79,10 @@ a:hover {
 	transition: all .25s ease-in;
 }
 
-#current {color: teal;}
-#current:before {content: "At ";}
-#available {color: navy;}
+.Menu #current {color: teal;}
+.Menu #current:before {content: "At ";}
 
+.Menu #available {color: navy;}
 .Menu #available:hover {color: #6666cc;}
 
 a:hover, .Menu #available:hover {
