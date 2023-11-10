@@ -24,8 +24,8 @@ body {background-color: #ededed;}
 
 /* Various custom widgets */
 .Download {border-radius: 0 0 15px 15px;}
-.Bottom-to-top {border-radius: 15px 15px 0 0;}
-.Download, .Bottom-to-top {
+#Footer {border-radius: 15px 15px 0 0;}
+.Download, #Footer {
 	padding: .5%;
 	text-align: center;
 }
@@ -43,8 +43,8 @@ body {background-color: #ededed;}
 	scrollbar-width: thin;
 }
 
-.Download, .Menu, .Bottom-to-top {background-color: #ddd2b2;}
-.Download, .Menu, .Bottom-to-top,
+.Download, .Menu, #Footer {background-color: #ddd2b2;}
+.Download, .Menu, #Footer,
 #section, img {
 	font-size: 18px;
 	border: var(--1p-b) white;

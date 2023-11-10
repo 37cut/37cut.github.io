@@ -35,6 +35,7 @@ function colorScheme(t, e, l, s, bg, fg) {
 
 // Select elements.
 const section = selectAll('#section');
+const footer = document.getElementById("Footer");
 
 // Index.
 const sectionIndex = amountToIndex(section);
@@ -51,3 +52,22 @@ if (sectionIndex != 0) {
 	colorScheme('zae', section, sectionIndex, 1, 'powderblue', 'steelblue');
 }
 
+console.log(document.documentElement.scrollHeight)
+console.log(document.documentElement.clientHeight)
+console.log(footer)
+
+const actualHeight = document.documentElement.scrollHeight;
+const visualHeight = document.documentElement.clientHeight;
+
+if (actualHeight > visualHeight) {
+	footer.innerHTML=`<a id="bottom-to-top">To top.</a>`;
+
+	// Bottom to top
+	const buttonBTT = selectById('bottom-to-top');
+	
+	buttonBTT.onclick = function() {
+		window.scrollTo({top: 0, behavior: 'smooth'})
+	}
+} else {
+	footer.remove();
+}
