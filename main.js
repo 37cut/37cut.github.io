@@ -52,9 +52,8 @@ if (sectionIndex != 0) {
 	colorScheme('zae', section, sectionIndex, 1, 'powderblue', 'steelblue');
 }
 
-console.log(document.documentElement.scrollHeight)
-console.log(document.documentElement.clientHeight)
-console.log(footer)
+// console.log(document.documentElement.scrollHeight)
+// console.log(document.documentElement.clientHeight)
 
 const actualHeight = document.documentElement.scrollHeight;
 const visualHeight = document.documentElement.clientHeight;
