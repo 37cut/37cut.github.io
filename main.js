@@ -37,10 +37,8 @@ function colorScheme(t, e, l, s, bg, fg) {
 const section = selectAll('#section');
 const footer = document.getElementById("Footer");
 
-// Index.
 const sectionIndex = amountToIndex(section);
 
-// DEBUG
 // console.log(importantTagIndex)
 // console.log(sectionIndex)
 
@@ -59,14 +57,16 @@ const actualHeight = document.documentElement.scrollHeight;
 const visualHeight = document.documentElement.clientHeight;
 
 if (actualHeight > visualHeight) {
+	// Add link
 	footer.innerHTML=`<a id="bottom-to-top">To top.</a>`;
 
-	// Bottom to top
+	// When click on this button, it
+	// scrolls to top.
 	const buttonBTT = selectById('bottom-to-top');
 	
 	buttonBTT.onclick = function() {
 		window.scrollTo({top: 0, behavior: 'smooth'})
-	}
+	};
 } else {
 	footer.remove();
 }
