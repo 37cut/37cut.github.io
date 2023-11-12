@@ -17,7 +17,7 @@
 /* Where to display custom fonts */
 h1, h2,
 .Menu a, .Download,
-.Bottom-to-top a {
+#bottom-to-top {
 	font-family: "Ink Free", en-font_Ink-Free, system-ui;
 }
 
