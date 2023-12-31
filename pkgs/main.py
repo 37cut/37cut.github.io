@@ -7,6 +7,7 @@ from tkinter import filedialog, Tk, Frame,\
 
 # FUNCTION
 # ================================================
+# Input handler
 def handler(sig, frm): _exit(0)
 
 def invalid_input(info):
@@ -17,6 +18,7 @@ def meanless_input(var, text):
     print(f"Meanless input: {var}.")
     print(f"The {text} won't change.")
 
+# Image info
 def img_info():
     print("\033[36m==================Info==================\033[0m")
     print(f'\033[36mPath: {file}\033[0m')
@@ -26,6 +28,7 @@ def img_info():
         print(f'\033[36mMode: {img.mode}\033[0m')
     print(f'\033[36mResolution: {img.size[0]}px, {img.size[1]}px\033[0m')
 
+# File analysis
 def file_analysis(f):
     # If user clicked cancel or hit esc,
     # show message instead of error msg.
@@ -38,6 +41,7 @@ def ftype_analysis(f, ftype):
     # throw the error.
     if ftype not in support_files: invalid_input(f)
 
+# Execute different action
 def exec_crop():
     global t1
     t1 = Thread(target=crop_active,
@@ -55,6 +59,20 @@ def exec_restore():
                       new_img_xr, new_img_yb))
     t2.start()
     threads.append(t2)
+
+def exec_draw(x, y, x1, y1, fac):
+    global t3
+    t3 = Thread(target=draw_section,
+                args=(x, y, x1, y1, fac))
+    t3.start()
+    threads.append(t3)
+
+def exec_refresh():
+    global t4
+    t4 = Thread(target=refresh_image,
+                args=(tk_get_image, tk_show_image, tk_prev_img))
+    t4.start()
+    threads.append(t4)
 
 def draw_section(x, y, x1, y1, fac):
     rect = [( round(x/fac), round(y/fac) ),
@@ -74,7 +92,7 @@ def crop_active(x, y, x1, y1):
     # If the crop position is correct, it'll work
     if x < x1 and y < y1:
         # If the scale's value changed, it'll work
-        if (x or y)!=0 or \
+        if (x or y) != 0 or \
         x1 != tk_s_img_x or y1 != tk_s_img_y:
             tst_img = sharpened_img.crop(new_img)
 
@@ -82,16 +100,18 @@ def crop_active(x, y, x1, y1):
                 count = 0
                 # Reset the preview image
                 tk_prev_img = sharpened_img.resize(
-                        (tk_prev_img_x, tk_prev_img_y),
-                        resample=Image.BILINEAR)
+                        tk_prev_img_size, resample=Image.BILINEAR)
             count = 1
-            draw_section(*new_img, tk_img_factor)
-            refresh_image(tk_get_image, tk_show_image, tk_prev_img)
-            tst_img.show()
-
+            
+            # Preview image
+            exec_draw(*new_img, tk_img_factor)
+            exec_refresh()
+            
             # Change the text.
-            tk_text_r.configure(text=text_r(tst_img.size[0], tst_img.size[1], "(Cropped)"))
+            tk_text_r.configure(text=text_r(*tst_img.size, "(Cropped)"))
             tk_close_button.configure(text="Save 2 images.")
+            
+            tst_img.show()
     else: invalid_input(new_img)
 
 def restore(x, y, x1, y1):
@@ -104,11 +124,10 @@ def restore(x, y, x1, y1):
     
     # Refresh the image
     tk_prev_img = sharpened_img.resize(
-            (tk_prev_img_x, tk_prev_img_y),
-            resample=Image.BILINEAR)
-    refresh_image(tk_get_image, tk_show_image, tk_prev_img)
-    
-    tk_text_r.configure(text=text_r(tk_s_img_x, tk_s_img_y, ""))
+            tk_prev_img_size, resample=Image.BILINEAR)
+    exec_refresh()
+
+    tk_text_r.configure(text=text_r(*sharpened_img.size, ""))
     tk_close_button.configure(text="Close")
 
 def close_active():
@@ -118,7 +137,7 @@ def close_active():
 def save_file(img, fname, f_ext, text):
     if fname in ['/', '\\', '*', ':', '?',
                  '|', '<', '>', '.', '..']:
-        print(f"Avoid character {fname}.")
+        print(f"Avoid character \'{fname}\'.")
         fname="output"
     if old_mode: img.convert(old_mode)
     img.save(f'{fname}{text}.{f_ext}')
@@ -147,8 +166,6 @@ ftype_analysis(file, file_extension)
 
 _e = Exception
 
-threads = []
-
 # If it's ok, then open the image.
 img = Image.open(file)
 tst_img = None
@@ -168,10 +185,8 @@ img_info()
 # Graph's resolution
 manual_or_keep=input("手动输入分辨率大小(m)还是保持长宽比(k): ")
 if manual_or_keep in ['m', 'M']:
-    try: m_image_x = int(input("请输入长: "))
-    except _e: invalid_input(value_invalid)
-    try: m_image_y = int(input("请输入宽: "))
-    except _e: invalid_input(value_invalid)
+    m_image_x = int(input("请输入长: "))
+    m_image_y = int(input("请输入宽: "))
 
     m_resolution = (m_image_x, m_image_y)
 
@@ -182,8 +197,7 @@ if manual_or_keep in ['m', 'M']:
         resized_img = img.resize(m_resolution, resample=Image.BILINEAR)
     else: meanless_input(m_resolution, "resolution")
 elif manual_or_keep in ['k', 'K']:
-    try: k_value=float(input("请输入缩放图片的倍率(... 0.5, 2, 5 ...): "))
-    except _e: invalid_input(value_invalid)
+    k_value=float(input("请输入缩放图片的倍率(... 0.5, 2, 5 ...): "))
     k_image_x = round(img.size[0]*k_value)
     k_image_y = round(img.size[1]*k_value)
 
@@ -200,12 +214,9 @@ else: invalid_input(manual_or_keep)
 # Graph's sharpness
 sharpen_or_not=input("锐化(y/n): ")
 if sharpen_or_not in ['y', 'Y']:
-    if img.mode not in ["RGB", "RGBA"]: img.convert("RGB")
     sharpen_tool=ImageEnhance.Sharpness(resized_img)
     
-    try: sharpness = float(input("输入锐化因子(默认值2): "))
-    except _e: invalid_input(value_invalid)
-
+    sharpness = float(input("输入锐化因子(默认值2): "))
     if sharpness >= 0:
         sharpened_img = sharpen_tool.enhance(sharpness)
     else: meanless_input(sharpness, "sharpness")
@@ -222,6 +233,8 @@ root.resizable(0, 0)
 
 count = 0
 
+threads = []
+
 new_img_xl = IntVar()
 new_img_xr = IntVar()
 new_img_yt = IntVar()
@@ -237,9 +250,9 @@ tk_img_factor = max(tk_s_img_x/448, tk_s_img_y/336)
 # The preview image's size should be smaller.
 tk_prev_img_x = round(tk_s_img_x/tk_img_factor)
 tk_prev_img_y = round(tk_s_img_y/tk_img_factor)
-tk_prev_img_resolution = (tk_prev_img_x, tk_prev_img_y)
+tk_prev_img_size = (tk_prev_img_x, tk_prev_img_y)
 tk_prev_img = sharpened_img.resize(
-        tk_prev_img_resolution, resample=Image.BILINEAR)
+        tk_prev_img_size, resample=Image.BILINEAR)
 
 # Settings
 # Objects
@@ -255,7 +268,7 @@ tk_text_image = Label(tk_content_frame, height=1,
 tk_show_image = Label(tk_content_frame, image=tk_get_image,
                       borderwidth=1, relief="solid")
 tk_text_r = Label(tk_content_frame, height=1,
-                  text=text_r(tk_s_img_x, tk_s_img_y, ""))
+                  text=text_r(*sharpened_img.size, ""))
 
 # Crop-Y section
 tk_cropy_frame = Frame(tk_main_frame)
@@ -302,7 +315,7 @@ tk_close_button = Button(tk_button_frame, width=10, height=1,
 tk_main_frame.pack(anchor="center")
 
 # Crop-Y section(left)
-tk_cropy_frame.grid(row=0, column=0, sticky='nw')
+tk_cropy_frame.grid(row=0, column=0, sticky='nw') 
 tk_text_cropyb.grid(row=0, column=0)
 tk_text_cropyt.grid(row=0, column=1)
 tk_scale_yb.grid(row=1, column=0)
