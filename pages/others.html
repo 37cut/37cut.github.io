@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Running exe on linux</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="../main.css">
+	<link rel="stylesheet" type="text/css" href="../fonts.css">
+	<link rel="stylesheet" type="text/css" href="../colors.css">
+</head>
+
+<body>
+	<div id="Menu">
+		<a href="../" id="available">Home</a>
+		<a href="./config" id="available">Config</a>
+		<a href="./" id="current">Games</a>
+	</div>
+
+	<div id="Article">
+		<h2>Download osu</h2>
+		<div class="container">
+			<p>vim /etc/pacman.conf<br>
+			Uncomment [multilib] and mirror</p>
+
+			<p>sudo pacman -Syu<br>
+			sudo pacman -S wine-staging wine-mono winetricks \<br>
+			lib32-{libxcomposite,gst-plugins-base-libs,gnutls,<i>vulkan-intel</i>,libva}</p>
+
+			<p>WINEARCH=win32 winecfg<br>
+			Select "Windows 2000"</p>
+
+			<p>winetricks<br>
+			Select "Select the default wineprefix"<br>
+			Select "Install a Windows DLL or component"<br>
+			Select "dotnet40"</p>
+
+			<p><a href="../pkgs/osu!install.exe">Install osu</a><br>
+			mkdir osu &amp;&amp; wine osu\!install.exe</p>
+		</div>
+	</div>
+</body>
+</html>

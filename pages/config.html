@@ -2,60 +2,54 @@
 <html>
 <head>
 	<title>Config</title>
-	
-	<!-- Basic -->
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<!-- Import css files -->
-	<link rel="stylesheet" type="text/css" href="../colors.css">
+
+	<link rel="stylesheet" type="text/css" href="../main.css">
 	<link rel="stylesheet" type="text/css" href="../fonts.css">
-	<link rel="stylesheet" type="text/css" href="../widgets.css">
-
-	<!-- Import javascript file -->
-	<script type="text/javascript" src="../main.js" defer></script>
-
-	<!-- Analytics -->
-	<script type="text/javascript" data-domain="cutt37.is-a.dev" src="https://analytics.is-a.dev/js/script.js" defer></script>
+	<link rel="stylesheet" type="text/css" href="../colors.css">
 </head>
 
 <body>
-	<div class="Menu">
+	<div id="Menu">
 		<a href="../" id="available">Home</a>
-		<a href="config" id="current">Config</a>
-		<a href="games" id="available">Games</a>
+		<a href="./" id="current">Config</a>
+		<a href="./others" id="available">Others</a>
 	</div>
-	
-	<div class="Article">
+
+	<div id="Article">
 		<h2>Desktop environment</h2>
-		<div id="section">
+		<div class="container">
 			<p>Login as <u>your-accountname</u></p>
 			
 			<p>Services:<br>
 			sudo systemctl enable acpid bluetooth tlp NetworkManager<br>
 			sudo systemctl start NetworkManager<br>
 			Connect internet with <u>nmtui</u>.</p>
-			
-			<p>Packages:<br>
-			KDE:<br>
-			[minimal: <u>plasma-desktop</u>;<br>
-			normal: <u>plasma</u>;<br>
-			full: <u>plasma-meta</u>]<br>
-			GNOME:<br>
-			[normal: <u>gnome</u>;<br>
-			extra-apps: <u>gnome-extra</u>]</p>
 
-			<p>sudo pacman -S i3{-wm,lock,status} \<br>
-			network-manager-applet pcmanfm-gtk3 xarchiver dmenu \<br>
-			dunst feh ibus ibus-libpinyin picom flameshot mpv \<br>
-			zsh zsh-{completions,autosuggestions,syntax-highlighting} \<br>
-			chromium alacritty xss-lock</p>
-			
+			<div class="subcontainer">
+				<p>Packages:<br>
+				KDE:<br>
+				[minimal: <u>plasma-desktop</u>;<br>
+				normal: <u>plasma</u>;<br>
+				full: <u>plasma-meta</u>]<br>
+				GNOME:<br>
+				[normal: <u>gnome</u>;<br>
+				extra-apps: <u>gnome-extra</u>]</p>
+
+				<p>sudo pacman -S i3{-wm,lock,status} \<br>
+				network-manager-applet pcmanfm-gtk3 xarchiver dmenu \<br>
+				dunst feh ibus ibus-libpinyin picom flameshot mpv \<br>
+				zsh zsh-{completions,autosuggestions,syntax-highlighting} \<br>
+				chromium alacritty xss-lock</p>
+			</div>
+
 			<p>Configuration:<br>
 			sudo echo i3 &gt; .xinitrc<br>
 			sudo echo INPUT_METHOD=ibus &gt;&gt; /etc/environment<br>
 			sudo echo XMODIFIERS=@im=ibus &gt;&gt; /etc/environment</p>
-			
+
 			<p>Missing firmwares: <br>
 			Read this: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
 				mkinitcpio - ArchWiki</a><br>
@@ -66,13 +60,13 @@
 			wget https://cutt37.github.io/pkgs/yay-12.1.0-1-x86_64.pkg.tar.zst<br>
 			yay -S slim archlinux-themes-slim ttf-symbola \<br>
 			{aic94xx,ast,wd719x}-firmware upd72020x-fw</p>
-			
+
 			<p>Slim theme:<br>
 			sudo systemctl enable slim<br>
 			sudo vim /etc/slim.conf<br>
 			Type <u>/current_theme</u> to search.<br>
-			current_theme <i>archlinux-simplyblack</i></p>
-			
+			current_theme archlinux-simplyblack</p>
+
 			<p>Dark gtk theme:<br>
 			sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment</p>
 
@@ -83,7 +77,7 @@
 			:CocInstall coc-json coc-html coc-css<br>
 			:q<br>
 			sudo ln -sf /home/cutt37/.vim /root/.vim</p>
-			
+
 			<p>My config for <b>i3</b>:<br>
 			wget https://cutt37.github.io/pkgs/main.zip<br>
 			unzip main.zip<br>
@@ -91,7 +85,5 @@
 			sudo ./configuration.sh</p>
 		</div>
 	</div>
-
-	<div id="Footer"></div>
 </body>
 </html>
