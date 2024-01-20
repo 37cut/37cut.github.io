@@ -23,7 +23,6 @@
 	<div class="Menu">
 		<a href="../" id="available">Home</a>
 		<a href="config" id="available">Config</a>
-		<a href="explain" id="available">Explaination</a>
 		<a href="games" id="current">Games</a>
 	</div>
 	
@@ -33,14 +32,14 @@
 			<p>vim /etc/pacman.conf<br>
 			Uncomment [multilib] and mirror</p>
 
-			sudo pacman -Syu<br>
+			<p>sudo pacman -Syu<br>
 			sudo pacman -S wine-staging wine-mono winetricks \<br>
 			lib32-{libxcomposite,gst-plugins-base-libs,gnutls,<i>vulkan-intel</i>,libva}</p>
 			
 			<p>WINEARCH=win32 winecfg<br>
 			Select "Windows 2000"</p>
 
-			winetricks<br>
+			<p>winetricks<br>
 			Select "Select the default wineprefix"<br>
 			Select "Install a Windows DLL or component"<br>
 			Select "dotnet40"</p>
