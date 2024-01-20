@@ -1,16 +1,16 @@
+body, h1, h2, #Footer p {margin: 0;}
+
 body #Menu, body #Article,
-#Article .container,
-.container .subcontainer{margin: .5%;}
+body #Footer, #Article .container,
+.container .subcontainer {margin: .5%;}
 .container, .subcontainer {overflow-wrap: break-word;}
 
-#Menu, #Article,
-#Article, .container, .subcontainer {
+#Menu, #Article, #Footer,
+.container, .subcontainer {
 	padding: .5%;
-	border: 1px solid white;
+	border: 2px solid white;
 }
 
-/* The title and the passage */
-h1, h2 {margin: 0;}
 
 /* The submenu and the hyperlink  */
 a {
@@ -26,9 +26,11 @@ a:hover {
 
 #Menu #current:before {content: "At ";}
 
+
+
 @media only screen and (max-width: 960px) {
 	body #Menu, body #Article,
-	#Article .container,
+	body #Footer, #Article .container,
 	.container .subcontainer{margin: 1%;}
 
 	#Menu, #Article,
@@ -37,7 +39,7 @@ a:hover {
 
 @media only screen and (max-width: 720px) {
 	body #Menu, body #Article,
-	#Article .container,
+	body #Footer, #Article .container,
 	.container .subcontainer{margin: 1.5%;}
 
 	#Menu, #Article,
@@ -46,7 +48,7 @@ a:hover {
 
 @media only screen and (max-width: 480px) {
 	body #Menu, body #Article,
-	#Article .container,
+	body #Footer, #Article .container,
 	.container .subcontainer{margin: 2%;}
 
 	#Menu, #Article,
