@@ -1,11 +1,10 @@
 body #Menu, body #Article,
 #Article .container,
-.container .subcontainer{
-	margin: .5%;
-}
+.container .subcontainer{margin: .5%;}
+.container, .subcontainer {overflow-wrap: break-word;}
 
 #Menu, #Article,
-.container, .subcontainer {
+#Article, .container, .subcontainer {
 	padding: .5%;
 	border: 1px solid white;
 }
@@ -26,3 +25,30 @@ a:hover {
 }
 
 #Menu #current:before {content: "At ";}
+
+@media only screen and (max-width: 960px) {
+	body #Menu, body #Article,
+	#Article .container,
+	.container .subcontainer{margin: 1%;}
+
+	#Menu, #Article,
+	.container, .subcontainer {padding: 1%;}
+}
+
+@media only screen and (max-width: 720px) {
+	body #Menu, body #Article,
+	#Article .container,
+	.container .subcontainer{margin: 1.5%;}
+
+	#Menu, #Article,
+	.container, .subcontainer {padding: 1.5%;}
+}
+
+@media only screen and (max-width: 480px) {
+	body #Menu, body #Article,
+	#Article .container,
+	.container .subcontainer{margin: 2%;}
+
+	#Menu, #Article,
+	.container, .subcontainer {padding: 2%;}
+}
