@@ -2,62 +2,50 @@
 <html>
 <head>
 	<title>Home</title>
-	
-	<!-- Basic -->
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="fonts.css">
+	<link rel="stylesheet" type="text/css" href="colors.css">
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<!-- Import css files -->
-	<link rel="stylesheet" type="text/css" href="colors.css">
-	<link rel="stylesheet" type="text/css" href="fonts.css">
-	<link rel="stylesheet" type="text/css" href="widgets.css">
-	
-	<!-- Import javascript files -->
-	<script type="text/javascript" src="main.js" defer></script>
-	<script type="text/javascript" src="function.js" defer></script>
-
-	<!-- Analytics -->
-	<script type="text/javascript" data-domain="cutt37.is-a.dev" src="https://analytics.is-a.dev/js/script.js" defer></script>
 </head>
 
 <body>
-	<div class="Download">
-		配置文件<a href="./pkgs/main.zip">下载</a><br>
-		yay<a href="./pkgs/yay-12.1.0-1-x86_64.pkg.tar.zst">下载</a>
-	</div>
-	
-	<div class="Menu">
+	<div id="Menu">
 		<a href="./" id="current">Home</a>
-		<a href="./pages/config" id="available">Config</a>
-		<a href="./pages/games" id="available">Games</a>
+		<a href="./pages/config" class="available">Config</a>
+		<a href="./pages/others" class="available">Others</a>
 	</div>
 	
-	<div class="Article">
-		<h1>Archlinux Installation</h1>
-		
-		<h2>1.Connect to the internet(Wireless)</h2>
-		<div id="section">
-			<p><u>ifconfig</u> to check the wlan cards</p>
+	<h1>> Archlinux installation._</h1>
+	<div id="Article">
+		<h2>1.Connect to the internet(wireless)</h2>
+		<div class="container">
+			<p><u>ifconfig</u> to check the network card.<br>
+			Here <b>wlan0</b> as default.</p>	
 			
 			<p>iwctl<br>
-			station <i>wlan0</i> scan<br>
-			station <i>wlan0</i> get-networks<br>
-			station <i>wlan0</i> connect <u>any-internet</u><br>
-			exit</p>
+			station wlan0 scan<br>
+			station wlan0 get-networks<br>
+			station wlan0 connect <u>any-networks</u></p>
+
+			<p>Once you're done, type <u>exit</u>.</p>
 		</div>
-		
-		<h2>2.Disk</h2>
-		<div id="section">
-			<p>Legacy BIOS: You don't need efi partition and efibootmgr;<br>
-			Note: make sure you are not formatting the udisk,<br>
-			also notice what kind of disk you are using,<br>
-			like I'm using a single nvme disk so it's /dev/<b>nvme0n1xx</b></p>
 
-			<p>fdisk -l<br>
-			cfdisk</p>
+		<h2>2.Disk partition and format</h2>
+		<div class="container">
+			<p>If you are using legacy bios boot,<br>
+			you don't have to create the efi partition and the <u>efibootmgr</u> package.<br>
+			Before partition the disk, make sure the target isn't the udisk.<br>
+			also notice some disks names are different.<br>
+			If it's a nvme disk it should be /dev/<u>nvmeXnYpZ</u>.</p>
 
+			<p><u>fdisk -l</u> to check disks on your computer.<br>
+			<u>cfdisk</u> to create partition table.</p>
+
+			<table>
 			<caption>Partition table</caption>
-			<table id="best">
 			<tr>
 				<th>Part(s)</th>
 				<th>Type</th>
@@ -78,62 +66,76 @@
 
 			<tr>
 				<td>nvme0n1p3</td>
-				<td>
-					<i title="You can use other filesystems. Like ext4, brtfs, xfs...">f2fs</i>
-				</td>
+				<td>f2fs</td>
 				<td>Remain</td>
 			</tr>
 			</table>
-
-			<p>Formatting:<br>
-			mkfs.fat -F 32 /dev/nvme0n1p1<br>
-			mkswap /dev/nvme0n1p2<br>
-			swapon /dev/nvme0n1p2<br>
-			mkfs.<i title="Available options: ext4, brtfs, xfs...">f2fs</i> /dev/nvme0n1p3</p>
-		
-			<p>Mounting:<br>
-			mount /dev/nvme0n1p3 /mnt<br>
-			mount --mkdir /dev/nvme0n1p1 /mnt/boot</p>
+			<div class="subcontainer">
+				<p>Formatting:<br>
+				Here are some filesystems like: ext4, brtfs, xfs, f2fs...<br>
+				mkfs.fat -F 32 /dev/nvme0n1p1<br>
+				mkswap /dev/nvme0n1p2<br>
+				swapon /dev/nvme0n1p2<br>
+				mkfs.f2fs /dev/nvme0n1p3</p>
+				
+				<p>Mounting:<br>
+				mount /dev/nvme0n1p3 /mnt<br>
+				mount --mkdir /dev/nvme0n1p1 /mnt/boot</p>
+			</div>
 		</div>
-		
-		<h2>3.Packages</h2>
-		<div id="section">
-			<p><u>Please check the mirror if download speed is slow.</u><br>
-			vim /etc/pacman.d/mirrorlist</p>
 
+		<h2>3.Packages</h2>
+		<div class="container">
+			<p>Now you should setup the mirror to download the packages.<br>
+			Some useful tools:<br>
+			<a href="https://archlinux.org/mirrors/status/">Arch mirrorlist</a><br>
+			<a href="https://archlinux.org/mirrorlist/">Arch generator</a></p>
+			<p>vim /etc/pacman.d/mirrorlist<br>
+			Insert this code <u>Server = /your/mirror/$repo/os/$arch</u><br>
+			It's a good idea to refresh the repo with <u>pacman -Syu</u>.</p>
+		
 			<p>pacstrap -K /mnt linux linux-firmware base \<br>
-			base-devel <i title="MBR partition ignore this pkg.">efibootmgr</i> grub \<br>
+			base-devel efibootmgr grub \<br>
 			networkmanager pipewire pipewire-{alsa,jack,pulse} mesa \<br>
 			xorg xorg-server udisks2 gvfs ntfs-3g wget git vi vim \<br>
 			wqy-microhei-lite terminus-font bluez bluez-utils \<br>
 			alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}</p>
-		
-			<p>Graphic cards and microcode:<br>
-			Intel cpu: <u>intel-ucode</u>; AMD cpu: <u>amd-ucode</u>.<br>
-			For intel gpu it's not a good choice to use xf86-video-intel.</p>
+
+			<div class="subcontainer">
+				<p>Graphic card driver and microcode:<br>
+				Graphic card driver:<br>
+				intel: modesetting(Ignore it, you dont have to download)<br>
+				amd: <u>xf86-video-amd</u> <u>xf86-video-radeon</u></p>
+
+				<p>Microcode:<br>
+				intel cpu: <u>intel-ucode</u>;<br>
+				amd cpu: <u>amd-ucode</u>;</p>
+			</div>
 
 			<p>pacstrap /mnt intel-ucode intel-media-driver vulkan-intel \<br>
 			xf86-video-fbdev linux-firmware-qlogic</p>
-			
+
 			<p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab<br>
 			arch-chroot /mnt</p>
 		</div>
 
-		<h2>4.Time and Language</h2>
-		<div id="section">
-			<p>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime<br>
+		<h2>4.Time and language</h2>
+		<div class="container">
+			<p><u>ls -sf /usr/share/zoneinfo</u> to check places.<br>
+			ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime<br>
 			hwclock --systohc</p>
 
 			<p>vim /etc/locale.gen<br>
-			Find <u>en_US.UTF-8</u> <u>zh_CN.UTF-8</u> and uncomment it.</p>
+			Find your locale and uncomment it.<br>
+			Here I uncomment <u>en_US.UTF-8</u> <u>zh_CN.UTF-8</u></p>
 
 			<p>locale-gen<br>
 			echo LANG=en_US.UTF-8 &gt; /etc/locale.conf<br>
 			echo <i>{hostname}</i> &gt; /etc/hostname</p>
 		</div>
-		
+
 		<h2>5.GRUB config</h2>
-		<div id="section">
+		<div class="container">
 			<p>Legacy:<br>
 			grub-install --target=i386-pc <u>/dev/...</u><br>
 			<b>Note: /dev/... is NOT a partition</b><br>
@@ -149,46 +151,47 @@
 
 			<p>grub-mkconfig -o /boot/grub/grub.cfg</p>
 		</div>
-		
-		<h2>6.其他</h2>
-		<div id="section">
+
+		<h2>6.Others</h2>
+		<div class="container">
 			<p>Add one account:<br>
 			useradd -m -G audio,storage,video,wheel <u>your-accountname</u><br>
 			passwd <u>your-accountname</u><br>
 			visudo<br>
 			Uncomment <u>%wheel ALL=(ALL:ALL) ALL</u></p>
 
-			<p>Add hibernate:<br>
-			vim /etc/mkinitcpio.conf<br>
-			Find <u>HOOKS=(...)</u><br>
-			Add <u>resume</u> <b>behind</b> <u>filesystems</u><br>
-			It should look like this:<br>
-			HOOKS=(... filesystem <b>resume</b>)</p>
+			<div class="subcontainer">
+				<p>Add hibernate:<br>
+				vim /etc/mkinitcpio.conf<br>
+				Find <u>HOOKS=(...)</u><br>
+				Add <u>resume</u> <b>behind</b> <u>filesystems</u><br>
+				It should look like this:<br>
+				HOOKS=(... filesystem <b>resume</b>)</p>
 
-			<p>vim /etc/systemd/logind.conf<br>
-			Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u></p>
+				<p>vim /etc/systemd/logind.conf<br>
+				Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u></p>
 
-			<p>What is <b>HandleLidSwitch</b> and <b>HandleLidSwitchExternalPower</b>?<br>
-			If you are using a laptop, when you close the lid,<br>
-			usually the computer don't hibernate if you dont add these.<br>
-			<b>HandleLidSwitchExternalPower</b> means if you are charging,<br>
-			when you close the lid, what pc is going to do.</p>
-			
-			<p>HandleLidSwitch=<i>hibernate</i><br>
-			HandleLidSwitchExternalPower=<i>suspend</i></p>
+				<p>What is <b>HandleLidSwitch</b> and <b>HandleLidSwitchExternalPower</b>?<br>
+				If you are using a laptop, when you close the lid,<br>
+				usually the computer don't hibernate if you dont add these.<br>
+				<b>HandleLidSwitchExternalPower</b> means if you are charging,<br>
+				when you close the lid, what pc is going to do.</p>
+
+				<p>HandleLidSwitch=<i>hibernate</i><br>
+				HandleLidSwitchExternalPower=<i>suspend</i></p>
+			</div>
 
 			<p>tty font:<br>
 			echo FONT=ter-132n(n-正常 b-粗体) &gt; /etc/vconsole.conf</p>
-			
+
 			<p>High resolution with small window problem:<br>
 			echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment<br>
 			echo GDK_SCALE=1.25 &gt;&gt; /etc/environment</p>
 
 			<p>If you are troubled with the intel graphic card,<br>
 			then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.<br>
-			
 			echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment</p>
-			
+
 			<p>mkinitcpio -P<br>
 			exit<br>
 			umount /mnt/boot<br>
@@ -197,7 +200,5 @@
 			Desktop configuration: Click <a href="./pages/config">here</a></p>
 		</div>
 	</div>
-	
-	<div id="Footer"></div>
 </body>
 </html>

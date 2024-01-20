@@ -1,0 +1,28 @@
+body #Menu, body #Article,
+#Article .container,
+.container .subcontainer{
+	margin: .5%;
+}
+
+#Menu, #Article,
+.container, .subcontainer {
+	padding: .5%;
+	border: 1px solid white;
+}
+
+/* The title and the passage */
+h1, h2 {margin: 0;}
+
+/* The submenu and the hyperlink  */
+a {
+	text-decoration: none;
+	transition: all .25s ease-out;
+}
+
+a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	transition: all .25s ease-in;
+}
+
+#Menu #current:before {content: "At ";}

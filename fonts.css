@@ -1,26 +1,10 @@
-/* Import fonts */
 @font-face {
-	src: url("./fonts/Cantarell-VF.otf") format(opentype);
-	font-family: en-font_cantarell;
-	font-display: swap;
-}	
-
-@font-face {
-	src: url("./fonts/Ink\ Free.ttf") format(truetype);
-	font-family: en-font_Ink-Free;
-	font-display: swap;
+	src: url("./cantarell/Cantarell-VF.otf") format(opentype);
+	font-family: Cantarell-VF;
 }
 
-
-* {overflow-wrap: break-word;}
-
-/* Where to display custom fonts */
-h1, h2,
-.Menu a, .Download,
-#bottom-to-top {
-	font-family: "Ink Free", en-font_Ink-Free, system-ui;
-}
-
-#section {
-	font-family: Cantarell, en-font_cantarell, system-ui;
-}
+body {font-family: Cantarell-VF, serif;}
+h1 {font-size: 32px;}
+h2 {font-size: 26px;}
+p, table {font-size: 20px;}
+a {font-size: 20px;}
