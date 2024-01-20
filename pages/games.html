@@ -28,26 +28,22 @@
 	</div>
 	
 	<div class="Article">
-		<h2>osu!下载</h2>
+		<h2>Download osu</h2>
 		<div id="section">
-			<p>1.启用 multilib<br>
-			vim /etc/pacman.conf<br>
+			<p>vim /etc/pacman.conf<br>
 			Uncomment [multilib] and mirror</p>
 
-			<p>2.软件<br>
 			sudo pacman -Syu<br>
-			sudo pacman -S wine wine-mono winetricks lib32-{gst-plugins-base-libs,gnutls,<i>vulkan-intel</i>} --needed</p>
+			sudo pacman -S wine-staging wine-mono winetricks \<br>
+			lib32-{libxcomposite,gst-plugins-base-libs,gnutls,<i>vulkan-intel</i>,libva}</p>
 			
-			<p>3.配置<br>
-			winecfg WINEARCH=win32<br>
-			Select "Windows 2000"<br><br>
+			<p>WINEARCH=win32 winecfg<br>
+			Select "Windows 2000"</p>
 
-			winetricks --gui<br>
+			winetricks<br>
 			Select "Select the default wineprefix"<br>
 			Select "Install a Windows DLL or component"<br>
 			Select "dotnet40"</p>
-
-			<p><span id="best">第二第三步骤适用于大多数Windows游戏</span></p>
 
 			<p>4.<a href="../pkgs/osu!install.exe">Install osu</a><br>
 			mkdir osu &amp;&amp; wine osu\!install.exe</p>
