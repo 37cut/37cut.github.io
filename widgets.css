@@ -46,7 +46,7 @@ body {background-color: #ededed;}
 .Download, .Menu, #Footer {background-color: #ddd2b2;}
 .Download, .Menu, #Footer,
 #section, img {
-	font-size: 18px;
+	font-size: 20px;
 	border: var(--1p-b) white;
 	box-shadow: var(--bs-dg);
 }
@@ -112,7 +112,7 @@ a:hover, .Menu #available:hover {
 
 	.Menu, #section {margin: 1%;}
 	#section {
-		font-size: 20px;
+		font-size: 22px;
 		overflow-x: auto;
 		white-space: nowrap;
 	}

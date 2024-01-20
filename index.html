@@ -29,45 +29,34 @@
 	<div class="Menu">
 		<a href="./" id="current">Home</a>
 		<a href="./pages/config" id="available">Config</a>
-		<a href="./pages/explain" id="available">Explaination</a>
 		<a href="./pages/games" id="available">Games</a>
 	</div>
 	
 	<div class="Article">
-		<h1>Archlinux的下载</h1>
-		<h2>Why archlinux</h2>
-		<div id="section">
-			<p>wiki全<br>
-			对硬件支持全(至少我试了大部分linux都不支持我的这个网卡)<br>
-			我不喜欢Windows (11/10/8.1/7)<br>
-			安装可自定义</p>
-		</div>
+		<h1>Archlinux Installation</h1>
 		
-		<h2>1.联网</h2>
+		<h2>1.Connect to the internet(Wireless)</h2>
 		<div id="section">
-			<p>ifconfig</p>
-
+			<p><u>ifconfig</u> to check the wlan cards</p>
+			
 			<p>iwctl<br>
 			station <i>wlan0</i> scan<br>
 			station <i>wlan0</i> get-networks<br>
-			station <i>wlan0</i> connect <i>{网络名}</i><br>
+			station <i>wlan0</i> connect <u>any-internet</u><br>
 			exit</p>
 		</div>
 		
-		<h2>2.磁盘分区</h2>
+		<h2>2.Disk</h2>
 		<div id="section">
-			<h3>非UEFI启动</h3>
-			不用EFI分区<br>
-			不用efibootmgr<br><br>
-
-			<h3>安装前注意事项</h3>
-			swap分区为可选项<br>
-			<span id="important">格式化硬盘前确保不是U盘</span>
+			<p>Legacy BIOS: You don't need efi partition and efibootmgr;<br>
+			Note: make sure you are not formatting the udisk,<br>
+			also notice what kind of disk you are using,<br>
+			like I'm using a single nvme disk so it's /dev/<b>nvme0n1xx</b></p>
 
 			<p>fdisk -l<br>
 			cfdisk</p>
 
-			<h3>磁盘分区表</h3>
+			<caption>Partition table</caption>
 			<table id="best">
 			<tr>
 				<th>Part(s)</th>
@@ -94,131 +83,118 @@
 				</td>
 				<td>Remain</td>
 			</tr>
-			</table><br>
-			
-			<h3>格式化</h3>
+			</table>
+
+			<p>Formatting:<br>
 			mkfs.fat -F 32 /dev/nvme0n1p1<br>
 			mkswap /dev/nvme0n1p2<br>
 			swapon /dev/nvme0n1p2<br>
-			mkfs.<i title="Available options: ext4, brtfs, xfs...">f2fs</i> /dev/nvme0n1p3<br><br>
+			mkfs.<i title="Available options: ext4, brtfs, xfs...">f2fs</i> /dev/nvme0n1p3</p>
 		
-			<h3>挂载</h3>
+			<p>Mounting:<br>
 			mount /dev/nvme0n1p3 /mnt<br>
-			mount --mkdir /dev/nvme0n1p1 /mnt/boot
+			mount --mkdir /dev/nvme0n1p1 /mnt/boot</p>
 		</div>
 		
-		<h2>3.软件安装</h2>
+		<h2>3.Packages</h2>
 		<div id="section">
-			<p><u>Please check the mirror if your internet is slow.</u><br>
-			vim /etc/pacman.d/<a href="./pages/explain#reference">mirrorlist</a></p>
+			<p><u>Please check the mirror if download speed is slow.</u><br>
+			vim /etc/pacman.d/mirrorlist</p>
 
-			pacstrap -K /mnt <span id="important">linux linux-firmware base</span><br>
-			<span id="require">
-				base-devel <i title="MBR partition ignore this pkg.">efibootmgr</i> grub<br>
-				networkmanager pipewire pipewire-{alsa,jack,pulse} mesa<br>
-				xorg xorg-server udisks2 gvfs ntfs-3g<br>
-			</span>
-			wget git vi vim<br>
-			wqy-microhei-lite terminus-font bluez bluez-utils<br>
-			alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}<br><br>
-			
-			<h3>CPU微码&显卡</h3>
-			Amd nvidia<a href="./pages/explain#reference">点此</a>查找.(见CPU微码,显卡驱动)<br>
-			Intel CPU+集显:<br>
-			<span id="important"><u>Intel-13代Iris Xe集显不建议安装xf86-video-intel</u></span><br>
-			<span id="best">
-				请使用modesetting(见桌面配置(20-intel.conf))<br>
-				(见7.其他)mesa使用...驱动<br>
-			</span>
-			<a href="https://wiki.archlinux.org/title/OpenGL#OpenGL_over_Vulkan_(Zink)">
-				详情见OpenGL - ArchWiki
-			</a><br><br>
-	
-			<p>pacstrap /mnt intel-ucode(Intel微码) intel-media-driver vulkan-intel(Vulkan支持)<br>
+			<p>pacstrap -K /mnt linux linux-firmware base \<br>
+			base-devel <i title="MBR partition ignore this pkg.">efibootmgr</i> grub \<br>
+			networkmanager pipewire pipewire-{alsa,jack,pulse} mesa \<br>
+			xorg xorg-server udisks2 gvfs ntfs-3g wget git vi vim \<br>
+			wqy-microhei-lite terminus-font bluez bluez-utils \<br>
+			alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}</p>
+		
+			<p>Graphic cards and microcode:<br>
+			Intel cpu: <u>intel-ucode</u>; AMD cpu: <u>amd-ucode</u>.<br>
+			For intel gpu it's not a good choice to use xf86-video-intel.</p>
+
+			<p>pacstrap /mnt intel-ucode intel-media-driver vulkan-intel \<br>
 			xf86-video-fbdev linux-firmware-qlogic</p>
+			
+			<p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab<br>
+			arch-chroot /mnt</p>
 		</div>
 
-		<h2>4.时间&语言</h2>
+		<h2>4.Time and Language</h2>
 		<div id="section">
-			<p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab<br>
-			<span id="important">arch-chroot /mnt</span><br>
-			ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime<br>
+			<p>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime<br>
 			hwclock --systohc</p>
 
-			vim /etc/locale.gen<br>
-			
-			<p>找到 en_US.UTF-8 zh_CN.UTF-8<br>
-			取消注释</p>
+			<p>vim /etc/locale.gen<br>
+			Find <u>en_US.UTF-8</u> <u>zh_CN.UTF-8</u> and uncomment it.</p>
 
 			<p>locale-gen<br>
 			echo LANG=en_US.UTF-8 &gt; /etc/locale.conf<br>
 			echo <i>{hostname}</i> &gt; /etc/hostname</p>
 		</div>
 		
-		<h2>5.GRUB 配置</h2>
+		<h2>5.GRUB config</h2>
 		<div id="section">
-			<p>MBR:<br>
-			grub-install --target=i386-pc /dev/...(注意不是分区)<br>
+			<p>Legacy:<br>
+			grub-install --target=i386-pc <u>/dev/...</u><br>
+			<b>Note: /dev/... is NOT a partition</b><br>
 			UEFI:<br>
 			grub-install --target=x86_64-efi --efi-directory=/boot</p>
 			
-			vim /etc/default/grub<br>
-			
-			<p>找到GRUB_CMDLINE_LINUX_DEFAULT并添加以下内容<br>
-			<a href="./pages/explain#explaination">
-				fbcon=nodefer<br>
-				modprobe.blacklist=<i>iTCO_wdt</i>(可选-屏蔽watchdog)<br>
-				resume=<i>/dev/nvme0n1p2</i>(可选-无睡眠请忽略)<br>
-				video=efifb:nobgrt(可选-非UEFI请忽略)<br>
-			</a></p>
-		
-			<p><span id="best">
-				Intel显卡可添加以下参数:<br>
-				i915.fastboot=1<br>
-			</span></p>
+			<p>vim /etc/default/grub<br>
+			Find <u>GRUB_CMDLINE_LINUX_DEFAULT</u> and add these:<br>
+			fbcon=nodefer<br>
+			modprobe.blacklist=<i>iTCO_wdt</i> (disable watchdog)<br>
+			resume=<i>/dev/nvme0n1p2</i> (enable hibernate)<br>
+			video=efifb:nobgrt</p>
 
-			<p><span id="important">grub-mkconfig -o /boot/grub/grub.cfg</span></p>
+			<p>grub-mkconfig -o /boot/grub/grub.cfg</p>
 		</div>
 		
 		<h2>6.其他</h2>
 		<div id="section">
-			<h3>添加账户</h3>
-			<span id="important">
-				useradd -m -G audio,storage,video,wheel {account}<br>
-				passwd {account}<br>
-				visudo<br>
-				取消%wheel ALL=(ALL:ALL) ALL注释<br>
-			</span><br>
+			<p>Add one account:<br>
+			useradd -m -G audio,storage,video,wheel <u>your-accountname</u><br>
+			passwd <u>your-accountname</u><br>
+			visudo<br>
+			Uncomment <u>%wheel ALL=(ALL:ALL) ALL</u></p>
 
-			<h3>笔记本睡眠/休眠(可选)</h3>
-			从睡眠中唤醒:<br>
+			<p>Add hibernate:<br>
 			vim /etc/mkinitcpio.conf<br>
-			找到HOOKS=(...)<br>
-			在filesystems后面添加resume<br>
-			HOOKS=(... filesystem <strong>resume</strong>)<br>
-			vim /etc/systemd/logind.conf<br>
-			取消HandleLidSwitch和HandleLidSwitchExternalPower的注释<br>
-			<a href="./pages/explain#explaination">
-				HandleLidSwitch=<i>hibernate</i><br>
-				HandleLidSwitchExternalPower=<i>suspend</i><br><br>
-			</a>
+			Find <u>HOOKS=(...)</u><br>
+			Add <u>resume</u> <b>behind</b> <u>filesystems</u><br>
+			It should look like this:<br>
+			HOOKS=(... filesystem <b>resume</b>)</p>
 
-			<h3>tty字体(可选)</h3>
-			echo FONT=ter-132n(n-正常 b-粗体) &gt; /etc/vconsole.conf<br><br>
+			<p>vim /etc/systemd/logind.conf<br>
+			Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u></p>
+
+			<p>What is <b>HandleLidSwitch</b> and <b>HandleLidSwitchExternalPower</b>?<br>
+			If you are using a laptop, when you close the lid,<br>
+			usually the computer don't hibernate if you dont add these.<br>
+			<b>HandleLidSwitchExternalPower</b> means if you are charging,<br>
+			when you close the lid, what pc is going to do.</p>
 			
-			<h3>高分辨率(1920x1080及以上):</h3>
+			<p>HandleLidSwitch=<i>hibernate</i><br>
+			HandleLidSwitchExternalPower=<i>suspend</i></p>
+
+			<p>tty font:<br>
+			echo FONT=ter-132n(n-正常 b-粗体) &gt; /etc/vconsole.conf</p>
+			
+			<p>High resolution with small window problem:<br>
 			echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment<br>
-			echo GDK_SCALE=1.25 &gt;&gt; /etc/environment<br><br>
+			echo GDK_SCALE=1.25 &gt;&gt; /etc/environment</p>
 
-			<h3><span id="important">强制</span>mesa使用...显卡驱动</h3>
-			<span id="require">echo MESA_LOADER_DRIVER_OVERRIDE=<i>zink</i> &gt;&gt; /etc/environment</span><br><br>
+			<p>If you are troubled with the intel graphic card,<br>
+			then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.<br>
 			
-			mkinitcpio -P<br>
+			echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment</p>
+			
+			<p>mkinitcpio -P<br>
 			exit<br>
 			umount /mnt/boot<br>
 			umount /mnt<br>
 			reboot<br>
-			系统桌面等配置<a href="./pages/config">点此</a>跳转
+			Desktop configuration: Click <a href="./pages/config">here</a></p>
 		</div>
 	</div>
 	
