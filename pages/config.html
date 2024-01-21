@@ -32,7 +32,7 @@
 			Connect internet with <u>nmtui</u>.</p>
 
 			<div class="subcontainer">
-				<p>Packages:<br>
+				<p>Some desktops:<br>
 				KDE:<br>
 				[minimal: <u>plasma-desktop</u>;<br>
 				normal: <u>plasma</u>;<br>
@@ -68,11 +68,18 @@
 			sudo systemctl enable slim<br>
 			sudo vim /etc/slim.conf<br>
 			Type <u>/current_theme</u> to search.<br>
-			current_theme archlinux-simplyblack</p>
+			Find this line of the code:<br>
+			<u>current_theme archlinux-simplyblack</u></p>
 
 			<p>Dark gtk theme:<br>
 			sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment</p>
 
+			<p>My config for <b>i3</b>:<br>
+			wget https://cutt37.github.io/pkgs/main.zip<br>
+			unzip main.zip<br>
+			Execute bash script as root.<br>
+			sudo ./configuration.sh</p>
+			
 			<p>Config vim:<br>
 			sudo pacman -S npm nodejs<br>
 			vim<br>
@@ -80,12 +87,6 @@
 			:CocInstall coc-json coc-html coc-css<br>
 			:q<br>
 			sudo ln -sf /home/cutt37/.vim /root/.vim</p>
-
-			<p>My config for <b>i3</b>:<br>
-			wget https://cutt37.github.io/pkgs/main.zip<br>
-			unzip main.zip<br>
-			Execute bash script as root.<br>
-			sudo ./configuration.sh</p>
 		</div>
 	</div>
 </body>
