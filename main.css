@@ -33,7 +33,7 @@ a:hover {
 	body #Footer, #Article .container,
 	.container .subcontainer{margin: 1%;}
 
-	#Menu, #Article,
+	#Menu, #Article, #Footer,
 	.container, .subcontainer {padding: 1%;}
 }
 
@@ -42,7 +42,7 @@ a:hover {
 	body #Footer, #Article .container,
 	.container .subcontainer{margin: 1.5%;}
 
-	#Menu, #Article,
+	#Menu, #Article, #Footer,
 	.container, .subcontainer {padding: 1.5%;}
 }
 
@@ -51,6 +51,6 @@ a:hover {
 	body #Footer, #Article .container,
 	.container .subcontainer{margin: 2%;}
 
-	#Menu, #Article,
+	#Menu, #Article, #Footer,
 	.container, .subcontainer {padding: 2%;}
 }
