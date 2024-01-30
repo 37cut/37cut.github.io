@@ -22,35 +22,49 @@
 			<p>Hello, there.<br>
 			Welcome to my website.</p>
 			
-			<div class="subcontainer">
-				<p>Play style: alternating.<br>
-				Keyboard and mouse.<br>
-				Mouse config: 1x, no raw.<br>
-				It's not a good idea to change dpi in osu,<br>
-				it'll cause the mouse drift.<br></p>
+			<p>Play style: alternating.<br>
+			Keyboard and mouse.<br>
+			Mouse config: 1x, no raw.<br>
+			It's not a good idea to change dpi in osu,<br>
+			it'll cause the mouse drift.<br></p>
 				
+			<div class="subcontainer">
 				<p>Because I'm using linux so mainly config in libinput.<br></p>
 
-
+				<p>Create a config file under:<br>
+				/usr/share/X11/xorg.conf.d</p>
+				
 				<p>50-mouse-accel.conf<br>
-				"AccelProfile" "<u>flat</u>"<br>
-				"AccelSpeed" "-0.46246"<br>
+				Section "InputClass"<br>
+				&emsp;Identifier ""<br>
+				&emsp;Driver "libinput"<br>
+				&emsp;MatchIsPointer "yes"<br>
+				&emsp;Option "AccelProfile" "<u>flat</u>"<br>
+				&emsp;Option "AccelSpeed" "-0.46246"<br>
+				EndSection</p>
+				
+				<p>You can get your mouse with <u>xinput</u> command.<br>
+				Then paste it inside of the Identifier quotes.<br>
 				It's necessary to use precise float num if you're using flat.</p>
 
-				<p>Here are two AccelProfile:<br>
-				<u>adaptive</u>: High precision but may lag.<br>
-				<u>flat</u>: Stable but not precise.</p>
-
-				<p>I have two accounts: one for mainly play,<br>
-				the other one for training.<br>
-				cutt37(Main)<br>
-				account-t37(Train)</p>
+				<p>What is AccelProfile?<br>
+				For example, when you are playing osu,<br>
+				<u>adaptive</u>: <b>Mouse movement</b> is very important,<br>
+				which you should put focus on mouse.<br>
+				<u>flat</u>: <b>Cursor movement</b> is very important,
+				which you just need to focus on the screen(cursor).<br>
+				It's pretty hard to explain these two accel method :(</p>
 			</div>
+
+			<p>I have two accounts: one for mainly play,<br>
+			the other one for training.<br>
+			cutt37(Main)<br>
+			account-t37(Train)</p>
 
 			<p>Disclaim<br>
 			I dont create skin so they're modified.</p>
 
-			<p>2024-01-26 updated<br>
+			<p>2024-01-30 updated<br>
 			Skin: #inabakumori <b>16:9</b><br>
 			Mediafire: <a href="https://mediafire.com/file/kgq6cp0vkyu9xhq/#inabakumori.osk/file">Download</a><br>
 			Github: <a href="./pkgs/#inabakumori.osk">Download</a></p>
@@ -60,10 +74,6 @@
 		<div class="container">
 			<p>My stupid script<br>
 			Image Processor: <a href="../pkgs/proj.zip">Download</a></p>
-			
-			<p>#mikuAutumn 'extra' things<br>
-			I changed the extra folder.<br>
-			Extra: <a href="../pkgs/extra.zip">Download</a>
 			</p>
 		</div>
 	</div>
