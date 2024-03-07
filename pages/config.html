@@ -97,6 +97,18 @@
 			:CocInstall coc-json coc-html coc-css<br>
 			:q<br>
 			sudo ln -sf /home/cutt37/.vim /root/.vim</p>
+
+			<div class="subcontainer">
+				<p>Battery:<br>
+				sudo vim /etc/tlp.conf<br>
+				Uncomment and set to:<br>
+				TLP_ENABLE=1<br>
+				TLP_DEFAULT_MODE=BAT<br>
+				CPU_SCALING_GOVERNOR_ON_BAT=powersave<br>
+				CPU_SCALING_MAX_FREQ_ON_BAT=4000000 (deps on your cpu)<br>
+				CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power<br>
+				NMI_WATCHDOG=0</p>
+			</div>
 		</div>
 	</div>
 </body>
