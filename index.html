@@ -26,11 +26,11 @@
 
 		<h2>Before we start, please notice ...</h2>
 		<div class="container">
-			<p>1. This is NOT two os installation guide.<br>
+			<p>1. This is NOT two os installation guide(certainly).<br>
 			2. <b>All</b> your data will be destoryed when you format the disk.<br>
 			3. Though wine can execute windows program but it only supports <b>x86_32(32 bits)</b>.<br>
 			If you are going to play most games on game platform, I still suggest you'd better keep windows.<br>
-			4. Actually <u>archinstall</u> is enough.<br>
+			4. Actually <u>archinstall</u> is enough(but I prefer manual install).<br>
 			Just type it in console and it'll start the installation.<br>
 			5. I suggest you to see arch official wiki.<br>
 			<a href="https://wiki.archlinux.org/title/Installation_guide">
@@ -39,7 +39,7 @@
 			<a href="https://wiki.archlinux.org/title/General_recommendations">
 				1.1 2.1 2.2 2.3 2.5 pt4 pt5 pt6 are necessary
 			</a><br>
-			6. <b>Take your own responsibility</b>.</p>
+			6. <b>Take your responsibility</b>.</p>
 		</div>
 
 		<h2>1.Connect to the internet(wireless)</h2>
@@ -126,10 +126,10 @@
 			<div class="subcontainer">
 				<p>Graphic card driver and microcode:<br>
 				Graphic card driver:<br>
-				intel: [modesetting(Ignore this),<br>
-				<u>vulkan-intel</u>,<u>intel-media-driver</u>(&gt;=gen5)<br>
+				intel: [modesetting(ignore this),<br>
+				<u>vulkan-intel</u>,<u>intel-media-driver</u>(gen5 or newer)<br>
 				,<u>libva-intel-driver</u>(GMA4500 to gen8)]<br>
-				amd: <u>xf86-video-amd</u> <u>xf86-video-radeon</u></p>
+				amd: <u>xf86-video-amd</u> <u>vulkan-radeon</u></p>
 
 				<p>Microcode:<br>
 				intel cpu: <u>intel-ucode</u>;<br>
@@ -212,7 +212,7 @@
 			echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment<br>
 			echo GDK_SCALE=1.25 &gt;&gt; /etc/environment</p>
 
-			<p>If you are troubled with the intel or some graphic card,<br>
+			<p>If you are troubled with the intel or some graphic cards,<br>
 			then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.<br>
 			Notice your fps may be less than before.<br>
 			echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment</p>
