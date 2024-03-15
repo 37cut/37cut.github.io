@@ -29,13 +29,16 @@
 
 			<p>sudo pacman -Syu<br>
 			sudo pacman -S wine-staging wine-mono winetricks \<br>
-			lib32-{libxcomposite,gnutls,vulkan-intel,\<br>
+			lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\<br>
 			libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}</p>
 			
 			<p>yay -S ttf-tahoma</p>
 
-			<p>WINEARCH=win32 winecfg<br>
-			Select "Windows 2000"</p>
+			<p>If you only want x86_32 environment, type this below:<br>
+			WINEARCH=win32 winecfg<br>
+			otherwise(I recommended this, but may exist bugs):<br>
+			winecfg<br>
+			Select "Windows XP"</p>
 
 			<p>winetricks<br>
 			Select "Select the default wineprefix"<br>
