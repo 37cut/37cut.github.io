@@ -5,23 +5,23 @@ or: `sudo dnf in`
 
 # Packages
 
-NetworkManager-tui
-alacritty
-i3
-xorg-x11-\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}*
-picom
-slim
-chromium
-pcmanfm
-vim-enhanced
-wine
-light
-dbus-x11
-winetricks *parameter with: --exclude=kf\\\**
-nodejs *optional*
-dunst *optional*
-gimp *optional*
-flameshot *optional*
+- NetworkManager-tui<br>
+- alacritty<br>
+- i3<br>
+- xorg-x11-\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}*<br>
+- picom<br>
+- slim<br>
+- chromium<br>
+- pcmanfm<br>
+- vim-enhanced<br>
+- wine<br>
+- light<br>
+- dbus-x11<br>
+- winetricks *parameter with: --exclude=kf\\\**<br>
+- nodejs *optional*<br>
+- dunst *optional*<br>
+- gimp *optional*<br>
+- flameshot *optional*
 
 # Files
 
