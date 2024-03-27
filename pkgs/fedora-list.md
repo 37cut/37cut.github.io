@@ -1,5 +1,6 @@
 # Fedora required packages
-# Install with: sudo dnf in
+Install with:
+``sudo dnf in
 
 # Packages
 
