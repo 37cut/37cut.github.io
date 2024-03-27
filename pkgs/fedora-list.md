@@ -25,6 +25,7 @@ or: `sudo dnf in`
 - gimp
 - flameshot
 - mpv
+- bluez
 
 # Files
 
