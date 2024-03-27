@@ -28,6 +28,6 @@ or: `sudo dnf in`
 
 # Files
 
-background.png
+- background.png
 
 
