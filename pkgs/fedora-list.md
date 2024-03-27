@@ -1,4 +1,4 @@
-# Fedora required packages
+# Fedora config
 
 Install with: `sudo dnf install`
 or: `sudo dnf in`
@@ -8,7 +8,7 @@ or: `sudo dnf in`
 - NetworkManager-tui<br>
 - alacritty<br>
 - i3<br>
-- xorg-x11-\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}*<br>
+- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}*<br>
 - picom<br>
 - slim<br>
 - chromium<br>
