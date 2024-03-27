@@ -17,11 +17,11 @@ or: `sudo dnf in`
 - wine<br>
 - light<br>
 - dbus-x11<br>
-- winetricks *parameter with: --exclude=kf\\\**<br>
-- nodejs *optional*<br>
-- dunst *optional*<br>
-- gimp *optional*<br>
-- flameshot *optional*
+- winetricks \**parameter with: --exclude=kf\\\**<br>
+- nodejs \**optional*<br>
+- dunst \**optional*<br>
+- gimp \**optional*<br>
+- flameshot \**optional*
 
 # Files
 
