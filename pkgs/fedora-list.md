@@ -11,13 +11,11 @@ or in short: `sudo dnf in`
 - gvfs-archive
 - xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
 
-<p>
 Uninstall some packages I dont need:<br>
 Remove with: `sudo dnf remove`<br>
 or in short: `sudo dnf rm`<br>
 
 xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
-</p>
 
 - picom
 - slim
