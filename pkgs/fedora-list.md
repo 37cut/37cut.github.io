@@ -1,7 +1,7 @@
 # Fedora config
 
-Install with: `sudo dnf install`
-or: `sudo dnf in`
+Install with: `sudo dnf install`<br>
+or in short: `sudo dnf in`
 
 # Packages
 
@@ -9,7 +9,16 @@ or: `sudo dnf in`
 - alacritty
 - i3
 - gvfs-archive
-- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}*
+- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
+
+<p>
+Uninstall some packages I dont need:<br>
+Remove with: `sudo dnf remove`<br>
+or in short: `sudo dnf rm`<br>
+
+xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
+</p>
+
 - picom
 - slim
 - chromium
@@ -26,6 +35,10 @@ or: `sudo dnf in`
 - flameshot
 - mpv
 - bluez
+- xarchiver
+- zsh
+- zsh-autosuggestions
+- zsh-syntax-highlighting
 
 # Files
 
