@@ -1,4 +1,8 @@
-# Fedora config
+# Fedora netinstall guide
+
+Here I use minimal install.<br>
+If you're using laptop,<br>
+it's very important to check **Common NetworkManager Submodules**.<br>
 
 Install with: `sudo dnf in`<br>
 
@@ -17,20 +21,25 @@ xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
 
 - picom
 - slim
+
+If slim not loaded on startup, try this:<br>
+`sudo systemctl disable multi-user.target`
+
+- bluez
 - chromium
+- dbus-x11
+- dunst
+- flameshot
+- gimp
+- htop
+- light
+- mousepad
+- mpv
+- nodejs
 - pcmanfm
 - vim-enhanced
 - wine
-- light
-- dbus-x11
 - winetricks \**parameter with: --exclude=kf\\\**<br>
-- mousepad
-- nodejs
-- dunst
-- gimp
-- flameshot
-- mpv
-- bluez
 - xarchiver
 - zsh
 - zsh-autosuggestions
@@ -54,6 +63,6 @@ sudo dnf install \
 https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 ```
 
-Override the default ffmpeg, install from rpmfusion.
+Override the default ffmpeg, using ffmpeg from rpmfusion:
 
 `sudo dnf in ffmpeg --allowerasing`
