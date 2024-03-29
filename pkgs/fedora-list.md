@@ -1,9 +1,8 @@
 # Fedora config
 
-Install with: `sudo dnf install`<br>
-or in short: `sudo dnf in`
+Install with: `sudo dnf in`<br>
 
-# Packages
+## Packages
 
 - NetworkManager-tui
 - alacritty
@@ -12,8 +11,7 @@ or in short: `sudo dnf in`
 - xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
 
 Uninstall some packages I dont need:<br>
-Remove with: `sudo dnf remove`<br>
-or in short: `sudo dnf rm`<br>
+Remove with: `sudo dnf rm`<br>
 
 xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
 
@@ -38,13 +36,24 @@ xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
-# Files
+## Files
 
 - background.png
 
-# Configs
+## Configs
 
 ```shell
 chsh -s /usr/bin/zsh
 usermod -a -G audio your_account
 ```
+
+Add rpmfusion *free* repos:
+
+```shell
+sudo dnf install \
+https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
+
+Override the default ffmpeg, install from rpmfusion.
+
+`sudo dnf in ffmpeg --allowerasing`
