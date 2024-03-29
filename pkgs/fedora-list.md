@@ -2,9 +2,9 @@
 
 Here I use minimal install.<br>
 If you're using laptop,<br>
-it's very important to check **Common NetworkManager Submodules**.<br>
+it's very important to check **Common NetworkManager Submodules**.
 
-Install with: `sudo dnf in`<br>
+Install with: `sudo dnf in`
 
 ## Packages
 
@@ -15,7 +15,7 @@ Install with: `sudo dnf in`<br>
 - xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
 
 Uninstall some packages I dont need:<br>
-Remove with: `sudo dnf rm`<br>
+Remove with: `sudo dnf rm`
 
 xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
 
@@ -40,6 +40,10 @@ If slim not loaded on startup, try this:<br>
 - vim-enhanced
 - wine
 - winetricks \**parameter with: --exclude=kf\\\**<br>
+- wqy-zenhei-fonts
+
+fc-cache -fv
+
 - xarchiver
 - zsh
 - zsh-autosuggestions
