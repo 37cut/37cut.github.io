@@ -42,4 +42,9 @@ xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
 
 - background.png
 
+# Configs
 
+```shell
+chsh -s /usr/bin/zsh
+usermod -a -G audio *your_account*
+```
