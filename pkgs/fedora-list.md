@@ -70,3 +70,7 @@ https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fed
 Override the default ffmpeg, using ffmpeg from rpmfusion:
 
 `sudo dnf in ffmpeg --allowerasing`
+
+Disable zram
+
+`sudo dnf rm zram-generator-defaults`
