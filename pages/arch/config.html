@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Config</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="../../files/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="../../files/styles/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../../files/styles/colors.css">
+
+	<script type="text/javascript" src="../../files/scripts/main.js" defer></script>
+	<script type="text/javascript" data-domain="cutt37.is-a.dev" src="https://analytics.is-a.dev/js/script.js" defer></script>	
+</head>
+
+<body>
+	<div id="Menu">
+		<a href="./arch" id="available">Home</a>
+		<a href="./" id="current">Config</a>
+		<a href="./others" id="available">Others</a>
+	</div>
+
+	<div id="Article">
+		<h2>Desktop environment</h2>
+		<div class="container">
+			<p>Login as <u>your-accountname</u></p>
+			
+			<p>Services:<br>
+			sudo systemctl enable acpid bluetooth tlp NetworkManager<br>
+			sudo systemctl start NetworkManager<br>
+			Connect internet with <u>nmtui</u>.</p>
+
+			<div class="subcontainer">
+				<p>Some desktops:<br>
+				KDE:<br>
+				[minimal: <u>plasma-desktop</u>;<br>
+				normal: <u>plasma</u>;<br>
+				full: <u>plasma-meta</u>]<br>
+				GNOME:<br>
+				[normal: <u>gnome</u>;<br>
+				extra-apps: <u>gnome-extra</u>]</p>
+
+				<p>sudo pacman -S i3{-wm,lock,status} \<br>
+				network-manager-applet pcmanfm-gtk3 xarchiver dmenu \<br>
+				dunst feh ibus ibus-libpinyin picom flameshot mpv \<br>
+				zsh zsh-{completions,autosuggestions,syntax-highlighting} \<br>
+				chromium alacritty xss-lock</p>
+
+				<p><u>pcmanfm</u> is a file manager.<br>
+				<u>xarchiver</u> extract or compress sth.<br>
+				<u>dmenu</u> like 'Windows Startup'<br>
+				<u>dunst</u> is a notifier.<br>
+				<u>feh</u> is a lightweight image viewer.<br>
+				<u>ibus</u> is a input method.<br>
+				<u>flameshot</u> is a screenshot.<br>
+				<u>mpv</u> is a video(or audio) player.<br>
+				<u>zsh</u> is one of the linux shells.<br></p>
+			</div>
+
+			<p>Configuration:<br>
+			sudo echo i3 &gt; .xinitrc<br>
+			sudo echo INPUT_METHOD=ibus &gt;&gt; /etc/environment<br>
+			sudo echo XMODIFIERS=@im=ibus &gt;&gt; /etc/environment</p>
+
+			<p>Missing firmwares: <br>
+			Read this: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
+				mkinitcpio - ArchWiki</a><br>
+			yay -S <u>missing-firmwares</u><br>
+			mkinitcpio -P</p>
+
+			<p>yay and others:<br>
+			wget https://cutt37.github.io/pkgs/yay-12.1.0-1-x86_64.pkg.tar.zst<br>
+			yay -S slim archlinux-themes-slim ttf-symbola \<br>
+			{aic94xx,ast,wd719x}-firmware upd72020x-fw</p>
+
+			<p>Slim theme:<br>
+			sudo systemctl enable slim<br>
+			sudo vim /etc/slim.conf<br>
+			Type /current_theme to search.<br>
+			Find this line of the code:<br>
+			current_theme archlinux-simplyblack</p>
+
+			<p>Dark gtk theme:<br>
+			sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment</p>
+
+			<p>My config for <b>i3</b>:<br>
+			wget https://cutt37.github.io/pkgs/main.zip<br>
+			unzip main.zip<br>
+			Execute bash script as root.<br>
+			sudo ./configuration.sh</p>
+			
+			<p>Config vim:<br>
+			sudo pacman -S npm nodejs<br>
+			vim<br>
+			:PlugInstall<br>
+			:CocInstall coc-json coc-html coc-css<br>
+			:q<br>
+			sudo ln -sf /home/cutt37/.vim /root/.vim</p>
+
+			<div class="subcontainer">
+				<p>Battery:<br>
+				sudo vim /etc/tlp.conf<br>
+				Uncomment and set to:<br>
+				TLP_ENABLE=1<br>
+				TLP_DEFAULT_MODE=BAT<br>
+				CPU_SCALING_GOVERNOR_ON_BAT=powersave<br>
+				CPU_SCALING_MAX_FREQ_ON_BAT=4000000 (deps on your cpu)<br>
+				CPU_ENERGY_PERF_POLICY_ON_BAT=balance_power<br>
+				NMI_WATCHDOG=0</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
