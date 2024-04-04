@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="../../files/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="../../files/styles/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../../files/styles/colors.css">
+
+	<script type="text/javascript" src="../../files/scripts/main.js" defer></script>
+	<script type="text/javascript" data-domain="cutt37.is-a.dev" src="https://analytics.is-a.dev/js/script.js" defer></script>	
+</head>
+
+<body>
+	<div id="Menu">
+		<a href="./" id="current">Home</a>
+		<a href="config" class="available">Config</a>
+		<a href="others" class="available">Others</a>
+	</div>
+	
+	<h1>Archlinux installation</h1>
+	<div id="Article">
+
+		<h2>Before we start, please notice ...</h2>
+		<div class="container">
+			<ol>
+				<li>This is NOT two os installation guide(certainly).</li>
+
+				<li><b>All</b> your data will be destoryed when you format the disk.</li>
+				
+				<li>I suggest you keep windows. It's stable and clear than linux, I think.<br>
+				But if you really hate windows, you can try it.
+				Not recommended start with <b>nothing</b> in <b>any linux</b>.</li>
+
+				<li>Avoid always following my guide, may contain issues.</li>
+				
+				<li>Actually <u>archinstall</u> is enough(but I prefer manual install).</li>
+				Just type it in console and it'll start the installation.</li>
+				
+				<li>I suggest you read these official wiki:</li>
+
+				<li><a href="https://wiki.archlinux.org/title/Installation_guide">
+					First pre-install
+				</a></li>
+
+				<li><a href="https://wiki.archlinux.org/title/General_recommendations">
+					1.1 2.1 2.2 2.3 2.5 pt4 pt5 pt6 are necessary
+				</a></li>
+
+				<li><b>Take your responsibility</b>.</li>
+			</ol>	
+		</div>
+
+		<h2>1.Connect to the internet(wireless)</h2>
+		<div class="container">
+			<p><u>ifconfig</u> to check the network card.<br>
+			Here <b>wlan0</b> as default.</p>	
+			
+			<p>iwctl<br>
+			station wlan0 scan<br>
+			station wlan0 get-networks<br>
+			station wlan0 connect <u>any-networks</u></p>
+
+			<p>Once you're done, type <u>exit</u>.</p>
+		</div>
+
+		<h2>2.Disk partition and format</h2>
+		<div class="container">
+			<p>If you are using legacy bios boot,<br>
+			you don't have to create the efi partition and the <u>efibootmgr</u> package.<br>
+			Before partition the disk, make sure the target isn't the udisk.<br>
+			also notice some disks names are different.<br>
+			If it's a nvme disk it should be /dev/<u>nvmeXnYpZ</u>.</p>
+
+			<p><u>fdisk -l</u> to check disks on your computer.<br>
+			<u>cfdisk</u> to create partition table.</p>
+
+			<table>
+			<caption>Partition table</caption>
+			<tr>
+				<th>Part(s)</th>
+				<th>Type</th>
+				<th>Size</th>
+			</tr>
+
+			<tr>
+				<td>nvme0n1p1</td>
+				<td>EFI</td>
+				<td>300MiB</td>
+			</tr>
+
+			<tr>
+				<td>nvme0n1p2</td>
+				<td>swap</td>
+				<td>4096MiB</td>
+			</tr>
+
+			<tr>
+				<td>nvme0n1p3</td>
+				<td>f2fs(or you can use ext4)</td>
+				<td>Remain</td>
+			</tr>
+			</table>
+			<div class="subcontainer">
+				<p>Formatting:<br>
+				Here are some filesystems like: ext4, brtfs, xfs, f2fs...<br>
+				mkfs.fat -F 32 /dev/nvme0n1p1<br>
+				mkswap /dev/nvme0n1p2<br>
+				swapon /dev/nvme0n1p2<br>
+				mkfs.f2fs /dev/nvme0n1p3<br>
+				If you want to make a ext4 partition disk for root(not account but one of disk partition instead),<br>
+				then type this below:<br>
+				mkfs.ext4 /dev/nvme0n1p3</p>
+				
+				<p>Mounting:<br>
+				mount /dev/nvme0n1p3 /mnt<br>
+				mount --mkdir /dev/nvme0n1p1 /mnt/boot</p>
+			</div>
+		</div>
+
+		<h2>3.Packages</h2>
+		<div class="container">
+			<p>Now you should setup the mirror to download the packages.<br>
+			Some useful tools:<br>
+			<a href="https://archlinux.org/mirrors/status/">Arch mirrorlist</a><br>
+			<a href="https://archlinux.org/mirrorlist/">Arch generator</a></p>
+			<p>vim /etc/pacman.d/mirrorlist<br>
+			Insert this code <u>Server = /your/mirror/$repo/os/$arch</u><br>
+			It's a good idea to refresh the repo with <u>pacman -Syu</u>.</p>
+		
+			<p>pacstrap -K /mnt linux linux-firmware base \<br>
+			base-devel efibootmgr grub \<br>
+			networkmanager pipewire pipewire-{alsa,jack,pulse} mesa \<br>
+			xorg xorg-server udisks2 gvfs ntfs-3g wget git vi vim \<br>
+			wqy-microhei-lite terminus-font bluez bluez-utils \<br>
+			alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}</p>
+
+			<div class="subcontainer">
+				<p>Graphic card driver and microcode:<br>
+				Graphic card driver:<br>
+				intel: [<u>vulkan-intel</u>,<u>intel-media-driver</u>(gen5 or newer)<br>
+				,<u>libva-intel-driver</u>(GMA4500 to gen8)]<br>
+				amd: <u>xf86-video-amd</u> <u>vulkan-radeon</u></p>
+
+				<p>Microcode:<br>
+				intel cpu: <u>intel-ucode</u>;<br>
+				amd cpu: <u>amd-ucode</u>;</p>
+
+				<p>pacstrap /mnt intel-ucode intel-media-driver vulkan-intel \<br>
+				xf86-video-fbdev linux-firmware-qlogic</p>
+			</div>
+
+			<p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab<br>
+			arch-chroot /mnt</p>
+		</div>
+
+		<h2>4.Time and language</h2>
+		<div class="container">
+			<p><u>ls /usr/share/zoneinfo</u> to check places.<br>
+			ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime<br>
+			hwclock --systohc</p>
+
+			<p>vim /etc/locale.gen<br>
+			Find your locale and uncomment it.<br>
+			Here I uncomment <u>en_US.UTF-8</u> <u>zh_CN.UTF-8</u></p>
+
+			<p>locale-gen<br>
+			echo LANG=en_US.UTF-8 &gt; /etc/locale.conf<br>
+			echo <u>your-hostname</u> &gt; /etc/hostname</p>
+		</div>
+
+		<h2>5.GRUB config</h2>
+		<div class="container">
+			<p>Legacy:<br>
+			grub-install --target=i386-pc <u>/dev/...</u><br>
+			<b>Note: /dev/... is NOT a partition</b><br>
+			UEFI:<br>
+			grub-install --target=x86_64-efi --efi-directory=/boot</p>
+			
+			<p>vim /etc/default/grub<br>
+			Find <u>GRUB_CMDLINE_LINUX_DEFAULT</u> and add these:<br>
+			fbcon=nodefer<br>
+			modprobe.blacklist=<i>iTCO_wdt</i> (disable watchdog)<br>
+			resume=<i>/dev/nvme0n1p2</i> (enable hibernate)<br>
+			video=efifb:nobgrt</p>
+
+			<p>grub-mkconfig -o /boot/grub/grub.cfg</p>
+		</div>
+
+		<h2>6.Others</h2>
+		<div class="container">
+			<p>Add one account:<br>
+			useradd -m -G audio,storage,video,wheel <u>your-accountname</u><br>
+			passwd <u>your-accountname</u><br>
+			visudo<br>
+			Uncomment <u>%wheel ALL=(ALL:ALL) ALL</u></p>
+
+			<div class="subcontainer">
+				<p>Add hibernate:<br>
+				vim /etc/mkinitcpio.conf<br>
+				Find <u>HOOKS=(...)</u><br>
+				Add <u>resume</u> <b>behind</b> <u>filesystems</u><br>
+				It should look like this:<br>
+				HOOKS=(... filesystem <b>resume</b>)</p>
+
+				<p>vim /etc/systemd/logind.conf<br>
+				Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u></p>
+
+				<p>What is <b>HandleLidSwitch</b> and <b>HandleLidSwitchExternalPower</b>?<br>
+				If you are using a laptop, when you close the lid,<br>
+				usually the computer don't hibernate if you dont add these.<br>
+				<b>HandleLidSwitchExternalPower</b> means if you are charging,<br>
+				when you close the lid, what pc is going to do.</p>
+
+				<p>HandleLidSwitch=<i>hibernate</i><br>
+				HandleLidSwitchExternalPower=<i>suspend</i></p>
+			</div>
+
+			<p>tty font:<br>
+			echo FONT=ter-132n(n-normal b-bold) &gt; /etc/vconsole.conf</p>
+
+			<p>High resolution with small window problem(Bigger resolution, bigger scale value):<br>
+			echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment<br>
+			echo GDK_SCALE=1.25 &gt;&gt; /etc/environment</p>
+
+			<p>If you are troubled with the intel or some graphic cards,<br>
+			then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.<br>
+			Notice your fps may be less than before.<br>
+			echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment</p>
+
+			<p>mkinitcpio -P<br>
+			exit<br>
+			umount /mnt/boot<br>
+			umount /mnt<br>
+			reboot<br>
+			Desktop configuration: Click <a href="./pages/config">here</a></p>
+		</div>
+	</div>
+</body>
+</html>
