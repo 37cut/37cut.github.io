@@ -26,7 +26,6 @@ If slim not loaded on startup, try this:<br>
 `sudo systemctl disable multi-user.target`
 
 - bluez
-- chromium
 - dbus-x11
 - dunst
 - flameshot
@@ -74,3 +73,5 @@ Override the default ffmpeg, using ffmpeg from rpmfusion:
 Disable zram
 
 `sudo dnf rm zram-generator-defaults`
+
+[Install](https://minbrowser.org/) minbrowser

@@ -11,6 +11,7 @@ body #Footer, #Article .container,
 	border: 2px solid white;
 }
 
+ol {padding-inline-start: 22px;}
 
 /* The submenu and the hyperlink  */
 a {
@@ -24,10 +25,7 @@ a:hover {
 	transition: all .2s ease-in;
 }
 
-#Menu a {
-	display: block;
-}
-
+#Menu a {display: block;}
 #Menu #current:before {content: "At ";}
 
 
