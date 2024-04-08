@@ -29,25 +29,24 @@
 			Uncomment [multilib] and mirror</p>
 
 			<p>sudo pacman -Syu<br>
-			sudo pacman -S wine-staging wine-mono winetricks \<br>
+			sudo pacman -S wine-staging winetricks \<br>
 			lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\<br>
 			libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}</p>
 			
 			<p>yay -S ttf-tahoma</p>
 
-			<p>If you only want x86_32 environment, type this below:<br>
+			<p>If you only have x86_32 or bad pc, type this below:<br>
 			WINEARCH=win32 winecfg<br>
-			otherwise(I recommended this, but may exist bugs):<br>
-			winecfg<br>
-			Select "Windows XP"</p>
+			Otherwise(Contain unique bugs):<br>
+			winecfg</p>
 
 			<p>winetricks<br>
 			Select "Select the default wineprefix"<br>
 			Select "Install a Windows DLL or component"<br>
 			Select "dotnet40"</p>
 
-			<p>mkdir yourfolder<br>
-			wine yourfile.exe</p>
+			<p>mkdir your_folder<br>
+			wine your_file.exe</p>
 		</div>
 	</div>
 </body>
