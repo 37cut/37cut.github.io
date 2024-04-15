@@ -8,19 +8,8 @@ Install with: `sudo dnf in`
 
 ## Packages
 
-- NetworkManager-tui
 - alacritty
-- i3
-- gvfs-archive
-- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
-
-Uninstall some packages I dont need:<br>
-Remove with: `sudo dnf rm`
-
-xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
-
-- picom
-- slim
+- alsa-utils
 
 If slim not loaded on startup, try this:<br>
 `sudo systemctl disable multi-user.target`
@@ -30,12 +19,17 @@ If slim not loaded on startup, try this:<br>
 - dunst
 - flameshot
 - gimp
+- gvfs-archive
 - htop
+- i3
 - light
 - mousepad
 - mpv
+- NetworkManager-tui
 - nodejs
 - pcmanfm
+- picom
+- slim
 - vim-enhanced
 - wine
 - winetricks \**parameter with: --exclude=kf\\\**<br>
@@ -44,13 +38,16 @@ If slim not loaded on startup, try this:<br>
 fc-cache -fv
 
 - xarchiver
+- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
+
+Uninstall some packages I dont need:<br>
+Remove with: `sudo dnf rm`
+
+xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
+
 - zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
-
-## Files
-
-- background.png
 
 ## Configs
 
