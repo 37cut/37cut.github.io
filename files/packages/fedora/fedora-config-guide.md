@@ -29,7 +29,6 @@ If slim not loaded on startup, try this:<br>
 - nodejs
 - pcmanfm
 - picom
-- slim
 - vim-enhanced
 - wine
 - winetricks \**parameter with: --exclude=kf\\\**<br>
@@ -38,7 +37,11 @@ If slim not loaded on startup, try this:<br>
 fc-cache -fv
 
 - xarchiver
-- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-{xdm},xorg-x11-drivers*
+- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-drivers*
+
+Config xorg-x11-xdm: `vim /etc/X11/xdm/Xsetup_0`<br>
+Add `/usr/bin/feh --borderless --no-xinerama --no-menus --geometry 3840x2160 --bg-fill /home/cutt37/.config/i3/Kano.png &`
+Save and quit.
 
 Uninstall some packages I dont need:<br>
 Remove with: `sudo dnf rm`
