@@ -42,14 +42,13 @@ export HOME=/home/cutt37
 /usr/bin/feh --borderless --no-xinerama --no-menus --no-fehbg --cache-size '16' --window-id ':0'  --geometry '3840x2160' --bg-fill '/home/cutt37/.config/i3/Kano.png' &
 ```
 
-Add .xsession: `touch .xsession && echo i3 > .xsession`
+Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xession executeable: `chmod +x .xsession`
 
 
 Uninstall some packages I dont need:<br>
+xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}<br>
 Remove with: `sudo dnf rm`
-
-xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}
 
 - zsh
 - zsh-autosuggestions
