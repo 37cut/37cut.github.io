@@ -40,8 +40,11 @@ fc-cache -fv
 - xorg-x11-\\\* *parameter with: --exclude=xorg-x11-drivers*
 
 Config xorg-x11-xdm: `vim /etc/X11/xdm/Xsetup_0`<br>
-Write this code into Xsetup_0:<br>
-`/usr/bin/feh --borderless --no-xinerama --no-menus --geometry 3840x2160 --bg-fill /home/cutt37/.config/i3/Kano.png &`
+Write these codes into Xsetup\_0:<br>
+```shell
+export HOME=/home/cutt37
+/usr/bin/feh --borderless --no-xinerama --no-menus --no-fehbg --cache-size '16' --window-id ':0'  --geometry '3840x2160' --bg-fill '/home/cutt37/.config/i3/Kano.png' &
+```
 
 Add .xsession: `touch .xsession && echo i3 > .xsession`
 Make .xession executeable: `chmod +x .xsession`
