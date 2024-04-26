@@ -10,10 +10,6 @@ Install with: `sudo dnf in`
 
 - alacritty
 - alsa-utils
-
-If slim not loaded on startup, try this:<br>
-`sudo systemctl disable multi-user.target`
-
 - bluez
 - dbus-x11
 - dunst
