@@ -1,21 +1,29 @@
+const Footer = document.createElement('div')
+const ToIndex = document.createElement('div')
+const ToIndexContent = document.createElement('p')
+
+Footer.setAttribute('id', 'Footer')
+ToIndex.setAttribute('class', 'functionbuttons')
+ToIndexContent.appendChild(document.createTextNode('To index.'))
+ToIndex.appendChild(ToIndexContent)
+
 if (document.documentElement.scrollHeight > window.innerHeight) {
-	const Footer = document.createElement('div')
-	const FooterContent = document.createElement('p')
+	const ToTop = document.createElement('div')
+	const ToTopContent = document.createElement('p')
 
-	FooterContent.appendChild(document.createTextNode('To top.'))
-	Footer.appendChild(FooterContent)
+	ToTop.setAttribute('class', 'functionbuttons')
+	ToTopContent.appendChild(document.createTextNode('To top.'))
+	ToTop.appendChild(ToTopContent)
+	Footer.appendChild(ToTop)
 	
-	Footer.setAttribute('id', 'Footer')
-	Footer.style.textAlign='center'
-	Footer.style.backgroundColor='#2f2f2f'
-	
-	document.body.appendChild(Footer)
-
-	Footer.onclick = function() {
+	ToTop.onclick = function() {
 		window.scrollTo({
-			top: 0,
-			left: 0,
-			behavior: 'smooth'
-		})
-	}
+			top: 0, left: 0,
+			behavior: 'smooth'})}
+
+	ToIndex.onclick = function() {
+		window.location='../../'}
 }
+
+Footer.appendChild(ToIndex)
+document.body.appendChild(Footer)

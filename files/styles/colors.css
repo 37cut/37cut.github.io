@@ -1,6 +1,6 @@
 body {background-color: #1f1f1f;}
-#Menu, #Article {background-color: #2f2f2f;}
-.container {background-color: #3f3f3f;}
+#Menu, #Article, #Footer {background-color: #2f2f2f;}
+.container, .functionbuttons {background-color: #3f3f3f;}
 .subcontainer {background-color: #4f4f4f;}
 
 h1 {color: #d0d0d0;}

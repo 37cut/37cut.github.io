@@ -1,17 +1,23 @@
 body, h1, h2, #Footer p {margin: 0;}
 
-body #Menu, body #Article,
-body #Footer, #Article .container,
+body #Menu, body #Article, body #Footer,
+#Article .container,
+#Footer .functionbuttons,
 .container .subcontainer {margin: .5%;}
-.container, .subcontainer {overflow-wrap: break-word;}
 
 #Menu, #Article, #Footer,
-.container, .subcontainer {
+.container, .subcontainer,
+.functionbuttons {
 	padding: .5%;
 	border: 2px solid white;
 }
+.container, .subcontainer {word-wrap: break-word;}
+
+#Footer {text-align: center;}
 
 ol {padding-inline-start: 22px;}
+
+
 
 /* The submenu and the hyperlink  */
 a {
@@ -30,29 +36,36 @@ a:hover {
 
 
 
+/* Display */
 @media only screen and (max-width: 960px) {
-	body #Menu, body #Article,
-	body #Footer, #Article .container,
-	.container .subcontainer{margin: 1%;}
+	body #Menu, body #Article, body #Footer,
+	#Article .container,
+	#Footer .functionbuttons,
+	.container .subcontainer {margin: 1%;}
 
 	#Menu, #Article, #Footer,
-	.container, .subcontainer {padding: 1%;}
+	.container, .subcontainer,
+	.functionbuttons {padding: 1%;}
 }
 
 @media only screen and (max-width: 720px) {
-	body #Menu, body #Article,
-	body #Footer, #Article .container,
-	.container .subcontainer{margin: 1.5%;}
+	body #Menu, body #Article, body #Footer,
+	#Article .container,
+	#Footer .functionbuttons,
+	.container .subcontainer {margin: 1.5%;}
 
 	#Menu, #Article, #Footer,
-	.container, .subcontainer {padding: 1.5%;}
+	.container, .subcontainer,
+	.functionbuttons {padding: 1.5%;}
 }
 
 @media only screen and (max-width: 480px) {
-	body #Menu, body #Article,
-	body #Footer, #Article .container,
-	.container .subcontainer{margin: 2%;}
+	body #Menu, body #Article, body #Footer,
+	#Article .container,
+	#Footer .functionbuttons,
+	.container .subcontainer {margin: 2%;}
 
 	#Menu, #Article, #Footer,
-	.container, .subcontainer {padding: 2%;}
+	.container, .subcontainer,
+	.functionbuttons {padding: 2%;}
 }
