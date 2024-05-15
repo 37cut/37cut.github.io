@@ -20,10 +20,10 @@ if (document.documentElement.scrollHeight > window.innerHeight) {
 		window.scrollTo({
 			top: 0, left: 0,
 			behavior: 'smooth'})}
-
-	ToIndex.onclick = function() {
-		window.location='../../'}
 }
+
+ToIndex.onclick = function() {
+		window.location='../../'}
 
 Footer.appendChild(ToIndex)
 document.body.appendChild(Footer)
