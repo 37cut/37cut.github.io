@@ -9,7 +9,7 @@ body #Menu, body #Article, body #Footer,
 .container, .subcontainer,
 .functionbuttons {
 	padding: .5%;
-	box-shadow: 4px 8px 2px black;
+	box-shadow: 2px 2px 8px black;
 	border: 2px solid white;
 }
 .container, .subcontainer {word-wrap: break-word;}
