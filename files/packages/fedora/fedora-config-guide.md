@@ -48,6 +48,8 @@ Make .xession executeable: `chmod +x .xsession`
 
 Uninstall some packages I dont need:<br>
 xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}<br>
+amd-{gpu,ucode}-firmware<br>
+nvidia-gpu-firmware<br>
 Remove with: `sudo dnf rm`
 
 - zsh

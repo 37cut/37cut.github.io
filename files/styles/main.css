@@ -9,9 +9,8 @@ body #Menu, body #Article, body #Footer,
 .container, .subcontainer,
 .functionbuttons {
 	padding: .5%;
-	box-shadow: 2px 2px 8px black;
-	border: 2px solid white;
-}
+	border: 2px solid #000000;
+	box-shadow: 2px 2px 4px #cccccc;}
 .container, .subcontainer {word-wrap: break-word;}
 
 #Footer {text-align: center;}
@@ -23,22 +22,19 @@ ol {padding-inline-start: 22px;}
 /* The submenu and the hyperlink  */
 a {
 	text-decoration: none;
-	transition: all .2s ease-out;
-}
+	transition: all .2s ease-out;}
 
 a:hover {
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
-	transition: all .2s ease-in;
-}
-
-#Menu a {display: block;}
-#Menu #current:before {content: "At ";}
+	transition: all .2s ease-in;}
 
 
 
 /* Display */
 @media only screen and (max-width: 960px) {
+    #Menu a {display: block;}
+
 	body #Menu, body #Article, body #Footer,
 	#Article .container,
 	#Footer .functionbuttons,

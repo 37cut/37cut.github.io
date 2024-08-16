@@ -22,34 +22,18 @@
 		<a href="./others" class="available">Others</a>
 	</div>
 	
-	<h1>Archlinux installation</h1>
-	
 	<div id="Article">
-		<h2>Before we start, please notice ...</h2>
+        <h1>Archlinux installation</h1>		
+        <h2>Notes:</h2>
 		<div class="container">
 			<ol>
-				<li>Status tag tells you can or not follow the guide.<br>
-				Status: <b>Unstable(updating the website)</b>.</li>
-
-				<li>This is NOT two os installation guide(certainly).</li>
-
-				<li><b>All</b> your data will be destoryed when you format the disk.</li>
-
-				<li>I suggest you keep windows(if you're a gamer).<br>
-				It's <b>stable</b> than linux, I think.<br>
-				Not recommended start with <b>nothing</b> in <b>any linux</b>.</li>
-
-				<li>Actually <u>archinstall</u> is enough(but I prefer manual install).</li>
-				Just type it in console and it'll start the installation.</li>
-
 				<li>I suggest you read these official wiki:<br>
 				<a href="https://wiki.archlinux.org/title/Installation_guide">
 				First pre-install</a><br>
 				<a href="https://wiki.archlinux.org/title/General_recommendations">
-				1.1 2.1 2.2 2.3 2.5 pt4 pt5 pt6 are necessary</a>
-				</li>
+                Software & Hardware Issues/Wikis</a></li>
 
-				<li><b>Take your responsibility</b>.</li>
+				<li>Take your responsibility.</li>
 			</ol>	
 		</div>
 
@@ -61,7 +45,7 @@
 			<p>iwctl<br>
 			station wlan0 scan<br>
 			station wlan0 get-networks<br>
-			station wlan0 connect <u>any-networks</u></p>
+			station wlan0 connect <u>select_network</u></p>
 
 			<p>Once you're done, type <u>exit</u>.</p>
 		</div>
@@ -127,8 +111,8 @@
 			<a href="https://archlinux.org/mirrors/status/">Arch mirrorlist</a><br>
 			<a href="https://archlinux.org/mirrorlist/">Arch generator</a></p>
 			<p>vim /etc/pacman.d/mirrorlist<br>
-			Insert this code <u>Server = /your/mirror/$repo/os/$arch</u><br>
-			It's a good idea to refresh the repo with <u>pacman -Syu</u>.</p>
+			Insert this code: <u>Server = /your/mirror/$repo/os/$arch</u><br>
+			Refresh your repo with: <u>pacman -Syu</u>.</p>
 		
 			<p>pacstrap -K /mnt linux linux-firmware base \<br>
 			base-devel efibootmgr grub \<br>
@@ -175,7 +159,7 @@
 		<div class="container">
 			<p>Legacy:<br>
 			grub-install --target=i386-pc <u>/dev/...</u><br>
-			<b>Note: /dev/... is NOT a partition</b><br>
+			Note: /dev/... is a partition part.<br>
 			UEFI:<br>
 			grub-install --target=x86_64-efi --efi-directory=/boot</p>
 			
