@@ -10,7 +10,7 @@ body #Menu, body #Article, body #Footer,
 .functionbuttons {
 	padding: .5%;
 	border: 2px solid #000000;
-	box-shadow: 2px 2px 4px #cccccc;}
+	box-shadow: 2px 2px 4px #999999;}
 .container, .subcontainer {word-wrap: break-word;}
 
 #Footer {text-align: center;}
