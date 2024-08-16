@@ -28,13 +28,12 @@ a:hover {
 	text-decoration: underline;
 	text-decoration-thickness: 1px;
 	transition: all .2s ease-in;}
+#Menu a {display: block;}
 
 
 
 /* Display */
 @media only screen and (max-width: 960px) {
-    #Menu a {display: block;}
-
 	body #Menu, body #Article, body #Footer,
 	#Article .container,
 	#Footer .functionbuttons,
