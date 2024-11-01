@@ -2,7 +2,7 @@
 
 Here I use minimal install.<br>
 If you're using laptop,<br>
-it's very important to check **Common NetworkManager Submodules**.
+you should check **Common NetworkManager Submodules**.
 
 Install with: `sudo dnf in`
 
@@ -40,8 +40,7 @@ fc-cache -fv
 Config xorg-x11-xdm: `vim /etc/X11/xdm/Xsetup_0`<br>
 Write these codes into Xsetup\_0:<br>
 ```shell
-export HOME=/home/cutt37
-/usr/bin/feh --borderless --no-xinerama --no-menus --no-fehbg --cache-size '16' --window-id ':0'  --geometry '3840x2160' --bg-fill '/home/cutt37/.config/i3/Kano.png' &
+/usr/bin/feh --borderless --no-xinerama --no-menus --no-fehbg --cache-size '16' --window-id ':0' --geometry '3840x2160' --bg-fill '/home/cutt37/.config/i3/Kano.png' &
 ```
 
 Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
