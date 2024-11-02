@@ -71,11 +71,6 @@ sudo dnf install \
 https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 ```
 
-Make $HOME/ibus/bus folder root
-```shell
-sudo chown root:root /home/cutt37/.config/ibus/bus
-```
-
 Override the default ffmpeg, using ffmpeg from rpmfusion:
 
 `sudo dnf in ffmpeg --allowerasing`
