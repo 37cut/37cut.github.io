@@ -6,7 +6,6 @@
 - Audio: Store all audio files
 - Interface: As the name
 - Mode: 2/4 modes in osu
-- Transparent: Useless widgets to hide
 
 ___***Osu***___
 
