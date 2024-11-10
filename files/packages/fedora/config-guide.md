@@ -19,6 +19,7 @@ Install with: `sudo dnf in`
 - gvfs-archive
 - htop
 - i3
+- libratbag-ratbagd
 - light
 - mousepad
 - mpv
@@ -31,11 +32,14 @@ Install with: `sudo dnf in`
 - wine
 - winetricks \**parameter with: --exclude=kf\\\**<br>
 - wqy-zenhei-fonts
+- xarchiver
+- zsh
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+
+## Configs
 
 fc-cache -fv
-
-- xarchiver
-- xorg-x11-\\\* *parameter with: --exclude=xorg-x11-drivers*
 
 Config xorg-x11-xdm: `vim /etc/X11/xdm/Xsetup_0`<br>
 Write these codes into Xsetup\_0:<br>
@@ -46,18 +50,11 @@ Write these codes into Xsetup\_0:<br>
 Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xession executeable: `chmod +x .xsession`
 
-
 Uninstall some packages I dont need:<br>
 xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware}<br>
 amd-{gpu,ucode}-firmware<br>
 nvidia-gpu-firmware<br>
 Remove with: `sudo dnf rm`
-
-- zsh
-- zsh-autosuggestions
-- zsh-syntax-highlighting
-
-## Configs
 
 ```shell
 chsh -s /usr/bin/zsh
@@ -65,18 +62,18 @@ usermod -a -G audio your_account
 ```
 
 Add rpmfusion *free* repos:
-
 ```shell
 sudo dnf install \
 https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 ```
 
 Override the default ffmpeg, using ffmpeg from rpmfusion:
-
 `sudo dnf in ffmpeg --allowerasing`
 
 Disable zram
-
 `sudo dnf rm zram-generator-defaults`
+
+Enable libratbag-ratbagd
+`sudo systemctl enable ratbagd.service`
 
 [Install](https://minbrowser.org/) minbrowser
