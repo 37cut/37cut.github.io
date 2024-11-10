@@ -19,7 +19,6 @@ Install with: `sudo dnf in`
 - gvfs-archive
 - htop
 - i3
-- libratbag-ratbagd
 - light
 - mousepad
 - mpv
@@ -72,8 +71,5 @@ Override the default ffmpeg, using ffmpeg from rpmfusion:
 
 Disable zram
 `sudo dnf rm zram-generator-defaults`
-
-Enable libratbag-ratbagd
-`sudo systemctl enable ratbagd.service`
 
 [Install](https://minbrowser.org/) minbrowser
