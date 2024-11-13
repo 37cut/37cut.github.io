@@ -173,6 +173,14 @@ ___***Interface***___
 - Feather: 3px
 - Color: #eeffcc
 
+# Interface::Mode::mode-{osu,taiko,catch,mania}-small
+- Canva: 80x80
+- Feather: 2px
+- Color: #eeffcc
+- Taiko: Stroke path: Paint: 6px, hardness: 25%
+- Catch: Objects width: 16px
+- Mania: Rounded corners: 32px
+
 # Interface::Pause::pause-{back,continue,replay,retry}
 - Canva: 768x128
 - Font: Constantia-80px
@@ -202,7 +210,7 @@ ___***Interface***___
 		- blur radius: 4
 		- grow radius: 0
 		- opacity: 0.25
-- 'Panel::PanelWidget::Score' Layer:
+- Panel::PanelWidget::Score Layer:
 	- Font: Candara
 	- Font size: 96px
 	- Color: #ffffff
