@@ -72,4 +72,8 @@ Override the default ffmpeg, using ffmpeg from rpmfusion:
 Disable zram
 `sudo dnf rm zram-generator-defaults`
 
+Disable fstrim
+`sudo systemctl disable fstrim.timer`
+
+
 [Install](https://minbrowser.org/) minbrowser
