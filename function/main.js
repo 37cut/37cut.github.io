@@ -10,7 +10,7 @@ footer.setAttribute('id', 'Footer')
 return_home.setAttribute('class', '_button')
 return_homeContent.appendChild(document.createTextNode('Return home.'))
 return_home.appendChild(return_homeContent)
-return_home.onclick = function() {window.location='../'}
+return_home.onclick = function() {window.location='../../'}
 
 if (scroll_height > innerHeight) {
 	const backto_top = document.createElement('div')
