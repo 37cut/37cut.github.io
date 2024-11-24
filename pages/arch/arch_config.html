@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Config</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="../../decorate/main.css">
+
+	<script type="text/javascript" src="../../function/main.js" defer></script>
+</head>
+
+<body>
+	<div id="Menu">
+		<a href="./arch-install" id="available">Arch</a>
+		<a href="./arch-config" id="current">Config</a>
+		<a href="./arch-extra" id="available">Others</a>
+	</div>
+
+	<div id="Content">
+        <h1>Desktop configs</h1>
+		<h2>Services and additional packages:</h2>		
+		<div class="container">
+			<p>Login with your_account
+			
+			<br><br>
+
+			<p>sudo systemctl enable acpid bluetooth tlp NetworkManagers
+			<p>sudo systemctl start NetworkManager
+			
+			<br><br>
+
+			<p>Connect the internet with <u>nmtui</u>, then install the following packages(decided by yourself):
+
+			<p>sudo pacman -S i3{-wm,lock,status} \
+			<p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
+			<p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
+			<p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
+			<p>chromium alacritty xss-lock audacity gimp
+		</div>
+
+		<h2>Config:</h2>
+		<div class="container">
+			<p>Missing firmwares:
+			<p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
+				mkinitcpio - ArchWiki</a>
+			<p>yay -S your_missing_firmwares
+
+			<br><br>
+
+			<p>I'm missing these firmwares so I'll type:
+			<p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
+			<p>mkinitcpio -P
+
+			<br><br>
+
+			<p>sudo echo i3 &gt; .xinitrc
+
+			<br><br>
+
+			<p>wget https://cutt37.github.io/files/packages/arch/yay-12.1.0-1-x86_64.pkg.tar.zst
+			<p>yay -S slim archlinux-themes-slim ttf-symbola
+
+			<br><br>
+
+			<p>Slim theme:
+			<p>sudo systemctl enable slim
+			<p>sudo vim /etc/slim.conf
+			<p>Type /current_theme to search.
+			<p>Find this line and uncomment:
+			<p>current_theme archlinux-simplyblack
+
+			<br><br>
+
+			<p>Dark gtk theme:<br>
+			<p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
+
+			<br><br>
+
+			<p>My config for i3:<br>
+			<p>Download <a href="../../files/fedora/config.zip">here</a> or execute the following command:
+			<p>wget https://cutt37.github.io/files/packages/fedora/config.zip
+
+			<br><br>
+
+			<p>Config vim:
+			<p>sudo pacman -S npm nodejs
+			<p>vim
+			<p>:PlugInstall
+			<p>:CocInstall coc-json coc-html coc-css
+			<p>:q
+			<p>sudo ln -sf /home/cutt37/.vim /root/.vim
+		</div>
+	</div>
+</body>
+</html>

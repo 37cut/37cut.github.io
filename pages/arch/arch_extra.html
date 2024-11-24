@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dot exe file on linux</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" type="text/css" href="../../decorate/main.css">
+
+	<script type="text/javascript" src="../../function/main.js" defer></script>
+</head>
+
+<body>
+	<div id="Menu">
+		<a href="./arch-install">Home</a>
+		<a href="./arch-config">Config</a>
+		<a href="./arch-extra" id="current">Others</a>
+	</div>
+
+	<div id="Content">
+		<h2>Execute x86_32 .exe file</h2>
+		<div class="container">
+			<p>vim /etc/pacman.conf
+			<p>Uncomment [multilib] and mirror
+
+			<br><br>
+
+			<p>sudo pacman -Syu
+			<p>sudo pacman -S wine-staging winetricks \
+			<p>lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\
+			<p>libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}
+
+			<br><br>
+
+			<p>yay -S ttf-tahoma
+
+			<br><br>
+
+			<p>winecfg
+
+			<br><br>
+
+			<p>winetricks
+			<p>Select "Select the default wineprefix"
+			<p>Select "Install a Windows DLL or component"
+			<p>Select "dotnet40" and "dotnet45"
+
+			<br><br>
+
+			<p>mkdir your_folder
+			<p>wine your_file.exe
+		</div>
+	</div>
+</body>
+</html>
