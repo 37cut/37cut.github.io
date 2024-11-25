@@ -47,7 +47,7 @@ a {
 }
 
 a:hover {
-	color: #6788cc;
+	color: #7899cc;
 	text-decoration: 1px underline dotted;
 }
 
@@ -58,6 +58,12 @@ br {font-size: 0;}
 u {
 	background-color: #ffffff;
 	text-decoration: 1px underline;
+}
+
+table {
+	padding: 8px;
+	border: 1px solid #999999;
+	background-color: #fcfcfc;
 }
 
 #Menu {
@@ -98,11 +104,10 @@ u {
 
 .container {
 	margin-block: 8px;
-	margin-inline: 20px;
+	margin-inline: 16px;
 	word-break: break-word;
 }
 
-/* Display */
 @media only screen and (max-width: 960px) {
 
 }
