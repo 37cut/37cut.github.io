@@ -1,36 +1,49 @@
+@font-face {
+	font-family: "comic";
+	src: url("comic.ttf") format("ttf");
+}
+
+@font-face {
+	font-family: "comic";
+	font-weight: bold;
+	src: url("comicbd.ttf") format("ttf");
+}
+
+body, h1, h2, p {
+	margin: 0;
+	padding: 0;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
-	
-	margin: 0;
-	font-family: cursive, monospace;
+
+	font-family: "comic", cursive;
+	margin: 2px;
 	background-color: #e9e9d0;
 }
 
 h1 {
-	margin: 0;
-	padding: 0;
 	font-size: 26px;
+	margin-block: 2px;
 }
 
 h2 {
-	margin: 0;
-	padding: 0;
 	font-size: 24px;
+	margin-block: 2px;
 }
 
 p {
-	margin: 0;
-	padding: 0;
 	color: #c06633;
 	font-size: 22px;
+	margin-block: 2px;
 }
 
 a {
-	display: inline-flex;
 	color: #456699;
-	font-size: 20px;
+	font-size: 22px;
 	text-decoration: none;
+	transition: all .16s linear;
 }
 
 a:hover {
@@ -47,17 +60,12 @@ u {
 	text-decoration: 1px underline;
 }
 
-ol {
-	margin: 16px;
-	padding: 0;
-}
-
 #Menu {
 	display: flex;
 	flex-direction: column;
 
 	margin: 4px;
-	padding: 4px;
+	padding: 8px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
 }
@@ -67,12 +75,12 @@ ol {
 	flex-direction: column;
 
 	margin: 4px;
-	padding: 4px;
+	padding: 8px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
 }
 
-#Footer {;
+#Footer {
 	display: flex;
 	flex-direction: row;
 }
@@ -80,16 +88,17 @@ ol {
 ._button {
 	width: 100%;
 	margin: 4px;
-	padding: 4px;
+	padding: 8px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
+	transition: all .16s linear;
 }
 
 ._button:hover {background-color: #ffffff;}
 
 .container {
 	margin-block: 8px;
-	margin-inline: 16px;
+	margin-inline: 20px;
 	word-break: break-word;
 }
 
