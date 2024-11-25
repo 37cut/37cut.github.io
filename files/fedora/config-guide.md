@@ -20,7 +20,6 @@ Install with: `sudo dnf in`
 - htop
 - i3
 - light
-- mousepad
 - mpv
 - NetworkManager-tui
 - nodejs
@@ -55,8 +54,7 @@ Make .xession executeable: `chmod +x .xsession`
 ## Uninstall some add-ons
 ```shell
 sudo dnf rm xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware} \
-amd-{gpu,ucode}-firmware nvidia-gpu-firmware \
-xdg-desktop-portal
+amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
 ```
 ## Config shell, account
 ```shell
