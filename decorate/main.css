@@ -1,12 +1,12 @@
 @font-face {
 	font-family: "comic";
-	src: url("comic.ttf") format("ttf");
+	src: url("comic.ttf") format("truetype");
 }
 
 @font-face {
 	font-family: "comic";
 	font-weight: bold;
-	src: url("comicbd.ttf") format("ttf");
+	src: url("comicbd.ttf") format("truetype");
 }
 
 body, h1, h2, p {
@@ -18,7 +18,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	font-family: "comic", cursive;
+	font-family: "comic", cursive, serif;
 	margin: 2px;
 	background-color: #e9e9d0;
 }
