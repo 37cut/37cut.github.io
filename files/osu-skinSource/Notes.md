@@ -13,8 +13,8 @@ ___***Osu***___
 - Canva: 272x272
 - Color: #ffffff
 
-# Mode::Osu::hitcirle
-- Canva: 256x256
+# Mode::Osu::(hit,sliderstart}cirle
+- Canva: 272x272
 - Color: #ffffff and #000000
 - Feather: 3px
 - Drop shadow:
@@ -23,7 +23,7 @@ ___***Osu***___
 	- opacity: 2(max)
 
 # Mode::Osu::{hit,sliderstart}cirleoverlay
-- Canva: 256x256
+- Canva: 272x272
 - Color: #ffffff
 - Feather: 2px
 - Drop shadow:
@@ -32,7 +32,7 @@ ___***Osu***___
 	- opacity: 2(max)
 
 # Mode::Osu::sliderb
-- Canva: 256x256
+- Canva: 272x272
 - Color: #000000
 - Feather: 3px
 - Drop shadow:
@@ -41,7 +41,7 @@ ___***Osu***___
     - opacity: 2(max)
 
 # Mode::Osu::reversearrow
-- Canva: 256x256
+- Canva: 272x272
 - Color: #ffffff
 - Feather: 3px
 - Drop shadow:
@@ -149,7 +149,7 @@ ___***Interface***___
 - 'Layer' Feather: 3px
 
 # Interface::Cursor::cursor
-- Canva: 128x128
+- Canva: 1272x272
 - 'Paint' Layer:
 	- Color: #000000
 - 'Padding' Layer:
@@ -163,7 +163,7 @@ ___***Interface***___
 	- High quality
 	
 # Interface::Cursor::cursortrail
-- Canva: 128x128
+- Canva: 272x272
 - Color: #ffffcc
 - Focus Blur(Gaussian Blur):
 	- 3px
