@@ -43,10 +43,9 @@ ___***Osu***___
 # Mode::Osu::reversearrow
 - Canva: 272x272
 - Color: #ffffff
-- Feather: 3px
 - Drop shadow:
 	- blur radius: 2
-	- grow radius: 3
+	- grow radius: 1
 	- opacity: 2(max)
 
 # Mode::Osu::Default::default-{0,1,2,3,4,5,6,7,8,9}
