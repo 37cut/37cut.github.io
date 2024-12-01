@@ -109,9 +109,11 @@ ___***Interface***___
 	- opacity: 1
 
 # Interface::spinner-rpm
-- Canva: 176x96
+- Canva: 176x80
+- Color: #eeffcc
 - Font: Constantia-64px
 - Drop shadow:
+	- color: #eeffcc
 	- blur radius: 4
 	- grow radius: 0
 	- opacity: 1
@@ -221,9 +223,9 @@ ___***Interface***___
 		- opacity: 1
 
 # Interface::Ranking::ranking-{accuracy,maxcombo}
-- Canva: 448x128(accuracy), 320x128(accuracy)
+- Canva: 448x128(accuracy), 320x128(maxcombo)
 - Font: Mingzat-80px
-- Color: #f3ffcc
+- Color: #ffffff
 - Drop shadow:
 	- x,y: 5,5
 	- blur radius: 4
@@ -266,10 +268,10 @@ ___***Interface***___
 	- opacity: 0.5
 
 # Interface::Score::score-{0,1,2,3,4,5,6,7,8,9}
-- Canva: 48x80(0-9), 24x80(c,d,p,x)
-- Font: Philosopher-82px(0-9), "Cute Aurora"-66px(c,d), "Cute Aurora"-33px(p,x)
-- Drop shadow:
-	- color: black once, white once
+- Canva: 56x80(0-9), 24x80(c,d,p,x)
+- Font: Philosopher-96px(0-9), "Cute Aurora"-66px(c,d), "Cute Aurora"-33px(p,x)
+- Drop shadow(0-9):
+	- color: #999999
 	- blur radius: 1
-	- grow radius: 0
-	- opacity: 0.5
+	- grow radius: 1
+	- opacity: 1
