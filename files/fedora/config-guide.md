@@ -20,6 +20,7 @@ Install with: `sudo dnf in`
 - htop
 - i3
 - light
+- mousepad
 - mpv
 - NetworkManager-tui
 - nodejs
