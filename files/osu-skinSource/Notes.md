@@ -150,22 +150,24 @@ ___***Interface***___
 - 'Layer' Feather: 3px
 
 # Interface::Cursor::cursor
-- Canva: 1272x272
+- Canva: 272x272
 - 'Paint' Layer:
 	- Color: #000000
+    - Paintbrush:
+        - Brush: Hardness 100
+        - Size: 3
+        - Spacing: 4
 - 'Padding' Layer:
 	- Color: #ffffff 
 - 'Cursor' Layer:
 	- Color: #ffff80
-	- Item Size: 80x80
+	- Item Size: 96x96
 - 'Blur' Layer:
-	- Focus Blur(Gaussian Blur)
-	- 3px
-	- High quality
-	
+	- Lens Blur: 6px
+
 # Interface::Cursor::cursortrail
 - Canva: 272x272
-- Color: #ffffcc
+- Color: #ffff99
 - Focus Blur(Gaussian Blur):
 	- 3px
 	- High quality
@@ -173,7 +175,7 @@ ___***Interface***___
 # Interface::Cursor::cursor-smoke
 - Canva: 16x16
 - Feather: 3px
-- Color: #eeffcc
+- Color: #bbcc99
 
 # Interface::Mode::mode-{osu,taiko,catch,mania}-small
 - Canva: 80x80
