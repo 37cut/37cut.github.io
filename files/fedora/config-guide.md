@@ -91,3 +91,8 @@ then type this code to keep xdm running: `systemctl set-default graphical.target
 ## Minbrowser
 [Install](https://minbrowser.org/) minbrowser or using wget instead
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
+
+## wine中文字体: Chinese font for wine
+See chn_font.reg under config.zip
+Extract and execute:
+`wine regedit chn_font.reg`
