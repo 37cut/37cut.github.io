@@ -18,7 +18,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	font-family: "comic", cursive, serif;
+	font-family: "comic", serif;
 	margin: 2px;
 	background-color: #e9e9d0;
 }
