@@ -16,10 +16,10 @@ body, h1, h2, p {
 
 body {
 	display: flex;
-	flex-direction: column;
+    flex-direction: column;
 
-	font-family: "comic", serif;
-	margin: 2px;
+    margin: 2px;
+    font-family: "comic", serif;
 	background-color: #e9e9d0;
 }
 
@@ -74,6 +74,7 @@ table {
 	padding: 8px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
+    box-shadow: 0 0 4px #cccccc;
 }
 
 #Content {
@@ -84,6 +85,7 @@ table {
 	padding: 8px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
+    box-shadow: 0 0 4px #cccccc;
 }
 
 #Footer {
@@ -97,6 +99,7 @@ table {
 	padding: 8px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
+    box-shadow: 0 0 4px #cccccc;
 	transition: all .16s linear;
 }
 
@@ -109,13 +112,13 @@ table {
 }
 
 @media only screen and (max-width: 960px) {
-
+    #Content {width: auto}
 }
 
 @media only screen and (max-width: 720px) {
-
+    #Content {width: auto}
 }
 
 @media only screen and (max-width: 480px) {
-
+    #Content {width: auto}
 }
