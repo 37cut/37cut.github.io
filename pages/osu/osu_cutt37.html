@@ -12,68 +12,70 @@
 </head>
 
 <body>
-	<div id="Content">
-        <h1>About setup</h1>		
-        <h2>Intro</h2>
-		<div class="container">
-			<p>Setup:
-			<p>&emsp;Mouse: Logitech G102 (2 accel);
-			<p>&emsp;Keyboard: Sayo O2C + Greywood v3 switch;
-            <p>&emsp;Resolution: 1920x1080, 15&quot;6			
-            <p>&emsp;Typing: Alternate;
-			<p>&emsp;Skin(made by me): <a href="https://mediafire.com/file/ccwdmu9b07d3exu/Idontknow.osk/file">Idontknow</a>	
-        </div>
+    <div id="Grid">
+	    <div class="content">
+            <h1>About setup</h1>		
+            <h2>Intro</h2>
+		    <div class="container">
+			    <p>Setup:
+			    <p>&emsp;Mouse: Logitech G102 (2 accel);
+			    <p>&emsp;Keyboard: Sayo O2C + Greywood v3 switch;
+                <p>&emsp;Resolution: 1920x1080, 15&quot;6			
+                <p>&emsp;Typing: Alternate;
+			    <p>&emsp;Skin(made by me): <a href="https://mediafire.com/file/ccwdmu9b07d3exu/Idontknow.osk/file">Idontknow</a>	
+            </div>
 
-		<h2>Mouse config</h2>
-		<div class="container">
-			<p>File: 50-mouse-acceleration.conf
-			<p>Section "InputClass"
-			<p>&emsp;Identifier ""
-			<p>&emsp;Driver "libinput"
-			<p>&emsp;MatchIsPointer "yes"
-			<p>&emsp;Option "AccelProfile" "flat"
-			<p>&emsp;Option "AccelSpeed" "0"
-			<p>EndSection
-		</div>
+		    <h2>Mouse config</h2>
+		    <div class="container">
+			    <p>File: 50-mouse-acceleration.conf
+			    <p>Section "InputClass"
+			    <p>&emsp;Identifier ""
+			    <p>&emsp;Driver "libinput"
+			    <p>&emsp;MatchIsPointer "yes"
+			    <p>&emsp;Option "AccelProfile" "flat"
+			    <p>&emsp;Option "AccelSpeed" "0"
+			    <p>EndSection
+		    </div>
+        </div>
+	    <div id="focus" class="content">
+            <h1>Misc.</h1>
+            <h2>A method to boost your Internet(maybe)</h2>
+            <div class="container">
+                <p>Since it's pretty slow to access osu website(me in China),
+                <p>I find a way to get a fast connection.
+                <p>At least I can finally access the bancho now(I've been struggling to login for a long time before).
+
+                <br><br>
+
+                <p>1. Visit osu faster.
+                <p>Visit <a href="https://github.com/XIU2/CloudflareSpeedTest">this</a> website.
+                <p>Execute a file which is called CloudflareST(or CloudflareST.exe sth else).
+                <p>Wait till it gets an output.
+                <p>Choose the fast ip in "result.csv".
+                <p>Then change your host file.
+                <p>Example: <a href="https://37cut.is-a.dev/files/etc/hosts">Click me</a>
+
+                <br><br>
+
+                <p>2. Download beatmap smoothly(sadly I can't use this anymore XP).
+                <p>Now go to <a href="https://github.com/KyuubiRan/BeatmapDownloader">this</a> website.
+                <p>Go to releases(on the right of website), download "Release-x86.zip".
+                <p>Make a directory inside your osu folder like "Injector"
+                <p>Unzip Release-x86.zip, move Downloader.dll and Injector.exe to directory you've been created.
+            </div>
+
+            <h2>Something like "Stable vs Lazer"</h2>        
+            <div class="container">
+                <p>I would stay at stable.
+                <p>I'd say Lazer is still not playable, though the key sounds correct and clear(while typing),
+                <p>but the approach things look so weird(reading so weird), still not better than stable.
+                <p>And I don't need bunches of fr**king options(in setting).
+                <p>Also, hp drain confused me, like Lazer is easy than stable.
+                <p>Stable's key sounds messing(not clear).
+                <p>At least Stable got a nice gaming.
+                <p>I can't play lazer well, its just bad.
+            </div>
+	    </div>
     </div>
-	<div id="Content">
-        <h1>Misc.</h1>
-        <h2>A method to boost your Internet(maybe)</h2>
-        <div class="container">
-            <p>Since it's pretty slow to access osu website(me in China),
-            <p>I find a way to get a fast connection.
-            <p>At least I can finally access the bancho now(I've been struggling to login for a long time before).
-
-            <br><br>
-
-            <p>1. Visit osu faster.
-            <p>Visit <a href="https://github.com/XIU2/CloudflareSpeedTest">this</a> website.
-            <p>Execute a file which is called CloudflareST(or CloudflareST.exe sth else).
-            <p>Wait till it gets an output.
-            <p>Choose the fast ip in "result.csv".
-            <p>Then change your host file.
-            <p>Example: <a href="https://37cut.is-a.dev/files/etc/hosts">Click me</a>
-
-            <br><br>
-
-            <p>2. Download beatmap smoothly(sadly I can't use this anymore XP).
-            <p>Now go to <a href="https://github.com/KyuubiRan/BeatmapDownloader">this</a> website.
-            <p>Go to releases(on the right of website), download "Release-x86.zip".
-            <p>Make a directory inside your osu folder like "Injector"
-            <p>Unzip Release-x86.zip, move Downloader.dll and Injector.exe to directory you've been created.
-        </div>
-
-        <h2>Something like "Stable vs Lazer"</h2>        
-        <div class="container">
-            <p>I would stay at stable.
-            <p>I'd say Lazer is still not playable, though the key sounds correct and clear(while typing),
-            <p>but the approach things look so weird(reading so weird), still not better than stable.
-            <p>And I don't need bunches of fr**king options(in setting).
-            <p>Also, hp drain confused me, like Lazer is easy than stable.
-            <p>Stable's key sounds messing(not clear).
-            <p>At least Stable got a nice gaming.
-            <p>I can't play lazer well, its just bad.
-        </div>
-	</div>
 </body>
 </html>

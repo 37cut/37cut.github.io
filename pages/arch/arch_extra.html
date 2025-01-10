@@ -18,36 +18,38 @@
 		<a href="./arch_extra" id="current">Arch: Others</a>
 	</div>
 
-	<div id="Content">
-		<h2>Execute x86_32 .exe file</h2>
-		<div class="container">
-			<p>vim /etc/pacman.conf
-			<p>Uncomment [multilib] and mirror
+    <div id="Grid">
+	    <div class="content">
+		    <h2>Execute dot exe files</h2>
+		    <div class="container">
+			    <p>vim /etc/pacman.conf
+			    <p>Uncomment [multilib] and mirror
 
-			<br><br>
+			    <br><br>
 
-			<p>sudo pacman -Syu
-			<p>sudo pacman -S wine-staging winetricks \
-			<p>lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\
-			<p>libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}
+			    <p>sudo pacman -Syu
+			    <p>sudo pacman -S wine-staging winetricks \
+			    <p>lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\
+			    <p>libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}
 
-			<br><br>
+			    <br><br>
 
-			<p>yay -S ttf-tahoma
+			    <p>yay -S ttf-tahoma
 
-			<br><br>
+			    <br><br>
 
-			<p>winecfg
+			    <p>winecfg
 
-			<br><br>
+			    <br><br>
 
-			<p>winetricks dotnet45
+			    <p>winetricks dotnet45
 
-			<br><br>
+			    <br><br>
 
-			<p>mkdir your_folder
-			<p>wine your_file.exe
-		</div>
-	</div>
+			    <p>mkdir your_folder
+			    <p>wine your_file.exe
+		    </div>
+	    </div>
+    </div>
 </body>
 </html>

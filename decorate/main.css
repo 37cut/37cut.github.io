@@ -51,8 +51,6 @@ a:hover {
 	text-decoration: 1px underline dotted;
 }
 
-#current {font-weight: bold;}
-
 br {font-size: 0;}
 
 u {
@@ -66,18 +64,12 @@ table {
 	background-color: #fcfcfc;
 }
 
-#Menu {
-	display: flex;
-	flex-direction: column;
-
-	margin: 4px;
-	padding: 8px;
-	border: 1px solid #999999;
-	background-color: #f9f9f0;
-    box-shadow: 0 0 4px #cccccc;
+#Grid {
+    display: flex;
+    flex-direction: row;
 }
 
-#Content {
+#Menu {
 	display: flex;
 	flex-direction: column;
 
@@ -93,6 +85,9 @@ table {
 	flex-direction: row;
 }
 
+#current {font-weight: bold;}
+#focus {min-width: 60%;}
+
 ._button {
 	width: 100%;
 	margin: 4px;
@@ -102,23 +97,35 @@ table {
     box-shadow: 0 0 4px #cccccc;
 	transition: all .16s linear;
 }
-
 ._button:hover {background-color: #ffffff;}
+
+.content {
+	display: flex;
+    flex-basis: 100%;
+	flex-direction: column;
+
+	margin: 4px;
+	padding: 8px;
+	border: 1px solid #999999;
+	background-color: #f9f9f0;
+    box-shadow: 0 0 4px #cccccc;
+}
 
 .container {
 	margin-block: 8px;
 	margin-inline: 16px;
+    overflow-x: auto;
 	word-break: break-word;
 }
 
 @media only screen and (max-width: 960px) {
-    #Content {width: auto}
+    #Grid {flex-direction: column;}
 }
 
+/*
 @media only screen and (max-width: 720px) {
-    #Content {width: auto}
 }
 
 @media only screen and (max-width: 480px) {
-    #Content {width: auto}
 }
+*/
