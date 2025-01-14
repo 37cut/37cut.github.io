@@ -71,18 +71,24 @@ ___***Interface***___
 
 # Interface::Song-select::songselect-{top,bottom}
 - Canva: 2732x1536(top), 2732x200(bottom)
+- songselect-top::{Top,Bottom}:
+    - Color: #111111, #222222
+    - Drop shadow:
+		- blur radius: 6
+		- grow radius: 0
+		- opacity: 1
 - songselect-top::Character-songselect-top.xcf layer:
-	- Color: #111111, #222222
 	- Drop shadow:
 		- x,y: 5,5
 		- blur radius: 4
 		- grow radius: 0
 		- opacity: 0.25
-- songselect-bottom: Color: #111111, #eeffcc
-- Drop shadow:
-	- blur radius: 4
-	- grow radius: 0
-	- opacity: 1
+- songselect-bottom:
+    - Color: #111111, #eeffcc
+    - Drop shadow:
+	    - blur radius: 6
+	    - grow radius: 0
+	    - opacity: 1
 
 # Interface::Selection::selection-tab
 - Canva: 236x44
