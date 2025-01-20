@@ -75,6 +75,7 @@ table {
 
 	margin: 4px;
 	padding: 8px;
+    line-height: 32px;
 	border: 1px solid #999999;
 	background-color: #f9f9f0;
     box-shadow: 0 0 4px #cccccc;
