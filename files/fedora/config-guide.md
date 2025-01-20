@@ -17,7 +17,9 @@ you should check **Common NetworkManager Submodules**.
 - dunst
 - feh
 - flameshot
+- gdouros-symbola-fonts
 - gimp
+- google-noto-emoji-fonts
 - gvfs-archive
 - htop
 - i3
@@ -45,7 +47,10 @@ you should check **Common NetworkManager Submodules**.
 # Configs
 
 ## Refresh the fonts
+```shell
 fc-cache -fv
+sudo fc-cache -fv
+```
 
 ## Uninstall some add-ons(if exist)
 ```shell
