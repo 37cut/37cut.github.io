@@ -1,12 +1,12 @@
 @font-face {
-	font-family: "comic";
-	src: url("comic.ttf") format("truetype");
+	font-family: "lgc";
+	src: url("font-family/Louis George Cafe.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "comic";
+	font-family: "lgc";
 	font-weight: bold;
-	src: url("comicbd.ttf") format("truetype");
+	src: url("font-family/Louis George Cafe Bold.ttf") format("truetype");
 }
 
 body, h1, h2, p {
@@ -19,24 +19,24 @@ body {
     flex-direction: column;
 
     margin: 2px;
-    font-family: "comic", serif;
-	background-color: #e9e9d0;
+    font-family: "lgc", serif;
+    background-color: #e9e9d0;
 }
 
 h1 {
 	font-size: 26px;
-	margin-block: 2px;
+	margin-block: 4px;
 }
 
 h2 {
 	font-size: 24px;
-	margin-block: 2px;
+	margin-block: 4px;
 }
 
 p {
 	color: #c06633;
 	font-size: 22px;
-	margin-block: 2px;
+	line-height: 32px;
 }
 
 a {
@@ -112,7 +112,7 @@ table {
 }
 
 .container {
-	margin-block: 8px;
+	margin-block: 4px;
 	margin-inline: 16px;
     overflow-x: auto;
 	word-break: break-word;
