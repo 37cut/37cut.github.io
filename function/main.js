@@ -13,18 +13,18 @@ return_home.appendChild(return_homeContent)
 return_home.onclick = function() {window.location='../../'}
 
 if (scroll_height > innerHeight) {
-	const backto_top = document.createElement('div')
-	const backto_topContent = document.createElement('p')
+    const backto_top = document.createElement('div')
+    const backto_topContent = document.createElement('p')
 
-	backto_top.setAttribute('class', '_button')
-	backto_topContent.appendChild(document.createTextNode('Back to top.'))
-	backto_top.appendChild(backto_topContent)
-	footer.appendChild(backto_top)
-	
-	backto_top.onclick = function() {
-		window.scrollTo({
-			top: 0, left: 0,
-			behavior: 'smooth'})}
+    backto_top.setAttribute('class', '_button')
+    backto_topContent.appendChild(document.createTextNode('Back to top.'))
+    backto_top.appendChild(backto_topContent)
+    footer.appendChild(backto_top)
+
+    backto_top.onclick = function() {
+        window.scrollTo({
+            top: 0, left: 0,
+            behavior: 'smooth'})}
 }
 
 footer.appendChild(return_home)
