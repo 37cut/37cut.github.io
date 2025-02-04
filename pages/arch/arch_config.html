@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Arch: Config</title>
+    <title>Arch: Config</title>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="stylesheet" type="text/css" href="../../decorate/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script type="text/javascript" src="../../function/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../../decorate/main.css">
+
+    <script type="text/javascript" src="../../function/main.js" defer></script>
 </head>
 
 <body>
-	<div id="Menu">
-		<a href="./arch_install">Arch: Install</a>
-		<a href="./arch_config" id="current">Arch: Config</a>
-		<a href="./arch_extra">Arch: Others</a>
-	</div>
+    <div id="Menu">
+        <a href="./arch_install">Arch: Install</a>
+        <a href="./arch_config" id="current">Arch: Config</a>
+        <a href="./arch_extra">Arch: Others</a>
+    </div>
 
     <div id="Grid">
-	    <div class="content">
+        <div class="content">
             <h1>Install gui</h1>
-		    <h2>Services and additional packages</h2>		
-		    <div class="container">
-			    <p>Login with <i>your_account</i>
-			    
-			    <br><br>
+            <h2>Services and additional packages</h2>
 
-			    <p>sudo systemctl enable acpid bluetooth tlp xdm NetworkManager
-			    <p>sudo systemctl start NetworkManager
-			    
-			    <br><br>
+            <div class="container">
+                <p>Login with <i>your_account</i>
 
-			    <p>Connect the internet with <u>nmtui</u>, then install the following packages(decided by you):
+                <br><br>
 
-			    <p>sudo pacman -S i3{-wm,lock,status} \
-			    <p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
-			    <p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
-			    <p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
-			    <p>chromium alacritty xss-lock audacity gimp
-		    </div>
+                <p>sudo systemctl enable acpid bluetooth tlp xdm NetworkManager
+                <p>sudo systemctl start NetworkManager
+
+                <br><br>
+
+                <p>Connect the internet with <u>nmtui</u>, then install the following packages(depends on you):
+                <p>sudo pacman -S i3{-wm,lock,status} \
+                <p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
+                <p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
+                <p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
+                <p>chromium alacritty xss-lock audacity gimp
+            </div>
         </div>
 
         <div id="focus" class="content">
-		    <h1>Config gui</h1>
+        <h1>Config gui</h1>
             <h2>Configs(for me)</h2>
-		    <div class="container">
+            <div class="container">
                 <p>Set xdm:
                 <p>touch .xsession
                 <p>echo i3 &gt; .xsession
@@ -59,42 +59,42 @@
                 <p>cd yay
                 <p>makepkg -si
 
-                <br><br>    
+                <br><br>
 
-			    <p>Missing firmwares:
-			    <p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
-				    mkinitcpio - ArchWiki</a>
-			    <p>yay -S your_missingFirmwares
-			    <p>I'm missing these firmwares so I'll type:
-			    <p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
-			    <p>mkinitcpio -P
+                <p>Missing firmwares:
+                <p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
+                mkinitcpio - ArchWiki</a>
+                <p>yay -S your_missingFirmwares
+                <p>I'm missing these firmwares so I'll type:
+                <p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
+                <p>mkinitcpio -P
 
-			    <br><br>
+                <br><br>
 
-			    <p>yay -S ttf-symbola
+                <p>yay -S ttf-symbola
 
-			    <br><br>
+                <br><br>
 
-			    <p>Dark gtk theme:<br>
-			    <p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
+                <p>Dark gtk theme:<br>
+                <p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
 
-			    <br><br>
+                <br><br>
 
-			    <p>My config for i3:<br>
-			    <p>Download <a href="../../files/fedora/config.zip">here</a> or:
-			    <p>wget https://cutt37.github.io/files/packages/fedora/config.zip
+                <p>My config for i3:<br>
+                <p>Download <a href="../../files/fedora/config.zip">here</a> or:
+                <p>wget https://cutt37.github.io/files/packages/fedora/config.zip
 
-			    <br><br>
+                <br><br>
 
-			    <p>Config vim(if you need):
-			    <p>sudo pacman -S npm nodejs
-			    <p>vim
-			    <p>:PlugInstall
-			    <p>:CocInstall coc-json coc-html coc-css
-			    <p>:q
-			    <p>sudo ln -sf /home/cutt37/.vim /root/.vim
-		    </div>
-	    </div>
+                <p>Config vim:
+                <p>sudo pacman -S npm nodejs
+                <p>vim
+                <p>:PlugInstall
+                <p>:CocInstall coc-json coc-html coc-css
+                <p>:q
+                <p>sudo ln -sf /home/cutt37/.vim /root/.vim
+            </div>
+        </div>
     </div>
 </body>
 </html>

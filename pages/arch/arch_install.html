@@ -1,246 +1,246 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Arch: Install</title>
+    <title>Arch: Install</title>
 
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link rel="stylesheet" type="text/css" href="../../decorate/main.css">
-	<script type="text/javascript" src="../../function/main.js" defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../../decorate/main.css">
+    <script type="text/javascript" src="../../function/main.js" defer></script>
 </head>
 
 <body>
-	<div id="Menu">
-		<a href="./arch_install" id="current">Arch: Install</a>
-		<a href="./arch_config">Arch: Config</a>
-		<a href="./arch_extra">Arch: Others</a>
-	</div>
-	
-	<div class='content'>
+    <div id="Menu">
+        <a href="./arch_install" id="current">Arch: Install</a>
+        <a href="./arch_config">Arch: Config</a>
+        <a href="./arch_extra">Arch: Others</a>
+    </div>
+
+    <div class='content'>
         <h1>Archlinux installation</h1>
         <h2>Notes:</h2>
-		<div class="container">
-			<p>Read this two official wiki:
-			<a href="https://wiki.archlinux.org/title/Installation_guide">
-				First pre-install</a>
-			<a href="https://wiki.archlinux.org/title/General_recommendations">
-				Software & Hardware Issues/Wikis</a>
-			<p>You can try <u>archinstall</u>, it's pretty simple to install the os.
-			<p>Be careful when executing commands.
-		</div>
+        <div class="container">
+            <p>Read this two official wiki:
+            <a href="https://wiki.archlinux.org/title/Installation_guide">
+                First pre-install</a>
+            <a href="https://wiki.archlinux.org/title/General_recommendations">
+                Software & Hardware Issues/Wikis</a>
+            <p>You can try <u>archinstall</u>, it's pretty simple to install the os.
+            <p>Be careful when executing commands.
+        </div>
 
-		<h2>1.Connect to the internet(wireless)</h2>
-		<div class="container">
-			<p><u>ifconfig</u> to check the network card.
-			<p>Here <b>wlan0</b> as default(Since I'm on laptop).
+        <h2>1. Connect to the internet(wireless)</h2>
+        <div class="container">
+            <p><u>ifconfig</u> to check the network card.
+            <p>Here <b>wlan0</b> as default(Since I'm on laptop).
 
-			<br><br>
+            <br><br>
 
-			<p>iwctl
-			<p>station wlan0 scan
-			<p>station wlan0 get-networks
-			<p>station wlan0 connect <i>select_yourNetwork</i>
+            <p>iwctl
+            <p>station wlan0 scan
+            <p>station wlan0 get-networks
+            <p>station wlan0 connect <i>select_yourNetwork</i>
 
-			<br><br>
+            <br><br>
 
-			<p>Once you're done, type <u>exit</u>.
-		</div>
+            <p>Once you're done, type <u>exit</u>.
+        </div>
 
-		<h2>2.Disk partition and format</h2>
-		<div class="container">
-			<p>If you have an old pc, you should check your bios that support uefi or not.
-			<p>Since there are two choice to install arch: uefi and legacy.
-			<p>On legacy you don't have to create the efi partition and install <i>efibootmgr</i>.
+        <h2>2. Disk partition and format</h2>
+        <div class="container">
+            <p>If you have an old pc, you should check your bios that support uefi or not.
+            <p>Since there are two choice to install arch: uefi and legacy.
+            <p>On legacy you don't have to create the efi partition and install <i>efibootmgr</i>.
 
-			<br><br>
+            <br><br>
 
-			<p>Be clear what disk you are going to partition.
-			<p>If it's a m.2 disk it should be something like <i>/dev/nvme0n1p1</i>.
-			<p>If it's a sata or some udisk it should be <i>/dev/sda</i>
-			<p>Btw don't format your installation media.
+            <p>Be clear what disk you are going to partition.
+            <p>If it's a m.2 disk it should be something like <i>/dev/nvme0n1p1</i>.
+            <p>If it's a sata or some udisk it should be <i>/dev/sda</i>
+            <p>Btw don't format your installation media.
 
-			<br><br>
+            <br><br>
 
-			<p><u>fdisk -l</u> to list disks on your computer.
-			<p><u>cfdisk</u>
+            <p><u>fdisk -l</u> to list disks on your computer.
+            <p><u>cfdisk</u>
 
-			<table>
-			<caption>Partition table example</caption>
-			<tr>
-				<th>Part(s)</th>
-				<th>Type</th>
-				<th>Size</th>
-			</tr>
+            <table>
+            <caption>Partition table example</caption>
+            <tr>
+                <th>Part(s)</th>
+                <th>Type</th>
+                <th>Size</th>
+            </tr>
 
-			<tr>
-				<td>nvme0n1p1</td>
-				<td>EFI</td>
-				<td>300MiB</td>
-			</tr>
+            <tr>
+                <td>nvme0n1p1</td>
+                <td>EFI</td>
+                <td>300MiB</td>
+            </tr>
 
-			<tr>
-				<td>nvme0n1p2</td>
-				<td>swap</td>
-				<td>4GiB</td>
-			</tr>
+            <tr>
+                <td>nvme0n1p2</td>
+                <td>swap</td>
+                <td>4GiB</td>
+            </tr>
 
-			<tr>
-				<td>nvme0n1p3</td>
-				<td>f2fs</td>
-				<td>Remain</td>
-			</tr>
-			</table>
+            <tr>
+                <td>nvme0n1p3</td>
+                <td>f2fs</td>
+                <td>Remain</td>
+            </tr>
+            </table>
 
-			<p>Formatting:
-			<p>Here are some filesystems like: ext4, brtfs, xfs, f2fs...
-			<p>I choose ext4 here.
+            <p>Formatting:
+            <p>Here are some filesystems like: ext4, brtfs, xfs, f2fs...
+            <p>I choose ext4 here.
 
-			<br><br>
+            <br><br>
 
-			<p>mkfs.fat -F 32 /dev/nvme0n1p1
-			<p>mkswap /dev/nvme0n1p2
-			<p>swapon /dev/nvme0n1p2
-			<p>mkfs.ext4 /dev/nvme0n1p3
+            <p>mkfs.fat -F 32 /dev/nvme0n1p1
+            <p>mkswap /dev/nvme0n1p2
+            <p>swapon /dev/nvme0n1p2
+            <p>mkfs.ext4 /dev/nvme0n1p3
 
-			<br><br>
+            <br><br>
 
-			<p>Mounting:
-			<p>mount /dev/nvme0n1p3 /mnt
-			<p>mount --mkdir /dev/nvme0n1p1 /mnt/boot
-		</div>
+            <p>Mounting:
+            <p>mount /dev/nvme0n1p3 /mnt
+            <p>mount --mkdir /dev/nvme0n1p1 /mnt/boot
+        </div>
 
-		<h2>3.Packages</h2>
-		<div class="container">
-			<p>Some mirrors may improve your download speed:
-			<a href="https://archlinux.org/mirrors/status/">Arch mirrorlist</a>
-			<a href="https://archlinux.org/mirrorlist/">Arch generator</a>
-			<p>vim /etc/pacman.d/mirrorlist
-			<p>Insert this code: <u>Server = /your/mirror/$repo/os/$arch</u>
-			<p>Refresh your repo with: <u>pacman -Syu</u>.
-		
-			<br><br>
+        <h2>3. Packages</h2>
+        <div class="container">
+            <p>Some mirrors may improve your download speed:
+            <a href="https://archlinux.org/mirrors/status/">Arch mirrorlist</a>
+            <a href="https://archlinux.org/mirrorlist/">Arch generator</a>
+            <p>vim /etc/pacman.d/mirrorlist
+            <p>Insert this code: <u>Server = /your/mirror/$repo/os/$arch</u>
+            <p>Refresh your repo with: <u>pacman -Syu</u>.
 
-			<p>pacstrap -K /mnt linux linux-firmware base base-devel \
+            <br><br>
+
+            <p>pacstrap -K /mnt linux linux-firmware base base-devel \
             <p>efibootmgr grub networkmanager 
             <p>pipewire pipewire-{alsa,jack,pulse} mesa \
-			<p>xorg xorg-server xorg-xdm udisks2 gvfs ntfs-3g wget git vi vim \
-			<p>wqy-microhei-lite terminus-font bluez bluez-utils \
-			<p>alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}
+            <p>xorg xorg-server xorg-xdm udisks2 gvfs ntfs-3g wget git vi vim \
+            <p>wqy-microhei-lite terminus-font bluez bluez-utils \
+            <p>alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}
 
-			<br><br>
+            <br><br>
 
-			<p>Graphic card driver:
-			<p>intel: <u>vulkan-intel</u>,<u>intel-media-driver</u>,<u>libva-intel-driver</u>
-			<p>amd: <u>xf86-video-amd</u>,<u>vulkan-radeon</u>
+            <p>Graphic card driver:
+            <p>intel: <u>vulkan-intel</u>,<u>intel-media-driver</u>,<u>libva-intel-driver</u>
+            <p>amd: <u>xf86-video-amd</u>,<u>vulkan-radeon</u>
 
-			<br><br>
+            <br><br>
 
-			<p>Microcode:
-			<p>intel cpu: <u>intel-ucode</u>;
-			<p>amd cpu: <u>amd-ucode</u>;
+            <p>Microcode:
+            <p>intel cpu: <u>intel-ucode</u>;
+            <p>amd cpu: <u>amd-ucode</u>;
 
-			<br><br>
+            <br><br>
 
-			<p>pacstrap /mnt intel-ucode intel-media-driver vulkan-intel \
-			<p>xf86-video-fbdev linux-firmware-qlogic(for me)
+            <p>pacstrap /mnt intel-ucode intel-media-driver vulkan-intel \
+            <p>xf86-video-fbdev linux-firmware-qlogic(for me)
 
-			<br>
+            <br>
 
-			<p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
-			arch-chroot /mnt</p>
-		</div>
+            <p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
+            arch-chroot /mnt</p>
+        </div>
 
-		<h2>4.Time and language</h2>
-		<div class="container">
-			<p><u>ls /usr/share/zoneinfo</u> to list timezone.
-			<p>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-			<p>hwclock --systohc
+        <h2>4. Time and language</h2>
+        <div class="container">
+            <p><u>ls /usr/share/zoneinfo</u> to list timezone.
+            <p>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+            <p>hwclock --systohc
 
-			<br><br>
+            <br><br>
 
-			<p>vim /etc/locale.gen
-			<p>Find your locale and uncomment it.
+            <p>vim /etc/locale.gen
+            <p>Find your locale and uncomment it.
 
-			<br><br>
+            <br><br>
 
-			<p>locale-gen
-			<p>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
-			<p>echo <u>your-hostname</u>(eg. archlinux) &gt; /etc/hostname
-		</div>
+            <p>locale-gen
+            <p>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
+            <p>echo <u>your-hostname</u>(eg. archlinux) &gt; /etc/hostname
+        </div>
 
-		<h2>5.GRUB config</h2>
-		<div class="container">
-			<p>Legacy:
-			<p>grub-install --target=i386-pc <u>/dev/nvme0n1p3</u>
-			<p>UEFI:
-			<p>grub-install --target=x86_64-efi --efi-directory=/boot
-			
-			<br><br>
+        <h2>5. GRUB config</h2>
+        <div class="container">
+            <p>Legacy:
+            <p>grub-install --target=i386-pc <u>/dev/nvme0n1p3</u>
+            <p>UEFI:
+            <p>grub-install --target=x86_64-efi --efi-directory=/boot
+
+            <br><br>
 
             <p>Not 100% sure these code do
-			<p>vim /etc/default/grub
-			<p>Find <u>GRUB_CMDLINE_LINUX_DEFAULT</u> and add these:
-			<p>fbcon=nodefer
-			<p>modprobe.blacklist=<i>iTCO_wdt</i> (if you want to disable watchdog)
-			<p>resume=<i>/dev/nvme0n1p2</i> (if you want your pc hibernate)
-			<p>video=efifb:nobgrt
+            <p>vim /etc/default/grub
+            <p>Find <u>GRUB_CMDLINE_LINUX_DEFAULT</u> and add these:
+            <p>fbcon=nodefer
+            <p>modprobe.blacklist=<i>iTCO_wdt</i> (if you want to disable watchdog)
+            <p>resume=<i>/dev/nvme0n1p2</i> (if you want your pc hibernate)
+            <p>video=efifb:nobgrt
 
-			<br><br>
+            <br><br>
 
-			<p>grub-mkconfig -o /boot/grub/grub.cfg
-		</div>
+            <p>grub-mkconfig -o /boot/grub/grub.cfg
+        </div>
 
-		<h2>6.Others</h2>
-		<div class="container">
-			<p>Add one account:
-			<p>useradd -m -G audio,storage,video,wheel <u>your-accountName</u>
-			<p>passwd <u>your-accountName</u>
-			<p>visudo
-			<p>Uncomment <u>%wheel ALL=(ALL:ALL) ALL</u>
+        <h2>6. Others</h2>
+        <div class="container">
+            <p>Add one account:
+            <p>useradd -m -G audio,storage,video,wheel <u>your-accountName</u>
+            <p>passwd <u>your-accountName</u>
+            <p>visudo
+            <p>Uncomment <u>%wheel ALL=(ALL:ALL) ALL</u>
 
-			<p>Add hibernate(if you want):
-			<p>vim /etc/mkinitcpio.conf
-			<p>Find <u>HOOKS=(...)</u>
-			<p>Add <u>resume</u> <b>behind</b> <u>filesystems</u>
-			<p>It should look like this:
-			<p>HOOKS=(... filesystem <b>resume</b>)
+            <p>Add hibernate(if you want):
+            <p>vim /etc/mkinitcpio.conf
+            <p>Find <u>HOOKS=(...)</u>
+            <p>Add <u>resume</u> <b>behind</b> <u>filesystems</u>
+            <p>It should look like this:
+            <p>HOOKS=(... filesystem <b>resume</b>)
 
-			<br><br>
+            <br><br>
 
-			<p>vim /etc/systemd/logind.conf
-			<p>Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u>
+            <p>vim /etc/systemd/logind.conf
+            <p>Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u>
 
-			<br><br>
+            <br><br>
 
-			<p>HandleLidSwitch=<i>hibernate(or keep default suspend)</i>
-			<p>HandleLidSwitchExternalPower=<i>suspend</i>
-		
-			<p>tty font:
-			<p>echo FONT=ter-132n(n-normal b-bold) &gt; /etc/vconsole.conf
+            <p>HandleLidSwitch=<i>hibernate(or keep default suspend)</i>
+            <p>HandleLidSwitchExternalPower=<i>suspend</i>
 
-			<br><br>
+            <p>tty font:
+            <p>echo FONT=ter-132n(n-normal b-bold) &gt; /etc/vconsole.conf
 
-			<p>High resolution with small window problem:
-			<p>Bigger values to get bigger window.
-			<p>echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment
-			<p>echo GDK_SCALE=1.25 &gt;&gt; /etc/environment
+            <br><br>
 
-			<br><br>
+            <p>High resolution with small window problem:
+            <p>Bigger values to get bigger window.
+            <p>echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment
+            <p>echo GDK_SCALE=1.25 &gt;&gt; /etc/environment
 
-			<p>If you are troubled with the intel or some graphic cards,
-			<p>then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.
-			<p>Notice your fps may be less than before.
-			<p>echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment
+            <br><br>
 
-			<br><br>
+            <p>If you are troubled with the intel or some graphic cards,
+            <p>then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.
+            <p>Notice your fps may be less than before.
+            <p>echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment
 
-			<p>mkinitcpio -P
-			<p>exit
-			<p>umount /mnt/boot
-			<p>umount /mnt
-			<p>reboot
-		</div>
-	</div>
+            <br><br>
+
+            <p>mkinitcpio -P
+            <p>exit
+            <p>umount /mnt/boot
+            <p>umount /mnt
+            <p>reboot
+        </div>
+    </div>
 </body>
 </html>
