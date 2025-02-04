@@ -58,6 +58,8 @@ u {
 	text-decoration: 1px underline;
 }
 
+#tiny {font-size: 4px;}
+
 table {
 	padding: 8px;
 	border: 1px solid #999999;
