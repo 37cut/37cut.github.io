@@ -14,54 +14,46 @@
 <body>
     <div id="Grid">
         <div class="content">
-            <h1>Setup & Preference</h1> 
+            <h1>Setup</h1>
             <h2>Intro</h2>
-
-            <p>Fuck 1 miss.
 
             <div class="container">
                 <p>Setup:
-                <p>&emsp;Mouse: Logitech G102 (2 accel);
-                <p>&emsp;Keyboard: Sayo O2C + Greywood v3 switch;
-                <p>&emsp;Resolution: 1920x1080, 15&quot;6
-                <p>&emsp;Typing: Alternate;
-                <p>&emsp;Skin(made by me, update occasionally): <a href="https://mediafire.com/file/ccwdmu9b07d3exu/Idontknow.osk/file">Idontknow</a>   
+                <p id="tab">Mouse: Logitech G102 (2 accel);
+                <p id="tab">Keyboard: Sayo O2C + Greywood v3 switch;
+                <p id="tab">Resolution: 1920x1080, 15&quot;6
+                <p id="tab">Typing: Alternate;
+                <p id="tab">Skin(made by me, update occasionally): <a href="https://mediafire.com/file/ccwdmu9b07d3exu/Idontknow.osk/file">Idontknow</a>   
             </div>
 
             <h2>Mouse config</h2>
             <div class="container">
                 <p>File: 50-mouse-acceleration.conf
                 <p>Section "InputClass"
-                <p>&emsp;Identifier ""
-                <p>&emsp;Driver "libinput"
-                <p>&emsp;MatchIsPointer "yes"
-                <p>&emsp;Option "AccelProfile" "flat"
-                <p>&emsp;Option "AccelSpeed" "0"
+                <p id="tab">Identifier ""
+                <p id="tab">Driver "libinput"
+                <p id="tab">MatchIsPointer "yes"
+                <p id="tab">Option "AccelProfile" "flat"
+                <p id="tab">Option "AccelSpeed" "0"
                 <p>EndSection
             </div>
         </div>
 
         <div id="focus" class="content">
             <h1>Fast connection</h1>
-            <h2>A method to boost your Internet(maybe)</h2>
+            <h2>A method to boost your Internet</h2>
             <div class="container">
-                <p>Since it's pretty slow to access osu website(me in China),
-                <p>I find a way to get a fast connection.
-                <p>At least I can finally access the bancho now(I've been struggling to login for a long time before).
-
-                <br><br>
-
-                <p>1. Visit osu faster.
                 <p>Visit <a href="https://github.com/XIU2/CloudflareSpeedTest">this</a> website.
-                <p>Execute a file which is called CloudflareST(or CloudflareST.exe sth else).
+                <p>Execute a file which is called CloudflareST.exe(or CloudflareST sth else).
                 <p>Wait till it gets an output.
                 <p>Choose the fast ip in "result.csv".
                 <p>Then change your host file.
-                <p>Example: <a href="https://37cut.is-a.dev/files/etc/hosts">Click me</a>
+                <p>Windows: "C:\Windows\System32\drivers\etc\hosts"
+                <p>Linux: "/etc/hosts"
+                <p>Then see <a href="../../files/host_example.txt">this</a> example file.
 
                 <br><br>
 
-                <p>2. Download beatmap smoothly(sadly I can't use this anymore).
                 <p>Now go to <a href="https://github.com/KyuubiRan/BeatmapDownloader">this</a> website.
                 <p>Go to releases(on the right of website), download "Release-x86.zip".
                 <p>Make a directory inside your osu folder like "Injector"
@@ -86,28 +78,28 @@
                 <p>2. Map songs
                 <p>Link for mod: https://osumod.com/
                 <p>Mod steps:
-                <p>1. Read the modder's preference(If fit then go on, otherwise change)
-                <p>2. Upload the link which map to mod
+                <p>1. <span id="im">Read the modder's preference(If fit you can upload , otherwise change)</span>.
+                <p>2. Upload the link which map+diff to mod.
                 <p>3. Wait.
-                <p>4. If he/she reject, and you really try hard to map, the map is clear(you can play),
+                <p>4. If he/she reject, and you really try hard to map, the map is clear and <span id="su">you can play</span>,
                 <p>   switch to another modder.(Maybe It's not in pending status or finish set so he/she reject)
                 <p>5. Done.
 
                 <br><br>
 
                 <p>Overflow of a map:
-                <p>|-- Picking songs(+++important+++, not only your favourite songs).
-                <p>|-- Read rc(Ranking criteria).
+                <p>|-- Picking songs(<span id="im">important</span>, <span id="su">not only your favourite songs</span>).
+                <p>|-- <span id="su">Read rc(Ranking criteria)</span>.
                 <p>|-- Listen to music and put notes.
-                <p>|-- If done, play it by yourself first(I recommended +playable+ first).
-                <p>|-- Find mistakes by +you+ as much as possible.
+                <p>|-- If done, play it <span id="su">by yourself</span> first(I recommended <span id="tg">playable</span> first).
+                <p>|-- Find mistakes <span id="su">by you</span> as <span id="im">much</span> as possible.
                 <p>|-- If you think you can't find any problems, find modders.
-                <p>&emsp;|-- +Issue+ must fix.
-                <p>&emsp;|-- Do +not+ always follow modders +advice+,
-                <p>&emsp;|-- however, if you really get some mistakes just correct it.
-                <p>&emsp;|-- But still, some little problems you are going to think why is that.
-                <p>|-- Hitsound your map and put some custom hitsound in it(hitsound MUST included). 
-                <p>|-- If you think the basic structure is done, put it to PENDING status.
+                <p id="tab">|-- <span id="tg">Issue</span> must fix.
+                <p id="tab">|-- Do <span id="im">not</span> always follow modders <span id="tg">advice</span>,
+                <p id="tab">|-- however, if you really get some mistakes then <span id="im">you should</span> correct it.
+                <p id="tab">|-- But still, some little problems you are going to think <span id="su">why</span> is that.
+                <p>|-- Hitsound your map and put some custom hitsound in it(hitsound <span id="im">must</span> included). 
+                <p>|-- If you think the basic structure is done, put it to <span id="tg">pending</span> status.
                 <p>|-- Now, you must find some BNs to mod your map,
                 <p>|-- besides, try to get at least 5 hypes. 
                 <p>...
@@ -123,17 +115,9 @@
 
                 <br><br>
 
-                <p>You know what? Map more is extremely hard for me.
-                <p>Why that? Less song attracts me.
-                <p>Picking songs is the most difficult part.
-                <p>For me, I cant map complex rhythm, or simple rhythm, or "repeat nightmare".
-                <p>If someone maps that song and ranked it, I have less chance to map that. 
-
-                <br><br>
-
-                <p><b>Never request a modding queue which makes you uncomfortable</b>,
+                <p><span id="im">Never request a modding queue which makes you uncomfortable</span>,
                 <p>such as "I mod what I like" or "long article of rules" or "a bunch of reject tags",
-                <p>always find easy queue like "casual" or "for newble" or "known BNs/GMT".
+                <p>always find easy queue like "casual" or "for newble"(idk how to say, its just feelings).
             </div>
 
             <h2>Something like "Stable vs Lazer"</h2>
