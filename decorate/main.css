@@ -1,69 +1,93 @@
 @font-face {
-	font-family: "lgc";
-	src: url("font-family/Louis George Cafe.ttf") format("truetype");
+    font-family: "lgc";
+    src: url("font-family/Louis George Cafe.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: "lgc";
-	font-weight: bold;
-	src: url("font-family/Louis George Cafe Bold.ttf") format("truetype");
+    font-family: "lgc";
+    font-weight: bold;
+    src: url("font-family/Louis George Cafe Bold.ttf") format("truetype");
 }
 
 body, h1, h2, p {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	display: flex;
+    display: flex;
     flex-direction: column;
 
     margin: 2px;
+    word-break: break-word;
     font-family: "lgc", serif;
     background-color: #e9e9d0;
 }
 
 h1 {
-	font-size: 26px;
-	margin-block: 4px;
+    font-size: 26px;
+    margin-block: 4px;
 }
 
 h2 {
-	font-size: 24px;
-	margin-block: 4px;
+    font-size: 24px;
+    margin-block: 4px;
 }
 
 p {
-	color: #c06633;
-	font-size: 22px;
-	line-height: 32px;
+    color: #c06633;
+    font-size: 22px;
+    line-height: 32px;
 }
 
+p span {line-height: 32px}
+
 a {
-	color: #456699;
-	font-size: 22px;
-	text-decoration: none;
-	transition: all .16s linear;
+    color: #456699;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all .16s linear;
 }
 
 a:hover {
-	color: #7899cc;
-	text-decoration: 1px underline dotted;
+    color: #7899cc;
+    text-decoration: 1px underline dotted;
 }
 
 br {font-size: 0;}
 
 u {
-	background-color: #ffffff;
-	text-decoration: 1px underline;
+    background-color: #ffffff;
+    text-decoration: 1px underline;
+}
+
+#tab {
+    margin-left: 16px;
 }
 
 #tiny {font-size: 4px;}
 
+/*
+    im: important;
+    su: suggest;
+    tg: tags;
+*/
+#im {
+    color: #aa3333;
+    font-weight: bolder;
+}
+#su {
+    color: #339966;
+    text-decoration: underline;
+}
+#tg {
+    color: #336699;
+}
+
 table {
-	padding: 8px;
-	border: 1px solid #999999;
-	background-color: #fcfcfc;
+    padding: 8px;
+    border: 1px solid #999999;
+    background-color: #fcfcfc;
 }
 
 #Grid {
@@ -72,53 +96,51 @@ table {
 }
 
 #Menu {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	margin: 4px;
-	padding: 8px;
+    margin: 4px;
+    padding: 8px;
     line-height: 32px;
-	border: 1px solid #999999;
-	background-color: #f9f9f0;
+    border: 1px solid #999999;
+    background-color: #f9f9f0;
     box-shadow: 0 0 4px #cccccc;
 }
 
 #Footer {
-	display: flex;
-	flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 #current {font-weight: bold;}
 #focus {min-width: 60%;}
 
 ._button {
-	width: 100%;
-	margin: 4px;
-	padding: 8px;
-	border: 1px solid #999999;
-	background-color: #f9f9f0;
+    width: 100%;
+    margin: 4px;
+    padding: 8px;
+    border: 1px solid #999999;
+    background-color: #f9f9f0;
     box-shadow: 0 0 4px #cccccc;
-	transition: all .16s linear;
+    transition: all .16s linear;
 }
 ._button:hover {background-color: #ffffff;}
 
 .content {
-	display: flex;
+    display: flex;
     flex-basis: 100%;
-	flex-direction: column;
+    flex-direction: column;
 
-	margin: 4px;
-	padding: 8px;
-	border: 1px solid #999999;
-	background-color: #f9f9f0;
+    margin: 4px;
+    padding: 8px;
+    border: 1px solid #999999;
+    background-color: #f9f9f0;
     box-shadow: 0 0 4px #cccccc;
 }
 
 .container {
-	margin-block: 4px;
-	margin-inline: 16px;
-    overflow-x: auto;
-	word-break: break-word;
+    margin-block: 4px;
+    margin-inline: 16px;
 }
 
 @media only screen and (max-width: 960px) {
