@@ -19,6 +19,7 @@ you should check **Common NetworkManager Submodules**.
 - flameshot
 - gdouros-symbola-fonts
 - gimp
+- gnome-boxes
 - google-noto-emoji-fonts
 - gvfs-archive
 - htop
@@ -34,8 +35,6 @@ you should check **Common NetworkManager Submodules**.
 - picom
 - tlp
 - vim-enhanced
-- wine
-- winetricks
 - wqy-zenhei-fonts
 - xarchiver
 - xorg-x11-server-Xorg
@@ -98,6 +97,6 @@ then type this code to keep xdm running: `systemctl set-default graphical.target
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
 
 ## wine中文字体: Chinese font for wine
-See chn_font.reg under config.zip
+See chn\_font.reg under config.zip
 Extract and execute:
 `wine regedit chn_font.reg`
