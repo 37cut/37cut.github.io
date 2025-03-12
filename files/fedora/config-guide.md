@@ -82,8 +82,6 @@ Replace enforcing to disabled(if available).
 
 ## Mask tpm
 ```shell
-sudo systemctl mask sys-devices-LNXSYSTM:00-LNXSYBUS:00-INTC6001:00-tpmrm-tpmrm0.device
-sudo systemctl mask dev-tpmrm0.device
 sudo systemctl mask tpm2.target
 ```
 
