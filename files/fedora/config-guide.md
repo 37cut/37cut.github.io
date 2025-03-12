@@ -71,7 +71,7 @@ Write these codes into Xsetup\_0:<br>
 
 ## Disable selinux
 `vim /etc/selinux/config`<br>
-Find key 'SELINUX=...'
+Find key 'SELINUX=...'<br>
 Replace enforcing to disabled(if available).
 
 ## Disable zram
@@ -79,6 +79,13 @@ Replace enforcing to disabled(if available).
 
 ## Disable fstrim
 `sudo systemctl disable fstrim.timer`
+
+## Mask tpm
+```shell
+sudo systemctl mask sys-devices-LNXSYSTM:00-LNXSYBUS:00-INTC6001:00-tpmrm-tpmrm0.device
+sudo systemctl mask dev-tpmrm0.device
+sudo systemctl mask tpm2.target
+```
 
 ## Enable services
 ```shell
@@ -88,14 +95,14 @@ sudo systemctl enable tlp
 
 ## About xorg-x11-xdm
 Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
-make .xession executeable: `chmod +x .xsession`
+make .xession executeable: `chmod +x .xsession`<br>
 then type this code to keep xdm running: `systemctl set-default graphical.target`
 
 ## Minbrowser
 [Install](https://minbrowser.org/) minbrowser or using wget instead
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
 
-## wine中文字体: Chinese font for wine
+## wine: Chinese font for wine
 See chn\_font.reg under config.zip
 Extract and execute:
 `wine regedit chn_font.reg`
