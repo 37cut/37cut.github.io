@@ -19,7 +19,6 @@ you should check **Common NetworkManager Submodules**.
 - flameshot
 - gdouros-symbola-fonts
 - gimp
-- gnome-boxes
 - google-noto-emoji-fonts
 - gvfs-archive
 - htop
