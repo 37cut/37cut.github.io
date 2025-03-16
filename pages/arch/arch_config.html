@@ -6,9 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../decorate/main.css">
-
-    <script type="text/javascript" src="../../function/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/main.css">
+    <script type="text/javascript" src="../../assets/main.js" defer></script>
 </head>
 
 <body>
@@ -18,82 +17,76 @@
         <a href="./arch_extra">Arch: Others</a>
     </div>
 
-    <div id="Grid">
-        <div class="content">
-            <h1>Install gui</h1>
+    <h1>Settings</h1>
+    <div class="content">
+        <div class="container">
             <h2>Services and additional packages</h2>
 
-            <div class="container">
-                <p>Login with <i>your_account</i>
+            <p>Login with <i>your_account</i>
 
-                <br><br>
+            <div class="return"></div>
 
-                <p>sudo systemctl enable acpid bluetooth tlp xdm NetworkManager
-                <p>sudo systemctl start NetworkManager
+            <p>sudo systemctl enable acpid bluetooth tlp xdm NetworkManager
+            <p>sudo systemctl start NetworkManager</p>
 
-                <br><br>
+            <div class="return"></div>
 
-                <p>Connect the internet with <u>nmtui</u>, then install the following packages(depends on you):
-                <p>sudo pacman -S i3{-wm,lock,status} \
-                <p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
-                <p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
-                <p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
-                <p>chromium alacritty xss-lock audacity gimp
-            </div>
+            <p>Connect the internet with <u>nmtui</u>, then install the following packages(depends on you):
+            <p>sudo pacman -S i3{-wm,lock,status} \
+            <p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
+            <p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
+            <p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
+            <p>chromium alacritty xss-lock audacity gimp
         </div>
+    </div>
 
-        <div id="focus" class="content">
-        <h1>Config gui</h1>
-            <h2>Configs(for me)</h2>
-            <div class="container">
-                <p>Set xdm:
-                <p>touch .xsession
-                <p>echo i3 &gt; .xsession
-                <p>chmod +x .xsession
+    <div class="content">
+        <div class="container">
+            <h2>Configs</h2>
 
-                <br><br>
+            <p>Set xdm:
+            <p>touch .xsession
+            <p>echo i3 &gt; .xsession
+            <p>chmod +x .xsession
 
-                <p>Get yay:
-                <p>git clone https://aur.archlinux.org/yay.git
-                <p>pacman -S go
-                <p>cd yay
-                <p>makepkg -si
+            <div class="return"></div>
 
-                <br><br>
+            <p>Get yay:
+            <p>git clone https://aur.archlinux.org/yay.git
+            <p>pacman -S go
+            <p>cd yay
+            <p>makepkg -si
 
-                <p>Missing firmwares:
-                <p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
-                mkinitcpio - ArchWiki</a>
-                <p>yay -S your_missingFirmwares
-                <p>I'm missing these firmwares so I'll type:
-                <p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
-                <p>mkinitcpio -P
+            <div class="return"></div>
 
-                <br><br>
+            <p>Missing firmwares:
+            <p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
+            mkinitcpio - ArchWiki</a>
+            <p>yay -S your_missingFirmwares
+            <p>I'm missing these firmwares so I'll type:
+            <p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
+            <p>mkinitcpio -P
 
-                <p>yay -S ttf-symbola
+            <div class="return"></div>
 
-                <br><br>
+            <p>Dark gtk theme:<br>
+            <p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
 
-                <p>Dark gtk theme:<br>
-                <p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
+            <div class="return"></div>
 
-                <br><br>
+            <p>My config for i3:<br>
+            <p>Download <a href="../../files/fedora/config.zip">here</a> or:
+            <p>wget https://cutt37.github.io/files/packages/fedora/config.zip
 
-                <p>My config for i3:<br>
-                <p>Download <a href="../../files/fedora/config.zip">here</a> or:
-                <p>wget https://cutt37.github.io/files/packages/fedora/config.zip
+            <div class="return"></div>
 
-                <br><br>
-
-                <p>Config vim:
-                <p>sudo pacman -S npm nodejs
-                <p>vim
-                <p>:PlugInstall
-                <p>:CocInstall coc-json coc-html coc-css
-                <p>:q
-                <p>sudo ln -sf /home/cutt37/.vim /root/.vim
-            </div>
+            <p>Config vim:
+            <p>sudo pacman -S npm nodejs
+            <p>vim
+            <p>:PlugInstall
+            <p>:CocInstall coc-json coc-html coc-css
+            <p>:q
+            <p>sudo ln -sf /home/cutt37/.vim /root/.vim
         </div>
     </div>
 </body>

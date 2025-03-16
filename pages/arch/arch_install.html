@@ -6,8 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../decorate/main.css">
-    <script type="text/javascript" src="../../function/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/main.css">
+    <script type="text/javascript" src="../../assets/main.js" defer></script>
 </head>
 
 <body>
@@ -17,10 +17,12 @@
         <a href="./arch_extra">Arch: Others</a>
     </div>
 
-    <div class='content'>
-        <h1>Archlinux installation</h1>
-        <h2>Notes:</h2>
+    <h1>Archlinux installation</h1>
+
+    <div class="content">
         <div class="container">
+            <h2>Notes:</h2>
+
             <p>Read this two official wiki:
             <a href="https://wiki.archlinux.org/title/Installation_guide">
                 First pre-install</a>
@@ -29,38 +31,44 @@
             <p>You can try <u>archinstall</u>, it's pretty simple to install the os.
             <p>Be careful when executing commands.
         </div>
+    </div>
 
-        <h2>1. Connect to the internet(wireless)</h2>
+    <div class="content">
         <div class="container">
-            <p><u>ifconfig</u> to check the network card.
-            <p>Here <b>wlan0</b> as default(Since I'm on laptop).
+            <h2>1. Connect to the internet(wireless)</h2>
 
-            <br><br>
+            <p><u>ifconfig</u> to check the network card.
+            <p>Here <b>wlan0</b> as default(I'm on laptop).
+
+            <div class="return"></div>
 
             <p>iwctl
             <p>station wlan0 scan
             <p>station wlan0 get-networks
             <p>station wlan0 connect <i>select_yourNetwork</i>
 
-            <br><br>
+            <div class="return"></div>
 
             <p>Once you're done, type <u>exit</u>.
         </div>
+    </div>
 
-        <h2>2. Disk partition and format</h2>
+    <div class="content">
         <div class="container">
+            <h2>2. Disk partition and format</h2>
+
             <p>If you have an old pc, you should check your bios that support uefi or not.
             <p>Since there are two choice to install arch: uefi and legacy.
             <p>On legacy you don't have to create the efi partition and install <i>efibootmgr</i>.
 
-            <br><br>
+            <div class="return"></div>
 
             <p>Be clear what disk you are going to partition.
             <p>If it's a m.2 disk it should be something like <i>/dev/nvme0n1p1</i>.
             <p>If it's a sata or some udisk it should be <i>/dev/sda</i>
             <p>Btw don't format your installation media.
 
-            <br><br>
+            <div class="return"></div>
 
             <p><u>fdisk -l</u> to list disks on your computer.
             <p><u>cfdisk</u>
@@ -96,22 +104,25 @@
             <p>Here are some filesystems like: ext4, brtfs, xfs, f2fs...
             <p>I choose ext4 here.
 
-            <br><br>
+            <div class="return"></div>
 
             <p>mkfs.fat -F 32 /dev/nvme0n1p1
             <p>mkswap /dev/nvme0n1p2
             <p>swapon /dev/nvme0n1p2
             <p>mkfs.ext4 /dev/nvme0n1p3
 
-            <br><br>
+            <div class="return"></div>
 
             <p>Mounting:
             <p>mount /dev/nvme0n1p3 /mnt
             <p>mount --mkdir /dev/nvme0n1p1 /mnt/boot
         </div>
+    </div>
 
-        <h2>3. Packages</h2>
+    <div class="content">
         <div class="container">
+            <h2>3. Packages</h2>
+
             <p>Some mirrors may improve your download speed:
             <a href="https://archlinux.org/mirrors/status/">Arch mirrorlist</a>
             <a href="https://archlinux.org/mirrorlist/">Arch generator</a>
@@ -119,7 +130,7 @@
             <p>Insert this code: <u>Server = /your/mirror/$repo/os/$arch</u>
             <p>Refresh your repo with: <u>pacman -Syu</u>.
 
-            <br><br>
+            <div class="return"></div>
 
             <p>pacstrap -K /mnt linux linux-firmware base base-devel \
             <p>efibootmgr grub networkmanager 
@@ -128,55 +139,61 @@
             <p>wqy-microhei-lite terminus-font bluez bluez-utils \
             <p>alsa-{utils,plugins} zip {un,p7}zip tlp acpi{d,light}
 
-            <br><br>
+            <div class="return"></div>
 
             <p>Graphic card driver:
             <p>intel: <u>vulkan-intel</u>,<u>intel-media-driver</u>,<u>libva-intel-driver</u>
             <p>amd: <u>xf86-video-amd</u>,<u>vulkan-radeon</u>
 
-            <br><br>
+            <div class="return"></div>
 
             <p>Microcode:
             <p>intel cpu: <u>intel-ucode</u>;
             <p>amd cpu: <u>amd-ucode</u>;
 
-            <br><br>
+            <div class="return"></div>
 
             <p>pacstrap /mnt intel-ucode intel-media-driver vulkan-intel \
             <p>xf86-video-fbdev linux-firmware-qlogic(for me)
 
-            <br>
+            <div class="return"></div>
 
             <p>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab
             arch-chroot /mnt</p>
         </div>
+    </div>
 
-        <h2>4. Time and language</h2>
+    <div class="content">
         <div class="container">
+            <h2>4. Time and language</h2>
+
             <p><u>ls /usr/share/zoneinfo</u> to list timezone.
             <p>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
             <p>hwclock --systohc
 
-            <br><br>
+            <div class="return"></div>
 
             <p>vim /etc/locale.gen
             <p>Find your locale and uncomment it.
 
-            <br><br>
+            <div class="return"></div>
 
             <p>locale-gen
             <p>echo LANG=en_US.UTF-8 &gt; /etc/locale.conf
             <p>echo <u>your-hostname</u>(eg. archlinux) &gt; /etc/hostname
         </div>
+    </div>
 
-        <h2>5. GRUB config</h2>
+    <div class="content">
         <div class="container">
+            <h2>5. GRUB config</h2>
+
             <p>Legacy:
             <p>grub-install --target=i386-pc <u>/dev/nvme0n1p3</u>
             <p>UEFI:
             <p>grub-install --target=x86_64-efi --efi-directory=/boot
 
-            <br><br>
+            <div class="return"></div>
 
             <p>Not 100% sure these code do
             <p>vim /etc/default/grub
@@ -186,13 +203,16 @@
             <p>resume=<i>/dev/nvme0n1p2</i> (if you want your pc hibernate)
             <p>video=efifb:nobgrt
 
-            <br><br>
+            <div class="return"></div>
 
             <p>grub-mkconfig -o /boot/grub/grub.cfg
         </div>
+    </div>
 
-        <h2>6. Others</h2>
+    <div class="content">
         <div class="container">
+            <h2>6. Others</h2>
+
             <p>Add one account:
             <p>useradd -m -G audio,storage,video,wheel <u>your-accountName</u>
             <p>passwd <u>your-accountName</u>
@@ -206,12 +226,12 @@
             <p>It should look like this:
             <p>HOOKS=(... filesystem <b>resume</b>)
 
-            <br><br>
+            <div class="return"></div>
 
             <p>vim /etc/systemd/logind.conf
             <p>Uncomment <u>HandleLidSwitch</u> and <u>HandleLidSwitchExternalPower</u>
 
-            <br><br>
+            <div class="return"></div>
 
             <p>HandleLidSwitch=<i>hibernate(or keep default suspend)</i>
             <p>HandleLidSwitchExternalPower=<i>suspend</i>
@@ -219,21 +239,21 @@
             <p>tty font:
             <p>echo FONT=ter-132n(n-normal b-bold) &gt; /etc/vconsole.conf
 
-            <br><br>
+            <div class="return"></div>
 
             <p>High resolution with small window problem:
             <p>Bigger values to get bigger window.
             <p>echo GDK_DPI_SCALE=1.25 &gt;&gt; /etc/environment
             <p>echo GDK_SCALE=1.25 &gt;&gt; /etc/environment
 
-            <br><br>
+            <div class="return"></div>
 
             <p>If you are troubled with the intel or some graphic cards,
             <p>then add <u>MESA_LOADER_DRIVER_OVERRIDE</u>.
             <p>Notice your fps may be less than before.
             <p>echo MESA_LOADER_DRIVER_OVERRIDE=zink &gt;&gt; /etc/environment
 
-            <br><br>
+            <div class="return"></div>
 
             <p>mkinitcpio -P
             <p>exit

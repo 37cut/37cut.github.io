@@ -6,138 +6,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../decorate/main.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/main.css">
 
-    <script type="text/javascript" src="../../function/main.js" defer></script>
+    <script type="text/javascript" src="../../assets/main.js" defer></script>
 </head>
 
 <body>
-    <div id="Grid">
-        <div class="content">
-            <h1>Setup</h1>
-            <h2>Intro</h2>
+    <h1>Introd.</h1>
+    <div class="content">
+        <div class="container">
+            <h2>Setup</h2>
 
-            <div class="container">
-                <p>probably offline(very tired about osu).
-
-                <br><br>
-
-                <p>Setup:
-                <p id="tab">Mouse: Logitech G102 (2 accel);
-                <p id="tab">Keyboard: Sayo O2C + Greywood v3 switch;
-                <p id="tab">Resolution: 1920x1080, 15&quot;6
-                <p id="tab">Typing: Alternate;
-                <p id="tab">Skin(made by me, update occasionally): <a href="https://mediafire.com/file/ccwdmu9b07d3exu/Idontknow.osk/file">Idontknow</a>   
-            </div>
-
-            <h2>Mouse config</h2>
-            <div class="container">
-                <p>File: 50-mouse-acceleration.conf
-                <p>Section "InputClass"
-                <p id="tab">Identifier ""
-                <p id="tab">Driver "libinput"
-                <p id="tab">MatchIsPointer "yes"
-                <p id="tab">Option "AccelProfile" "flat"
-                <p id="tab">Option "AccelSpeed" "0"
-                <p>EndSection
-            </div>
+            <p>Mouse: Logitech G102 (2 accel);
+            <p>Keyboard: Sayo O2C + Greywood v3 switch;
+            <p>Resolution: 1920x1080, 15&quot;6
+            <p>Typing: Alternate;
+            <p>Skin: <a href="https://mediafire.com/file/ccwdmu9b07d3exu/Idontknow.osk/file">Idontknow</a>
         </div>
 
-        <div id="focus" class="content">
-            <h1>Fast connection</h1>
-            <h2>A method to boost your Internet</h2>
-            <div class="container">
-                <p>Visit <a href="https://github.com/XIU2/CloudflareSpeedTest">this</a> website.
-                <p>Execute a file which is called CloudflareST.exe(or CloudflareST sth else).
-                <p>Wait till it gets an output.
-                <p>Choose the fast ip in "result.csv".
-                <p>Then change your host file.
-                <p>Windows: "C:\Windows\System32\drivers\etc\hosts"
-                <p>Linux: "/etc/hosts"
-                <p>Then see <a href="../../files/host_example.txt">this</a> example file.
-
-                <br><br>
-
-                <p>Now go to <a href="https://github.com/KyuubiRan/BeatmapDownloader">this</a> website.
-                <p>Go to releases(on the right of website), download "Release-x86.zip".
-                <p>Make a directory inside your osu folder like "Injector"
-                <p>Unzip Release-x86.zip, move Downloader.dll and Injector.exe to directory you've been created.
-            </div>
-        </div>
-    </div>
-
-    <div id="Grid">
-        <div class="content">
-            <h1>Misc.</h1>
-            <h2>Maps</h2>
-            <div class="container">
-                <p>1. Enjoy maps
-                <p>Except ez, low ar(&lt;~8), old,
-                <p>the "classic" farms, usually I enjoy all other maps,
-                <p>but I still prefer maps I like.
-                <p id="tiny">why there're so many tv sizes... I dont want to be that...
-
-                <br><br>
-
-                <p>2. Map songs
-                <p>Mapping is a feeling thing.
-                <p>Prefer comfort/unique pattern than copy.
-                <p>btw sd_mango queue sucks, osumod is better than this trash.
-                
-                <br><br>
-
-                <p>Difficulty(an example)
-                Hard:   cs3.6~4, hp5, ar8, od6, sv~1.4, sl~7
-                Insane: cs3.8~4, hp5, ar9, od8, sv~1.4, sl~7
-                About stack leniency
-                Mostly it would be:
-                Fast bpm(>= 180) / complex rhythm use lower stack leniency,
-                simple rhythm use higher stack leniency(>=5).
-                But always keep sl7 as default(if you cant find out).
-                <br><br>
-
-                <p>Workflow of a map:
-                <p>|-- Picking songs(<span id="im">important</span>, <span id="su">not only your favourite songs</span>).
-                <p>|-- <span id="su">Read rc(ranking criteria)</span>.
-                <p>|-- Listen to music carefully(think about the genre, rhythm, bpm, difficulty...).
-                <p>|-- First play.
-                <p>|-- Find the problems.
-                <p>|-- If you think you can't find any problems, ask modders.
-                <p id="tab">|-- <span id="tg">Issue</span> <span id="im">must</span> fix.
-                <p id="tab">|-- Do <span id="im">not</span> always follow modders <span id="tg">advice</span>,
-                <p id="tab">|-- Choose what kind of advice you need.
-                <p>|-- Hitsound your map and put some custom hitsound in it(hitsound <span id="im">must</span> included).
-                <p>|-- If you think the base structure is done, put it to <span id="tg">pending</span> status.
-                <p>|-- Now, find some BNs to mod your map,
-                <p>|-- besides, try to get at least 5 hypes.
-                <p>...
-                <p>And yes I really need contacts,
-                <p>otherwise I'm going to put a lot of time to rank(or never rank) one map.
-
-                <br><br>
-
-                <p>WIP map modding acceptable rate.
-                <p>Current: 3 rejects | 2 finish | 5 pending
-                <p>which is 1/5 - 20% chance can pass.
-
-                <br><br>
-
-                <p><span id="im">Encouraging is a vital thing.</span>
-                <p><span id="im">Never request a modding queue which makes you uncomfortable</span>.
-            </div>
-
-            <h2>About osu</h2>
-            <div class="container">
-                <p>offset - no, confusing, as well as hitting circles
-                <p>song editor - no, not so convinent and clean
-                <p>interesting - no, pretty boring
-                <p>the player - no, they are not so kind
-                <p>interface - no, "song select" not so reasonable and bad
-                <p>skinning - no, not so smart due to "song select" since everyone's display ratios are different
-                <p>ranking a map - no, strict ranking criteria and no one wants to enjoy a newble's map
-                <p>community - no, isolation and hating is so suck 
-                <p>osu itself - yes, since its play style is unique from the other rhythm games
-           </div>
+        <div class="container">
+            <h2>And me</h2>
+            <p>First, I dont play classic(see every player's top pp lol) farms.
+            <p>Second, I'll put on nf if I hate that music(or cant play if star &gt; 6.5).
+            <p>Third, dont like the community cuz not kind.
+            <p>Fourth, dont play osu stable cuz works weird on linux.
+            <p>Fifth, sd_mango queue sucks.
+            <p>Last, dont like lazer's new design.
         </div>
     </div>
 </body>

@@ -6,9 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../../decorate/main.css">
-
-    <script type="text/javascript" src="../../function/main.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="../../assets/main.css">
+    <script type="text/javascript" src="../../assets/main.js" defer></script>
 </head>
 
 <body>
@@ -18,35 +17,33 @@
         <a href="./arch_extra" id="current">Arch: Others</a>
     </div>
 
-    <div id="Grid">
-        <div class="content">
-            <h1>Wine on arch linux</h1>
+    <h1>Wine on arch linux</h1>
+    <div class="content">
+        <div class="container">
             <h2>Execute dot exe files</h2>
-            <div class="container">
-                <p>vim /etc/pacman.conf
-                <p>Uncomment [multilib] and mirror
+            <p>vim /etc/pacman.conf
+            <p>Uncomment [multilib] and mirror
 
-                <br><br>
+            <div class="return"></div>
 
-                <p>sudo pacman -Syu
-                <p>sudo pacman -S wine-staging winetricks \
-                <p>lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\
-                <p>libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}
+            <p>sudo pacman -Syu
+            <p>sudo pacman -S wine-staging winetricks \
+            <p>lib32-{libva,ocl-icd,libxcomposite,gnutls,vulkan-intel,\
+            <p>libpulse,alsa-lib,alsa-plugins,gst-plugins-base-libs,gtk3}
 
-                <br><br>
+            <div class="return"></div>
 
-                <p>yay -S ttf-tahoma
+            <p>yay -S ttf-tahoma
 
-                <br><br>
+            <div class="return"></div>
 
-                <p>winecfg
-                <p>winetricks dotnet45
+            <p>winecfg
+            <p>winetricks dotnet45
 
-                <br><br>
+            <div class="return"></div>
 
-                <p>mkdir your_folder
-                <p>wine your_file.exe
-            </div>
+            <p>mkdir your_folder
+            <p>wine your_file.exe
         </div>
     </div>
 </body>

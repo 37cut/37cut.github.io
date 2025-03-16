@@ -1,0 +1,87 @@
+/* Font */
+@font-face {
+    font-family: "lgc";
+    src: url("font-family/Louis George Cafe.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "lgc";
+    font-weight: bold;
+    src: url("font-family/Louis George Cafe Bold.ttf") format("truetype");
+}
+
+/* The HTML element */
+body, h1, h2, p { margin: 0; padding: 0; }
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    margin: 2px;
+    font-size: 16px;
+    word-break: break-word;
+    font-family: "lgc", serif;
+    background-color: #e9e9d0;
+}
+
+/* They have the same object */
+h1, #Menu, ._button, .content {
+    margin: 4px;
+    padding: 10px;
+    border: 1px solid #999999;
+    background-color: #f9f9f0;
+    box-shadow: 0 0 4px #cccccc;
+}
+
+h1  { font-size: 1.7em; }
+h2  { font-size: 1.5em; }
+p   { color: #c06633; font-size: 1.3em; }
+u   { background-color: #ffffff; text-decoration: 1px underline; }
+br  { font-size: 0; }
+
+a {
+    color: #456699;
+    font-size: 22px;
+    text-decoration: none;
+    transition: all .16s linear;
+}
+
+a:hover {
+    color: #7899cc;
+    text-decoration: 1px underline dotted;
+}
+
+table {
+    padding: 8px;
+    border: 1px solid #999999;
+    background-color: #fcfcfc;
+}
+
+
+/* The element that I created*/
+#Menu {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.2em;
+}
+
+#current    { font-weight: bold; }
+#Footer     { display: flex; flex-direction: row; }
+.return     { height: 1.1em; }
+
+._button        { width: 100%; transition: all .16s linear; }
+._button:hover  { background-color: #ffffff; }
+
+.content {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: row;
+    gap: 4%;
+}
+
+.container { line-height: 2.2em; }
+
+@media only screen and (max-width: 960px) {
+    .content    { flex-direction: column; }
+}
+
