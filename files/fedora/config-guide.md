@@ -10,6 +10,8 @@ you should check **Common NetworkManager Submodules**.
 # Packages to download(for me)
 
 - alacritty
+- alsa-firmware
+- alsa-sof-firmware
 - alsa-utils
 - audacity
 - bluez
