@@ -1,4 +1,4 @@
-# Fedora netinstall guide
+# fedora netinstall guide
 
 Go to this [page](https://alt.fedoraproject.org/)<br>
 Find 'Network Installers' and download.<br>
@@ -7,7 +7,7 @@ Here I use minimal install.<br>
 If you want to connect to Internet,<br>
 you should check **Common NetworkManager Submodules**.
 
-# Packages to download(for me)
+# an example package list
 
 - alacritty
 - alsa-firmware
@@ -44,65 +44,73 @@ you should check **Common NetworkManager Submodules**.
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
-# Configs
+# configs
 
-## Refresh the fonts
+## refresh the fonts
 ```shell
 fc-cache -fv
 sudo fc-cache -fv
 ```
 
-## Uninstall some add-ons(if exist)
+## uninstall some pkgs(if exist)
 ```shell
 sudo dnf rm xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware} \
 amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
 ```
 
-## Config shell, account
+## config shell and account
 ```shell
 chsh -s /usr/bin/zsh
 usermod -a -G audio your_account
 ```
 
-## Wallpaper on loaded
+## wallpaper
 Config xorg-x11-xdm: `vim /etc/X11/xdm/Xsetup_0`<br>
 Write these codes into Xsetup\_0:<br>
 ```shell
 /usr/bin/feh --borderless --no-xinerama --no-menus --no-fehbg --cache-size '16' --window-id ':0' --geometry '3840x2160' --bg-fill '/home/cutt37/.config/i3/Kano.png' &
 ```
 
-## Disable selinux
+## my configs
+[Here](https://cutt37.is-a.dev/files/fedora/config.zip)
+
+## disable selinux
 `vim /etc/selinux/config`<br>
 Find key 'SELINUX=...'<br>
 Replace enforcing to disabled(if available).
 
-## Disable zram
+## disable zram
 `sudo dnf rm zram-generator`
 
-## Disable fstrim
+## disable fstrim
 `sudo systemctl disable fstrim.timer`
 
-## Mask tpm
+## mask tpm
 ```shell
 sudo systemctl mask tpm2.target
 ```
 
-## Enable services
+## enable services
 ```shell
 sudo systemctl enable xdm
 sudo systemctl enable tlp
 ```
 
-## About xorg-x11-xdm
+## about xorg-x11-xdm
 Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
 make .xession executeable: `chmod +x .xsession`<br>
 then type this code to keep xdm running: `systemctl set-default graphical.target`
 
-## Minbrowser
-[Install](https://minbrowser.org/) minbrowser or using wget instead
+## minbrowser
+[Install](https://minbrowser.org/)<br>
+```shell
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
+```
 
 ## wine: Chinese font for wine
 See chn\_font.reg under config.zip
 Extract and execute:
 `wine regedit chn_font.reg`
+
+## pycharm
+Visit [this](https://www.jetbrains.com/pycharm/download/other.html) website.
