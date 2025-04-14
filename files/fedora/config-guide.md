@@ -107,15 +107,7 @@ then type this code to keep xdm running: `systemctl set-default graphical.target
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
 ```
 
-## wine: Chinese font for wine
-See chn\_font.reg under config.zip<br>
-Extract it and run `wine regedit chn_font.reg`
-
 ## shutdown action after hibernate
-Create a file under "/etc/systemd" called "sleep.conf"<br>
-Then add these two lines of code:<br>
-```shell
-[Sleep]
-HibernateMode=shutdown
-```
-And run `sudo systemctl daemon-reload`
+See files under config.zip/systemd<br>
+Extract all, move them to "/etc/systemd" directory<br>
+And then run `sudo systemctl daemon-reload`
