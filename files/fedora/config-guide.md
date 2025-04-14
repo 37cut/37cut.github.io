@@ -108,9 +108,14 @@ wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/downlo
 ```
 
 ## wine: Chinese font for wine
-See chn\_font.reg under config.zip
-Extract and execute:
-`wine regedit chn_font.reg`
+See chn\_font.reg under config.zip<br>
+Extract it and run `wine regedit chn_font.reg`
 
-## pycharm
-Visit [this](https://www.jetbrains.com/pycharm/download/other.html) website.
+## shutdown action after hibernate
+Create a file under "/etc/systemd" called "sleep.conf"<br>
+Then add these two lines of code:<br>
+```shell
+[Sleep]
+HibernateMode=shutdown
+```
+And run `sudo systemctl daemon-reload`
