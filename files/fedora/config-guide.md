@@ -65,7 +65,6 @@ usermod -a -G audio your_account
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config.zip)<br>
-> file                        :: path(if directory not exist then create one)<br>
 - .zshrc                      -> /home/account<br>
 - alacritty.toml              -> /home/account/.config/alacritty<br>
 - config                      -> /home/account/.config/i3<br>
