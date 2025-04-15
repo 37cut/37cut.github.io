@@ -65,21 +65,21 @@ usermod -a -G audio your_account
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config.zip)<br>
-file                        :: path(if directory not exist then create one)<br>
-.zshrc                      -> /home/account<br>
-alacritty.toml              -> /home/account/.config/alacritty<br>
-config                      -> /home/account/.config/i3<br>
-dunstrc                     -> /home/account/.config/dunst<br>
-50-mouse-acceleration.conf  -> /usr/share/X11/xorg.conf.d<br>
-environment                 -> /etc<br>
-vimrc                       -> /etc<br>
-i3status.conf               -> /etc<br>
-tlp.conf                    -> /etc<br>
-picom.conf                  -> /etc/xdg<br>
-systemd/logind.conf         -> /etc/systemd<br>
-systemd/sleep.conf          -> /etc/systemd<br>
-xdm/Xresources              -> /etc/X11/xdm<br>
-xdm/Xsetup_0                -> /etc/X11/xdm
+> file                        :: path(if directory not exist then create one)<br>
+- .zshrc                      -> /home/account<br>
+- alacritty.toml              -> /home/account/.config/alacritty<br>
+- config                      -> /home/account/.config/i3<br>
+- dunstrc                     -> /home/account/.config/dunst<br>
+- 50-mouse-acceleration.conf  -> /usr/share/X11/xorg.conf.d<br>
+- environment                 -> /etc<br>
+- vimrc                       -> /etc<br>
+- i3status.conf               -> /etc<br>
+- tlp.conf                    -> /etc<br>
+- picom.conf                  -> /etc/xdg<br>
+- systemd/logind.conf         -> /etc/systemd<br>
+- systemd/sleep.conf          -> /etc/systemd<br>
+- xdm/Xresources              -> /etc/X11/xdm<br>
+- xdm/Xsetup_0                -> /etc/X11/xdm
 
 ## disable selinux
 `vim /etc/selinux/config`<br>
