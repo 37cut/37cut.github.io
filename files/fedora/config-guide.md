@@ -31,7 +31,6 @@ you should check **Common NetworkManager Submodules**.
 - mousepad
 - mpv
 - NetworkManager-tui
-- nodejs
 - pcmanfm
 - picom
 - tlp
@@ -64,15 +63,23 @@ chsh -s /usr/bin/zsh
 usermod -a -G audio your_account
 ```
 
-## wallpaper
-Config xorg-x11-xdm: `vim /etc/X11/xdm/Xsetup_0`<br>
-Write these codes into Xsetup\_0:<br>
-```shell
-/usr/bin/feh --borderless --no-xinerama --no-menus --no-fehbg --cache-size '16' --window-id ':0' --geometry '3840x2160' --bg-fill '/home/cutt37/.config/i3/Kano.png' &
-```
-
 ## my configs
-[Here](https://cutt37.is-a.dev/files/fedora/config.zip)
+[Here](https://cutt37.is-a.dev/files/fedora/config.zip)<br>
+file                        :: path(if directory not exist then create one)<br>
+.zshrc                      -> /home/account<br>
+alacritty.toml              -> /home/account/.config/alacritty<br>
+config                      -> /home/account/.config/i3<br>
+dunstrc                     -> /home/account/.config/dunst<br>
+50-mouse-acceleration.conf  -> /usr/share/X11/xorg.conf.d<br>
+environment                 -> /etc<br>
+vimrc                       -> /etc<br>
+i3status.conf               -> /etc<br>
+tlp.conf                    -> /etc<br>
+picom.conf                  -> /etc/xdg<br>
+systemd/logind.conf         -> /etc/systemd<br>
+systemd/sleep.conf          -> /etc/systemd<br>
+xdm/Xresources              -> /etc/X11/xdm<br>
+xdm/Xsetup_0                -> /etc/X11/xdm
 
 ## disable selinux
 `vim /etc/selinux/config`<br>
@@ -106,8 +113,3 @@ then type this code to keep xdm running: `systemctl set-default graphical.target
 ```shell
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
 ```
-
-## shutdown action after hibernate
-See files under config.zip/systemd<br>
-Extract all, move them to "/etc/systemd" directory<br>
-And then run `sudo systemctl daemon-reload`
