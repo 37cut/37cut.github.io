@@ -21,7 +21,6 @@ you should check **Common NetworkManager Submodules**.
 - flameshot
 - gdouros-symbola-fonts
 - gimp
-- google-noto-emoji-fonts
 - gvfs-archive
 - htop
 - i3
