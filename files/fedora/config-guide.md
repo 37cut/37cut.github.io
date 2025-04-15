@@ -50,10 +50,12 @@ fc-cache -fv
 sudo fc-cache -fv
 ```
 
-## uninstall some pkgs(if exist)
+## uninstall some pkgs(for personal requirement)
 ```shell
 sudo dnf rm xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware} \
 amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
+
+sudo dnf rm {atheros,brcmfmac,cirrus-audio,mt7xxx,nxpwireless,tiwilink}-firmware
 ```
 
 ## config shell and account
