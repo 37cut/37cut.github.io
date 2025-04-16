@@ -14,6 +14,7 @@ you should check **Common NetworkManager Submodules**.
 - alsa-sof-firmware
 - alsa-utils
 - audacity
+- bleachbit
 - bluez
 - dbus-x11
 - dunst
@@ -50,7 +51,7 @@ fc-cache -fv
 sudo fc-cache -fv
 ```
 
-## uninstall some pkgs(for personal requirement)
+## uninstall some pkgs(if you need that, dont follow this)
 ```shell
 sudo dnf rm xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware} \
 amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
@@ -64,22 +65,26 @@ chsh -s /usr/bin/zsh
 usermod -a -G audio your_account
 ```
 
+## dnf config
+Edit /etc/dnf/dnf.conf<br>
+Add `max_parellel_downloads=1` to it
+
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config.zip)<br>
-- .zshrc                      -> /home/account<br>
-- alacritty.toml              -> /home/account/.config/alacritty<br>
-- config                      -> /home/account/.config/i3<br>
-- dunstrc                     -> /home/account/.config/dunst<br>
-- 50-mouse-acceleration.conf  -> /usr/share/X11/xorg.conf.d<br>
-- environment                 -> /etc<br>
-- vimrc                       -> /etc<br>
-- i3status.conf               -> /etc<br>
-- tlp.conf                    -> /etc<br>
-- picom.conf                  -> /etc/xdg<br>
-- systemd/logind.conf         -> /etc/systemd<br>
-- systemd/sleep.conf          -> /etc/systemd<br>
-- xdm/Xresources              -> /etc/X11/xdm<br>
-- xdm/Xsetup_0                -> /etc/X11/xdm
+- .zshrc                        -> /home/account<br>
+- alacritty.toml                -> /home/account/.config/alacritty<br>
+- config                        -> /home/account/.config/i3<br>
+- dunstrc                       -> /home/account/.config/dunst<br>
+- 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d<br>
+- environment                   -> /etc<br>
+- vimrc                         -> /etc<br>
+- i3status.conf                 -> /etc<br>
+- tlp.conf                      -> /etc<br>
+- picom.conf                    -> /etc/xdg<br>
+- systemd/logind.conf           -> /etc/systemd<br>
+- systemd/sleep.conf            -> /etc/systemd<br>
+- xdm/Xresources                -> /etc/X11/xdm<br>
+- xdm/Xsetup\_0                 -> /etc/X11/xdm
 
 ## disable selinux
 `vim /etc/selinux/config`<br>
@@ -105,7 +110,7 @@ sudo systemctl enable tlp
 
 ## about xorg-x11-xdm
 Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
-make .xession executeable: `chmod +x .xsession`<br>
+make .xsession executeable: `chmod +x .xsession`<br>
 then type this code to keep xdm running: `systemctl set-default graphical.target`
 
 ## minbrowser
@@ -113,3 +118,15 @@ then type this code to keep xdm running: `systemctl set-default graphical.target
 ```shell
 wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.33.1/min-1.33.1-x86\_64.rpm
 ```
+
+# notes
+
+## system upgrade
+```shell
+sudo dnf upgrade --refresh
+sudo dnf system-upgrade download --releasever=XX
+sudo dnf system-upgrade reboot
+```
+
+## remove old kernel
+`sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1)`
