@@ -4,8 +4,8 @@ Go to this [page](https://alt.fedoraproject.org/)<br>
 Find 'Network Installers' and download.<br>
 
 Here I use minimal install.<br>
-If you want to connect to Internet,<br>
-you should check **Common NetworkManager Submodules**.
+If you have a card which is wireless,<br>
+then you should check **Common NetworkManager Submodules** this option.
 
 # an example package list
 
