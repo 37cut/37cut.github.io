@@ -11,81 +11,83 @@
 </head>
 
 <body>
-    <div id="Menu">
+    <div id="menu">
         <a href="./install">Installation</a>
         <a href="./config" id="current">Configuration</a>
     </div>
 
-    <h1>Settings</h1>
-    <div class="content">
-        <div class="container">
-            <h2>Services and additional packages</h2>
+    <div id="content">
+        <div class="text-group">
+            <div class="text-child">
+                <h1>Settings</h1>
+                <h2>Services and additional packages</h2>
 
-            <p>Login with <i>your_account</i>
+                <p>Login with <i>your_account</i>
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>sudo systemctl enable acpid bluetooth tlp xdm NetworkManager
-            <p>sudo systemctl start NetworkManager</p>
+                <p>sudo systemctl enable acpid bluetooth tlp xdm NetworkManager
+                <p>sudo systemctl start NetworkManager</p>
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>Connect the internet with <u>nmtui</u>, then install the following packages(depends on you):
-            <p>sudo pacman -S i3{-wm,lock,status} \
-            <p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
-            <p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
-            <p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
-            <p>chromium alacritty xss-lock audacity gimp
+                <p>Connect the internet with <u>nmtui</u>, then install the following packages(depends on you):
+                <p>sudo pacman -S i3{-wm,lock,status} \
+                <p>network-manager-applet pcmanfm-gtk3 xarchiver dmenu \
+                <p>dunst feh ibus ibus-libpinyin picom flameshot mpv \
+                <p>zsh zsh-{completions,autosuggestions,syntax-highlighting} \
+                <p>chromium alacritty xss-lock audacity gimp
+            </div>
         </div>
-    </div>
 
-    <div class="content">
-        <div class="container">
-            <h2>Configs</h2>
+        <div class="text-group">
+            <div class="text-child">
+                <h2>Configs</h2>
 
-            <p>Set xdm:
-            <p>touch .xsession
-            <p>echo i3 &gt; .xsession
-            <p>chmod +x .xsession
+                <p>Set xdm:
+                <p>touch .xsession
+                <p>echo i3 &gt; .xsession
+                <p>chmod +x .xsession
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>Get yay:
-            <p>git clone https://aur.archlinux.org/yay.git
-            <p>pacman -S go
-            <p>cd yay
-            <p>makepkg -si
+                <p>Get yay:
+                <p>git clone https://aur.archlinux.org/yay.git
+                <p>pacman -S go
+                <p>cd yay
+                <p>makepkg -si
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>Missing firmwares:
-            <p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
-            mkinitcpio - ArchWiki</a>
-            <p>yay -S your_missingFirmwares
-            <p>I'm missing these firmwares so I'll type:
-            <p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
-            <p>mkinitcpio -P
+                <p>Missing firmwares:
+                <p>See: <a href="https://wiki.archlinux.org/title/Mkinitcpio#Possibly_missing_firmware_for_module_XXXX">
+                mkinitcpio - ArchWiki</a>
+                <p>yay -S your_missingFirmwares
+                <p>I'm missing these firmwares so I'll type:
+                <p>yay -S {aic94xx,ast,wd719x}-firmware upd72020x-fw
+                <p>mkinitcpio -P
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>Dark gtk theme:<br>
-            <p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
+                <p>Dark gtk theme:<br>
+                <p>sudo echo GTK-THEME=Adwaita:dark &gt;&gt; /etc/environment
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>My config for i3:<br>
-            <p>Download <a href="../../files/fedora/config.zip">here</a> or:
-            <p>wget https://cutt37.github.io/files/packages/fedora/config.zip
+                <p>My config for i3:<br>
+                <p>Download <a href="../../files/fedora/config.zip">here</a> or using wget:
+                <p>wget https://cutt37.github.io/files/packages/fedora/config.zip
 
-            <div class="return"></div>
+                <div class="ret"></div>
 
-            <p>Config vim:
-            <p>sudo pacman -S npm nodejs
-            <p>vim
-            <p>:PlugInstall
-            <p>:CocInstall coc-json coc-html coc-css
-            <p>:q
-            <p>sudo ln -sf /home/cutt37/.vim /root/.vim
+                <p>Config vim:
+                <p>sudo pacman -S npm nodejs
+                <p>vim
+                <p>:PlugInstall
+                <p>:CocInstall coc-json coc-html coc-css
+                <p>:q
+                <p>sudo ln -sf /home/cutt37/.vim /root/.vim
+            </div>
         </div>
     </div>
 </body>

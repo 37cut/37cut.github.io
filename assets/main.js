@@ -5,7 +5,7 @@ const footer = document.createElement('div')
 const return_home = document.createElement('div')
 const return_homeContent = document.createElement('p')
 
-footer.setAttribute('id', 'Footer')
+footer.setAttribute('id', 'footer')
 
 return_home.setAttribute('class', '_button')
 return_homeContent.appendChild(document.createTextNode('Return home.'))

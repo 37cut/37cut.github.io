@@ -1,4 +1,4 @@
-/* Font */
+/* -------------------------------- */
 @font-face {
     font-family: "lgc";
     src: url("font-family/Louis George Cafe.ttf") format("truetype");
@@ -10,7 +10,18 @@
     src: url("font-family/Louis George Cafe Bold.ttf") format("truetype");
 }
 
-/* The HTML element */
+
+/* -------------------------------- */
+#menu, #content, ._button {
+    margin: 4px;
+    padding: 10px;
+    border: 1px solid #999999;
+    background-color: #f9f9f0;
+    box-shadow: 0 0 4px #cccccc;
+}
+
+
+/* -------------------------------- */
 body, h1, h2, p { margin: 0; padding: 0; }
 
 body {
@@ -24,20 +35,10 @@ body {
     background-color: #e9e9d0;
 }
 
-/* They have the same object */
-h1, #Menu, ._button, .content {
-    margin: 4px;
-    padding: 10px;
-    border: 1px solid #999999;
-    background-color: #f9f9f0;
-    box-shadow: 0 0 4px #cccccc;
-}
-
-h1  { font-size: 1.7em; }
-h2  { font-size: 1.5em; }
-p   { color: #c06633; font-size: 1.3em; }
+h1  { font-size: 1.7em; line-height: 1.4em; }
+h2  { font-size: 1.5em; line-height: 1.4em; }
+p   { font-size: 1.3em; color: #c06633; }
 u   { background-color: #ffffff; text-decoration: 1px underline; }
-br  { font-size: 0; }
 
 a {
     color: #456699;
@@ -58,30 +59,33 @@ table {
 }
 
 
-/* The element that I created*/
-#Menu {
+/* -------------------------------- */
+#menu, #content {
     display: flex;
     flex-direction: column;
     line-height: 2.2em;
 }
 
 #current    { font-weight: bold; }
-#Footer     { display: flex; flex-direction: row; }
-.return     { height: 1.1em; }
+#footer     { display: flex; flex-direction: row; }
 
+
+/* -------------------------------- */
+.ret            { height: 1.1em; }
 ._button        { width: 100%; transition: all .16s linear; }
 ._button:hover  { background-color: #ffffff; }
 
-.content {
+.text-group {
     display: flex;
-    flex-basis: 100%;
     flex-direction: row;
-    gap: 4%;
+    gap: 8vh;
 }
 
-.container { line-height: 2.2em; }
+.text-child { }
 
+
+/* -------------------------------- */
 @media only screen and (max-width: 960px) {
-    .content    { flex-direction: column; }
+    .text-group { flex-direction: column; }
 }
 
