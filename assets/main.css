@@ -29,8 +29,9 @@ body {
     flex-direction: column;
 
     margin: 2px;
+    word-wrap: break-word;
+
     font-size: 16px;
-    word-break: break-word;
     font-family: "lgc", serif;
     background-color: #e9e9d0;
 }
