@@ -1,4 +1,4 @@
-/* -------------------------------- */
+/* */
 @font-face {
     font-family: "lgc";
     src: url("font-family/Louis George Cafe.ttf") format("truetype");
@@ -11,17 +11,7 @@
 }
 
 
-/* -------------------------------- */
-#menu, #content, ._button {
-    margin: 4px;
-    padding: 10px;
-    border: 1px solid #999999;
-    background-color: #f9f9f0;
-    box-shadow: 0 0 4px #cccccc;
-}
-
-
-/* -------------------------------- */
+/* */
 body, h1, h2, p { margin: 0; padding: 0; }
 
 body {
@@ -33,7 +23,7 @@ body {
 
     font-size: 16px;
     font-family: "lgc", serif;
-    background-color: #e9e9d0;
+    background-color: #f9f9f0;
 }
 
 h1  { font-size: 1.7em; line-height: 1.4em; }
@@ -60,36 +50,33 @@ table {
 }
 
 
-/* -------------------------------- */
+/* */
 #menu, #content {
     display: flex;
+    padding-inline: 33vh;
     flex-direction: column;
     line-height: 2.2em;
 }
 
 #current    { font-weight: bold; }
-#footer     { display: flex; flex-direction: row; }
+#footer     { padding-inline: 33vh; display: flex; flex-direction: row; }
 
 
-/* -------------------------------- */
+/* */
 .ret            { height: 1.1em; }
-._button        { width: 100%; transition: all .16s linear; }
-._button:hover  { background-color: #ffffff; }
+._button        { margin-right: 33px; transition: all .16s linear; }
+._button p:hover  { color: #000000; }
 
-.text-group {
-    display: flex;
-    flex-direction: row;
-    gap: 8vh;
+#menu {padding-bottom: 24px;}
+.text {padding-bottom: 24px;}
+
+
+/* */
+@media only screen and (max-width: 1280px) {
+    #menu, #content, #footer {padding-inline: 16vh;}
 }
 
-.text-child { }
-
-
-/* -------------------------------- */
 @media only screen and (max-width: 960px) {
-    .text-group {
-        flex-direction: column;
-        gap: 0;
-    }
+    #menu, #content, #footer {padding: 4px;}
 }
 
