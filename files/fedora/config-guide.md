@@ -8,7 +8,6 @@ If you have a card which is wireless,<br>
 then you should check **Common NetworkManager Submodules** this option.
 
 # an example package list
-
 - alacritty
 - alsa-firmware
 - alsa-sof-firmware
