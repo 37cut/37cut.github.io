@@ -120,6 +120,10 @@ wget -O min-1.33.1-x86\_64.rpm https://github.com/minbrowser/min/releases/downlo
 
 # notes
 
+## remove unused repos
+Repository path: /etc/yum.repos.d
+Remove within `rm` command
+
 ## system upgrade
 ```shell
 sudo dnf upgrade --refresh
