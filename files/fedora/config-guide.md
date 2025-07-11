@@ -10,6 +10,8 @@ then you should check **Common NetworkManager Submodules** this option.
 # an example package list
 - alacritty
 - alsa-firmware
+- alsa-lib
+- alsa-lib-devel
 - alsa-sof-firmware
 - alsa-utils
 - audacity
@@ -69,7 +71,7 @@ Edit /etc/dnf/dnf.conf<br>
 Add `max_parellel_downloads=1` to it
 
 ## my configs
-Download [here](https://cutt37.is-a.dev/files/fedora/config.zip)<br>
+Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
 - .zshrc                        -> /home/account<br>
 - alacritty.toml                -> /home/account/.config/alacritty<br>
 - config                        -> /home/account/.config/i3<br>
