@@ -59,6 +59,7 @@ table {
 }
 
 #current    { font-weight: bold; }
+#note       { font-size: 10px; margin-top: -12px; margin-bottom: -6px; }
 #footer     { padding-inline: 33vh; display: flex; flex-direction: row; }
 
 
