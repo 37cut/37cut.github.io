@@ -137,7 +137,7 @@ sudo dnf system-upgrade reboot
 ```shell
 sudo rm /boot/*rescue*
 sudo kernel-install add "$(uname -r)" "/lib/modules/$(uname -r)/vmlinuz"
-
 ```
+
 ## remove old kernel
 `sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1)`
