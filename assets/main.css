@@ -78,7 +78,6 @@ table {
 .text {padding-bottom: 24px;}
 
 
-/* */
 @media only screen and (max-width: 1280px) {
     #menu, #content, #footer {padding-inline: 16vh;}
 }
