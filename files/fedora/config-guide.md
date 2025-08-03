@@ -72,10 +72,11 @@ Add `max_parellel_downloads=1` to it
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
-- .zshrc                        -> /home/account<br>
-- alacritty.toml                -> /home/account/.config/alacritty<br>
-- config                        -> /home/account/.config/i3<br>
-- dunstrc                       -> /home/account/.config/dunst<br>
+- .Xresources                   -> $HOME<br>
+- .zshrc                        -> $HOME<br>
+- alacritty.toml                -> $HOME/.config/alacritty<br>
+- config                        -> $HOME/.config/i3<br>
+- dunstrc                       -> $HOME/.config/dunst<br>
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d<br>
 - environment                   -> /etc<br>
 - vimrc                         -> /etc<br>
