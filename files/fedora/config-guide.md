@@ -20,7 +20,6 @@ then you should check **Common NetworkManager Submodules** this option.
 - dbus-x11
 - dunst
 - feh
-- flameshot
 - gdouros-symbola-fonts
 - gimp
 - gvfs-archive
@@ -46,7 +45,7 @@ then you should check **Common NetworkManager Submodules** this option.
 
 # configs
 
-## refresh the fonts
+## refresh fonts
 ```shell
 fc-cache -fv
 sudo fc-cache -fv
@@ -68,7 +67,8 @@ usermod -a -G audio your_account
 
 ## dnf config
 Edit /etc/dnf/dnf.conf<br>
-Add `max_parellel_downloads=1` to it
++ `max_parellel_downloads=1`
++ `exclude=flameshot`
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
@@ -116,9 +116,14 @@ make .xsession executeable: `chmod +x .xsession`<br>
 then type this code to keep xdm running: `systemctl set-default graphical.target`
 
 ## minbrowser
-[Install](https://minbrowser.org/)<br>
 ```shell
-curl -L https://github.com/minbrowser/min/releases/download/v1.11.2/min-1.11.2-1.x86_64.rpm > min-1.11.2-1.x86_64.rpm
+curl -L https://github.com/minbrowser/min/releases/download/v1.30.0/min-1.30.0-x86_64.rpm > min-1.30.0-x86_64.rpm
+```
+
+## flameshot
+```shell
+sudo dnf in qt5-{qtbase,qttools},qt5-qtbase-gui
+curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
 
 # notes
