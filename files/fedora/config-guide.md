@@ -118,7 +118,7 @@ then type this code to keep xdm running: `systemctl set-default graphical.target
 ## minbrowser
 [Install](https://minbrowser.org/)<br>
 ```shell
-wget -O min-1.11.2-x86\_64.rpm https://github.com/minbrowser/min/releases/download/v1.11.2/min-1.11.2-1.x86\_64.rpm
+curl -L https://github.com/minbrowser/min/releases/download/v1.11.2/min-1.11.2-1.x86_64.rpm > min-1.11.2-1.x86_64.rpm
 ```
 
 # notes
