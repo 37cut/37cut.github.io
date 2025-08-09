@@ -67,8 +67,8 @@ usermod -a -G audio your_account
 
 ## dnf config
 Edit /etc/dnf/dnf.conf<br>
-+ `max_parellel_downloads=1`
-+ `exclude=flameshot`
+- `max_parellel_downloads=1`
+- `exclude=flameshot`
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
@@ -111,9 +111,10 @@ sudo systemctl enable tlp
 ```
 
 ## about xorg-x11-xdm
-Add .xsession: `touch .xsession && echo i3 > .xsession`<br>
-make .xsession executeable: `chmod +x .xsession`<br>
-then type this code to keep xdm running: `systemctl set-default graphical.target`
+Edit .xsession:
+- `touch .xsession && echo i3 > .xsession`<br>
+Make .xsession executeable: `chmod +x .xsession`<br>
+Then type this code to keep xdm running: `systemctl set-default graphical.target`
 
 ## minbrowser
 ```shell
