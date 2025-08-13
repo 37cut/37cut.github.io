@@ -8,6 +8,7 @@ If you have a card which is wireless,<br>
 then you should check **Common NetworkManager Submodules** this option.
 
 # an example package list
+- 7zip-standalone
 - alacritty
 - alsa-firmware
 - alsa-lib
@@ -17,6 +18,7 @@ then you should check **Common NetworkManager Submodules** this option.
 - audacity
 - bleachbit
 - bluez
+- bzip2
 - dbus-x11
 - dunst
 - feh
@@ -39,6 +41,7 @@ then you should check **Common NetworkManager Submodules** this option.
 - xarchiver
 - xorg-x11-server-Xorg
 - xorg-x11-xdm
+- xz
 - zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
