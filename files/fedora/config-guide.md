@@ -18,7 +18,6 @@ then you should check **Common NetworkManager Submodules** this option.
 - audacity
 - bleachbit
 - bluez
-- bzip2
 - dbus-x11
 - dunst
 - feh
@@ -41,7 +40,6 @@ then you should check **Common NetworkManager Submodules** this option.
 - xarchiver
 - xorg-x11-server-Xorg
 - xorg-x11-xdm
-- xz
 - zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
