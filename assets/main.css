@@ -27,6 +27,7 @@ body {
 h1  { font-size: 1.7em; line-height: 1.4em; }
 h2  { font-size: 1.5em; line-height: 1.4em; }
 p   { font-size: 1.3em; color: #c06633; }
+img { padding-block: 4px; }
 u   { background-color: #ffffff; text-decoration: 1px underline; }
 
 a {
@@ -47,11 +48,15 @@ table {
     background-color: #fcfcfc;
 }
 
+progress {
+    width: 80%;
+    margin-block: 4px;
+}
 
 #menu, #content {
     display: flex;
-    padding-inline: 33vh;
     flex-direction: column;
+    padding-inline: 33vh;
     line-height: 2.2em;
 }
 
@@ -71,9 +76,9 @@ table {
 }
 
 
-.ret            { height: 1.1em; }
-._button        { margin-right: 33px; transition: all .16s linear; }
-._button p:hover  { color: #000000; }
+.ret             { height: 1.1em; }
+._button         { margin-right: 33px; transition: all .16s linear; }
+._button p:hover { color: #000000; }
 
 .text {padding-bottom: 24px;}
 
