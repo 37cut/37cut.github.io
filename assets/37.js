@@ -1,4 +1,3 @@
-
 class Element {
     constructor(text, func) {
         this.text = text
@@ -22,7 +21,12 @@ class Element {
 const footer = document.createElement('div')
 footer.setAttribute('id', 'footer')
 
-const Profile = new Element('Return.', function() { window.location.href = "https://osu.ppy.sh/users/17589673" })
-Profile.createInstance()
+const Return = new Element('Return.', function() { window.history.back() })
+const Page0 = new Element('0', function() { window.location.href = "./cutt37" })
+// const Page1 = new Element('1', function() { window.location.href = "./comment" })
+
+Return.createInstance()
+Page0.createInstance()
+// Page1.createInstance()
 
 document.body.appendChild(footer)
