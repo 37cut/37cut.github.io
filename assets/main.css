@@ -77,8 +77,8 @@ progress {
 
 
 .ret             { height: 1.1em; }
-._button         { padding-right: 33px; transition: all .16s linear; }
-._button p:hover { color: #000000; }
+._button         { padding-right: 33px; }
+._button p:hover { color: #000000; transition: all .16s linear; }
 
 .text {padding-bottom: 24px;}
 
