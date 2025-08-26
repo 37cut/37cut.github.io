@@ -24,7 +24,7 @@ const inner_height = window.innerHeight
 const footer = document.createElement('div')
 footer.setAttribute('id', 'footer')
 
-const Home = new Element('Home.', function() { window.location = '../../' })
+const Home = new Element('Return.', function() { window.location = '../../' })
 Home.createInstance()
 
 if (scroll_height > innerHeight) {
