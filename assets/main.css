@@ -48,11 +48,6 @@ table {
     background-color: #fcfcfc;
 }
 
-progress {
-    width: 80%;
-    margin-block: 4px;
-}
-
 #menu, #content {
     display: flex;
     flex-direction: column;
