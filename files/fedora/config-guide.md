@@ -51,16 +51,20 @@ I will use i3 desktop<br>
 - atheros-firmware
 - lightdm (be careful with this one)
 
-## config shell
-```shell
-chsh -s /usr/bin/zsh
-```
+## set default shell
+`chsh -s /usr/bin/zsh`
 
 ## dnf config
 Edit /etc/dnf/dnf.conf<br>
 - `max_parellel_downloads=1`
 - `install_weak_deps=False`
 - `exclude=flameshot`
+
+## pipewire -\> pulseaudio
+```shell
+sudo dnf rm pipewire\*
+sudo dnf in pulseaudio
+```
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
@@ -92,9 +96,7 @@ Replace enforcing to disabled(if available).
 `sudo systemctl disable fstrim.timer`
 
 ## mask tpm
-```shell
-sudo systemctl mask tpm2.target
-```
+`sudo systemctl mask tpm2.target`
 
 ## enable services
 ```shell
@@ -112,9 +114,7 @@ Then type this code to keep xdm running: `systemctl set-default graphical.target
 `sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
 ## minbrowser
-```shell
-curl -L https://github.com/minbrowser/min/releases/download/v1.30.0/min-1.30.0-x86_64.rpm > min-1.30.0-x86_64.rpm
-```
+`curl -L https://github.com/minbrowser/min/releases/download/v1.30.0/min-1.30.0-x86_64.rpm > min-1.30.0-x86_64.rpm`
 
 ## flameshot
 ```shell
