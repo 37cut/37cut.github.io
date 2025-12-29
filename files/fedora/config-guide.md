@@ -36,8 +36,9 @@ I will use i3 desktop<br>
 # configs
 
 ## to remove
-- xfce4-terminal
 - firefox
+- nano
+- xfce4-terminal
 - amd-gpu-firmware
 - nvidia-gpu-firmware
 - amd-ucode-firmware
