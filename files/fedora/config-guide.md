@@ -102,11 +102,14 @@ sudo systemctl enable xdm
 sudo systemctl enable tlp
 ```
 
-## cfg xorg-x11-xdm
+## edit xorg-x11-xdm
 Edit .xsession:
 - `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this code to keep xdm running: `systemctl set-default graphical.target`
+
+## regen the grub file
+`sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
 ## minbrowser
 ```shell
