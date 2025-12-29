@@ -35,12 +35,19 @@ I will use i3 desktop<br>
 # configs
 
 ## to remove
-```shell
-sudo dnf rm xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware} \
-amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
-
-sudo dnf rm {atheros,brcmfmac,cirrus-audio,mt7xxx,nxpwireless,tiwilink}-firmware
-```
+- xfce4-terminal
+- firefox
+- amd-gpu-firmware
+- nvidia-gpu-firmware
+- amd-ucode-firmware
+- tiwilink-firmware
+- qcom-wwan-firmware
+- nxpwireless-firmware
+- mt7xxx-firmware
+- libertas-firmware
+- brcmfmac-firmware
+- atheros-firmware
+- lightdm (be careful with this one)
 
 ## config shell
 ```shell
