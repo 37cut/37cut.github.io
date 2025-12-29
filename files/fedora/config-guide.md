@@ -71,7 +71,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
 - config                        -> $HOME/.config/i3<br>
 - dunstrc                       -> $HOME/.config/dunst<br>
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d<br>
-- environment                   -> /etc<br>
+- environment                   -> /etc - Please edit /etc/profile instead<br>
 - vimrc                         -> /etc<br>
 - i3status.conf                 -> /etc<br>
 - tlp.conf                      -> /etc<br>
