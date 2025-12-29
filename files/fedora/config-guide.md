@@ -1,27 +1,16 @@
-# fedora netinstall guide
+# Fedora netinstall guide
 
 Go to this [page](https://alt.fedoraproject.org/)<br>
-Find 'Network Installers' and download.<br>
 
-Here I use minimal install.<br>
-If you have a card which is wireless,<br>
-then you should check **Common NetworkManager Submodules** this option.
+i3 desktop install<br>
 
 # an example package list
 - 7zip-standalone
 - alacritty
-- alsa-firmware
-- alsa-lib
-- alsa-lib-devel
-- alsa-sof-firmware
-- alsa-utils
 - audacity
-- bleachbit
-- bluez
 - dbus-x11
 - dunst
 - feh
-- gdouros-symbola-fonts
 - gimp
 - gvfs-archive
 - htop
@@ -36,7 +25,6 @@ then you should check **Common NetworkManager Submodules** this option.
 - picom
 - tlp
 - vim-enhanced
-- wqy-zenhei-fonts
 - xarchiver
 - xorg-x11-server-Xorg
 - xorg-x11-xdm
@@ -46,13 +34,7 @@ then you should check **Common NetworkManager Submodules** this option.
 
 # configs
 
-## refresh fonts
-```shell
-fc-cache -fv
-sudo fc-cache -fv
-```
-
-## uninstall some pkgs(if you need that, dont follow this)
+## to remove
 ```shell
 sudo dnf rm xorg-x11-drv-{amdgpu,armada,ati,nouveau,openchrome,qxl,vmware} \
 amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
@@ -111,7 +93,7 @@ sudo systemctl enable xdm
 sudo systemctl enable tlp
 ```
 
-## about xorg-x11-xdm
+## cfg xorg-x11-xdm
 Edit .xsession:
 - `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
