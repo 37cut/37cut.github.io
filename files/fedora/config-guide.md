@@ -6,7 +6,7 @@ I will use i3 desktop<br>
 
 # configs
 
-# things to add
+## things to add
 - 7zip-standalone
 - alacritty
 - audacity
