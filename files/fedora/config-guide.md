@@ -4,7 +4,7 @@ Go to this [page](https://alt.fedoraproject.org/)<br>
 
 I will use i3 desktop<br>
 
-# configs
+# Configs
 
 ## things to add
 - 7zip-standalone
@@ -122,7 +122,7 @@ sudo dnf in qt5-{qtbase,qttools},qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
 
-# notes
+# Notes
 
 ## remove unused repos
 Repository path: /etc/yum.repos.d<br>
