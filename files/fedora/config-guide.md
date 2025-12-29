@@ -2,9 +2,9 @@
 
 Go to this [page](https://alt.fedoraproject.org/)<br>
 
-i3 desktop install<br>
+I will use i3 desktop<br>
 
-# an example package list
+# list
 - 7zip-standalone
 - alacritty
 - audacity
@@ -42,7 +42,7 @@ amd-{gpu,ucode}-firmware nvidia-gpu-firmware xdg-desktop-portal
 sudo dnf rm {atheros,brcmfmac,cirrus-audio,mt7xxx,nxpwireless,tiwilink}-firmware
 ```
 
-## config shell and account
+## config shell
 ```shell
 chsh -s /usr/bin/zsh
 usermod -a -G audio your_account
