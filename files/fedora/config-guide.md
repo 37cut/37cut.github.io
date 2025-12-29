@@ -17,6 +17,7 @@ I will use i3 desktop<br>
 - i3
 - ibus
 - ibus-libpinyin
+- langpacks-en
 - light
 - mousepad
 - mpv
@@ -58,6 +59,7 @@ usermod -a -G audio your_account
 ## dnf config
 Edit /etc/dnf/dnf.conf<br>
 - `max_parellel_downloads=1`
+- `install_weak_deps=False`
 - `exclude=flameshot`
 
 ## my configs
