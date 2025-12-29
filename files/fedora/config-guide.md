@@ -4,7 +4,9 @@ Go to this [page](https://alt.fedoraproject.org/)<br>
 
 I will use i3 desktop<br>
 
-# list
+# configs
+
+# things to add
 - 7zip-standalone
 - alacritty
 - audacity
@@ -33,9 +35,7 @@ I will use i3 desktop<br>
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
-# configs
-
-## to remove
+## things to remove
 - firefox
 - nano
 - xfce4-terminal
