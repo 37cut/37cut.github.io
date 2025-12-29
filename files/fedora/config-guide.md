@@ -16,7 +16,7 @@ I will use i3 desktop<br>
 - htop
 - i3
 - ibus
-- ibus-libpinyin
+- ibus-pinyin
 - langpacks-en
 - light
 - mousepad
