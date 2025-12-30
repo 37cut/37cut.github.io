@@ -32,7 +32,7 @@ u   { background-color: #ffffff; text-decoration: 1px underline; }
 
 a {
     color: #456699;
-    font-size: 20px;
+    font-size: 0.9em;
     text-decoration: none;
     transition: all .16s linear;
 }
