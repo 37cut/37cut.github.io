@@ -86,6 +86,9 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
 - xdm/Xresources                -> /etc/X11/xdm<br>
 - xdm/Xsetup\_0                 -> /etc/X11/xdm
 
+## disable tpm2
+Go to your bios then disable it.
+
 ## disable selinux
 `vim /etc/selinux/config`<br>
 Find key 'SELINUX=...'<br>
@@ -103,10 +106,7 @@ sudo systemctl disable avahi-daemon.socket
 ```
 
 ## mask services
-```shell
-sudo systemctl mask NetworkManager-wait-online
-sudo systemctl mask tpm2.target
-```
+`sudo systemctl mask NetworkManager-wait-online`
 
 ## edit xorg-x11-xdm
 Edit .xsession:
