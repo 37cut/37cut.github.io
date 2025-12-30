@@ -94,17 +94,16 @@ Replace enforcing to disabled(if available).
 ## disable zram
 `sudo dnf rm zram-generator`
 
-## disable fstrim
-`sudo systemctl disable fstrim.timer`
+## unused services
+```shell
+sudo systemctl disable fstrim.timer
+sudo systemctl disable sshd
+sudo systemctl disable avahi-daemon
+sudo systemctl disable avahi-daemon.socket
+```
 
 ## mask tpm
 `sudo systemctl mask tpm2.target`
-
-## enable services
-```shell
-sudo systemctl enable xdm
-sudo systemctl enable tlp
-```
 
 ## edit xorg-x11-xdm
 Edit .xsession:
