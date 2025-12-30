@@ -38,6 +38,7 @@ I will use i3 desktop<br>
 ## things to remove
 - firefox
 - gnome-abrt
+- gnome-disk-utility
 - nano
 - xfce4-terminal
 - amd-gpu-firmware
