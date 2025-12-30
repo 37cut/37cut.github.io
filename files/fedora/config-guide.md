@@ -50,6 +50,7 @@ I will use i3 desktop<br>
 - libertas-firmware
 - brcmfmac-firmware
 - atheros-firmware
+- cirrus-audio-firmware
 - lightdm (be careful with this one)
 
 ## set default shell
