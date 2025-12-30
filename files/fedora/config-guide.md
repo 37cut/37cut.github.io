@@ -102,8 +102,12 @@ sudo systemctl disable avahi-daemon
 sudo systemctl disable avahi-daemon.socket
 ```
 
-## mask tpm
-`sudo systemctl mask tpm2.target`
+## mask services
+```shell
+sudo systemctl mask tpm2.target
+sudo systemctl mask NetworkManager-wait-online
+sudo systemctl mask dev-tpmrm0.device
+```
 
 ## edit xorg-x11-xdm
 Edit .xsession:
