@@ -44,9 +44,10 @@ img { margin-block: 4px; }
 u   { background-color: #ffffff; text-decoration: 1px underline; }
 
 /* Link */
+p a { font-size: 1em; }
 a {
     color: #456699;
-    font-size: 1em;
+    font-size: 1.3em;
     text-decoration: none;
     transition: all .16s linear;
 }
