@@ -32,7 +32,7 @@ u   { background-color: #ffffff; text-decoration: 1px underline; }
 
 a {
     color: #456699;
-    font-size: 1.1em;
+    font-size: 20px;
     text-decoration: none;
     transition: all .16s linear;
 }
@@ -81,15 +81,15 @@ table {
 
 .text { padding-bottom: 24px; }
 
-@media only screen and (max-width: 2560px) {
+@media only screen and (min-width: 1920px) {
     body { font-size: 18px; }
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (min-width: 960px) {
     #menu, #content, #footer { padding-inline: 16vh; }
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (min-width: 0px) {
     #menu, #content, #footer { padding: 4px; }
 }
 
