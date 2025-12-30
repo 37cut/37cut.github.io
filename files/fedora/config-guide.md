@@ -117,9 +117,6 @@ Then type this code to keep xdm running: `systemctl set-default graphical.target
 ## regen the grub file
 `sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
-## store the alsamixer config
-`sudo alsactl store`
-
 ## minbrowser
 `curl -L https://github.com/minbrowser/min/releases/download/v1.30.0/min-1.30.0-x86_64.rpm > min-1.30.0-x86_64.rpm`
 
