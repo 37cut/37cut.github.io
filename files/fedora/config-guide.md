@@ -83,8 +83,9 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
 - picom.conf                    -> /etc/xdg<br>
 - systemd/logind.conf           -> /etc/systemd<br>
 - systemd/sleep.conf            -> /etc/systemd<br>
+- xdm/xdm-config                -> /etc/X11/xdm<br>
 - xdm/Xresources                -> /etc/X11/xdm<br>
-- xdm/Xsetup\_0                 -> /etc/X11/xdm
+- xdm/Xsetup                    -> /etc/X11/xdm
 
 ## disable tpm2
 Go to your bios then disable it.
