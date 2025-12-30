@@ -100,11 +100,12 @@ Replace enforcing to disabled(if available).
 `sudo dnf rm zram-generator`
 
 ## disable PostMixer channel
-`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf`
+Take a look at this folder: /usr/share/alsa/ucm2<br>
+`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` For example<br>
 Find sth called <b>If.endpoint_with_drc</b><br>
 Go to True -\> EnableSequence<br>
-Find the line <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
-Then change the value <b>${var:__drcswitch}</b> to <b>off</b>
+Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
+Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 
 ## unused services
 ```shell
