@@ -70,7 +70,7 @@ sudo dnf in pulseaudio
 ```
 
 ## my configs
-Download [here](https://cutt37.is-a.dev/files/fedora/config-files.zip)<br>
+Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - .Xresources                   -> $HOME<br>
 - .zshrc                        -> $HOME<br>
 - alacritty.toml                -> $HOME/.config/alacritty<br>
