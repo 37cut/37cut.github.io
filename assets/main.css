@@ -79,17 +79,17 @@ table {
     transition: all .16s linear;
 }
 
-.text {padding-bottom: 24px;}
+.text { padding-bottom: 24px; }
 
 @media only screen and (min-width: 2560px) {
     body { font-size: 20px; }
 }
 
 @media only screen and (max-width: 1280px) {
-    #menu, #content, #footer {padding-inline: 16vh;}
+    #menu, #content, #footer { padding-inline: 16vh; }
 }
 
 @media only screen and (max-width: 960px) {
-    #menu, #content, #footer {padding: 4px;}
+    #menu, #content, #footer { padding: 4px; }
 }
 
