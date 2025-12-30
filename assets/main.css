@@ -1,8 +1,11 @@
+/* 1. Font */
+/* Regular Font */
 @font-face {
     font-family: "lgc";
     src: url("font-family/Louis George Cafe.ttf") format("truetype");
 }
 
+/* Bold Font */
 @font-face {
     font-family: "lgc";
     font-weight: bold;
@@ -10,8 +13,15 @@
 }
 
 
+
+/* 2. HTML elements */
+/* Remove preset */
 body, h1, h2, p { margin: 0; padding: 0; }
 
+/* body
+ * break word if overflow
+ * has a default font size 16px
+ */
 body {
     display: flex;
     flex-direction: column;
@@ -24,15 +34,19 @@ body {
     background-color: #f9f9f0;
 }
 
+/* Basic Text Element */
 h1  { font-size: 1.7em; line-height: 1.4em; }
 h2  { font-size: 1.5em; line-height: 1.4em; }
 p   { font-size: 1.3em; color: #c06633; }
+
+/* Unique Element */
 img { margin-block: 4px; }
 u   { background-color: #ffffff; text-decoration: 1px underline; }
 
+/* Link */
 a {
     color: #456699;
-    font-size: 20px;
+    font-size: 1em;
     text-decoration: none;
     transition: all .16s linear;
 }
@@ -48,30 +62,34 @@ table {
     background-color: #fcfcfc;
 }
 
+
+
+/* 3. ID and Class elements */
+/* Three main widget */
 #menu, #content {
     display: flex;
     flex-direction: column;
-    padding-inline: 33vh;
+    padding-inline: 32vh;
     line-height: 2.2em;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    padding-inline: 32vh;
 }
 
 #menu { padding-bottom: 24px; }
 #current { font-weight: bold; }
 
+/* Unique text description */
 #note {
     font-size: 0.6em;
     margin-bottom: 4px;
     line-height: 1.2em;
 }
 
-#footer {
-    display: flex;
-    flex-direction: row;
-    padding-inline: 33vh;
-}
-
-
-.ret             { height: 1.1em; }
+/* They all belong to footer */
 ._button         { padding-right: 33px; }
 ._button p:hover {
     color: #000000;
@@ -79,13 +97,42 @@ table {
     transition: all .16s linear;
 }
 
+/* Div element but empty, as well as <br> */
+.ret { height: 1.1em; }
+
+/* Div element, to split different information */
 .text { padding-bottom: 24px; }
 
-@media only screen and (min-width: 960px) {
-    #menu, #content, #footer { padding-inline: 16vh; }
+
+
+/* 4. Different Devices */
+/* > 2k laptop */
+@media only screen and (min-width: 1920px) and (max-width: 2560px){
+    body { font-size: 18px }
 }
 
-@media only screen and (min-width: 0px) {
-    #menu, #content, #footer { padding: 4px; }
+/* > 1.5k laptop */
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+    #menu, #content, #footer { padding-inline: 16vh }
+}
+
+/* > 1k laptop */
+@media only screen and (min-width: 1200px) and (max-width: 1440px) {
+    #menu, #content, #footer { padding-inline: 8vh }
+}
+
+/* > 1k tablet */
+@media only screen and (min-width: 960px) and (max-width: 1200px) {
+    #menu, #content, #footer { padding: 4px }
+}
+
+/* > .5k mobile */
+@media only screen and (min-width: 480px) and (max-width: 960px) {
+    #menu, #content, #footer { padding: 4px }
+}
+
+/* < .5k mobile */
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    #menu, #content, #footer { padding: 2px }
 }
 
