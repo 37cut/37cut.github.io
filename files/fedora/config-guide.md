@@ -57,22 +57,26 @@ I will use i3 desktop<br>
 
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
-- .Xresources                   -> $HOME<br>
-- .zshrc                        -> $HOME<br>
-- alacritty.toml                -> $HOME/.config/alacritty<br>
-- config                        -> $HOME/.config/i3<br>
-- dunstrc                       -> $HOME/.config/dunst<br>
-- 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d<br>
-- 20-intel.conf                 -> /etc/X11/xorg.conf.d<br>
-- environment                   -> /etc - <b>This could be a backup. Please edit /etc/profile instead</b><br>
-- vimrc                         -> /etc<br>
-- i3status.conf                 -> /etc<br>
-- tlp.conf                      -> /etc<br>
-- picom.conf                    -> /etc/xdg<br>
-- systemd/logind.conf           -> /etc/systemd<br>
-- xdm/xdm-config                -> /etc/X11/xdm<br>
-- xdm/Xresources                -> /etc/X11/xdm<br>
+- .Xresources                   -> $HOME
+- .zshrc                        -> $HOME
+- alacritty.toml                -> $HOME/.config/alacritty
+- config                        -> $HOME/.config/i3
+- dunstrc                       -> $HOME/.config/dunst
+- 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
+- 20-intel.conf                 -> /etc/X11/xorg.conf.d
+- environment                   -> /etc - <b>This could be a backup. Please edit /etc/profile instead</b>
+- vimrc                         -> /etc
+- i3status.conf                 -> /etc
+- tlp.conf                      -> /etc
+- picom.conf                    -> /etc/xdg
+- systemd/logind.conf           -> /etc/systemd
+- xdm/xdm-config                -> /etc/X11/xdm
+- xdm/Xresources                -> /etc/X11/xdm
 - xdm/Xsetup                    -> /etc/X11/xdm
+
+<br><br>
+
+# Settings
 
 ## disable tpm2
 Go to your bios then disable it.
