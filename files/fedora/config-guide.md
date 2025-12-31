@@ -85,7 +85,6 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - tlp.conf                      -> /etc<br>
 - picom.conf                    -> /etc/xdg<br>
 - systemd/logind.conf           -> /etc/systemd<br>
-- systemd/sleep.conf            -> /etc/systemd<br>
 - xdm/xdm-config                -> /etc/X11/xdm<br>
 - xdm/Xresources                -> /etc/X11/xdm<br>
 - xdm/Xsetup                    -> /etc/X11/xdm
