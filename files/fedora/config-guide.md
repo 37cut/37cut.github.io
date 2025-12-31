@@ -9,6 +9,7 @@ I will use i3 desktop<br>
 ### things to add
 - 7zip-standalone
 - alacritty
+- alsa-plugins-pulse
 - audacity
 - dbus-x11
 - dunst
@@ -97,9 +98,12 @@ sudo dnf in pulseaudio
 ### enable software mixing manually
 Add these line to /etc/asound:<br>
 ```shell
-pcm.dsp {
-    type plug
-    slave.pcm "dmix"
+pcm.!default {
+    type pulse
+}
+
+ctl.!default {
+    type pulse
 }
 ```
 
