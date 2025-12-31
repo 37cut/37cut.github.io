@@ -74,8 +74,6 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - xdm/Xresources                -> /etc/X11/xdm
 - xdm/Xsetup                    -> /etc/X11/xdm
 
-<br>
-
 ## Settings
 
 ### disable tpm2
