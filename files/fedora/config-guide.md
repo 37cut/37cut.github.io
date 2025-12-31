@@ -40,6 +40,7 @@ I will use i3 desktop<br>
 - gnome-abrt
 - gnome-disk-utility
 - nano
+- xorg-x11-drv-intel
 - xfce4-terminal
 - amd-gpu-firmware
 - nvidia-gpu-firmware
