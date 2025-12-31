@@ -112,8 +112,18 @@ table {
     body { font-size: 18px }
 }
 
-/* > 1.5k laptop */
-@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+/* Transition */
+@media only screen and (min-width: 1800px) and (max-width: 1920px) {
+    #menu, #content, #footer { padding-inline: 28vh }
+}
+
+/* Transition */
+@media only screen and (min-width: 1680px) and (max-width: 1800px) {
+    #menu, #content, #footer { padding-inline: 24vh }
+}
+
+/* Transition */
+@media only screen and (min-width: 1440px) and (max-width: 1680px) {
     #menu, #content, #footer { padding-inline: 16vh }
 }
 
