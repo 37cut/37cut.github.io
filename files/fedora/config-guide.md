@@ -95,7 +95,7 @@ sudo dnf in pulseaudio
 ```
 
 ### enable software mixing manually
-Add these line:<br>
+Add these line to /etc/asound:<br>
 ```shell
 pcm.dsp {
     type plug
