@@ -94,6 +94,15 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
+### enable software mixing manually
+Add these line:<br>
+```shell
+pcm.dsp {
+    type plug
+    slave.pcm "dmix"
+}
+```
+
 ### disable zram
 `sudo dnf rm zram-generator`
 
