@@ -55,21 +55,6 @@ I will use i3 desktop<br>
 - cirrus-audio-firmware
 - lightdm (be careful with this one)
 
-## set default shell
-`chsh -s /usr/bin/zsh`
-
-## dnf config
-Edit /etc/dnf/dnf.conf<br>
-- `max_parellel_downloads=1`
-- `install_weak_deps=False`
-- `exclude=flameshot`
-
-## pipewire -\> pulseaudio
-```shell
-sudo dnf rm pipewire\*
-sudo dnf in pulseaudio
-```
-
 ## my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - .Xresources                   -> $HOME<br>
@@ -92,13 +77,32 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 ## disable tpm2
 Go to your bios then disable it.
 
+## set default shell
+`chsh -s /usr/bin/zsh`
+
+## dnf config
+Edit /etc/dnf/dnf.conf<br>
+- `max_parellel_downloads=1`
+- `install_weak_deps=False`
+- `exclude=flameshot`
+
+## pipewire -\> pulseaudio
+```shell
+sudo dnf rm pipewire\*
+sudo dnf in pulseaudio
+```
+
+## disable zram
+`sudo dnf rm zram-generator`
+
 ## disable selinux
 `vim /etc/selinux/config`<br>
 Find key 'SELINUX=...'<br>
 Replace enforcing to disabled(if available).
 
-## disable zram
-`sudo dnf rm zram-generator`
+## disable `download folder
+Edit $HOME/.config/user-dirs.dirs<br>
+Remove the text after $HOME/
 
 ## disable PostMixer channel
 Take a look at this folder: <u>/usr/share/alsa/ucm2</u><br>
