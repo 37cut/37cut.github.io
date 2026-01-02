@@ -95,7 +95,7 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
-### enable software mixing manually
+### enable software mixing
 Add these line to /etc/asound:<br>
 ```shell
 pcm.!default {
@@ -133,6 +133,7 @@ Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 ```shell
 sudo systemctl disable fstrim.timer
 sudo systemctl disable sshd
+sudo systemctl disable upower
 sudo systemctl disable avahi-daemon
 sudo systemctl disable avahi-daemon.socket
 ```
