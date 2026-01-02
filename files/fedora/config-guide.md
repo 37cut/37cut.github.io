@@ -41,19 +41,19 @@ I will use i3 desktop<br>
 - gnome-abrt
 - gnome-disk-utility
 - nano
-- xorg-x11-drv-intel
 - xfce4-terminal
 - amd-gpu-firmware
-- nvidia-gpu-firmware
 - amd-ucode-firmware
-- tiwilink-firmware
-- qcom-wwan-firmware
-- nxpwireless-firmware
-- mt7xxx-firmware
-- libertas-firmware
-- brcmfmac-firmware
 - atheros-firmware
+- brcmfmac-firmware
 - cirrus-audio-firmware
+- libertas-firmware
+- mt7xxx-firmware
+- nvidia-gpu-firmware
+- nxpwireless-firmware
+- qcom-wwan-firmware
+- tiwilink-firmware
+- xorg-x11-drv-intel
 - lightdm (be careful with this one)
 
 ### my configs
