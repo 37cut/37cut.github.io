@@ -151,7 +151,7 @@ Then type this code to keep xdm running: `systemctl set-default graphical.target
 `sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
 
 ### minbrowser
-`curl -L https://github.com/minbrowser/min/releases/download/v1.28.1/min-1.28.1-x86_64.rpm > min-1.28.1-x86_64.rpm`
+`curl -L https://github.com/minbrowser/min/releases/download/v1.35.2/min-1.35.2-x86_64.rpm > min-1.35.2-x86_64.rpm`
 
 ### flameshot
 ```shell
