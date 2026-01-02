@@ -40,7 +40,7 @@ h2  { font-size: 1.5em; line-height: 1.4em; }
 p   { font-size: 1.3em; color: #c06633; }
 
 /* Unique Element */
-img { margin-block: 4px; }
+img { margin-block: 2px; }
 u   { background-color: #ffffff; text-decoration: 1px underline; }
 
 /* Link */
