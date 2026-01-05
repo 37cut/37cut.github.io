@@ -2,12 +2,12 @@
 /* > 2k laptop */
 @media only screen and (min-width: 1920px) and (max-width: 2560px){
     body { font-size: 18px }
-    #menu, #content, #footer { padding-inline: 40vh }
+    #menu, #content, #footer { padding-inline: 44vh }
 }
 
 /* Transition */
 @media only screen and (min-width: 1800px) and (max-width: 1920px) {
-    #menu, #content, #footer { padding-inline: 32vh }
+    #menu, #content, #footer { padding-inline: 40vh }
 }
 
 /* Transition */
