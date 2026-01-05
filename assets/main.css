@@ -70,14 +70,14 @@ table {
 #menu, #content {
     display: flex;
     flex-direction: column;
-    padding-inline: 32vh;
+    padding-inline: 40vh;
     line-height: 2.2em;
 }
 
 #footer {
     display: flex;
     flex-direction: row;
-    padding-inline: 32vh;
+    padding-inline: 40vh;
 }
 
 #menu { padding-bottom: 24px; }
