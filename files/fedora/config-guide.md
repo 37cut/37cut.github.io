@@ -1,4 +1,4 @@
-# Fedora installation guide
+z# Fedora installation guide
 
 Go to this [page](https://alt.fedoraproject.org/)<br>
 
@@ -85,7 +85,7 @@ Go to your bios then disable it.
 
 ### dnf config
 Edit /etc/dnf/dnf.conf<br>
-- `max_parellel_downloads=1`
+- `max_parallel_downloads=1`
 - `install_weak_deps=False`
 - `exclude=flameshot`
 
