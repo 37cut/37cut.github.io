@@ -161,7 +161,7 @@ curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flam
 
 ### if you need wine
 ```shell
-sudo dnf in wine wine-core wine-common wine-mono winetricks --exclude=\kf*
+sudo dnf in wine wine-core wine-mono winetricks --exclude=\kf*
 winetricks dotnet40
 ```
 
