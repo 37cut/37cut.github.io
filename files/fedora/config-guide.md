@@ -1,4 +1,4 @@
-z# Fedora installation guide
+# Fedora installation guide
 
 Go to this [page](https://alt.fedoraproject.org/)<br>
 
@@ -158,6 +158,9 @@ Then type this code to keep xdm running: `systemctl set-default graphical.target
 sudo dnf in qt5-{qtbase,qttools},qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
+
+### if you need wine
+`sudo dnf in wine-core wine-common wine-mono winetricks --exclude=\kf*`
 
 ## Notes
 
