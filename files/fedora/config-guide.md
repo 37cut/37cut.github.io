@@ -70,7 +70,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
 - picom.conf                    -> /etc/xdg
-- systemd/logind.conf           -> /etc/systemd
+- systemd/logind.conf           -> /etc/systemd/logind.conf.d
 - xdm/xdm-config                -> /etc/X11/xdm
 - xdm/Xresources                -> /etc/X11/xdm
 - xdm/Xsetup                    -> /etc/X11/xdm
