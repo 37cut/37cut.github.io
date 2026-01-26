@@ -166,8 +166,7 @@ winetricks dotnet45 dxvk
 winetricks corefonts wenquanyi
 ```
 
-###
-Some libraries you may need:<br>
+make sure _only_ these libraries are in your winecfg:<br>
 - avcodec-58
 - avutil-56
 - d3d10core
