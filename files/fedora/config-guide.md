@@ -166,6 +166,14 @@ winetricks dotnet45 dxvk
 winetricks corefonts wenquanyi
 ```
 
+###
+Some libraries you may need:<br>
+- avcodec-58
+- avutil-56
+- d3d10core
+- d3d11
+- SDL2
+
 ## Notes
 
 ### remove unused repos
