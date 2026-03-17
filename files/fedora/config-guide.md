@@ -140,7 +140,11 @@ sudo systemctl disable avahi-daemon.socket
 ```
 
 ### mask services
-`sudo systemctl mask NetworkManager-wait-online`
+```shell
+sudo systemctl mask NetworkManager-wait-online
+sudo systemctl mask crond
+
+```
 
 ### edit xorg-x11-xdm
 Edit .xsession:
