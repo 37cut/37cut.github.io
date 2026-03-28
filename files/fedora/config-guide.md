@@ -41,6 +41,7 @@ I will use i3 desktop<br>
 - firefox
 - gnome-abrt
 - gnome-disk-utility
+- imsettings
 - nano
 - xfce4-terminal
 - amd-gpu-firmware
