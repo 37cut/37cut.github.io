@@ -37,25 +37,24 @@ I will use i3 desktop<br>
 - zsh-syntax-highlighting
 
 ### things to remove
-- abrt
 - firefox
 - gnome-abrt
 - gnome-disk-utility
-- imsettings
 - nano
-- xfce4-terminal
-- amd-gpu-firmware
-- amd-ucode-firmware
-- atheros-firmware
-- brcmfmac-firmware
-- cirrus-audio-firmware
-- libertas-firmware
-- mt7xxx-firmware
-- nvidia-gpu-firmware
-- nxpwireless-firmware
-- qcom-wwan-firmware
-- tiwilink-firmware
 - xorg-x11-drv-intel
+- xfce4-terminal
+- zram-generator
+- amd-gpu-firmware
+- nvidia-gpu-firmware
+- amd-ucode-firmware
+- tiwilink-firmware
+- qcom-wwan-firmware
+- nxpwireless-firmware
+- mt7xxx-firmware
+- libertas-firmware
+- brcmfmac-firmware
+- atheros-firmware
+- cirrus-audio-firmware
 - lightdm (be careful with this one)
 
 ### my configs
@@ -72,7 +71,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
 - picom.conf                    -> /etc/xdg
-- systemd/logind.conf           -> /etc/systemd/logind.conf.d
+- systemd/logind.conf           -> /etc/systemd
 - xdm/xdm-config                -> /etc/X11/xdm
 - xdm/Xresources                -> /etc/X11/xdm
 - xdm/Xsetup                    -> /etc/X11/xdm
@@ -80,14 +79,14 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 ## Settings
 
 ### disable tpm2
-Go to your bios then disable it.
+Go to your bios and then disable it.
 
-### set default shell
+### set zsh as default shell
 `chsh -s /usr/bin/zsh`
 
 ### dnf config
 Edit /etc/dnf/dnf.conf<br>
-- `max_parallel_downloads=1`
+- `max_parellel_downloads=1`
 - `install_weak_deps=False`
 - `exclude=flameshot`
 
@@ -97,8 +96,8 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
-### enable software mixing
-Add these line to /etc/asound:<br>
+### force all sound goes through pulseaudio
+Add these line to /etc/asound.conf:<br>
 ```shell
 pcm.!default {
     type pulse
@@ -109,9 +108,6 @@ ctl.!default {
 }
 ```
 
-### disable zram
-`sudo dnf rm zram-generator`
-
 ### disable selinux
 `vim /etc/selinux/config`<br>
 Find key 'SELINUX=...'<br>
@@ -121,7 +117,7 @@ Replace enforcing to disabled(if available).
 Edit $HOME/.config/user-dirs.dirs<br>
 Remove the text after $HOME/
 
-### disable PostMixer channel
+### force PostMixer channel off
 Take a look at this folder: <u>/usr/share/alsa/ucm2</u><br>
 `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` For example<br><br>
 
@@ -135,49 +131,26 @@ Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 ```shell
 sudo systemctl disable fstrim.timer
 sudo systemctl disable sshd
-sudo systemctl disable upower
 sudo systemctl disable avahi-daemon
 sudo systemctl disable avahi-daemon.socket
 ```
 
 ### mask services
-```shell
-sudo systemctl mask NetworkManager-wait-online
-sudo systemctl mask crond
-
-```
+`sudo systemctl mask NetworkManager-wait-online`
 
 ### edit xorg-x11-xdm
-Edit .xsession:
-- `touch .xsession && echo i3 > .xsession`<br>
+Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this code to keep xdm running: `systemctl set-default graphical.target`
 
-### regen the grub file
-`sudo grub2-mkconfig -o /boot/grub2/grub.cfg`
-
 ### minbrowser
-`curl -L https://github.com/minbrowser/min/releases/download/v1.35.2/min-1.35.2-x86_64.rpm > min-1.35.2-x86_64.rpm`
+`curl -L https://github.com/minbrowser/min/releases/download/v1.35.4/min-1.35.4-x86_64.rpm > min-1.35.4-x86_64.rpm`
 
 ### flameshot
 ```shell
 sudo dnf in qt5-{qtbase,qttools},qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
-
-### if you need wine
-```shell
-sudo dnf in wine wine-core wine-mono winetricks --exclude=\kf*
-winetricks dotnet45 dxvk
-winetricks corefonts wenquanyi
-```
-
-make sure _only_ these libraries are in your winecfg:<br>
-- avcodec-58
-- avutil-56
-- d3d10core
-- d3d11
-- SDL2
 
 ## Notes
 
