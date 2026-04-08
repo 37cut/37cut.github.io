@@ -110,7 +110,8 @@ ctl.!default {
 
 ### force PostMixer channel off
 Go to this folder: <u>/usr/share/alsa/ucm2</u><br>
-Find the folder matched your sound devices, `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example<br><br>
+Find the folder matched your sound devices,<br>
+`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example<br>
 
 Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
 Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
