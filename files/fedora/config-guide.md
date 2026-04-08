@@ -66,7 +66,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 - dunstrc                       -> $HOME/.config/dunst
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
 - 20-intel.conf                 -> /etc/X11/xorg.conf.d
-- environment                   -> /etc - <b>This could be a backup. Please edit /etc/profile instead</b>
+- environment                   -> /etc - <b>It is kind weird that some options does no effect at all. I suggest edit /etc/profile instead</b>
 - vimrc                         -> /etc
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
