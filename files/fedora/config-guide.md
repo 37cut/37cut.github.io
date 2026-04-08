@@ -135,10 +135,17 @@ sudo systemctl disable avahi-daemon.socket
 ### mask services
 `sudo systemctl mask NetworkManager-wait-online`
 
-### edit xorg-x11-xdm
+### xorg-x11-xdm
 Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
-Then type this code to keep xdm running: `systemctl set-default graphical.target`
+Then type this code to activate xdm on next startup: `systemctl set-default graphical.target`
+
+### prevent changes on Xsetup_0
+By default every time you update your system Xsetup_0 will always reset itself.<br>
+In this case you can edit /etc/x11/xdm/xdm-config:<br>
+Find the line where it shows Xsetup_0<br>
+Remove _0 (so it is named Xsetup, of course you can use other name)<br>
+Then rename Xsetup_0 where it located in the same directory.
 
 ### minbrowser
 `curl -L https://github.com/minbrowser/min/releases/download/v1.35.4/min-1.35.4-x86_64.rpm > min-1.35.4-x86_64.rpm`
