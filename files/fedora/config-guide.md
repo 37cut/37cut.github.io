@@ -110,6 +110,7 @@ ctl.!default {
 
 ### force PostMixer channel off
 Go to this folder: <u>/usr/share/alsa/ucm2</u><br>
+
 Find the folder matched your sound devices,<br>
 `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example<br>
 
@@ -144,6 +145,7 @@ Then type this code to activate xdm on next startup: `systemctl set-default grap
 ### prevent changes on Xsetup_0
 By default every time you update your system Xsetup_0 will always reset itself.<br>
 In this case you can edit /etc/x11/xdm/xdm-config:<br>
+
 Find the line where it shows Xsetup_0<br>
 Remove _0 (so it is named Xsetup, of course you can use other name)<br>
 Then rename Xsetup_0 where it located in the same directory.
