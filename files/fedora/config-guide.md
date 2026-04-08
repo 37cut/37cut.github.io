@@ -81,10 +81,10 @@ Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
 ### disable tpm2
 Go to your bios and then disable it.
 
-### set zsh as default shell
+### zsh as default shell
 `chsh -s /usr/bin/zsh`
 
-### dnf config
+### dnf
 Edit /etc/dnf/dnf.conf<br>
 - `max_parellel_downloads=1`
 - `install_weak_deps=False`
@@ -96,7 +96,7 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
-### force all sound goes through pulseaudio
+### force every sound goes through pulseaudio
 Add these line to /etc/asound.conf:<br>
 ```shell
 pcm.!default {
@@ -108,6 +108,13 @@ ctl.!default {
 }
 ```
 
+### force PostMixer channel off
+Go to this folder: <u>/usr/share/alsa/ucm2</u><br>
+Find the folder matched your sound devices, `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example<br><br>
+
+Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
+Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
+
 ### disable selinux
 `vim /etc/selinux/config`<br>
 Find key 'SELINUX=...'<br>
@@ -116,16 +123,6 @@ Replace enforcing to disabled(if available).
 ### disable `download folder
 Edit $HOME/.config/user-dirs.dirs<br>
 Remove the text after $HOME/
-
-### force PostMixer channel off
-Take a look at this folder: <u>/usr/share/alsa/ucm2</u><br>
-`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` For example<br><br>
-
-Find sth called: <b>If.endpoint_with_drc</b><br>
-Go to True -\> EnableSequence<br><br>
-
-Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
-Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 
 ### unused services
 ```shell
