@@ -9,12 +9,13 @@ Offset: -22ms
 ## about me
 casual NM player -
 
-<b>my preference</b>:
+<b>preference</b>:
 - I play farm jumps, but most of time for fun, usually with mod difficulty adjust<br>
 - tech if it's not difficult<br>
 - prefer small circles(up to cs7, most of time cs6)
 
-- I dont play low ar(<5), 2b + funky maps
-- I hate heavy streams(>= 174bpm and >= 16object)
-- no vocaloid
+<b>I don't touch</b>:
+- low ar(<5), 2b + funky maps
+- heavy streams(>= 174bpm and >= 16object)
+- vocaloid
 
