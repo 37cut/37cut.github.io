@@ -58,7 +58,7 @@ I will use i3 desktop<br>
 - lightdm (be careful with this one)
 
 ### my configs
-Download [here](https://cutt37.is-a.dev/files/fedora/config-files.cutt37)<br>
+Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)<br>
 - .Xresources                   -> $HOME
 - .zshrc                        -> $HOME
 - alacritty.toml                -> $HOME/.config/alacritty
