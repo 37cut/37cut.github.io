@@ -3,8 +3,6 @@ Mouse: g102 800dpi x1.8 no raw-input<br>
 Keyboard: o2c with greywood switch v3<br>
 Typing: alt<br>
 
-Cursor-size: x0.7
-
 Skin: [a](https://cutt37.is-a.dev/files/osu/Idontknow.osk)<br>
 Offset: -22ms
 
