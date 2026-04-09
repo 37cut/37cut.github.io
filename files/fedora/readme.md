@@ -1,4 +1,4 @@
-# Fedora installation guide
+# Fedora
 
 Go to this [page](https://alt.fedoraproject.org/)
 
