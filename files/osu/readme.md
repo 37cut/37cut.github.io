@@ -14,6 +14,6 @@ casual player -
 <b>preference</b>:
 - no jump farms(straight-ward repetitive jumps), no low ar(<5), no 2b + funky maps<br>
 - no heavy streams(>= 174bpm and >= 16object)<br>
-- picky on vocaloid(95% I don't play)<br>
+- 95% vocaloid I don't play, and last 5% idk<br>
 - prefer small circles(up to cs7, most of time cs6)
 
