@@ -96,7 +96,7 @@ sudo dnf in pulseaudio
 ```
 
 ### force every sound goes through pulseaudio
-Add these line to /etc/asound.conf:<br>
+Add these line to /etc/asound.conf:
 ```shell
 pcm.!default {
     type pulse
@@ -109,6 +109,7 @@ ctl.!default {
 
 ### force PostMixer channel off
 Go to this folder: <u>/usr/share/alsa/ucm2</u>
+
 Find the folder matched your sound devices,
 `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example
 
