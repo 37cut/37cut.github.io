@@ -13,6 +13,7 @@ casual NM player -
 
 <b>preference</b>:
 - I play farm jumps, but most of time for fun, usually with mod difficult adjust<br>
+- fast aim(>= 200bpm)
 - tech if it's not difficult<br>
 - prefer small circles(up to cs7, most of time cs6)
 
