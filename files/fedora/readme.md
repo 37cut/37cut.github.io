@@ -110,19 +110,19 @@ ctl.!default {
 ### force PostMixer channel off
 Go to this folder: <u>/usr/share/alsa/ucm2</u>
 
-Find the folder matched your sound devices,
+Find the folder matched your sound devices,<br>
 `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example
 
-Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b>
+Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
 Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 
 ### disable selinux
 `vim /etc/selinux/config`
-Find key 'SELINUX=...'
+Find key 'SELINUX=...'<br>
 Replace enforcing to disabled(if available).
 
 ### disable `download folder
-Edit $HOME/.config/user-dirs.dirs
+Edit $HOME/.config/user-dirs.dirs<br>
 Remove the text after $HOME/
 
 ### unused services
@@ -137,16 +137,16 @@ sudo systemctl disable avahi-daemon.socket
 `sudo systemctl mask NetworkManager-wait-online`
 
 ### xorg-x11-xdm
-Edit .xsession: `touch .xsession && echo i3 > .xsession`
-Make .xsession executeable: `chmod +x .xsession`
+Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
+Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this code to activate xdm on next startup: `systemctl set-default graphical.target`
 
 ### prevent changes on Xsetup\_0
-By default every time you update your system Xsetup\_0 will always reset itself.
-In this case you can edit /etc/x11/xdm/xdm-config:
+By default every time you update your system Xsetup\_0 will always reset itself.<br>
+In this case you can edit /etc/x11/xdm/xdm-config:<br>
 
-Find the line where it shows Xsetup\_0
-Remove _0 (so it is named Xsetup, of course you can use other name)
+Find the line where it shows Xsetup\_0<br>
+Remove _0 (so it is named Xsetup, of course you can use other name)<br>
 Then rename Xsetup_0 where it located in the same directory.
 
 ### minbrowser
@@ -161,7 +161,7 @@ curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flam
 ## Notes
 
 ### remove unused repos
-Repository path: /etc/yum.repos.d
+Repository path: /etc/yum.repos.d<br>
 Remove within `rm` command
 
 ### system upgrade
