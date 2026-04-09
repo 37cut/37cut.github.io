@@ -1,8 +1,8 @@
 # Fedora installation guide
 
-Go to this [page](https://alt.fedoraproject.org/)<br>
+Go to this [page](https://alt.fedoraproject.org/)
 
-I will use i3 desktop<br>
+I will use i3 desktop
 
 ## Configs
 
@@ -58,7 +58,7 @@ I will use i3 desktop<br>
 - lightdm (be careful with this one)
 
 ### my configs
-Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)<br>
+Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - .Xresources                   -> $HOME
 - .zshrc                        -> $HOME
 - alacritty.toml                -> $HOME/.config/alacritty
@@ -84,7 +84,7 @@ Go to your bios and then disable it.
 `chsh -s /usr/bin/zsh`
 
 ### dnf
-Edit /etc/dnf/dnf.conf<br>
+Edit /etc/dnf/dnf.conf
 - `max_parellel_downloads=1`
 - `install_weak_deps=False`
 - `exclude=flameshot`
@@ -108,20 +108,20 @@ ctl.!default {
 ```
 
 ### force PostMixer channel off
-Go to this folder: <u>/usr/share/alsa/ucm2</u><br>
-Find the folder matched your sound devices,<br>
-`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example<br>
+Go to this folder: <u>/usr/share/alsa/ucm2</u>
+Find the folder matched your sound devices,
+`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example
 
-Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
+Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b>
 Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 
 ### disable selinux
-`vim /etc/selinux/config`<br>
-Find key 'SELINUX=...'<br>
+`vim /etc/selinux/config`
+Find key 'SELINUX=...'
 Replace enforcing to disabled(if available).
 
 ### disable `download folder
-Edit $HOME/.config/user-dirs.dirs<br>
+Edit $HOME/.config/user-dirs.dirs
 Remove the text after $HOME/
 
 ### unused services
@@ -136,15 +136,16 @@ sudo systemctl disable avahi-daemon.socket
 `sudo systemctl mask NetworkManager-wait-online`
 
 ### xorg-x11-xdm
-Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
-Make .xsession executeable: `chmod +x .xsession`<br>
+Edit .xsession: `touch .xsession && echo i3 > .xsession`
+Make .xsession executeable: `chmod +x .xsession`
 Then type this code to activate xdm on next startup: `systemctl set-default graphical.target`
 
 ### prevent changes on Xsetup\_0
-By default every time you update your system Xsetup\_0 will always reset itself.<br>
-In this case you can edit /etc/x11/xdm/xdm-config:<br>
-Find the line where it shows Xsetup\_0<br>
-Remove _0 (so it is named Xsetup, of course you can use other name)<br>
+By default every time you update your system Xsetup\_0 will always reset itself.
+In this case you can edit /etc/x11/xdm/xdm-config:
+
+Find the line where it shows Xsetup\_0
+Remove _0 (so it is named Xsetup, of course you can use other name)
 Then rename Xsetup_0 where it located in the same directory.
 
 ### minbrowser
@@ -159,7 +160,7 @@ curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flam
 ## Notes
 
 ### remove unused repos
-Repository path: /etc/yum.repos.d<br>
+Repository path: /etc/yum.repos.d
 Remove within `rm` command
 
 ### system upgrade
