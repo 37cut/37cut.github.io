@@ -11,7 +11,7 @@ Offset: -22ms
 ## about me
 casual player -
 
-preference:<br>
+<u>preference</u>:<br>
 no jump farms(straight-ward repetitive jumps), no low ar(<5), no 2b + funky maps<br>
 no heavy streams(>= 174bpm and >= 16object)<br>
 picky on vocaloid(95% I don't play)<br>
