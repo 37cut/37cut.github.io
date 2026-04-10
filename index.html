@@ -7,36 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
-        body p {
+        #head p {
             font-size: 24px;
             line-height: 12px;
         }
 
-        #block #head {
+        #list-head {
             font-size: 22px;
             font-weight: bold;
-            padding-bottom: 2px;
+            margin-top: 12px;
+			margin-bottom: 0;
         }
 
-        #block p {
-            font-size: 20px;
+		#block {
+			display: flex;
+			flex-direction: row;
+			width: 50vh;
+			gap: 20px;
+		}
+
+        #block div p {
+			font-size: 20px;
             line-height: 4px;
+			margin-block: 20px;
         }
 
     </style>
 </head>
 
 <body>
-    <p>cutt37&rsquo;s repository
-    <p>A place where to store my notes and ideas...
+	<div id="head">
+		<p>cutt37&rsquo;s repository
+		<p>A place where to store my notes and ideas...
+	</div>
 
     <hr>
 
+	<p id="list-head">List
+
     <div id="block">
-        <p id="head">List
-        <p>osu.about_me: <a href="./files/osu/readme.md">view</a>
-        <p>fedora.cfg_notes: <a href="./files/fedora/readme.md">view</a>
-        <p>python.my_project: <a href="./files/python/readme.md">view</a>
+		<div id="list">
+			<p>osu.about_me:
+			<p>fedora.cfg_notes:
+			<p>python.my_project:
+		</div>
+
+		<div id="view">
+            <p><a href="./files/osu/readme.md">view</a>
+            <p><a href="./files/fedora/readme.md">view</a>
+            <p><a href="./files/python/readme.md">view</a>
+		</div>
     </div>
+
 </body>
 </html>
