@@ -13,7 +13,7 @@ casual NM player -
 
 <b>preference</b>:
 - I play farm jumps, but for fun, usually with difficulty adjust<br>
-- fast aim(>= 200bpm)
+- fast aim(200-256bpm)
 - tech if it's not difficult<br>
 - prefer small circles(up to cs7, most of time cs6)
 - sometimes long maps(5-7mins)
