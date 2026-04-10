@@ -1,4 +1,5 @@
 ## Python project
-stock_rng<br>
-dependency: numpy<br>
+stock_rng
+
 source: https://cutt37.is-a.dev/files/python/stock_rng.zip
+dependency: numpy<br>
