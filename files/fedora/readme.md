@@ -123,7 +123,7 @@ Replace enforcing to disabled(if available).
 
 ### disable `download folder
 Edit $HOME/.config/user-dirs.dirs<br>
-Remove the text after $HOME/
+Remove the text inside the double quotes.
 
 ### unused services
 ```shell
@@ -134,7 +134,9 @@ sudo systemctl disable avahi-daemon.socket
 ```
 
 ### mask services
-`sudo systemctl mask NetworkManager-wait-online`
+```shell
+sudo systemctl mask NetworkManager-wait-online
+```
 
 ### xorg-x11-xdm
 Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
