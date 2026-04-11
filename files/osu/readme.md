@@ -22,3 +22,7 @@ casual NM player -
 - low ar(<5), 2b + funky maps
 - heavy streams(>= 174bpm and >= 16objects)
 
+<b>log</b>:
+<i>04-12-2026</i><br>
+ok so seems like lazer works well, my \`ur fixed and got my strength back.<br>
+but what should I do to improve next.?
