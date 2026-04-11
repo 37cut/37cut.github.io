@@ -21,5 +21,5 @@ casual NM player -
 <b>I don't touch</b>:
 - low ar(<5), 2b + funky maps
 - heavy streams(>= 174bpm and >= 16objects)
-- vocaloid(...depends)
+- vocaloid(...it depends)
 
