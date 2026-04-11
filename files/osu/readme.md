@@ -25,4 +25,4 @@ casual NM player -
 <b>log</b>:
 <i>04-12-2026</i><br>
 ok seems like lazer works well, my \`ur fixed and got my strength back.<br>
-but what should I do in order to improve my skill.?
+but what should I do next in order to improve my skill.?
