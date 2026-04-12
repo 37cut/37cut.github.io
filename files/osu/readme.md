@@ -24,5 +24,10 @@ casual NM player -
 
 <b>log</b>:
 <i>04-12-2026</i><br>
+no it is not.<br>
+Eerytime I play 140bpm long streams, it looks/feels terrible:<br>
+the latency seems like changing everytime(I mean the game experience in general, it feels different).
+
+<i>04-11-2026</i><br>
 ok seems like lazer works well, my \`ur fixed and got my strength back.<br>
 but what should I do next in order to improve my skill.?
