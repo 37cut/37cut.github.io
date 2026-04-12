@@ -24,7 +24,7 @@ casual NM player -
 
 <b>log</b>:
 <i>04-12-2026</i><br>
-everytime I play 140bpm long streams or any long streams, it looks/feels terrible:<br>
+everytime I play long streams(eden for example), it looks/feels terrible:<br>
 the latency seems like changing everytime(I mean the game experience in general, it feels different).
 
 <i>04-11-2026</i><br>
