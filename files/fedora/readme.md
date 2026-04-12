@@ -136,6 +136,8 @@ sudo systemctl disable avahi-daemon.socket
 ### mask services
 ```shell
 sudo systemctl mask NetworkManager-wait-online
+sudo systemctl mask authselect-apply-changes
+sudo systemctl mask dbus-org.freedesktop.nm-dispatcher.service
 ```
 
 ### xorg-x11-xdm
