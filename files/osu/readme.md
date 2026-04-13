@@ -23,12 +23,6 @@ casual NM player -
 - heavy streams(>= 174bpm and >= 16objects)
 
 <b>log</b>:
-<i>04-13-2026</i><br>
-there's one problem with my typing.<br>
-alt is kind hard to deal a pattern such as:<br>
-1| x xxx xxx xxxxx<br>
-2| xxxxx x xxxxx x
-
 <i>04-12-2026</i><br>
 every time I play long streams(eden for example), it looks/feels terrible:<br>
 the latency seems like changing all the time.
