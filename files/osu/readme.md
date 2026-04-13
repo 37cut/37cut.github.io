@@ -12,7 +12,7 @@ Offset: -22ms
 casual NM player -
 
 <b>preference</b>:
-- I play farm jumps, but for fun, usually with difficulty adjust<br>
+- aim control as if the distance is not large<br>
 - fast aim(200-256bpm)
 - tech if it's not difficult<br>
 - prefer small circles(up to cs7, most of time cs6)
