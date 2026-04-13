@@ -22,11 +22,6 @@ casual NM player -
 - low ar(<5), 2b + funky maps
 - heavy streams(>= 174bpm and >= 16objects)
 
-<b>log</b>:
-<i>04-12-2026</i><br>
-every time I play long streams(eden for example), it looks/feels terrible:<br>
-the latency seems like changing all the time.
-
-<i>04-11-2026</i><br>
-ok seems like lazer at least works, my \`ur fixed and got my strength back.<br>
-but what should I do next in order to improve my skill.?
+<b>Discovered issues</b>:
+- Fingerlock
+- losing attention
