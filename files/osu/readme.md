@@ -24,7 +24,5 @@ casual NM player -
 
 <b>Discovered issues</b>:
 - Fingerlock<br>
-  &emsp;&emsp;- solution: https://osu.ppy.sh/beatmapsets/2103125 - practise until it disppeared
 - losing attention<br>
-  &emsp;&emsp;- solution: idk
 
