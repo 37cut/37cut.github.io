@@ -23,5 +23,5 @@ casual NM player -
 - heavy streams(>= 174bpm and >= 16objects)
 
 <b>Discovered issues</b>:
-- Fingerlock                solution: 140bpm long stream map; practise until no more issue
-- losing attention          solution: focusing on every approach-circle
+- Fingerlock                - solution: 140bpm long stream map; practise until no more issue
+- losing attention          - solution: focusing on every approach-circle
