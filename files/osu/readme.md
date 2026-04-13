@@ -24,8 +24,7 @@ casual NM player -
 
 <b>log</b>:
 <i>04-13-2026</i><br>
-there's one problem with my typing.
-
+there's one problem with my typing.<br>
 alt is kind hard to deal a pattern such as:<br>
 1| x xxx xxx xxxxx<br>
 2| xxxxx x xxxxx x
