@@ -24,7 +24,7 @@ casual NM player -
 
 <b>Discovered issues</b>:
 - Fingerlock<br>
-  &emsp;&emsp;- solution: https://osu.ppy.sh/beatmapsets/2103125
+  &emsp;&emsp;- solution: https://osu.ppy.sh/beatmapsets/2103125 | practice until it disppeared
 - losing attention<br>
   &emsp;&emsp;- solution: focusing on every approach-circles and overlays, ignore the hitcircle
 
