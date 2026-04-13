@@ -24,8 +24,8 @@ casual NM player -
 
 <b>log</b>:
 <i>04-12-2026</i><br>
-everytime I play long streams(eden for example), it looks/feels terrible:<br>
-the latency seems like changing everytime(I mean the game experience in general, it feels different).
+every time I play long streams(eden for example), it looks/feels terrible:<br>
+the latency seems like changing all the time when I login to osu.
 
 <i>04-11-2026</i><br>
 ok seems like lazer at least works, my \`ur fixed and got my strength back.<br>
