@@ -26,5 +26,5 @@ casual NM player -
 - Fingerlock<br>
   &emsp;&emsp;- solution: https://osu.ppy.sh/beatmapsets/2103125 - practise until it disppeared
 - losing attention<br>
-  &emsp;&emsp;- solution: focusing on every approach-circles
+  &emsp;&emsp;- solution: for stream, focusing on every approach-circles; for jump/slider art, look all pattern appeared in general
 
