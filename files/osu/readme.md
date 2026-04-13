@@ -14,7 +14,6 @@ casual NM player -
 <b>preference</b>:
 - aim control as if the distance is not large<br>
 - 200-256bpm fast aim
-- 140-160bpm slow streams
 - tech if it's not difficult<br>
 - prefer small circles(up to cs7, most of time cs6)
 - sometimes long maps(5-7mins)
