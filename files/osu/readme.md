@@ -23,5 +23,8 @@ casual NM player -
 - heavy streams(>= 174bpm and >= 16objects)
 
 <b>Discovered issues</b>:
-- Fingerlock                - solution: 140bpm long stream map; practise until no more issue
-- losing attention          - solution: focusing on every approach-circle
+- Fingerlock
+  &emsp; solution: https://osu.ppy.sh/beatmapsets/2103125 | practise until no issue
+- losing attention
+  &emsp; solution: focusing on every approach-circles and overlays, ignore the hitcircle
+
