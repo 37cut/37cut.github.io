@@ -25,4 +25,5 @@ casual NM player -
 <b>Discovered issues</b>:
 - Fingerlock<br>
 - losing attention<br>
+- seriously, I don't enjoy this game anymore.
 
