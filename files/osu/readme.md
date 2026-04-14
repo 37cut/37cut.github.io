@@ -15,7 +15,7 @@ casual NM player -
 - aim control as if the distance is not large<br>
 - 200-256bpm fast aim
 - tech if it's not difficult<br>
-- precision maps(cs5 - cs7)
+- precision maps(cs5-7)
 - sometimes long maps(5-7mins)
 
 <b>I don't touch</b>:
