@@ -26,5 +26,7 @@ casual NM player -
 - Fingerlock<br>
 - losing attention<br>
 
-seriously, I don't enjoy this game anymore. there's like no cool song and the only thing I can do is repeat training old maps. no progress and I'm kind dis-motivated.
+seriously, I don't enjoy this game. there's like no cool song and the only thing I can do is repeat training old maps. no progress and I'm kind dis-motivated.
+
+
 
