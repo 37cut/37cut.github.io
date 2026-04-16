@@ -6,7 +6,7 @@ Keyboard: o2c with greywood switch v3<br>
 Typing: alt<br>
 
 Skin: [a](https://www.mediafire.com/folder/9nwc32ol7315l/Skin)<br>
-Offset: -12ms
+Offset: -22ms
 
 ## About me
 casual NM player -
