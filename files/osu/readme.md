@@ -26,7 +26,7 @@ casual NM player -
 - Fingerlock
 - losing attention
 - no progress
-- and also the latency, it feels weird...
+- and also the latency, especially streams, it feels weird...
 
 
 
