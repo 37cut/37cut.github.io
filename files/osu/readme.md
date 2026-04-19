@@ -22,3 +22,5 @@ casual NM player -
 - low ar(<5), 2b + funky maps
 - heavy streams(>= 174bpm and >= 16objects)
 
+Weird graphic issues with intel arc:
+what are these black squares... it appears sometimes but I really care about it
