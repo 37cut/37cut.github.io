@@ -22,11 +22,3 @@ casual NM player -
 - low ar(<5), 2b + funky maps
 - heavy streams(>= 174bpm and >= 16objects)
 
-<b>Discovered issues</b>:
-- Fingerlock
-- losing attention
-- no progress
-- and also the latency, especially streams, it feels weird...
-
-
-
