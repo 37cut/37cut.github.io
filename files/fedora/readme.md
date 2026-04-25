@@ -11,7 +11,6 @@ I will use i3 desktop
 - alacritty
 - alsa-plugins-pulse
 - audacity
-- cascadia-code-fonts
 - dbus-x11
 - dunst
 - feh
