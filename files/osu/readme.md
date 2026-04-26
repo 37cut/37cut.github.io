@@ -15,7 +15,7 @@ lazer is the worst version and I would never play it again
 I was thinking, a combination of lazer and stable
 
 ## You can find me on roblox...
-whatever how lazer is,<br>
+whatever how lazer is, or you think is<br>
 Ima with roblox
 
 
