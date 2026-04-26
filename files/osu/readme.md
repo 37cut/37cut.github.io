@@ -8,17 +8,14 @@ Typing: alt<br>
 Skin: [a](https://www.mediafire.com/folder/9nwc32ol7315l/Skin)<br>
 Offset: -22ms
 
-## About me
-casual NM player -
+## NO MORE CUTT
+you know what, I'm so tired w/ osu<br>
+lazer is the worst version and I would never play it again
 
-<b>preference</b>:
-- aim control as if the distance is not large<br>
-- 200-256bpm fast aim
-- tech if it's not difficult<br>
-- precision maps(cs5-7)
-- sometimes long maps(5-7mins)
+I was thinking, a combination of lazer and stable
 
-<b>I don't touch</b>:
-- low ar(<5), 2b + funky maps
-- heavy streams(>= 174bpm and >= 16objects)
+## You can find me on roblox...
+whatever how lazer is,<br>
+Ima with roblox
+
 
