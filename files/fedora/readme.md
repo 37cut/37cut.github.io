@@ -143,7 +143,9 @@ sudo systemctl mask NetworkManager-dispatcher.service
 ### xorg-x11-xdm
 Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
-Then type this code to activate xdm on next startup: `systemctl set-default graphical.target`
+Then type this command to activate xdm on next startup: `systemctl set-default graphical.target`
+
+Enable xdm.service
 
 ### prevent changes on Xsetup\_0
 By default every time you update your system Xsetup\_0 will always reset itself.<br>
