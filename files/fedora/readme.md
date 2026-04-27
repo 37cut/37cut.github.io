@@ -37,6 +37,7 @@ I will use i3 desktop
 - zsh-syntax-highlighting
 
 ### things to remove
+- abrt
 - firefox
 - gnome-abrt
 - gnome-disk-utility
