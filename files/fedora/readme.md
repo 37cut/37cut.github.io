@@ -40,7 +40,7 @@ I will use i3 desktop
 - firefox
 - gnome-abrt
 - gnome-disk-utility
-- ibus-{anthy,chewing,m17n,hangul}
+- ibus-{anthy,chewing,m17n,hangul,table}
 - nano
 - xorg-x11-drv-intel
 - xfce4-terminal
