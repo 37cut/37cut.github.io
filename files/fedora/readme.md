@@ -44,7 +44,7 @@ I will use i3 desktop
 - ibus-{anthy,chewing,m17n,hangul,table}
 - nano
 - plymouth
-- xorg-x11-drv-{intel,amdgpu,ati,openchrome}
+- xorg-x11-drv-{intel,amdgpu,ati,nouveau,openchrome,qxl,vmware}
 - xfce4-terminal
 - zram-generator
 - amd-gpu-firmware
