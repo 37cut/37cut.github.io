@@ -158,7 +158,7 @@ Then rename Xsetup_0 where it located in the same directory.
 
 ### flameshot
 ```shell
-sudo dnf in qt5-{qtbase,qttools},qt5-qtbase-gui
+sudo dnf in qt5-{qtbase,qttools} qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
 
