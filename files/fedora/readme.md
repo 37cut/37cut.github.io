@@ -43,7 +43,8 @@ I will use i3 desktop
 - gnome-disk-utility
 - ibus-{anthy,chewing,m17n,hangul,table}
 - nano
-- xorg-x11-drv-intel
+- plymouth
+- xorg-x11-drv-{intel,amdgpu,ati,openchrome}
 - xfce4-terminal
 - zram-generator
 - amd-gpu-firmware
