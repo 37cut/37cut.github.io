@@ -142,6 +142,8 @@ sudo systemctl mask NetworkManager-wait-online
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
+### xdg-mime
+
 ### xorg-x11-xdm
 Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
