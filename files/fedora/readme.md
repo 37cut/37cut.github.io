@@ -156,7 +156,7 @@ Remove _0 (so it is named Xsetup, of course you can use other name)<br>
 Then rename Xsetup_0 where it located in the same directory.
 
 ### minbrowser
-`curl -L https://github.com/minbrowser/min/releases/download/v1.35.4/min-1.35.4-x86_64.rpm > min-1.35.4-x86_64.rpm`
+`curl -L https://github.com/minbrowser/min/releases/download/v1.35.5/min-1.35.5-x86_64.rpm > min-1.35.5-x86_64.rpm`
 
 ### flameshot
 ```shell
