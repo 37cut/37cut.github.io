@@ -10,7 +10,7 @@ I will use i3 desktop
 - 7zip-standalone
 - adobe-source-code-pro-fonts
 - alacritty
-- alsa-plugins-pulse
+- alsa-plugins-pulseaudio
 - audacity
 - dbus-x11
 - dunst
