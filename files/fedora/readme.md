@@ -67,6 +67,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - alacritty.toml                -> $HOME/.config/alacritty
 - config                        -> $HOME/.config/i3
 - dunstrc                       -> $HOME/.config/dunst
+- mimeapps.list                 -> /usr/share/applications
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
 - 20-intel.conf                 -> /etc/X11/xorg.conf.d
 - environment                   -> /etc - <b>It is kind weird that some options does no effect at all. I suggest edit /etc/profile instead</b>
