@@ -20,7 +20,7 @@ I will use i3 desktop
 - htop
 - i3
 - ibus
-- ibus-libpinyin (I recommended reinstall ibus)
+- ibus-pinyin (I recommended reinstall ibus)
 - light
 - mousepad
 - mpv
