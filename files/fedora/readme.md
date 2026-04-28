@@ -144,11 +144,6 @@ sudo systemctl mask NetworkManager-wait-online
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
-### tty fonts
-make sure terminus-fonts installed on your pc<br>
-edit /etc/vconsole.conf<br>
-replace text in 'FONT='
-
 ### xorg-x11-xdm
 Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
