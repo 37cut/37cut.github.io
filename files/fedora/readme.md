@@ -172,16 +172,6 @@ curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flam
 
 ## Notes
 
-### remove unused repos
-Repository path: /etc/yum.repos.d<br>
-Remove within `rm` command
-
-### permission change(root: rw; others r only)
-```shell
-sudo chown root:root /path/to/file
-sudo chmod 644 /path/to/file
-```
-
 ### system upgrade
 ```shell
 sudo dnf upgrade --refresh
