@@ -39,6 +39,7 @@ I will use i3 desktop
 
 ### things to remove
 - abrt
+- azote --exclude=feh,xrandr
 - firefox
 - gnome-abrt
 - gnome-disk-utility
