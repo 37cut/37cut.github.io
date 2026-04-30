@@ -46,6 +46,7 @@ I will use i3 desktop
 - nano
 - pavucontrol
 - plymouth
+- setroubleshoot
 - xorg-x11-drv-{intel,amdgpu,ati,nouveau,openchrome,qxl,vmware}
 - xfce4-terminal
 - zram-generator
