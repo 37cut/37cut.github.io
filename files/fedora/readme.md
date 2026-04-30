@@ -44,6 +44,7 @@ I will use i3 desktop
 - gnome-disk-utility
 - ibus-{anthy,chewing,m17n,hangul,table}
 - nano
+- pavucontrol
 - plymouth
 - xorg-x11-drv-{intel,amdgpu,ati,nouveau,openchrome,qxl,vmware}
 - xfce4-terminal
