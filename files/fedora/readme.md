@@ -128,7 +128,7 @@ Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
 Find key 'SELINUX=...'<br>
 Replace enforcing to disabled(if available).
 
-### disable `download folder
+### disable `default dirs
 Edit $HOME/.config/user-dirs.dirs<br>
 Remove the text inside the double quotes.
 
