@@ -61,7 +61,7 @@ I will use i3 desktop
 - brcmfmac-firmware
 - atheros-firmware
 - cirrus-audio-firmware
-- lightdm (be careful with this one)
+- lightdm (aware this)
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
