@@ -8,7 +8,6 @@ I will use i3 desktop
 
 ### things to add
 - 7zip-standalone
-- adobe-source-code-pro-fonts
 - alacritty
 - alsa-plugins-pulseaudio
 - audacity
