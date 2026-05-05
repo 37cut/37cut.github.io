@@ -8,7 +8,7 @@ I will use i3 desktop
 
 ### things to add
 - 7zip-standalone
-  i. __;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`__
+  1) __;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`__
 - alacritty
 - alsa-plugins-pulseaudio
 - audacity
@@ -21,7 +21,7 @@ I will use i3 desktop
 - i3
 - ibus
 - ibus-pinyin
-  i. ___;I recommended reinstall ibus___
+  1) ___;I recommended reinstall ibus___
 - light
 - mousepad
 - mpv
