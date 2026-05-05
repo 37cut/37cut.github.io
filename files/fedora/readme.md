@@ -28,7 +28,6 @@ I will use i3 desktop
 - NetworkManager-tui
 - pcmanfm
 - picom
-- terminus-fonts
 - tlp
 - vim-enhanced
 - xarchiver
