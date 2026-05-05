@@ -113,8 +113,8 @@ Go to this folder: <u>/usr/share/alsa/ucm2</u>
 Find the folder matched your sound devices,<br>
 `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example
 
-Find the line: __cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"__ <br>
-Then change the value: __${var:\_\_drcswitch}__ to __off__
+Find the line: ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
+Then change the value: ___${var:\_\_drcswitch}___ to ___off___
 
 ### disable selinux
 `vim /etc/selinux/config`
@@ -140,7 +140,7 @@ sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
 ### xorg-x11-xdm
-Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
+Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this command to activate xdm on next startup: `systemctl set-default graphical.target`
 
