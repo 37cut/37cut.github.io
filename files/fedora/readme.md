@@ -11,11 +11,9 @@ I will use i3 desktop
   1) __;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`__
 - alacritty
 - alsa-plugins-pulseaudio
-- audacity
 - dbus-x11
 - dunst
 - feh
-- gimp
 - gvfs-archive
 - htop
 - i3
@@ -36,6 +34,11 @@ I will use i3 desktop
 - zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
+
+- audacity
+  1) ___;optional___
+- gimp
+  1) ___;optional___
 
 ### things to remove
 __;know your device first!!__
