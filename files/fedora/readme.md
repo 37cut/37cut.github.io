@@ -144,7 +144,7 @@ Edit .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this command to activate xdm on next startup: `systemctl set-default graphical.target`
 
-Enable xdm.service
+and finally enable xdm.service
 
 ### minbrowser
 `curl -L https://github.com/minbrowser/min/releases/download/v1.35.5/min-1.35.5-x86_64.rpm > min-1.35.5-x86_64.rpm`
