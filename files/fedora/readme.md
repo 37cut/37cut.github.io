@@ -55,7 +55,7 @@ __;know your device first!!__
 - {amd-ucode,mt7xxx}-firmware
 - {atheros,brcmfmac,libertas,nxpwireless,qcom-wwan,tiwilink}-firmware
 - cirrus-audio-firmware
-- lightdm __;beware this__
+- lightdm _;beware this_
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
