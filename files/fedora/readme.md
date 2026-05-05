@@ -20,8 +20,7 @@ I will use i3 desktop
 - htop
 - i3
 - ibus
-- ibus-pinyin<br>
-  &emsp; ___;I recommended reinstall ibus___
+- ibus-pinyin ___;I recommended reinstall ibus___
 - light
 - mousepad
 - mpv
