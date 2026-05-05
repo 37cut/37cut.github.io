@@ -20,7 +20,7 @@ I will use i3 desktop
 - htop
 - i3
 - ibus
-- ibus-pinyin
+- ibus-pinyin<br>
   &emsp; ___;I recommended reinstall ibus___
 - light
 - mousepad
@@ -55,7 +55,7 @@ __;know your device first!!__
 - {amd-ucode,mt7xxx}-firmware
 - {atheros,brcmfmac,libertas,nxpwireless,qcom-wwan,tiwilink}-firmware
 - cirrus-audio-firmware
-- lightdm &emsp; __;beware this__
+- lightdm __;beware this__
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
