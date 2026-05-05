@@ -7,8 +7,7 @@ I will use i3 desktop
 ## Configs
 
 ### things to add
-- 7zip-standalone<br>
-  &emsp; __;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`__
+- 7zip-standalone ___;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`___
 - alacritty
 - alsa-plugins-pulseaudio
 - audacity
