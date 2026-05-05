@@ -67,7 +67,8 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - mimeapps.list                 -> /usr/share/applications
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
 - environment                   -> /etc<br>
-  &emsp; __It is kind weird that some options does no effect at all. I suggest edit /etc/profile instead__
+  &emsp; __;It is kind weird that some options does no effect at all.<br>__
+  &emsp; __;I suggest edit /etc/profile instead__
 - vimrc                         -> /etc
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
