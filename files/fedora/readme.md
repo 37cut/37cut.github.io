@@ -38,7 +38,7 @@ I will use i3 desktop
 - zsh-syntax-highlighting
 
 ### things to remove
-__;know your device first!!__
+___;know your device first!!___
 - abrt
 - firefox
 - gnome-abrt
