@@ -7,4 +7,3 @@ Keyboard: o2c with greywood switch v3<br>
 Offset: -22ms<br>
 Background-Dim: 100%
 
-我靠 我感觉又行了
