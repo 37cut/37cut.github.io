@@ -55,7 +55,7 @@ __;know your device first!!__
 - {amd-ucode,mt7xxx}-firmware
 - {atheros,brcmfmac,libertas,nxpwireless,qcom-wwan,tiwilink}-firmware
 - cirrus-audio-firmware
-- lightdm _;beware this_
+- lightdm ___;beware this___
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
@@ -66,7 +66,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - dunstrc                       -> $HOME/.config/dunst
 - mimeapps.list                 -> /usr/share/applications
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
-- environment                   -> /etc __;Partial ENV keys does not work. I suggest edit /etc/profile instead__
+- environment                   -> /etc ___;Partial ENV keys does not function properly. I suggest edit /etc/profile instead___
 - vimrc                         -> /etc
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
