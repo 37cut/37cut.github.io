@@ -37,6 +37,7 @@ I will use i3 desktop
 - zsh-syntax-highlighting
 
 ### things to remove
+__;know your device first!!__
 - abrt
 - firefox
 - gnome-abrt
@@ -49,18 +50,11 @@ I will use i3 desktop
 - xorg-x11-drv-{intel,amdgpu,ati,nouveau,openchrome,qxl,vmware}
 - xfce4-terminal
 - zram-generator
-- amd-gpu-firmware
-- nvidia-gpu-firmware
-- amd-ucode-firmware
-- tiwilink-firmware
-- qcom-wwan-firmware
-- nxpwireless-firmware
-- mt7xxx-firmware
-- libertas-firmware
-- brcmfmac-firmware
-- atheros-firmware
+- {amd,nvidia}-gpu-firmware
+- {amd-ucode,mt7xxx}-firmware
+- {atheros,brcmfmac,libertas,nxpwireless,qcom-wwan,tiwilink}-firmware
 - cirrus-audio-firmware
-- lightdm (beware this)
+- lightdm __;beware this__
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
@@ -71,7 +65,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - dunstrc                       -> $HOME/.config/dunst
 - mimeapps.list                 -> /usr/share/applications
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
-- environment                   -> /etc - <b>It is kind weird that some options does no effect at all. I suggest edit /etc/profile instead</b>
+- environment                   -> /etc - __It is kind weird that some options does no effect at all. I suggest edit /etc/profile instead__
 - vimrc                         -> /etc
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
