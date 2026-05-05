@@ -11,9 +11,11 @@ I will use i3 desktop
   1) __;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`__
 - alacritty
 - alsa-plugins-pulseaudio
+- audacity
 - dbus-x11
 - dunst
 - feh
+- gimp
 - gvfs-archive
 - htop
 - i3
@@ -34,11 +36,6 @@ I will use i3 desktop
 - zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
-
-- audacity
-  1) ___;optional___
-- gimp
-  1) ___;optional___
 
 ### things to remove
 __;know your device first!!__
@@ -116,8 +113,8 @@ Go to this folder: <u>/usr/share/alsa/ucm2</u>
 Find the folder matched your sound devices,<br>
 `sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example
 
-Find the line: <b>cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:__drcswitch}"</b><br>
-Then change the value: <b>${var:__drcswitch}</b> to <b>off</b>
+Find the line: __cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"__ <br>
+Then change the value: __${var:\_\_drcswitch}__ to __off__
 
 ### disable selinux
 `vim /etc/selinux/config`
