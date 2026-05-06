@@ -17,6 +17,7 @@ I will use i3 desktop
 - gimp
 - gvfs-archive
 - htop
+- hunspell-en
 - i3
 - ibus
 - ibus-pinyin ___;I recommended reinstall ibus___
@@ -24,6 +25,7 @@ I will use i3 desktop
 - mousepad
 - mpv
 - NetworkManager-tui
+- nfs-utils
 - pcmanfm
 - picom
 - tlp
