@@ -17,7 +17,7 @@ Config:
   default-fragments = 4
   default-fragment-size-msec = 5
 
-  enable-deferred-volume = no
-  deferred-volume-safety-margin-usec = 0
+  enable-deferred-volume = yes
+  deferred-volume-safety-margin-usec = 2048
   deferred-volume-extra-delay-usec = 0
 ```
