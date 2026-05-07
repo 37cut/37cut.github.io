@@ -13,11 +13,13 @@ Config:
   alternate-sample-rate = 48000
   default-sample-channels = 6
   default-channel-map = front-left,front-right,rear-left,rear-right,lfe
-  
-  default-fragments = 4
-  default-fragment-size-msec = 5            # base-offset = 20ms (4 * 5)
 
+  # base-offset = 20ms (4 * 5)
+  default-fragments = 4
+  default-fragment-size-msec = 5
+
+  # offset = about 22ms (base-offset + 2048us / 1000)
   enable-deferred-volume = yes
-  deferred-volume-safety-margin-usec = 2048 # offset = about 22ms (base-offset + 2048us / 1000)
+  deferred-volume-safety-margin-usec = 2048
   deferred-volume-extra-delay-usec = 0
 ```
