@@ -1,11 +1,12 @@
 ## Setup
-OS: Fedora x86_64 43
-
-Mouse: g102 1600dpi x1.0 no-raw-input<br>
-Keyboard: o2c with greywood switch v3<br>
 
 ```ini
-Sound-Server: Pulseaudio<br>
+OS: Fedora x86_64 43
+
+Mouse: g102 1600dpi x1.0 no-raw-input
+Keyboard: o2c with greywood switch v3
+
+Sound-Server: Pulseaudio
 Config:
   default-sample-format = s16le
   default-sample-rate = 44100
@@ -15,6 +16,6 @@ Config:
   
   default-fragments = 4
   default-fragment-size-msec = 5
-```
 
 Background-Dim: 100%
+```
