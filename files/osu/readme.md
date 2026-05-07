@@ -16,4 +16,8 @@ Config:
   
   default-fragments = 4
   default-fragment-size-msec = 5
+
+  enable-deferred-volume = yes
+  deferred-volume-safety-margin-usec = 2048 # so the offset = 4 * 5 + 2048 / 1000 which is about 22ms
+  deferred-volume-extra-delay-usec = 0
 ```
