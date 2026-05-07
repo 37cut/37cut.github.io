@@ -10,6 +10,7 @@ I will use i3 desktop
 - 7zip-standalone ___;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`___
 - alacritty
 - alsa-plugins-pulseaudio
+- chromium
 - dbus-x11
 - dunst
 - feh
@@ -120,7 +121,7 @@ Then change the value: ___${var:\_\_drcswitch}___ to ___off___
 Find key 'SELINUX=...'<br>
 Replace enforcing to disabled(if available).
 
-### disable `default dirs
+### disable \`default dirs
 Edit $HOME/.config/user-dirs.dirs<br>
 Remove the text inside the double quotes.
 
@@ -144,9 +145,6 @@ Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this command to activate xdm on next startup: `systemctl set-default graphical.target`
 
 and finally enable xdm.service
-
-### minbrowser
-`curl -L https://github.com/minbrowser/min/releases/download/v1.35.5/min-1.35.5-x86_64.rpm > min-1.35.5-x86_64.rpm`
 
 ### flameshot
 ```shell
