@@ -6,14 +6,16 @@ Keyboard: o2c with greywood switch v3<br>
 
 Background-Dim: 100%
 
-Audio: Pulseaudio
-Config:<br>
-  default-sample-format = s16le<br>
-  default-sample-rate = 44100<br>
-  alternate-sample-rate = 48000<br>
-  default-sample-channels = 6<br>
+Sound-Server: Pulseaudio<br>
+
+```ini
+Config:
+  default-sample-format = s16le
+  default-sample-rate = 44100
+  alternate-sample-rate = 48000
+  default-sample-channels = 6
   default-channel-map = front-left,front-right,rear-left,rear-right,lfe
   
-  default-fragments = 4<br>
+  default-fragments = 4
   default-fragment-size-msec = 5
-  
+```
