@@ -23,7 +23,6 @@ I will use i3 desktop
 - mousepad
 - mpv
 - NetworkManager-tui
-- nfs-utils
 - pcmanfm
 - picom
 - tlp
@@ -44,6 +43,7 @@ ___;know your device first!!___
 - hunspell-en
 - ibus-{anthy,chewing,m17n,hangul,table}
 - nano
+- nfs-utils
 - pavucontrol
 - plymouth
 - setroubleshoot
