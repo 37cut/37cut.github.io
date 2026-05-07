@@ -1,6 +1,6 @@
 ## Setup
 
-```conf
+<pre>
 OS: Fedora x86_64 43
 
 Mouse: g102 1600dpi x1.0 no-raw-input
@@ -18,4 +18,4 @@ Config:
   default-fragment-size-msec = 5
 
 Background-Dim: 100%
-```
+</pre>
