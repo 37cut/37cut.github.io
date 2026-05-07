@@ -10,14 +10,12 @@ I will use i3 desktop
 - 7zip-standalone ___;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`___
 - alacritty
 - alsa-plugins-pulseaudio
-- audacity
 - dbus-x11
 - dunst
 - feh
 - gimp
 - gvfs-archive
 - htop
-- hunspell-en
 - i3
 - ibus
 - ibus-pinyin ___;I recommended reinstall ibus___
@@ -43,6 +41,7 @@ ___;know your device first!!___
 - firefox
 - gnome-abrt
 - gnome-disk-utility
+- hunspell-en
 - ibus-{anthy,chewing,m17n,hangul,table}
 - nano
 - pavucontrol
