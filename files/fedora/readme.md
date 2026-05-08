@@ -153,9 +153,9 @@ curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flam
 ```
 
 ### chromium: disable OptGuideOnDeviceModel
-Go to chrome://flags<br>
-Search ___gemini___ and disable every options include gemini keyword
+Go to chrome://flags
 
+Search ___gemini___ and disable every options include gemini keyword<br>
 Search ___optimization guide on device___ and disable it
 
 To prevent chrome download garbages into this folder -> $HOME/.config/chromium/___OptGuideOnDeviceModel___<br>
