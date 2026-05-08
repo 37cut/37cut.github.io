@@ -152,6 +152,17 @@ sudo dnf in qt5-{qtbase,qttools} qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
 
+### chromium: disable OptGuideOnDeviceModel
+Go to chrome://flags<br>
+Search ___gemini___ and disable every options include gemini keyword
+
+Search ___optimization guide on device___ and disable it
+
+To prevent chrome download garbages into this folder -> $HOME/.config/chromium/___OptGuideOnDeviceModel___<br>
+You could make this folder inmutable:<br>
+`sudo chattr +i $HOME/.config/chromium/OptGuideOnDeviceModel/`
+
+
 ## Notes
 
 ### system upgrade
