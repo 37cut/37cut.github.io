@@ -106,7 +106,7 @@ ctl.!default {
 }
 ```
 
-### force PostMixer channel off
+### Switch the PostMixer channel off
 Go to this folder: <u>/usr/share/alsa/ucm2</u>
 
 Find the folder matched your sound devices,<br>
