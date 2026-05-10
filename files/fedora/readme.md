@@ -106,7 +106,7 @@ ctl.!default {
 }
 ```
 
-### Switch the PostMixer channel off
+### switch the PostMixer channel off
 Go to this folder: <u>/usr/share/alsa/ucm2</u>
 
 Find the folder matched your sound devices,<br>
@@ -151,7 +151,7 @@ sudo dnf in qt5-{qtbase,qttools} qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
 ```
 
-### no AI on the backend
+### no AIs on the chromium backend
 Go to chrome://flags
 
 Search ___gemini___ and disable every options include gemini keyword<br>
