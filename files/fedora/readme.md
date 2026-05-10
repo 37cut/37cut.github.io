@@ -95,8 +95,7 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
-### force every sound goes through pulseaudio
-Add these line to /etc/asound.conf:
+and add these line to /etc/asound.conf:
 ```shell
 pcm.!default {
     type pulse
