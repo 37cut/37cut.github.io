@@ -31,6 +31,7 @@ I will use i3 desktop
 - xarchiver
 - xorg-x11-server-Xorg
 - xorg-x11-xdm
+- xsecurelock
 - zsh
 - zsh-autosuggestions
 - zsh-syntax-highlighting
