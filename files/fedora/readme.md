@@ -135,7 +135,7 @@ sudo systemctl disable avahi-daemon.socket
 
 ### mask services
 ```shell
-sudo systemctl mask NetworkManager-wait-online
+sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
