@@ -1,3 +1,3 @@
 ## Python project
 
-Stock: https://cutt37.is-a.dev/files/python/Stock.zip<br>
+Stock: https://cutt37.is-a.dev/files/python/Stock.zip ( copyright protected )<br>
