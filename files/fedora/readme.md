@@ -132,13 +132,14 @@ Remove the text inside the double quotes.
 ### unused services
 ```shell
 sudo systemctl disable fstrim.timer
-sudo systemctl disable sshd
 sudo systemctl disable avahi-daemon
 sudo systemctl disable avahi-daemon.socket
 ```
 
 ### mask services
 ```shell
+sudo systemctl mask sshd
+sudo systemctl mask wsdd
 sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
