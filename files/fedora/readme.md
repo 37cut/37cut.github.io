@@ -81,9 +81,11 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 ### disable tpm2
 Go to your bios and then disable it.
 
-### disable watchdog
-find your wdt module: `lsmod | grep 'wdt'`
-use rmmod to remove it(requires sudo)
+### disable wdt_module
+```shell
+lsmod | grep 'wdt'
+sudo echo 'your_wdt_module' >> /etc/modprobe.d/blacklist.conf
+```
 
 ### zsh as default shell
 `chsh -s /usr/bin/zsh`
