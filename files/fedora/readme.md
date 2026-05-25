@@ -85,6 +85,7 @@ Go to your bios and then disable it.
 ```shell
 lsmod | grep 'wdt'
 sudo echo 'your_wdt_module' >> /etc/modprobe.d/blacklist.conf
+sudo dracut -f
 ```
 
 ### zsh as default shell
