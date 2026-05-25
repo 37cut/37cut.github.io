@@ -167,7 +167,7 @@ To prevent chrome download garbages into this folder -> ___$HOME/.config/chromiu
 You could make this folder inmutable:<br>
 `sudo chattr +i $HOME/.config/chromium/OptGuideOnDeviceModel/`
 
-### x264/265 video codec support(intel)
+### x264/265 video codec support - intel
 Run these commands:<br>
 ```shell
 sudo dnf in https://download1.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
