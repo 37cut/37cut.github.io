@@ -103,7 +103,7 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
-and add these line to /etc/asound.conf:
+and add these lines to /etc/asound.conf:
 ```shell
 pcm.!default {
     type pulse
@@ -114,7 +114,7 @@ ctl.!default {
 }
 ```
 
-### switch PostMixer channel off
+### disable PostMixer channel
 Go to this folder: <u>/usr/share/alsa/ucm2</u>
 
 Find the folder matched your sound devices,<br>
