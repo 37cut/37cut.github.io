@@ -16,6 +16,7 @@ Switch your current workspace to tty4 (ctrl + alt + f4) before editing these fil
 - htop
 - i3
 - ibus
+- ibus-setup
 - ibus-pinyin ___;remove it first___
 - light
 - mousepad
