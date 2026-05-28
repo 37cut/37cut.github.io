@@ -99,11 +99,13 @@ Find ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"
 Then replace '${var:\_\_drcswitch}' to 'off'
 
 Example /etc/pulse/daemon.conf file:<br>
+```ini
 default-sample-format = s16le
 default-sample-rate = 44100
 alternate-sample-rate = 48000
 default-sample-channels = 6
 default-channel-map = front-left,front-right,rear-left,rear-right,front-center,lfe
+```
 
 ### Display Manager: lightdm -\> xorg-x11-xdm
 ```shell
