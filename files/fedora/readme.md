@@ -31,7 +31,6 @@ https://alt.fedoraproject.org
 - zsh-syntax-highlighting
 
 ### things to remove
-___;know your device first!!___
 - abrt
 - firefox
 - gnome-abrt
