@@ -1,7 +1,8 @@
 # Fedora
 https://alt.fedoraproject.org
 
-## Configs
+## Config
+Switch your current workspace to tty4 (ctrl + alt + f4) before editing these files
 
 ### things to add
 - alacritty
@@ -15,7 +16,7 @@ https://alt.fedoraproject.org
 - htop
 - i3
 - ibus
-- ibus-pinyin ___;I recommended reinstall ibus___
+- ibus-pinyin ___;remove it first___
 - light
 - mousepad
 - mpv
@@ -35,7 +36,6 @@ https://alt.fedoraproject.org
 - firefox
 - gnome-abrt
 - gnome-disk-utility
-- ibus-{anthy,chewing,m17n,hangul,table}
 - nano
 - nfs-utils
 - pavucontrol
@@ -57,7 +57,7 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - dunstrc                       -> $HOME/.config/dunst
 - mimeapps.list                 -> /usr/share/applications
 - 50-mouse-acceleration.conf    -> /usr/share/X11/xorg.conf.d
-- environment                   -> /etc ___;Partial ENV keys does not function properly. I suggest edit /etc/profile instead___
+- environment                   -> /etc
 - vimrc                         -> /etc
 - i3status.conf                 -> /etc
 - tlp.conf                      -> /etc
@@ -129,7 +129,8 @@ sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
-### xorg-x11-xdm
+### lightdm -\> xorg-x11-xdm
+Remove lightdm
 Install xorg-x11-xdm
 
 Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
@@ -146,7 +147,7 @@ curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flam
 ```
 
 ### no AIs on the chromium backend
-Go to chrome://flags
+Go to ___chrome://flags___
 
 Search ___gemini___ and disable every options include gemini keyword<br>
 Search ___optimization guide on device___ and disable it
