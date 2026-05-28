@@ -51,7 +51,6 @@ https://alt.fedoraproject.org
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
-- .Xresources                   -> $HOME
 - .zshrc                        -> $HOME
 - alacritty.toml                -> $HOME/.config/alacritty
 - config                        -> $HOME/.config/i3
