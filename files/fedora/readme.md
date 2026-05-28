@@ -158,7 +158,7 @@ You could make this folder inmutable:<br>
 ### x264/265 video codec support - intel
 Run these commands:<br>
 ```shell
-sudo dnf in https://download1.rpmfusion.org/free/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf in intel-media-driver
 ```
 
