@@ -7,7 +7,6 @@ I will use i3 desktop
 ## Configs
 
 ### things to add
-- 7zip-standalone ___;and type this command `sudo ln -s /usr/libexec/7zip/7z.so /bin/7z.so`___
 - alacritty
 - alsa-plugins-pulseaudio
 - chromium
@@ -86,7 +85,7 @@ Go to your bios and then disable it.
 
 ### dnf
 Edit /etc/dnf/dnf.conf
-- `max_parellel_downloads=1`
+- `max_parallel_downloads=1`
 - `install_weak_deps=False`
 - `exclude=flameshot`
 
