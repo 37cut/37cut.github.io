@@ -68,19 +68,13 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 
 ## Settings
 
-### disable tpm2
-Go to your bios and then disable it.
-
-### zsh as default shell
-`chsh -s /usr/bin/zsh`
-
 ### dnf
 Edit /etc/dnf/dnf.conf
 - `max_parallel_downloads=1`
 - `install_weak_deps=False`
 - `exclude=flameshot`
 
-### pipewire -\> pulseaudio
+### Audio Server: pipewire -\> pulseaudio
 ```shell
 sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
@@ -97,22 +91,56 @@ ctl.!default {
 }
 ```
 
-### disable PostMixer channel
+This part is supplement<br>
 Edit /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf
 
 Find ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
-Then replace ___${var:\_\_drcswitch}___ to ___off___
+Then replace '${var:\_\_drcswitch}' to 'off'
+
+### Display Manager: lightdm -\> xorg-x11-xdm
+```shell
+sudo dnf rm pipewire\*
+sudo dnf in pulseaudio
+```
+
+Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
+Make file executeable: `chmod +x .xsession`<br>
+Then run this command to activate xdm:<br>
+`systemctl set-default graphical.target`
+
+and finally enable xdm.service
+
+### DPI Scale
+See /etc/X11/Xresources<br>
+
+### set default shell
+`chsh -s /usr/bin/zsh`
+
+### x264/265 video codec support - Intel
+```shell
+sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf in intel-media-driver
+```
+
+### Flameshot
+```shell
+sudo dnf in qt5-{qtbase,qttools} qt5-qtbase-gui
+curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
+sudo rpm -i flameshot_0.5.1-fedora27-x86_64.rpm
+```
 
 ### disable selinux
-`vim /etc/selinux/config`
-Find 'SELINUX=...'<br>
-Replace 'enforcing' to 'disabled'.
+Edit /etc/selinux/config<br>
+Find 'SELINUX=...' then replace 'enforcing' to 'disabled'.
 
 `sudo grubby --update-kernel ALL --args selinux=0`
 
 ### disable \`default dirs
 Edit $HOME/.config/user-dirs.dirs<br>
-Remove the text inside the double quotes.
+Remove the text inside the quotes.
+
+### disable watchdog
+
 
 ### unused services
 ```shell
@@ -129,24 +157,7 @@ sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
-### lightdm -\> xorg-x11-xdm
-Remove lightdm
-Install xorg-x11-xdm
-
-Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
-Make file executeable: `chmod +x .xsession`<br>
-Then run this command to activate xdm:<br>
-`systemctl set-default graphical.target`
-
-and finally enable xdm.service
-
-### flameshot
-```shell
-sudo dnf in qt5-{qtbase,qttools} qt5-qtbase-gui
-curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
-```
-
-### no AIs on the chromium backend
+### Chromium Supplements
 Go to ___chrome://flags___
 
 Search ___gemini___ and disable every options include gemini keyword<br>
@@ -156,14 +167,7 @@ To prevent chrome download ai models into this folder -> ___$HOME/.config/chromi
 You could make this folder inmutable:<br>
 `sudo chattr +i $HOME/.config/chromium/OptGuideOnDeviceModel/`
 
-### x264/265 video codec support - intel
-Run these commands:<br>
-```shell
-sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf in intel-media-driver
-```
-
-## Notes
+## Maintainence
 
 ### system upgrade
 ```shell
