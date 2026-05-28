@@ -92,11 +92,18 @@ ctl.!default {
 }
 ```
 
-This part is supplement<br>
+___This part is supplement___ <br>
 Edit /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf
 
 Find ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
 Then replace '${var:\_\_drcswitch}' to 'off'
+
+Example /etc/pulse/daemon.conf file:<br>
+default-sample-format = s16le
+default-sample-rate = 44100
+alternate-sample-rate = 48000
+default-sample-channels = 6
+default-channel-map = front-left,front-right,rear-left,rear-right,front-center,lfe
 
 ### Display Manager: lightdm -\> xorg-x11-xdm
 ```shell
