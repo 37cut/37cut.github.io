@@ -1,8 +1,5 @@
 # Fedora
-
-Go to this [page](https://alt.fedoraproject.org/)
-
-I will use i3 desktop
+https://alt.fedoraproject.org
 
 ## Configs
 
@@ -103,20 +100,17 @@ ctl.!default {
 ```
 
 ### disable PostMixer channel
-Go to this folder: <u>/usr/share/alsa/ucm2</u>
+Edit /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf
 
-Find the folder matched your sound devices,<br>
-`sudo vim /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf` for example
-
-Find the line: ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
-Then change the value: ___${var:\_\_drcswitch}___ to ___off___
+Find ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
+Then replace ___${var:\_\_drcswitch}___ to ___off___
 
 ### disable selinux
 `vim /etc/selinux/config`
 Find 'SELINUX=...'<br>
 Replace 'enforcing' to 'disabled'.
 
-sudo grubby --update-kernel ALL --args selinux=0
+`sudo grubby --update-kernel ALL --args selinux=0`
 
 ### disable \`default dirs
 Edit $HOME/.config/user-dirs.dirs<br>
@@ -141,8 +135,9 @@ sudo systemctl mask NetworkManager-dispatcher.service
 Install xorg-x11-xdm
 
 Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
-Make .xsession executeable: `chmod +x .xsession`<br>
-Then type this command to activate xdm on next startup: `systemctl set-default graphical.target`
+Make file executeable: `chmod +x .xsession`<br>
+Then run this command to activate xdm:<br>
+`systemctl set-default graphical.target`
 
 and finally enable xdm.service
 
@@ -158,7 +153,7 @@ Go to chrome://flags
 Search ___gemini___ and disable every options include gemini keyword<br>
 Search ___optimization guide on device___ and disable it
 
-To prevent chrome download garbages into this folder -> ___$HOME/.config/chromium/OptGuideOnDeviceModel___ <br>
+To prevent chrome download ai models into this folder -> ___$HOME/.config/chromium/OptGuideOnDeviceModel___ <br>
 You could make this folder inmutable:<br>
 `sudo chattr +i $HOME/.config/chromium/OptGuideOnDeviceModel/`
 
