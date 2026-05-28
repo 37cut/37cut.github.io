@@ -28,8 +28,6 @@ I will use i3 desktop
 - tlp
 - vim-enhanced
 - xarchiver
-- xorg-x11-server-Xorg
-- xorg-x11-xdm
 - xsecurelock
 - zsh
 - zsh-autosuggestions
@@ -41,7 +39,6 @@ ___;know your device first!!___
 - firefox
 - gnome-abrt
 - gnome-disk-utility
-- hunspell-en
 - ibus-{anthy,chewing,m17n,hangul,table}
 - nano
 - nfs-utils
@@ -50,7 +47,6 @@ ___;know your device first!!___
 - setroubleshoot
 - xorg-x11-drv-{intel,amdgpu,ati,nouveau,openchrome,qxl,vmware}
 - xfce4-terminal
-- zram-generator
 - {amd,nvidia}-gpu-firmware
 - {amd-ucode,mt7xxx}-firmware
 - {atheros,brcmfmac,libertas,nxpwireless,qcom-wwan,tiwilink}-firmware
@@ -142,6 +138,8 @@ sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
 ### xorg-x11-xdm
+Install xorg-x11-xdm
+
 Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
 Make .xsession executeable: `chmod +x .xsession`<br>
 Then type this command to activate xdm on next startup: `systemctl set-default graphical.target`
