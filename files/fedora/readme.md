@@ -140,7 +140,10 @@ Edit $HOME/.config/user-dirs.dirs<br>
 Remove the text inside the quotes.
 
 ### disable watchdog
+Create /etc/modprobe.d/blacklist.conf<br>
+Find your wdt via `lsmod`
 
+Then add `blacklist your_module` into the file
 
 ### unused services
 ```shell
@@ -167,7 +170,7 @@ To prevent chrome download ai models into this folder -> ___$HOME/.config/chromi
 You could make this folder inmutable:<br>
 `sudo chattr +i $HOME/.config/chromium/OptGuideOnDeviceModel/`
 
-## Maintainence
+## Notes
 
 ### system upgrade
 ```shell
