@@ -118,8 +118,10 @@ Then change the value: ___${var:\_\_drcswitch}___ to ___off___
 
 ### disable selinux
 `vim /etc/selinux/config`
-Find key 'SELINUX=...'<br>
-Replace enforcing to disabled(if available).
+Find 'SELINUX=...'<br>
+Replace 'enforcing' to 'disabled'.
+
+sudo grubby --update-kernel ALL --args selinux=0
 
 ### disable \`default dirs
 Edit $HOME/.config/user-dirs.dirs<br>
