@@ -120,6 +120,9 @@ Then run this command to activate xdm:<br>
 
 and finally enable xdm.service
 
+### 7zip -\> 7zip-standalone
+Remove 7zip, install 7zip-standalone instead.
+
 ### DPI Scale
 See /etc/X11/Xresources<br>
 
@@ -132,7 +135,7 @@ sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-rel
 sudo dnf in intel-media-driver
 ```
 
-### Flameshot
+### flameshot
 ```shell
 sudo dnf in qt5-{qtbase,qttools} qt5-qtbase-gui
 curl -L https://github.com/flameshot-org/flameshot/releases/download/v0.5.1/flameshot_0.5.1-fedora27-x86_64.rpm > flameshot_0.5.1-fedora27-x86_64.rpm
