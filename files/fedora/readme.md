@@ -109,8 +109,8 @@ default-channel-map = front-left,front-right,rear-left,rear-right,front-center,l
 
 ### Display Manager: lightdm -\> xorg-x11-xdm
 ```shell
-sudo dnf rm pipewire\*
-sudo dnf in pulseaudio
+sudo dnf rm lightdm
+sudo dnf in xorg-x11-xdm
 ```
 
 Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
