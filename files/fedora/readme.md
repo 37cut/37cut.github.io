@@ -15,9 +15,9 @@ Switch your current workspace to tty4 (ctrl + alt + f4) before editing these fil
 - gvfs-archive
 - htop
 - i3
-- ibus
+- ibus  ___;remove it first___
 - ibus-setup
-- ibus-pinyin ___;remove it first___
+- ibus-pinyin
 - light
 - mousepad
 - mpv
