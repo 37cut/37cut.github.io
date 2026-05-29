@@ -160,7 +160,6 @@ Then add `blacklist your_module` into the file
 
 ### unused services
 ```shell
-sudo systemctl disable fstrim.timer
 sudo systemctl disable avahi-daemon
 sudo systemctl disable avahi-daemon.socket
 ```
