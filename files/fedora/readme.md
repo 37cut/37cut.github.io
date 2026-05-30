@@ -81,7 +81,7 @@ sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
 ```
 
-and add these lines to /etc/asound.conf:
+and add these code to /etc/asound.conf:
 ```shell
 pcm.!default {
     type pulse
@@ -121,7 +121,7 @@ Then run this command to activate xdm:<br>
 and finally enable xdm.service
 
 ### 7zip -\> 7zip-standalone
-Remove 7zip, install 7zip-standalone instead.
+Install 7zip-standalone, rather than 7zip.
 
 ### DPI Scale
 See /etc/X11/Xresources<br>
