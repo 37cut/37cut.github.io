@@ -1,7 +1,7 @@
 # Fedora
 https://alt.fedoraproject.org
 
-## Config
+## config
 Switch your current workspace to tty4 (ctrl + alt + f4) before editing these files
 
 ### things to add
