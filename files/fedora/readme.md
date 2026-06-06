@@ -16,10 +16,6 @@ https://cutt37.is-a.dev/files/fedora/src/4.md
 ### Display manager
 https://cutt37.is-a.dev/files/fedora/src/5.md
 
-
-### 7zip -\> 7zip-standalone
-Install 7zip-standalone, rather than 7zip.
-
 ### DPI Scale
 See /etc/X11/Xresources<br>
 
