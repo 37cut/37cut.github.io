@@ -58,6 +58,7 @@
         window.addEventListener('DOMContentLoaded', function () {            
             const img = document.createElement('img');
             const here = document.getElementById('here');
+            const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
             
             img.src = './files/lolisuki';
             img.id = 'fixed-image';
@@ -74,25 +75,27 @@
             document.body.appendChild(img);
             document.body.style.display = 'block';
             
-            here.addEventListener('mouseover', function() {
-                img.style.opacity = '0.6';
-                here.style.fontWeight = 'bold';
-            })
+            if (!mobile) {
+                here.addEventListener('mouseover', function() {
+                    img.style.opacity = '0.6';
+                    here.style.fontWeight = 'bold';
+                })
 
-            here.addEventListener('mouseout', function() {
-                img.style.opacity = '0';
-                here.style.fontWeight = 'normal';
-            })
-            
-            here.addEventListener('touchstart', function() {
-                img.style.opacity = '0.6';
-                here.style.fontWeight = 'bold';
-            })
-
-            here.addEventListener('touchend', function() {
-                img.style.opacity = '0';
-                here.style.fontWeight = 'normal';
-            })
+                here.addEventListener('mouseout', function() {
+                    img.style.opacity = '0';
+                    here.style.fontWeight = 'normal';
+                })
+            } else {
+                here.addEventListener('touchstart', function() {
+                    img.style.opacity = '0.6';
+                    here.style.fontWeight = 'bold';
+                })
+    
+                here.addEventListener('touchend', function() {
+                    img.style.opacity = '0';
+                    here.style.fontWeight = 'normal';
+                })
+            }
         })
         
     </script>
