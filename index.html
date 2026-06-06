@@ -55,7 +55,7 @@
     </style>
 
     <script>
-        window.addEventListener('DOMContentLoaded', function () {            
+        function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
             const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
@@ -98,8 +98,9 @@
                     here.style.fontWeight = 'normal';
                 })
             }
-
-        })
+        }
+        
+        window.addEventListener('DOMContentLoaded', init)
         
     </script>
 </head>
