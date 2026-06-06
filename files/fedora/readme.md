@@ -1,8 +1,6 @@
 # Fedora
 https://alt.fedoraproject.org
 
-## config
-
 ### things to add
 - alacritty
 - alsa-plugins-pulseaudio
@@ -65,8 +63,6 @@ Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
 - xdm/xdm-config                -> /etc/X11/xdm
 - xdm/Xresources                -> /etc/X11/xdm
 - xdm/Xsetup                    -> /etc/X11/xdm
-
-## Settings
 
 ### dnf
 Edit /etc/dnf/dnf.conf
