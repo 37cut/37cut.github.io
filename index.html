@@ -8,56 +8,62 @@
     <meta name="description" content="cutt37's userspace">
 
     <style>
-        #head {
+        #title {
+            font-size: 24px;
             margin-block: 16px;
         }
         
-        #head p {
-            font-size: 24px;
+        #title p {
             margin-block: 8px;
         }
 
-        #list-head {
+        #head {
             font-size: 22px;
             font-weight: bold;
+
             margin-top: 12px;
             margin-bottom: 0;
+
+            width: 24vh;
         }
 
-        #block {
+        #root {
             display: flex;
             flex-direction: row;
-            width: 50vh;
-            gap: 35px;
-        }
-
-        #block p {
-            font-size: 20px;
             line-height: 4px;
         }
 
-        #here {
-            transition: font-weight 0.5s;
+        #A.block {
+            display: flex;
+            flex-direction: row;
+            font-size: 20px;
+
+            width: 24vh;
+            height: 72vh;
+
+            gap: 35px;
         }
-        
-        #fixed-image {
-            transition: opacity 0.5s;
-        }
+
+        #B.block {
+            font-size: 20px;
+            width: 90vh;
+            height: 72vh;
+        }        
         
         hr {
             margin-block: 16px;
         }
 
-        body {
-            display: none;
-        }
-
     </style>
 
     <script>
+        document.body.style.display = 'none';
+
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
+            const root = document.getElementById('root');
+
             const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
             
             img.src = './files/lolisuki';
@@ -69,11 +75,13 @@
             img.style.bottom = '10px';
             img.style.right = '10px';
 
-            img.style.height = '75%';
+            img.style.height = '75vh';
             img.style.opacity = '0';
+            img.style.transition = 'opacity 0.5s';
 
             document.body.appendChild(img);
             document.body.style.display = 'block';
+            document.body.style.height = '97vh';
             
             if (!mobile) {
                 here.addEventListener('mouseover', function() {
@@ -88,6 +96,8 @@
             }
             
             else {
+                root.style.flexDirection = 'column';
+
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
@@ -106,26 +116,34 @@
 </head>
 
 <body>
-    <div id="head">
+    <div id="title">
         <p>cutt37&rsquo;s userspace
         <p><i>I was <span id="here">here</span></i>
     </div>
 
     <hr>
 
-    <p id="list-head">Entries
+    <p id="head">Entries
 
-    <div id="block">
-        <div id="list">
-            <p>fedora:
-            <p>python:
-            <p>osu:
+    <div id="root">
+        <div class="block" id="A">
+            <div id="text">
+                <p>fedora:
+                <p>python:
+                <p>osu:
+            </div>
+
+            <div id="text">
+                <p><a href="./files/fedora/readme.md" target="_frame">view</a>
+                <p><a href="./files/python/readme.md">view</a>
+                <p><a href="./files/osu/readme.md">view</a>
+            </div>
         </div>
 
-        <div id="link">
-            <p><a href="./files/fedora/readme.md">view</a>
-            <p><a href="./files/python/readme.md">view</a>
-            <p><a href="./files/osu/readme.md">view</a>
+        <div class="block" id="B">
+            <div id="text">
+                
+            </div>
         </div>
     </div>
 
