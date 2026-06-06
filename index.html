@@ -48,7 +48,7 @@
             font-size: 20px;
             width: 90vh;
             height: 72vh;
-        }        
+        }
         
         hr {
             margin-block: 16px;
@@ -62,7 +62,9 @@
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
+            
             const root = document.getElementById('root');
+            const blockB = document.getElementById('B');
 
             const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
             
@@ -97,6 +99,7 @@
             
             else {
                 root.style.flexDirection = 'column';
+                blockB.style.height = '0';
 
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
