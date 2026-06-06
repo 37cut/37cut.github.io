@@ -1,51 +1,8 @@
 # Fedora Linux
 https://alt.fedoraproject.org
 
-### things to add
-- alacritty
-- alsa-plugins-pulseaudio
-- chromium
-- dbus-x11
-- dunst
-- feh
-- gimp
-- gvfs-archive
-- htop
-- i3
-- ibus ___;remove it first___
-- ibus-setup
-- ibus-pinyin
-- light
-- mousepad
-- mpv
-- NetworkManager-tui
-- pcmanfm
-- picom
-- tlp
-- vim-enhanced
-- xarchiver
-- xsecurelock
-- zsh
-- zsh-autosuggestions
-- zsh-syntax-highlighting
-
-### things to remove
-- abrt
-- firefox
-- gnome-abrt
-- gnome-disk-utility
-- nano
-- nfs-utils
-- pavucontrol
-- plymouth
-- setroubleshoot
-- xorg-x11-drv-{intel,amdgpu,ati,nouveau,openchrome,qxl,vmware}
-- xfce4-terminal
-- {amd,nvidia}-gpu-firmware
-- {amd-ucode,mt7xxx}-firmware
-- {atheros,brcmfmac,libertas,nxpwireless,qcom-wwan,tiwilink}-firmware
-- cirrus-audio-firmware
-- lightdm ___;beware this___
+### Packages
+https://cutt37.is-a.dev/files/fedora/src/1.md
 
 ### my configs
 Download [here](https://cutt37.is-a.dev/files/fedora/files.cutt37)
