@@ -16,17 +16,11 @@ https://cutt37.is-a.dev/files/fedora/src/4.md
 ### Display manager
 https://cutt37.is-a.dev/files/fedora/src/5.md
 
-### DPI Scale
-See /etc/X11/Xresources<br>
+### Arc graphics
+https://cutt37.is-a.dev/files/fedora/src/6.md
 
 ### set-default shell
 `chsh -s /usr/bin/zsh`
-
-### x264/265 video codec support - Intel
-```shell
-sudo dnf in https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf in intel-media-driver
-```
 
 ### flameshot
 ```shell
