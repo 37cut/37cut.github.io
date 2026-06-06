@@ -1,4 +1,4 @@
-# Fedora
+# Fedora Linux
 https://alt.fedoraproject.org
 
 ### things to add
@@ -167,7 +167,7 @@ sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
-### chromium supplements
+### chromium
 Go to ___chrome://flags___
 
 Search ___gemini___ and disable every options include gemini keyword<br>
