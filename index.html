@@ -39,7 +39,7 @@
             font-size: 20px;
 
             width: 24vh;
-            height: 72vh;
+            height: 80vh;
 
             gap: 35px;
         }
@@ -47,7 +47,7 @@
         #B.block {
             font-size: 20px;
             width: 90vh;
-            height: 72vh;
+            height: 80vh;
         }
         
         hr {
@@ -64,9 +64,8 @@
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
+
             const root = document.getElementById('root');
-            
-            const blockA = document.getElementById('A');
             const blockB = document.getElementById('B');
 
             const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
@@ -102,7 +101,6 @@
             
             else {
                 root.style.flexDirection = 'column';
-                blockA.style.height = 'auto';
                 blockB.style.height = '0';
 
                 here.addEventListener('touchstart', function() {
