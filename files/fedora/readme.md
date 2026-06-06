@@ -13,18 +13,9 @@ https://cutt37.is-a.dev/files/fedora/src/3.md
 ### Sound server
 https://cutt37.is-a.dev/files/fedora/src/4.md
 
-### display manager: lightdm -\> xorg-x11-xdm
-```shell
-sudo dnf rm lightdm
-sudo dnf in xorg-x11-xdm
-```
+### Display manager
+https://cutt37.is-a.dev/files/fedora/src/5.md
 
-Create .xsession: `touch .xsession && echo i3 > .xsession`<br>
-Make file executeable: `chmod +x .xsession`<br>
-Then run this command to activate xdm:<br>
-`systemctl set-default graphical.target`
-
-and finally enable xdm.service
 
 ### 7zip -\> 7zip-standalone
 Install 7zip-standalone, rather than 7zip.
