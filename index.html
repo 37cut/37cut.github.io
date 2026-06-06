@@ -40,6 +40,26 @@
         }
 
     </style>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const img = document.createElement('img');
+            img.src = './files/lolisuki';
+            img.idName = 'fixed-image';
+
+            img.style.position = 'fixed';
+            img.style.pointerEvents = 'none';
+
+            img.style.bottom = '10px';
+            img.style.right = '10px';
+
+            img.style.height = '70%';
+            img.style.opacity = '0.6';
+            
+            document.body.appendChild(img);
+        })
+        
+    </script>
 </head>
 
 <body>
