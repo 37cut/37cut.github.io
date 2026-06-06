@@ -47,6 +47,10 @@
             margin-block: 16px;
         }
 
+        body {
+            display: none;
+        }
+
     </style>
 
     <script>
@@ -67,6 +71,7 @@
             img.style.opacity = '0';
 
             document.body.appendChild(img);
+            document.body.style.display = 'block';
             
             here.addEventListener('mouseover', function() {
                 img.style.opacity = '0.6';
