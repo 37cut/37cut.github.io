@@ -10,37 +10,8 @@ https://cutt37.is-a.dev/files/fedora/src/2.md
 ### Package manager
 https://cutt37.is-a.dev/files/fedora/src/3.md
 
-### audio server: pipewire -\> pulseaudio
-```shell
-sudo dnf rm pipewire\*
-sudo dnf in pulseaudio
-```
-
-and add these code to /etc/asound.conf:
-```shell
-pcm.!default {
-    type pulse
-}
-
-ctl.!default {
-    type pulse
-}
-```
-
-___This part is supplement___ <br>
-Edit /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf
-
-Find ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
-Then replace '${var:\_\_drcswitch}' to 'off'
-
-/etc/pulse/daemon.conf file:<br>
-```ini
-default-sample-format = s16le
-default-sample-rate = 44100
-alternate-sample-rate = 48000
-default-sample-channels = 6
-default-channel-map = front-left,front-right,rear-left,rear-right,front-center,lfe
-```
+### Sound server
+https://cutt37.is-a.dev/files/fedora/src/4.md
 
 ### display manager: lightdm -\> xorg-x11-xdm
 ```shell
