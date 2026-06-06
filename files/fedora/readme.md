@@ -7,11 +7,8 @@ https://cutt37.is-a.dev/files/fedora/src/1.md
 ### File configs
 https://cutt37.is-a.dev/files/fedora/src/2.md
 
-### dnf
-Edit /etc/dnf/dnf.conf
-- `max_parallel_downloads=1`
-- `install_weak_deps=False`
-- `exclude=flameshot`
+### Package manager
+https://cutt37.is-a.dev/files/fedora/src/3.md
 
 ### audio server: pipewire -\> pulseaudio
 ```shell
