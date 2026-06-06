@@ -44,6 +44,7 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {            
             const img = document.createElement('img');
+            const here = document.getElementById('here');
             
             img.src = './files/lolisuki';
             img.id = 'fixed-image';
@@ -55,9 +56,19 @@
             img.style.right = '10px';
 
             img.style.height = '70%';
-            img.style.opacity = '0.6';
-            
+            img.style.opacity = '0';
+
             document.body.appendChild(img);
+            
+            here.addEventListener('mouseover', function() {
+                img.style.opacity = '0.6';
+                here.style.fontWeight = 'bolder';
+            })
+
+            here.addEventListener('mouseout', function() {
+                img.style.opacity = '0';
+                here.style.fontWeight = 'normal';
+            })
         })
         
     </script>
@@ -66,7 +77,7 @@
 <body>
     <div id="head">
         <p>cutt37&rsquo;s userpage
-        <p><i>I was here</i>
+        <p><i>I was <span id="here">here</span></i>
     </div>
 
     <hr>
