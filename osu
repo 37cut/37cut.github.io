@@ -1,0 +1,12 @@
+#!/usr/bin/sh
+
+rm -rf $HOME/.local/share/osu/logs/*
+rm -rf $HOME/.local/share/osu/cache/*
+
+cd osu-lazer/
+
+chmod +x ./usr/bin/osu\!
+chmod +x ./AppRun
+
+./AppRun
+
