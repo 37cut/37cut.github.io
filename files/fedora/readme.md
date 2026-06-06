@@ -2,7 +2,6 @@
 https://alt.fedoraproject.org
 
 ## config
-Switch your current workspace to tty4 (ctrl + alt + f4) before editing these files
 
 ### things to add
 - alacritty
@@ -75,7 +74,7 @@ Edit /etc/dnf/dnf.conf
 - `install_weak_deps=False`
 - `exclude=flameshot`
 
-### Audio Server: pipewire -\> pulseaudio
+### audio server: pipewire -\> pulseaudio
 ```shell
 sudo dnf rm pipewire\*
 sudo dnf in pulseaudio
@@ -98,7 +97,7 @@ Edit /usr/share/alsa/ucm2/Intel/sof-hda-dsp/HiFi-sof.conf
 Find ___cset "name='${var:PostMixerAnalogPlaybackDrcSwitch ${var:\_\_drcswitch}"___ <br>
 Then replace '${var:\_\_drcswitch}' to 'off'
 
-Example /etc/pulse/daemon.conf file:<br>
+/etc/pulse/daemon.conf file:<br>
 ```ini
 default-sample-format = s16le
 default-sample-rate = 44100
@@ -107,7 +106,7 @@ default-sample-channels = 6
 default-channel-map = front-left,front-right,rear-left,rear-right,front-center,lfe
 ```
 
-### Display Manager: lightdm -\> xorg-x11-xdm
+### display manager: lightdm -\> xorg-x11-xdm
 ```shell
 sudo dnf rm lightdm
 sudo dnf in xorg-x11-xdm
@@ -126,7 +125,7 @@ Install 7zip-standalone, rather than 7zip.
 ### DPI Scale
 See /etc/X11/Xresources<br>
 
-### set default shell
+### set-default shell
 `chsh -s /usr/bin/zsh`
 
 ### x264/265 video codec support - Intel
@@ -172,7 +171,7 @@ sudo systemctl mask NetworkManager-wait-online.service
 sudo systemctl mask NetworkManager-dispatcher.service
 ```
 
-### Chromium Supplements
+### chromium supplements
 Go to ___chrome://flags___
 
 Search ___gemini___ and disable every options include gemini keyword<br>
