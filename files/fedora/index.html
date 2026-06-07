@@ -124,7 +124,7 @@
                 code.style.fontSize = '8px';
             })
 
-            window.addEventListener("orientationchange", function() {
+            window.addEventListener('resize', function() {
                 if (window.innerWidth < window.innerHeight) {
                     title.forEach(title => {
                         title.style.fontSize = '24px';
