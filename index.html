@@ -54,7 +54,7 @@
     </style>
 
     <script>
-        function place_image() {
+        function place_image(img) {
             if (window.innerWidth >= 1024) {
                 img.style.right = window.getComputedStyle(document.body).marginRight;
             }
@@ -93,17 +93,18 @@
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
 
-                    place_image();
+                    place_image(img);
                 })
 
                 here.addEventListener('mouseout', function() {
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
 
-                    place_image();
+                    place_image(img);
                 })
 
                 here.addEventListener('resize', function() {
+                    place_image(img);
                 })
             }
             
