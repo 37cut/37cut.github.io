@@ -72,16 +72,6 @@
             }
         }
 
-        function II_relocate_image(img) {
-            if (window.innerWidth < window.innerHeight) {
-                img.style.height = '65vh';
-            }
-
-            else {
-                img.style.height = '72vh';
-            }
-        }
-
         function mui_support() {
             const title = document.querySelectorAll('#title');
             const title_p = document.querySelectorAll('#title p');
@@ -210,15 +200,11 @@
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
-
-                    II_relocate_image(img);
                 })
     
                 here.addEventListener('touchend', function() {
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
-
-                    II_relocate_image(img);
                 })
             }
 
