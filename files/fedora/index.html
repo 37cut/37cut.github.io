@@ -124,8 +124,8 @@
                 code.style.fontSize = '8px';
             })
 
-            window.addEventListener('resize', function() {
-                if (window.innerWidth < window.innerHeight) {
+            window.addEventListener('change', function() {
+                if (screen.orientation.type == 'portrait-primary') {
                     title.forEach(title => {
                         title.style.fontSize = '14px';
                         title.style.marginBlock = '10px';
