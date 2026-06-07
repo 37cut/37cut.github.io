@@ -82,28 +82,6 @@
             }
         }
 
-        
-        function set_mobile_viewport() {
-            const title = document.getElementById('title');
-            const title_p = document.querySelector('#title p');
-
-            const head = document.getElementById('head');
-            const sub_head = document.getElementById('sub-head');
-            
-            const code = document.getElementById('code');
-            const content = document.querySelector('#Content.block');
-
-            title.style.fontSize = '18px';
-            title_p.style.marginBlock = '6px';
-            
-            head.style.fontSize = '16px';
-            sub_head.style.fontSize = '16px';
-            
-            code.style.fontSize = '10px';
-            code.style.marginLeft = '4px';
-            content.style.fontSize = '14px';     
-        }
-
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
@@ -149,8 +127,6 @@
             }
             
             else {
-                set_mobile_viewport()
-
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
