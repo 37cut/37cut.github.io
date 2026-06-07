@@ -80,29 +80,23 @@
                 document.body.style.paddingInline = '8px';
 
                 here.addEventListener('mouseover', function() {
-                    if (window.innerWidth >= 1024) {
-                        img.style.right = window.getComputedStyle(document.body).marginRight;
-                    }
-
-                    else {
-                        img.style.right = '10px';
-                    }
-
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
                 })
 
                 here.addEventListener('mouseout', function() {
+                    img.style.opacity = '0';
+                    here.style.fontWeight = 'normal';
+                })
+
+                window.addEventListener("resize", function() {
                     if (window.innerWidth >= 1024) {
                         img.style.right = window.getComputedStyle(document.body).marginRight;
                     }
-
+            
                     else {
                         img.style.right = '10px';
                     }
-
-                    img.style.opacity = '0';
-                    here.style.fontWeight = 'normal';
                 })
             }
             
