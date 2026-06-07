@@ -85,22 +85,22 @@
         
         function set_mobile_viewport() {
             const title = document.getElementById('title');
-            const sub_title = document.getElementById('sub-title');
+            const title_p = document.querySelector('#title p');
 
             const head = document.getElementById('head');
+            const sub_head = document.getElementById('sub-head');
+            
             const code = document.getElementById('code');
-
-            const title_p = document.querySelector('#title p');
             const content = document.querySelector('#Content.block');
 
-            title.style.fontSize = '20px';
-            sub_title.style.fontSize = '20px';
-
-            head.style.fontSize = '18px';
-            code.style.fontSize = '12px';
-
+            title.style.fontSize = '18px';
             title_p.style.marginBlock = '6px';
-            content.style.fontSize = '16px';
+            
+            head.style.fontSize = '16px';
+            sub_head.style.fontSize = '16px';
+            
+            code.style.fontSize = '10px';
+            content.style.fontSize = '14px';     
         }
 
         function init() {
