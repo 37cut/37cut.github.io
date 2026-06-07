@@ -125,7 +125,7 @@
             })
 
             screen.orientation.addEventListener('change', function() {
-                alert(screen.orientation.type);
+                document.body.innerHTML += screen.orientation.type
                 if (screen.orientation.type.startsWith('portrait')) {
                     title.forEach(title => {
                         title.style.fontSize = '14px';
