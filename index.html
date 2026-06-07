@@ -75,12 +75,12 @@
             img.style.transition = 'opacity 0.5s';
 
             if (!mobile) {
-                document.body.style.width = '1280px';
+                document.body.style.width = '1024px';
                 document.body.style.marginInline = 'auto';
                 document.body.style.paddingInline = '8px';
 
                 here.addEventListener('mouseover', function() {
-                    if (window.innerWidth >= 1280) {
+                    if (window.innerWidth >= 1024) {
                         img.style.right = window.getComputedStyle(document.body).marginRight;
                     }
 
@@ -93,7 +93,7 @@
                 })
 
                 here.addEventListener('mouseout', function() {
-                    if (window.innerWidth >= 1280) {
+                    if (window.innerWidth >= 1024) {
                         img.style.right = window.getComputedStyle(document.body).marginRight;
                     }
 
