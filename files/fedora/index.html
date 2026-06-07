@@ -76,7 +76,24 @@
                 img.style.height = '72vh';
             }
         }
+
         
+        function set_mobile_viewport() {
+            const title = document.getElementById('title');
+            const head = document.getElementById('head');
+            const code = document.getElementById('code');
+
+            const title_p = document.querySelector('#title p');
+            const content = document.querySelector('#Content.block');
+
+            title.style.fontSize = '20px';
+            head.style.fontSize = '18px';
+            code.style.fontSize = '12px';
+
+            title_p.style.marginBlock = '6px';
+            content.style.fontSize = '16px';
+        }
+
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
@@ -122,6 +139,8 @@
             }
             
             else {
+                set_mobile_viewport()
+
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
