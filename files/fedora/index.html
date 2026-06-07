@@ -60,7 +60,7 @@
         }
 
     </style>
-    
+
     <script>
         function relocate_image(img) {
             if (window.innerWidth >= 1024) {
@@ -74,11 +74,11 @@
 
         function II_relocate_image(img) {
             if (window.innerWidth < window.innerHeight) {
-                img.style.height = '60vh';
+                img.style.height = '72vh';
             }
 
             else {
-                img.style.height = '72vh';
+                img.style.height = '65vh';
             }
         }
 
@@ -133,9 +133,20 @@
             code.forEach(code => {
                 code.style.fontSize = '8px';
             })
-        
+
             window.addEventListener("orientationchange", function() {
                 if (window.innerWidth < window.innerHeight) {
+                    title.forEach(title => {
+                        title.style.fontSize = '24px';
+                        title.style.marginBlock = '16px';
+                    })
+        
+                    title_p.forEach(title_p => {
+                        title_p.style.marginBlock = '8px';
+                    })
+                }
+
+                else {
                     title.forEach(title => {
                         title.style.fontSize = '14px';
                         title.style.marginBlock = '10px';
@@ -146,18 +157,7 @@
                     })
                 }
 
-                else {
-                    title.forEach(title => {
-                        title.style.fontSize = '24px';
-                        title.style.marginBlock = '16px';
-                    })
-        
-                    title_p.forEach(title_p => {
-                        title_p.style.marginBlock = '8px';
-                    })
-                }          
             })
-
         }
 
         function init() {
