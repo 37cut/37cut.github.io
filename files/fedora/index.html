@@ -135,7 +135,18 @@
             })
         
             window.addEventListener("orientationchange", function() {
-                if (window.innerWidth > window.innerHeight) {
+                if (window.innerWidth < window.innerHeight) {
+                    title.forEach(title => {
+                        title.style.fontSize = '14px';
+                        title.style.marginBlock = '10px';
+                    })
+        
+                    title_p.forEach(title_p => {
+                        title_p.style.marginBlock = '3px';
+                    })
+                }
+
+                else {
                     title.forEach(title => {
                         title.style.fontSize = '24px';
                         title.style.marginBlock = '16px';
@@ -144,9 +155,9 @@
                     title_p.forEach(title_p => {
                         title_p.style.marginBlock = '8px';
                     })
-                }
+                }          
             })
-            
+
         }
 
         function init() {
