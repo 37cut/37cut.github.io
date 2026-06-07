@@ -54,6 +54,16 @@
     </style>
 
     <script>
+        function place_image() {
+            if (window.innerWidth >= 1024) {
+                img.style.right = window.getComputedStyle(document.body).marginRight;
+            }
+    
+            else {
+                img.style.right = '10px';
+            }
+        }
+        
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
@@ -78,27 +88,22 @@
                 document.body.style.width = '1024px';
                 document.body.style.marginInline = 'auto';
                 document.body.style.paddingInline = '8px';
-
-                img.style.right = window.getComputedStyle(document.body).marginRight;
                 
                 here.addEventListener('mouseover', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
+
+                    place_image();
                 })
 
                 here.addEventListener('mouseout', function() {
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
+
+                    place_image();
                 })
 
-                window.addEventListener("resize", function() {
-                    if (window.innerWidth >= 1024) {
-                        img.style.right = window.getComputedStyle(document.body).marginRight;
-                    }
-            
-                    else {
-                        img.style.right = '10px';
-                    }
+                here.addEventListener('resize', function() {
                 })
             }
             
