@@ -72,19 +72,31 @@
             }
         }
 
-        function II_relocate_image(img) {
+        function mui_on_rotate() {
+            const img = document.querySelector('#fixed-image img');
+            const title = document.querySelectAll('#title')
+            const title_p = document.querySelectAll('#title p')
+            
             if (window.innerWidth < window.innerHeight) {
                 img.style.height = '60vh';
             }
 
             else {
                 img.style.height = '72vh';
+                title.forEach(title => {
+                    title.style.fontSize = '14px';
+                    title.style.marginBlock = '10px';
+                })
+    
+                title_p.forEach(title_p => {
+                    title_p.style.marginBlock = '3px';
+                })
             }
         }
 
         function mui_support() {
-            //const title = document.querySelectorAll('#title');
-            //const title_p = document.querySelectorAll('#title p');
+            const title = document.querySelectorAll('#title');
+            const title_p = document.querySelectorAll('#title p');
 
             const head = document.querySelectorAll('#head');
             const sub_head = document.querySelectorAll('#sub-head');
@@ -96,14 +108,14 @@
             const hr = document.querySelectorAll('hr');
             const code = document.querySelectorAll('#code');
 
-            //title.forEach(title => {
-            //    title.style.fontSize = '12px';
-            //    title.style.marginBlock = '8px';
-            //})
+            title.forEach(title => {
+                title.style.fontSize = '14px';
+                title.style.marginBlock = '10px';
+            })
 
-            //title_p.forEach(title_p => {
-            //    title_p.style.marginBlock = '3px';
-            //})
+            title_p.forEach(title_p => {
+                title_p.style.marginBlock = '3px';
+            })
 
             head.forEach(head => {
                 head.style.fontSize = '11px';
@@ -187,14 +199,18 @@
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
 
-                    II_relocate_image(img);
+                    mui_on_rotate();
                 })
     
                 here.addEventListener('touchend', function() {
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
 
-                    II_relocate_image(img);
+                    mui_on_rotate();
+                })
+
+                window.addEventListener('resize', function() {
+                    mui_on_rotate();
                 })
             }
 
