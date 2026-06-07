@@ -25,6 +25,11 @@
             margin-bottom: 0;
         }
 
+        #sub-head {
+            font-size: 22px;
+            font-style: italic;
+        }
+        
         #root {
             display: flex;
             flex-direction: column;
@@ -80,6 +85,8 @@
         
         function set_mobile_viewport() {
             const title = document.getElementById('title');
+            const sub_title = document.getElementById('sub_title');
+
             const head = document.getElementById('head');
             const code = document.getElementById('code');
 
@@ -87,6 +94,8 @@
             const content = document.querySelector('#Content.block');
 
             title.style.fontSize = '20px';
+            sub_title.style.fontSize = '20px';
+
             head.style.fontSize = '18px';
             code.style.fontSize = '12px';
 
@@ -186,7 +195,7 @@
 
             <div id="text">
                 <p id="head">Fedora Linux
-                <p><i>a. Summary</i>
+                <p id="sub-head">a. Summary
 
                 <div id="list" style="font-style: italic; margin-left: 24px;">
                     <p>a. <a href="./src/1.md">Package managers - dnf</a>
@@ -201,7 +210,7 @@
             </div>
 
             <div id="text">
-                <p><i>b. Notes</i>
+                <p id="sub-head">b. Notes
 
                 <div id="code" style="font-size: 16px; font-family: monospace; margin-left: 8px;" >
                     <p>### system upgrade
