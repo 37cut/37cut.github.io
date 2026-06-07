@@ -99,9 +99,7 @@
             else {
                 root.style.flexDirection = 'column';
                 blockB.style.height = '0';
-
-                img.style.height = '72vh';
-
+                
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
@@ -110,6 +108,10 @@
                 here.addEventListener('touchend', function() {
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
+                    
+                    if (document.body.clientHeight > document.body.clientWidth) {
+                        img.style.height = '72vh';
+                    }
                 })
             }
         }
