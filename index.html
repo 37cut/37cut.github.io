@@ -81,7 +81,11 @@
 
                 here.addEventListener('mouseover', function() {
                     if (window.innerWidth >= 1024) {
-                        img.style.right = window.getComputedStyle(document.body).marginRight
+                        img.style.right = window.getComputedStyle(document.body).marginRight;
+                    }
+
+                    else {
+                        img.style.right = '10px';
                     }
 
                     img.style.opacity = '0.6';
@@ -89,8 +93,12 @@
                 })
 
                 here.addEventListener('mouseout', function() {
-                    if (window.innerWidth < 1024) {
-                        img.style.right = '10px'
+                    if (window.innerWidth >= 1024) {
+                        img.style.right = window.getComputedStyle(document.body).marginRight;
+                    }
+
+                    else {
+                        img.style.right = '10px';
                     }
 
                     img.style.opacity = '0';
