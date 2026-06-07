@@ -124,8 +124,8 @@
                 hr.style.marginBlock = '8px';
             })
 
-            window.addEventListener('change', function() {
-                if (screen.orientation.type == 'portrait-primary') {
+            screen.orientation.addEventListener('change', function() {
+                if (screen.orientation.type.startsWith('portrait') {
                     title.forEach(title => {
                         title.style.fontSize = '14px';
                         title.style.marginBlock = '10px';
