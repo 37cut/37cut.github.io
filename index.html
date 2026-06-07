@@ -40,7 +40,7 @@
             margin-block: 4px;
         }
         
-        #main {
+        #main.entry {
             display: flex;
             flex-direction: row;
 
@@ -134,6 +134,11 @@
                     title_p.forEach(title_p => {
                         title_p.style.marginBlock = '3px';
                     })
+
+                    main.forEach(main => {
+                        main.style.fontSize = '10px';
+                        main.style.gap = '17px';
+                    })
                 }
 
                 else {
@@ -144,6 +149,11 @@
         
                     title_p.forEach(title_p => {
                         title_p.style.marginBlock = '6px';
+                    })
+
+                    main.forEach(main => {
+                        main.style.fontSize = '18px';
+                        main.style.gap = '32px';
                     })
                 }
 
@@ -229,7 +239,7 @@
     <p id="head">Entries
 
     <div id="root">
-        <div id="main">
+        <div id="main" class="entry">
             <div id="text">
                 <p>fedora:
                 <p>python:
