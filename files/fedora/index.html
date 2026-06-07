@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>owo</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="cutt37's userspace">
+
+    <style>
+        #title {
+            font-size: 24px;
+            margin-block: 16px;
+        }
+        
+        #title p {
+            margin-block: 8px;
+        }
+
+        #head {
+            font-size: 22px;
+            font-weight: bold;
+
+            margin-top: 12px;
+            margin-bottom: 0;
+        }
+
+        #root {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #text {
+            margin-top: 4px;
+        }
+
+        #text p {
+            margin-block: 7px;
+        }
+
+        #Content.block {
+            display: flex;
+            flex-direction: column;
+
+            font-size: 20px;
+            min-width: 220px;
+        }
+
+        hr {
+            margin-block: 16px;
+        }
+
+        body {
+            display: none;
+        }
+
+    </style>
+
+    <script>
+        function relocate_image(img) {
+            if (window.innerWidth >= 1024) {
+                img.style.right = window.getComputedStyle(document.body).marginRight;
+            }
+    
+            else {
+                img.style.right = '10px';
+            }
+        }
+
+        function II_relocate_image(img) {
+            if (window.innerWidth < window.innerHeight) {
+                img.style.height = '60vh';
+            }
+
+            else {
+                img.style.height = '72vh';
+            }
+        }
+        
+        function init() {
+            const img = document.createElement('img');
+            const here = document.getElementById('here');
+            const root = document.getElementById('root');
+            
+            const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
+            
+            img.src = './files/lolisuki';
+            img.id = 'fixed-image';
+
+            img.style.position = 'fixed';
+            img.style.pointerEvents = 'none';
+
+            img.style.bottom = '10px';
+            img.style.right = '10px';
+
+            img.style.height = '72vh';
+            img.style.opacity = '0';
+            img.style.transition = 'opacity 0.5s';
+
+            if (!mobile) {
+                document.body.style.maxWidth = '1024px';
+                document.body.style.marginInline = 'auto';
+                document.body.style.paddingInline = '8px';
+                
+                here.addEventListener('mouseover', function() {
+                    img.style.opacity = '0.6';
+                    here.style.fontWeight = 'bold';
+
+                    relocate_image(img);
+                })
+
+                here.addEventListener('mouseout', function() {
+                    img.style.opacity = '0';
+                    here.style.fontWeight = 'normal';
+
+                    relocate_image(img);
+                })
+
+                window.addEventListener('resize', function() {
+                    relocate_image(img);
+                })
+            }
+            
+            else {
+                here.addEventListener('touchstart', function() {
+                    img.style.opacity = '0.6';
+                    here.style.fontWeight = 'bold';
+
+                    II_relocate_image(img);
+                })
+    
+                here.addEventListener('touchend', function() {
+                    img.style.opacity = '0';
+                    here.style.fontWeight = 'normal';
+
+                    II_relocate_image(img);
+                })
+            }
+
+            document.body.appendChild(img);
+            document.body.style.display = 'block';
+            document.body.style.height = '95vh';
+        }
+        
+        window.addEventListener('DOMContentLoaded', init)
+
+    </script>
+
+</head>
+
+<body>
+    <div id="title">
+        <p>cutt37&rsquo;s userspace
+        <p><i>I was <span id="here">here</span></i>
+    </div>
+
+    <hr>
+
+    <p id="head">!! Disclaimer !!
+
+    <div id="root">
+        <div class="block" id="Content">
+            <div id="text">
+                <p><b>This is not a installation guide or documentation.
+                <p>I will not guarantee the safety of <u>your data</u>, even if you break your system.</b>
+            </div>
+
+            <div id="text">
+                <p id="head">Fedora Linux
+                <p><i>a. Summary</i>
+
+                <div id="list" style="font-style: italic; margin-left: 24px;">
+                    <p>a. <a href="./src/1.md">Package managers - dnf</a>
+                    <p>b. <a href="./src/2.md">Packages</a>
+                    <p>c. <a href="./src/3.md">Config files</a>
+                    <p>d. <a href="./src/4.md">Sound server - pulseaudio</a>
+                    <p>e. <a href="./src/5.md">Display manager - xorg-x11-xdm</a>
+                    <p>f. <a href="./src/6.md">Arc graphics</a>
+                    <p>g. <a href="./src/7.md">Other settings</a>
+
+                </div>
+            </div>
+
+            <div id="text">
+                <p><i>b. Notes</i>
+
+                <div id="code" style="font-size: 16px; font-family: monospace; margin-left: 8px;" >
+                    <p>### system upgrade
+                    <p>sudo dnf upgrade --refresh
+                    <p>sudo dnf system-upgrade download --releasever=XX
+                    <p>sudo dnf system-upgrade reboot
+
+                    <br><br>
+
+                    <p>### update rescue kernel
+                    <p>sudo rm /boot/*rescue*
+                    <p>sudo kernel-install add "$(uname -r)" "/lib/modules/$(uname -r)/vmlinuz"
+
+                    <br><br>
+
+                    <p>### remove old kernel
+                    <p>`sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1)`
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
