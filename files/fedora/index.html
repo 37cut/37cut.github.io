@@ -43,7 +43,7 @@
             margin-block: 7px;
         }
 
-        #Content.block {
+        #main {
             display: flex;
             flex-direction: column;
 
@@ -80,6 +80,60 @@
             else {
                 img.style.height = '72vh';
             }
+        }
+
+        function mui_support() {
+            const title = document.querySelectorAll('#title');
+            const title_p = document.querySelectorAll('#title p');
+
+            const head = document.querySelectorAll('#head');
+            const sub_head = document.querySelectorAll('#sub-head');
+
+            const text = document.querySelectorAll('#text');
+            const text_p = document.querySelectorAll('#text p');
+
+            const main = document.querySelectorAll('#main');
+            const hr = document.querySelectorAll('hr');
+            const code = document.querySelectorAll('#code');
+
+            title.forEach(title => {
+                title.style.fontSize = '12px';
+                title.style.marginBlock = '8px';
+            })
+
+            title_p.forEach(title_p => {
+                title_p.style.marginBlock = '3px';
+            })
+
+            head.forEach(head => {
+                head.style.fontSize = '11px';
+                head.style.marginTop = '6px';
+            })
+
+            sub_head.forEach(sub_head => {
+                sub_head.style.fontSize = '11px';
+            })
+
+            text.forEach(text => {
+                text.style.marginTop = '2px';
+            })
+
+            text_p.forEach(text_p => {
+                text_p.style.marginBlock = '4px';
+            })
+
+            main.forEach(main => {
+                main.style.fontSize = '10px';
+            })
+
+            hr.forEach(hr => {
+                hr.style.marginBlock = '8px';
+            })
+
+            code.forEach(code => {
+                code.style.fontSize = '8px';
+            })
+
         }
 
         function init() {
@@ -127,6 +181,8 @@
             }
             
             else {
+                mui_support();
+
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
@@ -162,7 +218,7 @@
     <hr>
 
     <div id="root">
-        <div class="block" id="Content">
+        <div id="main">
             <div id="text">
                 <p id="head">!! Disclaimer !!
                 <p><b>This is not an installation guide or documentation.
