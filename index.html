@@ -70,17 +70,17 @@
             img.style.bottom = '10px';
             img.style.right = '10px';
 
-            img.style.height = '75vh';
+            img.style.height = '72vh';
             img.style.opacity = '0';
             img.style.transition = 'opacity 0.5s';
 
             if (!mobile) {
-                document.body.style.width = '1024px';
+                document.body.style.width = '1280px';
                 document.body.style.marginInline = 'auto';
                 document.body.style.paddingInline = '8px';
 
                 here.addEventListener('mouseover', function() {
-                    if (window.innerWidth >= 1024) {
+                    if (window.innerWidth >= 1280) {
                         img.style.right = window.getComputedStyle(document.body).marginRight;
                     }
 
@@ -93,7 +93,7 @@
                 })
 
                 here.addEventListener('mouseout', function() {
-                    if (window.innerWidth >= 1024) {
+                    if (window.innerWidth >= 1280) {
                         img.style.right = window.getComputedStyle(document.body).marginRight;
                     }
 
@@ -107,8 +107,6 @@
             }
             
             else {
-                img.style.height = '72vh';
-                
                 here.addEventListener('touchstart', function() {
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
