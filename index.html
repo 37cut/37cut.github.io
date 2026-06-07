@@ -57,9 +57,7 @@
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
-            
             const root = document.getElementById('root');
-            const get = window.getComputedStyle(document.body);
             
             const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
             
@@ -81,7 +79,7 @@
                 document.body.style.marginInline = 'auto';
                 document.body.style.paddingInline = '8px';
 
-                img.style.right = get.marginRight;
+                img.style.right = window.getComputedStyle(document.body).marginRight;
                 
                 here.addEventListener('mouseover', function() {
                     img.style.opacity = '0.6';
@@ -95,7 +93,7 @@
 
                 window.addEventListener("resize", function() {
                     if (window.innerWidth >= 1024) {
-                        img.style.right = get.marginRight;
+                        img.style.right = window.getComputedStyle(document.body).marginRight;
                     }
             
                     else {
