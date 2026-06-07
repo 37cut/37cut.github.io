@@ -72,26 +72,13 @@
             }
         }
 
-        function mui_on_rotate() {
-            const img = document.querySelector('#fixed-image img');
-            const title = document.querySelectAll('#title')
-            const title_p = document.querySelectAll('#title p')
-            
+        function II_relocate_image(img) {
             if (window.innerWidth < window.innerHeight) {
                 img.style.height = '60vh';
             }
 
             else {
                 img.style.height = '72vh';
-
-                title.forEach(title => {
-                    title.style.fontSize = '24px';
-                    title.style.marginBlock = '16px';
-                })
-    
-                title_p.forEach(title_p => {
-                    title_p.style.marginBlock = '8px';
-                })
             }
         }
 
@@ -147,6 +134,20 @@
                 code.style.fontSize = '8px';
             })
 
+            
+            window.addEventListener("orientationchange", function() {
+                if (window.innerWidth > window.innerHeight) {
+                    title.forEach(title => {
+                        title.style.fontSize = '24px';
+                        title.style.marginBlock = '16px';
+                    })
+        
+                    title_p.forEach(title_p => {
+                        title_p.style.marginBlock = '8px';
+                    })
+                }
+            })
+            
         }
 
         function init() {
@@ -200,18 +201,14 @@
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
 
-                    mui_on_rotate();
+                    II_relocate_image(img);
                 })
     
                 here.addEventListener('touchend', function() {
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
 
-                    mui_on_rotate();
-                })
-
-                window.addEventListener('orientationchange', function() {
-                    mui_on_rotate();
+                    II_relocate_image(img);
                 })
             }
 
