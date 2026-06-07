@@ -29,24 +29,20 @@
 
         #root {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             line-height: 4px;
         }
 
-        #A.block {
+        #Entry.block {
             display: flex;
             flex-direction: row;
-            font-size: 20px;
 
-            width: 220px;
+            font-size: 20px;
+            min-width: 220px;
+
             gap: 35px;
         }
 
-        #B.block {
-            font-size: 20px;
-            width: 90vh;
-        }
-        
         hr {
             margin-block: 16px;
         }
@@ -61,9 +57,7 @@
         function init() {
             const img = document.createElement('img');
             const here = document.getElementById('here');
-
             const root = document.getElementById('root');
-            const blockB = document.getElementById('B');
 
             const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
             
@@ -80,26 +74,31 @@
             img.style.opacity = '0';
             img.style.transition = 'opacity 0.5s';
 
-            document.body.appendChild(img);
-            document.body.style.display = 'block';
-            document.body.style.height = '97vh';
-            
             if (!mobile) {
+                document.body.style.width = '1024px';
+                document.body.style.marginInline = 'auto';
+                document.body.style.paddingInline = '8px';
+
                 here.addEventListener('mouseover', function() {
+                    if (window.innerWidth >= 1024) {
+                        img.style.right = window.getComputedStyle(document.body).marginRight
+                    }
+
                     img.style.opacity = '0.6';
                     here.style.fontWeight = 'bold';
                 })
 
                 here.addEventListener('mouseout', function() {
+                    if (window.innerWidth < 1024) {
+                        img.style.right = '10px'
+                    }
+
                     img.style.opacity = '0';
                     here.style.fontWeight = 'normal';
                 })
             }
             
             else {
-                root.style.flexDirection = 'column';
-                blockB.style.height = '0';
-                
                 img.style.height = '72vh';
                 
                 here.addEventListener('touchstart', function() {
@@ -112,6 +111,10 @@
                     here.style.fontWeight = 'normal';
                 })
             }
+
+            document.body.appendChild(img);
+            document.body.style.display = 'block';
+            document.body.style.height = '95vh';
         }
         
         window.addEventListener('DOMContentLoaded', init)
@@ -130,23 +133,17 @@
     <p id="head">Entries
 
     <div id="root">
-        <div class="block" id="A">
+        <div class="block" id="Entry">
             <div id="text">
                 <p>fedora:
                 <p>python:
                 <p>osu:
             </div>
 
-            <div id="text">
-                <p><a href="./files/fedora/readme.md" target="_frame">view</a>
+            <div id="hyperset">
+                <p><a href="./files/fedora/readme.md" target='_iframe'>view</a>
                 <p><a href="./files/python/readme.md">view</a>
                 <p><a href="./files/osu/readme.md">view</a>
-            </div>
-        </div>
-
-        <div class="block" id="B">
-            <div id="text">
-                
             </div>
         </div>
     </div>
