@@ -84,6 +84,8 @@
 
             const main = document.querySelectorAll('#main');
             const hr = document.querySelectorAll('hr');
+
+            const list = document.querySelectorAll('#list');
             const code = document.querySelectorAll('#code');
 
             title.forEach(title => {
@@ -92,7 +94,7 @@
             })
 
             title_p.forEach(title_p => {
-                title_p.style.marginBlock = '3px';
+                title_p.style.marginBlock = '6px';
             })
 
             head.forEach(head => {
@@ -120,6 +122,10 @@
                 hr.style.marginBlock = '8px';
             })
 
+            list.forEach(list => {
+                list.marginLeft = '12px';
+            })
+            
             code.forEach(code => {
                 code.style.fontSize = '8px';
                 code.marginLeft = '4px';
