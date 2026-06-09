@@ -4,7 +4,7 @@
 OS: Fedora x86_64 44
 
 Mouse: g102 < 1600dpi, x1.0 >
-Keyboard: o2c < greywood v3 switch >
+Keyboard: Keychron K2 HE
 
 Offset: -22ms
 Sound-Server: Pulseaudio
