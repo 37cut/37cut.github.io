@@ -9,6 +9,3 @@ Keyboard: Keychron K2 HE < K1, K2: Q, A >
 Offset: -22ms
 Sound-Server: Pulseaudio
 ```
-
-## Fetch maps
-https://cutt37.is-a.dev/files/osu/src/1.md
