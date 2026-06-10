@@ -32,4 +32,4 @@ with file.open('r', encoding='utf-8') as f:
 
 ```
 
-Create a file called list.txt, and write all your mapset ids inside this file.
+Create a file called list.txt, and write all your beatmap ids inside this file.
