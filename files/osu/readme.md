@@ -9,3 +9,26 @@ Keyboard: Keychron K2 HE < K1, K2: Q, A >
 Offset: -22ms
 Sound-Server: Pulseaudio
 ```
+
+## Fetch maps
+```py
+import requests
+import os, pathlib
+
+file = pathlib.Path('list.txt')
+target = os.makedirs('src/', exist_ok = True)
+
+with file.open('r', encoding='utf-8') as f:
+    for ln in f:
+        line = ln.strip()
+
+        if line:
+            print(f'GET: {line}')
+            resp = requests.get(f'https://mirror.nekoha.moe/api4/download/{line}')
+
+            if resp.status_code != 404:
+                with open(f'src/{line}.osz', 'wb') as out:
+                    out.write(resp.content)
+```
+
+Create a file called list.txt, and write all your mapids inside this file.
