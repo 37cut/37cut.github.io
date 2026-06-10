@@ -23,12 +23,13 @@ with file.open('r', encoding='utf-8') as f:
         line = ln.strip()
 
         if line:
+            resp = requests.get(f'https://osudl.org/s/{line}')
             print(f'GET: {line}')
-            resp = requests.get(f'https://mirror.nekoha.moe/api4/download/{line}')
 
             if resp.status_code != 404:
                 with open(f'src/{line}.osz', 'wb') as out:
                     out.write(resp.content)
+
 ```
 
-Create a file called list.txt, and write all your mapids inside this file.
+Create a file called list.txt, and write all your map-ids inside this file.
