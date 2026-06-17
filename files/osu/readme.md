@@ -9,3 +9,5 @@ Keyboard: Keychron K2 HE < K1, K2: Q, A | 2.4mm | RT-Disabled >
 Offset: -22ms
 Sound-Server: Pulseaudio
 ```
+
+Lazer is the best example of the worst open-source software.
