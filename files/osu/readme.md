@@ -10,4 +10,9 @@ Offset: -22ms
 Sound-Server: Pulseaudio
 ```
 
-Lazer is the best example of the worst open-source software.
+Lazer is the best example of the worst open-source software<br>
+1. this project is incomplete.
+2. only one osu version should exist, but they keep both stable and lazer
+3. complicated/unclear game design
+4. passive feedback/contribution
+
