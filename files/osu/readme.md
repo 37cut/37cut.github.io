@@ -14,5 +14,5 @@ Lazer is the best example of the worst open-source software<br>
 1. this project is incomplete.
 2. only one osu version should exist, but they keep both stable and lazer
 3. uncleared game design
-4. weak contribution( not well organised, totally a big mess ), which makes their github workflow even worse
+4. ineffective contribution( they messed up their github commits ), which makes their github workflow even worse
 
