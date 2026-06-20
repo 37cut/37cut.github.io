@@ -21,7 +21,7 @@ Lazer is the best example of the worst open-source rhythm game<br>
    yes, more is better than less. But it is not all true for ui design ( even the retro design of osu-stable is much better... ).<br>
    why do I need many options in settings? why they ~hide their play button so deep, that I have to click at least twice to see that stupid ui?
 
-3. the situation, of multiplayer is like a bunch of kids playing the same awkward meme song in a fucking sandbox<br>
+3. the situation, of multiplayer is like a bunch of kids playing the same awkward meme song in a same fucking sandbox<br>
    I dont really want to say something about pp-system. I just want some nice banger songs, and some nice friend.
 
 4. the development ( github commits, etc )...<br>
