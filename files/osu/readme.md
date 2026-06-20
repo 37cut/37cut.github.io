@@ -10,7 +10,7 @@ Offset: -24ms
 Sound-Server: Pulseaudio
 ```
 
-## osu-lazer
+## osu-lazer :: 2/5
 
 Lazer is the best example of the worst open-source rhythm game<br>
 1. this project is incomplete. I was wondering why ppy-team gives up osu-stable<br>
@@ -29,6 +29,6 @@ Lazer is the best example of the worst open-source rhythm game<br>
    as I said, this project is incomplete. AND that doesn't means that minor bugs SHOULD occured in a such old game<br>
    the fact of how ppy-team treat on osu-lazer is like copying someones homework
 
-## robeats/4k
+## robeats/4k :: 4/5
 roblox/robeats is probaly the first pc rhythm game I've ever play.<br>
 3d notes really gives me a comfort game experience and a nice impression of this game.
