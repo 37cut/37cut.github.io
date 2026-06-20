@@ -31,9 +31,6 @@ Lazer is the best example of the worst open-source rhythm game<br>
 
 5. Harbingo is shit. I never thought people nowadays are so fucking aggressive.
 
-6. and some of the chinese player of osu-lazer who joined after 2024-now. OMG RX fccccc, FUCK RX fc so you are proud huh?
-   WTF is going on, is relax acting the same as hard rock?
-
 ## robeats/4k :: 4/5
 
 roblox/robeats is the first pc rhythm game I've ever played. and it is the best 4k I've ever played<br>
