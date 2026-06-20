@@ -26,7 +26,7 @@ Lazer is the best example of the worst open-source rhythm game<br>
 
 4. the development ( github commits, etc )...<br>
    JESUS they treat their github repository like some random guy pee on a random street in public<br>
-   as I said, this project is incomplete. AND that doesn't means that minor bugs SHOULD occured in a such old game<br>
+   as I said, this project is incomplete. BUT that doesn't means that minor bugs SHOULD occured in a such old game<br>
    the fact of how ppy-team treat on osu-lazer is like copying someones homework
 
 5. Harbingo is shit. I never thought people nowadays are so fucking aggressive.
