@@ -10,7 +10,7 @@ Offset: -24ms
 Sound-Server: Pulseaudio
 ```
 
-## about osu-lazer
+## osu-lazer
 
 Lazer is the best example of the worst open-source rhythm game<br>
 1. this project is incomplete. I was wondering why ppy-team gives up osu-stable<br>
