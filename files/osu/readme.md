@@ -36,5 +36,5 @@ Lazer is the best example of the worst open-source rhythm game<br>
 
 ## robeats/4k :: 4/5
 
-roblox/robeats is probably the first pc rhythm game I've ever play.<br>
+roblox/robeats is the first pc rhythm game I've ever play. and it is the best 4k I've ever played<br>
 3d notes really gives me a comfort game experience and a nice impression of this game.
