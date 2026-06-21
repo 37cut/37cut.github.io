@@ -10,7 +10,7 @@ Offset: -24ms
 Sound-Server: Pulseaudio
 ```
 
-## osu-lazer :: 2/5
+## osu-lazer
 
 Lazer is the best example of the worst open-source rhythm game<br>
 1. this project is incomplete. I was wondering why ppy-team gives up osu-stable<br>
@@ -31,7 +31,7 @@ Lazer is the best example of the worst open-source rhythm game<br>
 
 5. Harbingo is shit. I never thought people nowadays are so fucking aggressive.
 
-## robeats/4k :: 4/5
+## robeats/4k
 
 roblox/robeats is the first pc rhythm game I've ever played. and it is the best 4k I've ever played<br>
 3d notes really gives me a comfort game experience and a nice impression of this game.
