@@ -22,7 +22,7 @@ Lazer is the best example of the worst open-source rhythm game<br>
    why do I need many options in settings? why they ~hide their play button so deep, that I have to click at least twice to see that stupid ui?
 
 3. the situation, of multiplayer is like a bunch of kids playing the same awkward meme song in a same fucking sandbox<br>
-   I dont really want to say something about pp-system. I just want some nice unique songs, and some nice friend.
+   I dont really want to talk about pp-system. I just want some nice unique songs, and some nice friend.
 
 4. the development ( github commits, etc )...<br>
    JESUS they treat their github repository like some random guy pee on a random street in public<br>
