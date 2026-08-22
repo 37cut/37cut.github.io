@@ -1,1 +1,174 @@
+function relocate_image(img) {
+    if (window.innerWidth >= 1024) {
+        img.style.right = window.getComputedStyle(document.body).marginRight;
+    }
 
+    else {
+        img.style.right = '10px';
+    }
+}
+
+function mui_support() {
+    const title = document.querySelectorAll('#title');
+    const title_p = document.querySelectorAll('#title p');
+
+    const text = document.querySelectorAll('#text');
+    const text_p = document.querySelectorAll('#text p');
+
+    const hyperset = document.querySelectorAll('#hyperset');
+    const hyperset_p = document.querySelectorAll('#hyperset p');
+
+    const main = document.querySelectorAll('#main');
+    const head = document.querySelectorAll('#head');
+    const hr = document.querySelectorAll('hr');
+
+    title.forEach(title => {
+        title.style.fontSize = '14px';
+        title.style.marginBlock = '10px';
+    })
+
+    title_p.forEach(title_p => {
+        title_p.style.marginBlock = '3px';
+    })
+
+    text.forEach(text => {
+        text.style.marginTop = '2px';
+    })
+
+    text_p.forEach(text_p => {
+        text_p.style.marginBlock = '2px';
+    })
+
+    hyperset.forEach(hyperset => {
+        hyperset.style.marginTop = '2px';
+    })
+
+    hyperset_p.forEach(hyperset_p => {
+        hyperset_p.style.marginBlock = '2px';
+    })
+
+    main.forEach(main => {
+        main.style.fontSize = '10px';
+        main.style.gap = '17px';
+    })
+
+    head.forEach(head => {
+        head.style.fontSize = '11px';
+        head.style.marginTop = '6px';
+    })
+
+    hr.forEach(hr => {
+        hr.style.marginBlock = '8px';
+    })
+
+    screen.orientation.addEventListener('change', function() {
+        if (screen.orientation.type.startsWith('portrait')) {
+            title.forEach(title => {
+                title.style.fontSize = '14px';
+                title.style.marginBlock = '10px';
+            })
+
+            title_p.forEach(title_p => {
+                title_p.style.marginBlock = '3px';
+            })
+
+            main.forEach(main => {
+                main.style.fontSize = '10px';
+                main.style.gap = '17px';
+            })
+
+            head.forEach(head => {
+                head.style.fontSize = '11px';
+                head.style.marginTop = '6px';
+            })
+        }
+
+        else {
+            title.forEach(title => {
+                title.style.fontSize = '22px';
+                title.style.marginBlock = '16px';
+            })
+
+            title_p.forEach(title_p => {
+                title_p.style.marginBlock = '8px';
+            })
+
+            main.forEach(main => {
+                main.style.fontSize = '18px';
+                main.style.gap = '32px';
+            })
+
+            head.forEach(head => {
+                head.style.fontSize = '20px';
+                head.style.marginTop = '10px';
+            })
+        }
+
+    })
+}
+
+function init() {
+    const img = document.createElement('img');
+    const here = document.getElementById('here');
+    const root = document.getElementById('root');
+    
+    const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
+    
+    img.src = './files/lolisuki';
+    img.id = 'fixed-image';
+
+    img.style.position = 'fixed';
+    img.style.pointerEvents = 'none';
+
+    img.style.bottom = '10px';
+    img.style.right = '10px';
+
+    img.style.height = '72vh';
+    img.style.opacity = '0';
+    img.style.transition = 'opacity 0.5s';
+
+    if (!mobile) {
+        document.body.style.maxWidth = '1024px';
+        document.body.style.marginInline = 'auto';
+        document.body.style.paddingInline = '8px';
+        
+        here.addEventListener('mouseover', function() {
+            img.style.opacity = '0.6';
+            here.style.fontWeight = 'bold';
+
+            relocate_image(img);
+        })
+
+        here.addEventListener('mouseout', function() {
+            img.style.opacity = '0';
+            here.style.fontWeight = 'normal';
+
+            relocate_image(img);
+        })
+
+        window.addEventListener('resize', function() {
+            relocate_image(img);
+        })
+    }
+    
+    else {
+        mui_support();
+
+        here.addEventListener('touchstart', function() {
+            img.style.opacity = '0.6';
+            here.style.fontWeight = 'bold';
+        })
+
+        here.addEventListener('touchend', function() {
+            img.style.opacity = '0';
+            here.style.fontWeight = 'normal';
+        })
+    }
+
+    document.body.appendChild(img);
+    document.body.style.display = 'block';
+    document.body.style.height = '95vh';
+}
+
+window.addEventListener('DOMContentLoaded', init)
+        
