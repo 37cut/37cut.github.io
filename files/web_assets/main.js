@@ -114,7 +114,7 @@ function init() {
     
     const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
     
-    img.src = './files/lolisuki';
+    img.src = './loli';
     img.id = 'fixed-image';
 
     img.style.position = 'fixed';
