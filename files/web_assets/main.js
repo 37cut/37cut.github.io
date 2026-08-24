@@ -20,6 +20,7 @@ function mui_support() {
 
     const main = document.querySelectorAll('#main');
     const head = document.querySelectorAll('#head');
+    const sub_head = document.querySelectorAll('#sub_head');
     const hr = document.querySelectorAll('hr');
 
     title.forEach(title => {
@@ -55,6 +56,11 @@ function mui_support() {
     head.forEach(head => {
         head.style.fontSize = '11px';
         head.style.marginTop = '6px';
+    })
+
+    sub_head.forEach(sub_head => {
+        sub_head.style.fontSize = '8px';
+        sub_head.style.marginTop = '6px';
     })
 
     hr.forEach(hr => {
