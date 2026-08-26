@@ -1,0 +1,46 @@
+
+/* Font Properties */
+
+p {
+    font-size: 24px;
+}
+
+p#itl {
+    font-size: 24px;
+    font-style: italic;
+}
+
+#sum>p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+/* Position */
+
+p {
+    margin-block: 8px;
+}
+
+p#itl {
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+#sum {
+    margin-top: 12px;
+    margin-left: 16px;
+}
+
+#nav {
+    margin-block: 22px;
+}
+
+h1 {
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
+
