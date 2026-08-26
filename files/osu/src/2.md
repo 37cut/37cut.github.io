@@ -1,9 +1,0 @@
-## Map Perference
-- Cool slider maps
-- Cool songs with decent mapping
-- Light marathon (5 mins)
-
-- Acceptable hard maps
-- AR >= 8 && bpm <= 145
-
-- No Farms
