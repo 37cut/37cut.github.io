@@ -49,17 +49,3 @@ Search ___optimization guide on device___ and disable it
 To prevent chrome download ai models into this folder -> ___$HOME/.config/chromium/OptGuideOnDeviceModel___ <br>
 You could make this folder inmutable:<br>
 `sudo chattr +i $HOME/.config/chromium/OptGuideOnDeviceModel/`
-
-# Note
-
-### system upgrade
-sudo dnf upgrade --refresh<br>
-sudo dnf system-upgrade download --releasever=XX<br>
-sudo dnf system-upgrade reboot
-
-### update rescue kernel
-sudo rm /boot/*rescue*<br>
-sudo kernel-install add "$(uname -r)" "/lib/modules/$(uname -r)/vmlinuz"
-
-### remove old kernel
-sudo dnf remove $(dnf repoquery --installonly --latest-limit=-1)
