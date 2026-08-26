@@ -44,7 +44,7 @@ function init() {
 
         hover.addEventListener('touchstart', function() {
             img.style.opacity = '0.6';
-            here.style.fontWeight = 'bold';
+            hover.style.fontWeight = 'bold';
         })
 
         hover.addEventListener('touchend', function() {
