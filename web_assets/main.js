@@ -40,7 +40,7 @@ function init() {
     }
     
     else {
-        mui_support();
+        // mui_support();
 
         hover.addEventListener('touchstart', function() {
             img.style.opacity = '0.6';
