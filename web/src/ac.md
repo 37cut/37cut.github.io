@@ -16,4 +16,4 @@
 - xdm/Xresources                -> /etc/X11/xdm
 - xdm/Xsetup                    -> /etc/X11/xdm
 
-You can download from here: https://cutt37.is-a.dev/files/fedora/src/files.zip
+You can download from here: https://cutt37.is-a.dev/web/src/files.zip
