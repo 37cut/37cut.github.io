@@ -1,6 +1,5 @@
 function init() {
     const img = document.createElement('img');
-    const imb = document.getElementById('imb');
     const hover = document.getElementById('hover');
     
     const mobile = /Mobile|Android|iPhone/i.test(navigator.userAgent);
