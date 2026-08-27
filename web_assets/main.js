@@ -40,7 +40,7 @@ function init() {
     
     else {
         // mui_support();
-        img.style.height = '60vh';
+        img.style.height = '65vh';
         
         hover.addEventListener('touchstart', function() {
             img.style.opacity = '0.6';
