@@ -14,7 +14,7 @@ this directory store files which is linked to specific mirror (or repository)
 
 
 
-# rpm - manual install from file
+# rpm - manual installation from file
 
 ### rpm usage
 sudo rpm -i  # install<br>
