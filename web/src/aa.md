@@ -17,7 +17,7 @@ this directory store files which is linked to specific mirror (or repository)
 # rpm - manual install from src
 
 ### rpm usage
-sudo rpm -i  # install
-sudo rpm -e  # erase (not recommended, use dnf rm instead)
-sudo rpm -U  # upgrade
+sudo rpm -i  # install<br>
+sudo rpm -e  # erase (not recommended, use dnf rm instead)<br>
+sudo rpm -U  # upgrade<br>
 sudo rpm -qa # show all packages installed
