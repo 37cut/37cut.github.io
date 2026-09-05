@@ -13,7 +13,7 @@ function init() {
     img.style.right = '8px';
     img.style.bottom = '8px';
 
-    img.style.height = '80vh';
+    img.style.height = '72vh';
     img.style.opacity = '0';
     img.style.transition = 'opacity 0.5s';
 
