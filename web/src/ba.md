@@ -2,8 +2,8 @@
 
 OS: Fedora x86_64 44
 
-Mouse: G403 Hero < 1920dpi, x1.0 > <br>
-Keyboard: Keychron K2 HE < K1, K2: Q, A | 2.4mm | RT-Disabled >
+Mouse: G403 Hero <br>
+Keyboard: Keychron K2 HE
 
 Offset: -22ms<br>
 Sound-Server: Pulseaudio
