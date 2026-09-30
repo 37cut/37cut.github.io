@@ -2,7 +2,7 @@
 
 OS: Fedora x86_64 44
 
-Mouse: G403 Hero <br>
+Mouse: G403 Hero<br>
 Keyboard: Keychron K2 HE
 
 Offset: -22ms<br>
