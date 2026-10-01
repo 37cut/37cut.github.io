@@ -3,7 +3,7 @@
 OS: Fedora x86_64 44
 
 Mouse: G403 Hero<br>
-Keyboard: Keychron K2 HE
+Keyboard: Keychron K2 HE Special
 
 Offset: -22ms<br>
 Sound-Server: Pulseaudio
