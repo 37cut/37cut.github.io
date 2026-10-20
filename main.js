@@ -26,7 +26,7 @@ function init() {
     
     else {
         document.documentElement.style.zoom = "75%";
-        img.style.height = '90vh';
+        img.style.height = '85vh';
     }
 
     Array.from(details).forEach(details => {
