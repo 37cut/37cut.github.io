@@ -31,18 +31,24 @@ function init() {
 
     Array.from(details).forEach(details => {
         details.onclick = function () {
-        await img.animate(
+        img.animate(
             [
                 { transform: 'translateY(0)' },
-                { transform: 'translateY(-60px)', easing: 'ease-out' },
-                { transform: 'translateY(0)', easing: 'ease-in' }
+                { transform: 'translateY(-40px)' },
+                { transform: 'translateY(-60px)' },
+                { transform: 'translateY(-40px)' },
+                { transform: 'translateY(-20px)' },
+                { transform: 'translateY(-10px)' },
+                { transform: 'translateY(0)' }
             ],
 
             {
-                duration: 500,
+                duration: 600,
+                easing: 'ease-out'
             }
 
-        ).finished;
+        )
+
         }
     })
 
