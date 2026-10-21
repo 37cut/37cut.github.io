@@ -34,14 +34,14 @@ function init() {
         img.animate(
             [
                 { transform: 'translateY(0)' },
-                { transform: 'translateY(-40px)' },
+                { transform: 'translateY(-35px)' },
                 { transform: 'translateY(-60px)' },
-                { transform: 'translateY(-40px)' },
+                { transform: 'translateY(-35px)' },
                 { transform: 'translateY(0)' }
             ],
 
             {
-                duration: 475,
+                duration: 450,
                 easing: 'ease-in-out'
             }
 
