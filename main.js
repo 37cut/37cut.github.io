@@ -39,7 +39,7 @@ function init() {
             ],
 
             {
-                duration: 750,
+                duration: 600,
                 easing: 'ease-out'
             }
 
