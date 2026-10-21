@@ -46,7 +46,7 @@ function init() {
             }
 
         );
-        }
+        };
     })
 
     window.onresize = () => {
