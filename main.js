@@ -38,7 +38,6 @@ function init() {
                 { transform: 'translateY(-60px)', offset: .6 },
                 { transform: 'translateY(-40px)', offset: .8 },
                 { transform: 'translateY(-20px)', offset: .9 },
-                { transform: 'translateY(-10px)', offset: .95 },
                 { transform: 'translateY(0)', offset: 1 }
             ],
 
