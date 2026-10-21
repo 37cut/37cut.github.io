@@ -41,7 +41,7 @@ function init() {
             ],
 
             {
-                duration: 500,
+                duration: 475,
                 easing: 'ease-in-out'
             }
 
