@@ -45,14 +45,14 @@ function init() {
                 easing: 'ease-in-out'
             }
 
-        );
-        };
+        )
+        }
     })
 
     window.onresize = () => {
         img.style.right =
             getComputedStyle(document.body).marginRight;
-    };
+    }
 
     document.body.appendChild(img);
     document.body.style.display = 'block';
