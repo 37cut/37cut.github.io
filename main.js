@@ -34,7 +34,7 @@ function init() {
         img.animate(
             [
                 { transform: 'translateY(0)' },
-                { transform: 'translateY(-35px)' },
+                { transform: 'translateY(-45px)' },
                 { transform: 'translateY(-60px)' },
                 { transform: 'translateY(-35px)' },
                 { transform: 'translateY(0)' }
@@ -42,7 +42,7 @@ function init() {
 
             {
                 duration: 475,
-                easing: 'ease-in-out'
+                easing: 'ease-out'
             }
 
         )
