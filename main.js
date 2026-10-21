@@ -31,7 +31,7 @@ function init() {
 
     Array.from(details).forEach(details => {
         details.onclick = function () {
-        img.animate(
+        await img.animate(
             [
                 { transform: 'translateY(0)' },
                 { transform: 'translateY(-60px)', easing: 'ease-out' },
@@ -40,10 +40,9 @@ function init() {
 
             {
                 duration: 500,
-                easing: 'ease-out'
             }
 
-        )
+        ).finished;
         }
     })
 
