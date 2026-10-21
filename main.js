@@ -34,15 +34,15 @@ function init() {
         img.animate(
             [
                 { transform: 'translateY(0)' },
-                { transform: 'translateY(-40px)' },
+                { transform: 'translateY(-30px)' },
                 { transform: 'translateY(-60px)' },
-                { transform: 'translateY(-20px)' },
+                { transform: 'translateY(-30px)' },
                 { transform: 'translateY(0)' }
             ],
 
             {
                 duration: 500,
-                easing: 'ease-in-out'
+                easing: 'ease-out'
             }
 
         )
