@@ -34,10 +34,11 @@ function init() {
         img.animate(
             [
                 { transform: 'translateY(0)', offset: 0 },
-                { transform: 'translateY(-40px)', offset: .4 },
+                { transform: 'translateY(-40px)', offset: .3 },
                 { transform: 'translateY(-60px)', offset: .6 },
                 { transform: 'translateY(-40px)', offset: .8 },
                 { transform: 'translateY(-20px)', offset: .9 },
+                { transform: 'translateY(-10px)', offset: .95 },
                 { transform: 'translateY(0)', offset: 1 }
             ],
 
