@@ -34,10 +34,8 @@ function init() {
         img.animate(
             [
                 { transform: 'translateY(0)' },
-                { transform: 'translateY(-30px)' },
-                { transform: 'translateY(-60px)' },
-                { transform: 'translateY(-30px)' },
-                { transform: 'translateY(0)' }
+                { transform: 'translateY(-60px)', easing: 'ease-out' },
+                { transform: 'translateY(0)', easing: 'ease-in' }
             ],
 
             {
