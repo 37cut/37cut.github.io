@@ -1,5 +1,4 @@
 function init_animation(time) {
-
 img.animate(
     [
         { transform: 'translateY(0)', offset: 0 },
