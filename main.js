@@ -1,23 +1,3 @@
-function init_animation(time) {
-img.animate(
-    [
-        { transform: 'translateY(0)', offset: 0 },
-        { transform: 'translateY(-40px)', offset: .3 },
-        { transform: 'translateY(-60px)', offset: .6 },
-        { transform: 'translateY(-40px)', offset: .8 },
-        { transform: 'translateY(-20px)', offset: .9 },
-        { transform: 'translateY(0)', offset: 1 }
-    ],
-
-    {
-        duration: time,
-        easing: 'ease-out'
-    }
-
-)
-
-}
-
 function init() {
     const img = document.createElement('img');
     const details = document.getElementsByTagName('details');
@@ -42,23 +22,38 @@ function init() {
         document.body.style.paddingInline = '8px';
 
         img.style.right = getComputedStyle(document.body).marginRight;
-
-        const time = 475;
     }
     
     else {
         document.documentElement.style.zoom = "75%";
         img.style.height = '85vh';
-
-        const time = 500;
     }
 
     Array.from(details).forEach(details => {
-        details.onclick = init_animation(time)
+        details.onclick = function () {
+        img.animate(
+            [
+                { transform: 'translateY(0)', offset: 0 },
+                { transform: 'translateY(-40px)', offset: .3 },
+                { transform: 'translateY(-60px)', offset: .6 },
+                { transform: 'translateY(-40px)', offset: .8 },
+                { transform: 'translateY(-20px)', offset: .9 },
+                { transform: 'translateY(0)', offset: 1 }
+            ],
+
+            {
+                duration: 475,
+                easing: 'ease-out'
+            }
+
+        )
+
+        }
     })
 
     window.onresize = () => {
-        img.style.right = getComputedStyle(document.body).marginRight;
+        img.style.right =
+            getComputedStyle(document.body).marginRight;
     }
 
     document.body.appendChild(img);
